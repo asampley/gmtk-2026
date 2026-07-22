@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dk5d33vio2gy3" path="res://themes/gruvbox_retro/buttons/button_hovered.png" id="2_820ky"]
 [ext_resource type="FontFile" uid="uid://bdevxwssqfqio" path="res://themes/gruvbox_retro/fonts/JetBrainsMonoNerdFontMono-Bold.ttf" id="3_5rypr"]
 [ext_resource type="Texture2D" uid="uid://cx2da5yh0bfo4" path="res://themes/gruvbox_retro/buttons/button_pressed.png" id="4_30fd6"]
-[ext_resource type="StyleBox" uid="uid://c70td424pupup" path="res://themes/minimalist/button/minimalist_button_base.tres" id="4_820ky"]
 [ext_resource type="Texture2D" uid="uid://c7fftm7gmeph0" path="res://themes/gruvbox_retro/panel/primary_panel.png" id="5_30fd6"]
 [ext_resource type="FontFile" uid="uid://bgu467x3qiwoo" path="res://themes/gruvbox_retro/fonts/fonts/URWGothic-DemiOblique.ttf" id="9_820ky"]
 
@@ -44,6 +43,9 @@ texture_margin_bottom = 22.0
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rypr"]
+texture = ExtResource("1_yw3hh")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udjph"]
 texture = ExtResource("5_30fd6")
 
@@ -63,7 +65,7 @@ HeaderLarge/fonts/font = ExtResource("2_3k5q6")
 Label/colors/font_color = Color(0.92156863, 0.85882354, 0.69803923, 1)
 Label/font_sizes/font_size = 35
 Label/fonts/font = ExtResource("3_5rypr")
-PanelContainer/styles/panel = ExtResource("4_820ky")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_5rypr")
 SubPanelContainer/base_type = &"PanelContainer"
 SubPanelContainer/styles/panel = SubResource("StyleBoxTexture_udjph")
 Title/base_type = &"Label"

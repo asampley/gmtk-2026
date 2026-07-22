@@ -5,8 +5,7 @@
 
 [sub_resource type="Theme" id="Theme_tf6c0"]
 
-[node name="Help" type="PanelContainer" unique_id=703864850]
-visible = false
+[node name="Help" type="PanelContainer" unique_id=1783265641]
 anchors_preset = -1
 anchor_left = 0.1
 anchor_top = 0.1
@@ -16,28 +15,24 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4ii5f")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1966324122]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=668150962]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=668150962]
 layout_mode = 2
 size_flags_vertical = 3
 alignment = 1
 
-[node name="Prev" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1228634700]
+[node name="Prev" type="Button" parent="HBoxContainer" unique_id=1228634700]
 unique_name_in_owner = true
 layout_mode = 2
 theme = SubResource("Theme_tf6c0")
 theme_override_font_sizes/font_size = 120
 text = "<"
 
-[node name="HelpPanes" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=115891911]
+[node name="HelpPanes" type="Control" parent="HBoxContainer" unique_id=115891911]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Help1" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/HelpPanes" unique_id=1223393063]
-visible = false
+[node name="Help1" type="VBoxContainer" parent="HBoxContainer/HelpPanes" unique_id=1223393063]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,21 +42,21 @@ grow_vertical = 2
 size_flags_horizontal = 3
 alignment = 1
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="VBoxContainer/HBoxContainer/HelpPanes/Help1" unique_id=427189977]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="HBoxContainer/HelpPanes/Help1" unique_id=427189977]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/HelpPanes/Help1/AspectRatioContainer" unique_id=877225842]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HelpPanes/Help1/AspectRatioContainer" unique_id=877225842]
 layout_mode = 2
 texture = ExtResource("2_jd775")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/HelpPanes/Help1" unique_id=800441125]
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/HelpPanes/Help1" unique_id=800441125]
 layout_mode = 2
 text = "Use WASD or Arrow Keys to move"
 fit_content = true
 horizontal_alignment = 1
 
-[node name="Help2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/HelpPanes" unique_id=1111692085]
+[node name="Help2" type="VBoxContainer" parent="HBoxContainer/HelpPanes" unique_id=1111692085]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -72,23 +67,23 @@ grow_vertical = 2
 size_flags_horizontal = 3
 alignment = 1
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="VBoxContainer/HBoxContainer/HelpPanes/Help2" unique_id=2078835467]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="HBoxContainer/HelpPanes/Help2" unique_id=2078835467]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/HelpPanes/Help2/AspectRatioContainer" unique_id=170817349]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HelpPanes/Help2/AspectRatioContainer" unique_id=170817349]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_rotation = 1.5707964
 texture = ExtResource("2_jd775")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/HelpPanes/Help2" unique_id=116319893]
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/HelpPanes/Help2" unique_id=116319893]
 layout_mode = 2
 text = "Use spacebar to jump"
 fit_content = true
 horizontal_alignment = 1
 
-[node name="Help3" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/HelpPanes" unique_id=2112034886]
+[node name="Help3" type="VBoxContainer" parent="HBoxContainer/HelpPanes" unique_id=2112034886]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -99,33 +94,27 @@ grow_vertical = 2
 size_flags_horizontal = 3
 alignment = 1
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="VBoxContainer/HBoxContainer/HelpPanes/Help3" unique_id=735599136]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="HBoxContainer/HelpPanes/Help3" unique_id=735599136]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/HelpPanes/Help3/AspectRatioContainer" unique_id=275105292]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HelpPanes/Help3/AspectRatioContainer" unique_id=275105292]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_rotation = 3.1415927
 texture = ExtResource("2_jd775")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/HelpPanes/Help3" unique_id=990326388]
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/HelpPanes/Help3" unique_id=990326388]
 layout_mode = 2
 text = "Have fun!"
 fit_content = true
 horizontal_alignment = 1
 
-[node name="Next" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1662168898]
+[node name="Next" type="Button" parent="HBoxContainer" unique_id=1662168898]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 120
 text = ">"
 
-[node name="Close" type="Button" parent="VBoxContainer" unique_id=146083998]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Close"
-
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/Prev" to="." method="_on_prev_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/Next" to="." method="_on_next_pressed"]
-[connection signal="pressed" from="VBoxContainer/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="HBoxContainer/Prev" to="." method="_on_prev_pressed"]
+[connection signal="pressed" from="HBoxContainer/Next" to="." method="_on_next_pressed"]

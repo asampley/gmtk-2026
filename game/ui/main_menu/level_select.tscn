@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://drjsd7n8y27do"]
+
+[node name="ItemList" type="ItemList" unique_id=899088996]
+offset_right = 142.0
+offset_bottom = 116.0
+auto_width = true
+auto_height = true
+item_count = 4
+item_0/text = "Bubble Bubble"
+item_1/text = "Toil and Trouble"
+item_2/text = "Fire Burn"
+item_3/text = "Cauldron Bubble"
