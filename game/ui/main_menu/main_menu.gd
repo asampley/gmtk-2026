@@ -1,4 +1,4 @@
-extends CenterContainer
+extends Control
 
 @export var help_menu: Control
 
