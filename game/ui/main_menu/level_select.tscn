@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://drjsd7n8y27do"]
 
+[ext_resource type="Script" uid="uid://14et77isxffc" path="res://game/ui/main_menu/level_select.gd" id="1_adl2x"]
+
 [node name="ItemList" type="ItemList" unique_id=899088996]
 offset_right = 142.0
 offset_bottom = 116.0
@@ -10,3 +12,6 @@ item_0/text = "Bubble Bubble"
 item_1/text = "Toil and Trouble"
 item_2/text = "Fire Burn"
 item_3/text = "Cauldron Bubble"
+script = ExtResource("1_adl2x")
+
+[connection signal="item_selected" from="." to="." method="_on_item_selected"]

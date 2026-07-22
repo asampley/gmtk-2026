@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://c7d5ruk3rkv1l"]
+
+[ext_resource type="Script" uid="uid://ch04hx6edyi2f" path="res://game/level/level.gd" id="1_plvcp"]
+
+[node name="Level1" type="Control" unique_id=324419999]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_plvcp")
+
+[node name="Button" type="Button" parent="." unique_id=131712094]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 252.0
+offset_right = 425.0
+offset_bottom = 322.0
+text = "Cauldron"
+
+[node name="Button2" type="Button" parent="." unique_id=1835391321]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 15.0
+offset_right = 265.0
+offset_bottom = 85.0
+text = "Plant Pot"
+
+[node name="Button3" type="Button" parent="." unique_id=1132609395]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 101.0
+offset_right = 493.0
+offset_bottom = 171.0
+text = "Mortar and Pestle"
+autowrap_mode = 3
