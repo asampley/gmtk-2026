@@ -66,6 +66,7 @@ size_flags_vertical = 3
 
 [node name="HelpMenu" parent="SubMenu/VBoxContainer/BoxContainer" unique_id=703864850 instance=ExtResource("3_0p1rw")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
 [node name="LevelSelect" parent="SubMenu/VBoxContainer/BoxContainer" unique_id=1730026072 instance=ExtResource("4_1x88f")]
