@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="LevelTemplate" format=3 uid="uid://ci64vwvpqpf57"]
+
+[ext_resource type="Script" uid="uid://cdg0e4kmye577" path="res://game/level/level_template.gd" id="1_16102"]
+
+[resource]
+script = ExtResource("1_16102")
+metadata/_custom_type_script = "uid://cdg0e4kmye577"

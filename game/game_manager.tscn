@@ -1,9 +1,19 @@
 [gd_scene format=3 uid="uid://dp2b7kp7c1hr3"]
 
-[ext_resource type="PackedScene" uid="uid://6f6fc3u2qijv" path="res://ui/main_menu/main_menu.tscn" id="1_hfu78"]
+[ext_resource type="Script" uid="uid://bxh3lvkd03a4x" path="res://game/core/game_manager.gd" id="1_5xjvc"]
+[ext_resource type="PackedScene" uid="uid://6f6fc3u2qijv" path="res://game/ui/main_menu/main_menu.tscn" id="1_hfu78"]
 [ext_resource type="PackedScene" uid="uid://dping0fholceh" path="res://utilities/debug_terminal/debug_terminal.tscn" id="1_s6er8"]
 
-[node name="Root" type="Node" unique_id=945519092]
+[node name="GameManager" type="Node" unique_id=945519092]
+script = ExtResource("1_5xjvc")
+
+[node name="LevelParent" type="CanvasLayer" parent="." unique_id=1337681768]
+
+[node name="Level1" type="Control" parent="LevelParent" unique_id=2137202737]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="HudLayer" type="CanvasLayer" parent="." unique_id=1321582583]
 
