@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dpp6sq3ysxp1f"]
+
+[ext_resource type="Script" uid="uid://dkq6xpbvca2w3" path="res://utilities/dev_tools/fps_counter.gd" id="1_bnruq"]
+
+[node name="FPSCounter" type="Label" unique_id=551632532]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -121.0
+offset_bottom = 36.291668
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/outline_size = 5
+text = "FPS: 60"
+horizontal_alignment = 2
+script = ExtResource("1_bnruq")

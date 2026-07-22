@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://c6wvtd1fpuyni"]
+
+[ext_resource type="Script" uid="uid://caapnub62fxgb" path="res://utilities/ui_animations/animation_container.gd" id="1_87k7e"]
+[ext_resource type="Script" uid="uid://coiuy4ui47v7e" path="res://utilities/ui_animations/ui_animation.gd" id="2_32jtj"]
+[ext_resource type="Script" uid="uid://yjob76jt1si" path="res://utilities/ui_animations/animations/scale_ui_animation.gd" id="3_ecpxu"]
+[ext_resource type="Theme" uid="uid://cick0d7gevra3" path="res://themes/minimalist/minimalist_theme.tres" id="5_jh8uw"]
+[ext_resource type="Script" uid="uid://c3scbub57h7yl" path="res://utilities/button_sounds/button_click_audio_player.gd" id="5_wk56g"]
+[ext_resource type="AudioStream" uid="uid://ch5045vpeawtf" path="res://themes/minimalist/button/minimalist_button_click.wav" id="6_1hqim"]
+[ext_resource type="Script" uid="uid://btf81xy3cxt5k" path="res://utilities/ui_animations/triggers/button_down_up_animation_trigger.gd" id="6_4fg8h"]
+[ext_resource type="Script" uid="uid://bsy4yfy1mcqoq" path="res://utilities/ui_animations/triggers/mouse_over_animation_trigger.gd" id="6_wk56g"]
+[ext_resource type="Script" uid="uid://6xfbcivv1tc7" path="res://utilities/button_sounds/button_hover_audio_player.gd" id="7_fbwfy"]
+[ext_resource type="AudioStream" uid="uid://lasoyuka6d80" path="res://themes/minimalist/button/minimalist_button_hover.wav" id="8_kw7xp"]
+
+[sub_resource type="Resource" id="Resource_i10rv"]
+resource_local_to_scene = true
+script = ExtResource("3_ecpxu")
+scale = Vector2(0.95, 0.9)
+duration = 0.1
+transition = 11
+metadata/_custom_type_script = "uid://yjob76jt1si"
+
+[sub_resource type="Resource" id="Resource_jh8uw"]
+resource_local_to_scene = true
+script = ExtResource("3_ecpxu")
+scale = Vector2(1.05, 1.02)
+duration = 0.1
+metadata/_custom_type_script = "uid://yjob76jt1si"
+
+[node name="DefaultMinimalistButton" type="MarginContainer" unique_id=1971877445]
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="ButtonAnimationContainer" type="Container" parent="." unique_id=1198044728 node_paths=PackedStringArray("trigger")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_87k7e")
+trigger = NodePath("ButtonAnimationContainer/Button/ButtonDownUpAnimationTrigger")
+animations = Array[ExtResource("2_32jtj")]([SubResource("Resource_i10rv")])
+metadata/_custom_type_script = "uid://caapnub62fxgb"
+
+[node name="ButtonAnimationContainer" type="Container" parent="ButtonAnimationContainer" unique_id=1854399655 node_paths=PackedStringArray("trigger")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_87k7e")
+trigger = NodePath("Button/MouseOverAnimationTrigger")
+animations = Array[ExtResource("2_32jtj")]([SubResource("Resource_jh8uw")])
+metadata/_custom_type_script = "uid://caapnub62fxgb"
+
+[node name="Button" type="Button" parent="ButtonAnimationContainer/ButtonAnimationContainer" unique_id=867152735]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("5_jh8uw")
+text = "Button"
+
+[node name="ButtonDownUpAnimationTrigger" type="Node" parent="ButtonAnimationContainer/ButtonAnimationContainer/Button" unique_id=1637709099]
+script = ExtResource("6_4fg8h")
+metadata/_custom_type_script = "uid://btf81xy3cxt5k"
+
+[node name="MouseOverAnimationTrigger" type="Node" parent="ButtonAnimationContainer/ButtonAnimationContainer/Button" unique_id=236196311]
+script = ExtResource("6_wk56g")
+metadata/_custom_type_script = "uid://bsy4yfy1mcqoq"
+
+[node name="ButtonClickAudioPlayer" type="Node" parent="ButtonAnimationContainer/ButtonAnimationContainer/Button" unique_id=1057573660]
+script = ExtResource("5_wk56g")
+sound = ExtResource("6_1hqim")
+metadata/_custom_type_script = "uid://c3scbub57h7yl"
+
+[node name="ButtonHoverAudioPlayer" type="Node" parent="ButtonAnimationContainer/ButtonAnimationContainer/Button" unique_id=316002721]
+script = ExtResource("7_fbwfy")
+sound = ExtResource("8_kw7xp")
+metadata/_custom_type_script = "uid://6xfbcivv1tc7"

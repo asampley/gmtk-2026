@@ -1,0 +1,45 @@
+[gd_resource type="Theme" format=3 uid="uid://cick0d7gevra3"]
+
+[ext_resource type="FontFile" uid="uid://cb5yac3inqfvp" path="res://themes/minimalist/font/Barlow/barlow_medium.ttf" id="1_adpva"]
+[ext_resource type="FontFile" uid="uid://cyw1qlywqs83v" path="res://themes/minimalist/font/Barlow/barlow_medium_scalable.ttf" id="1_nvqxw"]
+[ext_resource type="StyleBox" uid="uid://sye8t3ou5nj5" path="res://themes/minimalist/button/minimalist_button_hovered.tres" id="2_e851g"]
+[ext_resource type="StyleBox" uid="uid://dxlosc18vvjy1" path="res://themes/minimalist/button/minimalist_button_pressed.tres" id="3_8coho"]
+[ext_resource type="StyleBox" uid="uid://c70td424pupup" path="res://themes/minimalist/button/minimalist_button_base.tres" id="4_kmkqc"]
+[ext_resource type="FontFile" uid="uid://d2oxl6ssl68b8" path="res://themes/minimalist/font/Urbanist/Urbanist-ExtraBold_scalable.ttf" id="5_nvqxw"]
+[ext_resource type="FontFile" uid="uid://cuq6830n247af" path="res://themes/minimalist/font/Urbanist/Urbanist-ExtraBold.ttf" id="6_e851g"]
+[ext_resource type="FontFile" uid="uid://yycaay4jkjia" path="res://themes/minimalist/font/Urbanist/Urbanist-Medium.ttf" id="7_8coho"]
+[ext_resource type="Texture2D" uid="uid://ce3ooa2oyadge" path="res://themes/minimalist/panel/panel_container.png" id="8_e851g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2ij8"]
+texture = ExtResource("8_e851g")
+
+[resource]
+default_font = ExtResource("1_adpva")
+Button/colors/font_color = Color(0.105882354, 0.105882354, 0.105882354, 1)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.105882354, 0.105882354, 0.105882354, 1)
+Button/colors/font_hover_pressed_color = Color(0.105882354, 0.105882354, 0.105882354, 1)
+Button/colors/font_pressed_color = Color(0.105882354, 0.105882354, 0.105882354, 1)
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_nvqxw")
+Button/styles/hover = ExtResource("2_e851g")
+Button/styles/hover_mirrored = ExtResource("2_e851g")
+Button/styles/hover_pressed = ExtResource("3_8coho")
+Button/styles/hover_pressed_mirrored = ExtResource("2_e851g")
+Button/styles/normal = ExtResource("4_kmkqc")
+Button/styles/normal_mirrored = ExtResource("4_kmkqc")
+Button/styles/pressed = ExtResource("3_8coho")
+Button/styles/pressed_mirrored = ExtResource("4_kmkqc")
+FlyInText/base_type = &"Label"
+FlyInText/constants/outline_size = 8
+FlyInText/font_sizes/font_size = 30
+FlyInText/fonts/font = ExtResource("5_nvqxw")
+HeaderMedium/base_type = &"Label"
+HeaderMedium/colors/font_color = Color(0.10546875, 0.10546875, 0.10546875, 1)
+HeaderMedium/font_sizes/font_size = 50
+HeaderMedium/fonts/font = ExtResource("6_e851g")
+HeaderSmall/colors/font_color = Color(0.105882354, 0.105882354, 0.105882354, 1)
+HeaderSmall/font_sizes/font_size = 35
+HeaderSmall/fonts/font = ExtResource("7_8coho")
+LabelScalable/base_type = &"Label"
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_w2ij8")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ScaleUIAnimation" format=3 uid="uid://c31sjhulakjhp"]
+
+[ext_resource type="Script" uid="uid://yjob76jt1si" path="res://utilities/ui_animations/animations/scale_ui_animation.gd" id="1_y1q0x"]
+
+[resource]
+script = ExtResource("1_y1q0x")
+scale = Vector2(0.9, 0.7)
+duration = 0.1
+metadata/_custom_type_script = "uid://yjob76jt1si"

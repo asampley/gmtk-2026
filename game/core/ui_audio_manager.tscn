@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d3lh6hqd7182x"]
+
+[ext_resource type="Script" uid="uid://dq27eueaqnfgx" path="res://game/core/ui_audio_manager.gd" id="1_bchyk"]
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_xmxe4"]
+
+[node name="UIAudioManager" type="AudioStreamPlayer" unique_id=1088023958]
+stream = SubResource("AudioStreamPolyphonic_xmxe4")
+bus = &"UI_SFX"
+script = ExtResource("1_bchyk")

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://1hoj48ngdm7i"]
+
+[ext_resource type="Script" uid="uid://dgxd5avufrdp2" path="res://utilities/fly_in_text/fly_in_text_manager.gd" id="1_hybf3"]
+[ext_resource type="PackedScene" uid="uid://daumugae1dbgt" path="res://utilities/fly_in_text/score_fly_in_text_prefab.tscn" id="2_ure0o"]
+
+[node name="FlyInTextManager" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hybf3")
+fly_in_text_prefab = ExtResource("2_ure0o")
+text_speed = 30.0

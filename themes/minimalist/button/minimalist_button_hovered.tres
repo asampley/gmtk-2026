@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://sye8t3ou5nj5"]
+
+[ext_resource type="Texture2D" uid="uid://0xp6c1vfmdtu" path="res://themes/minimalist/button/minimalist_button_hovered.png" id="1_0kfgi"]
+
+[resource]
+texture = ExtResource("1_0kfgi")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0

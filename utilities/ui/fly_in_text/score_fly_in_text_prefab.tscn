@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://daumugae1dbgt"]
+
+[ext_resource type="Script" uid="uid://dtlh6cklixp5n" path="res://utilities/fly_in_text/fly_in_text.gd" id="1_pd0ef"]
+[ext_resource type="Script" uid="uid://caapnub62fxgb" path="res://utilities/ui_animations/animation_container.gd" id="2_66qcy"]
+[ext_resource type="Script" uid="uid://coiuy4ui47v7e" path="res://utilities/ui_animations/ui_animation.gd" id="3_xgbt7"]
+[ext_resource type="Script" uid="uid://c37w83vms1wb0" path="res://utilities/ui_animations/animations/modulate_ui_animation.gd" id="4_tjsbj"]
+[ext_resource type="Script" uid="uid://yew67jarcc3i" path="res://utilities/ui_animations/animations/move_directional_ui_animation.gd" id="5_0ewkw"]
+[ext_resource type="Script" uid="uid://dmid4tcs00lk" path="res://utilities/ui_animations/triggers/signal_animation_trigger.gd" id="6_mc8lt"]
+[ext_resource type="Script" uid="uid://dvy87pmat7t6c" path="res://utilities/fly_in_text/impact_setters/movement_impact_setter.gd" id="7_66qcy"]
+[ext_resource type="Script" uid="uid://hiwok44jjhi0" path="res://utilities/fly_in_text/impact_setters/scale_impact_setter.gd" id="8_tjsbj"]
+[ext_resource type="Script" uid="uid://yjob76jt1si" path="res://utilities/ui_animations/animations/scale_ui_animation.gd" id="9_tjsbj"]
+
+[sub_resource type="Resource" id="Resource_xgbt7"]
+script = ExtResource("4_tjsbj")
+duration = 0.5
+delay = 1.0
+metadata/_custom_type_script = "uid://c37w83vms1wb0"
+
+[sub_resource type="Resource" id="Resource_66qcy"]
+script = ExtResource("5_0ewkw")
+duration = 1.5
+metadata/_custom_type_script = "uid://yew67jarcc3i"
+
+[sub_resource type="Resource" id="Resource_0ewkw"]
+script = ExtResource("9_tjsbj")
+duration = 1.5
+metadata/_custom_type_script = "uid://yjob76jt1si"
+
+[node name="ScoreFlyInTextPrefab" type="CenterContainer" unique_id=1965790042]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -280.0
+offset_bottom = -280.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = true
+script = ExtResource("1_pd0ef")
+duration = 1.5
+
+[node name="AnimationContainer" type="Container" parent="." unique_id=1267131369 node_paths=PackedStringArray("trigger")]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("2_66qcy")
+trigger = NodePath("../AnimationTrigger")
+animations = Array[ExtResource("3_xgbt7")]([SubResource("Resource_xgbt7")])
+metadata/_custom_type_script = "uid://caapnub62fxgb"
+
+[node name="Label" type="Label" parent="AnimationContainer" unique_id=1930234843]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"FlyInText"
+text = "20	"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationTrigger" type="Node" parent="." unique_id=1700688810]
+script = ExtResource("6_mc8lt")
+one_way = true
+metadata/_custom_type_script = "uid://dmid4tcs00lk"
+
+[node name="DirectionImpactSetter" type="Node" parent="." unique_id=1909612710]
+script = ExtResource("7_66qcy")
+movement_mult = 40.0
+animation = SubResource("Resource_66qcy")
+
+[node name="ScaleImpactSetter" type="Node" parent="." unique_id=1854667551]
+script = ExtResource("8_tjsbj")
+animation = SubResource("Resource_0ewkw")
+scale_mult = Vector2(0.1, 0.1)
+scale_min = Vector2(1, 1)
+scale_max = Vector2(2, 2)
+metadata/_custom_type_script = "uid://hiwok44jjhi0"
