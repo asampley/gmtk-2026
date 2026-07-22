@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://6f6fc3u2qijv"]
+
+[ext_resource type="Theme" uid="uid://cogqm6wn24nal" path="res://game/ui/theme.tres" id="1_mkp5f"]
+[ext_resource type="Script" uid="uid://drip7u43q2rp5" path="res://game/ui/main_menu/main_menu.gd" id="2_1x88f"]
+[ext_resource type="PackedScene" uid="uid://ctdjsi1ruci6r" path="res://game/ui/main_menu/help_menu.tscn" id="3_0p1rw"]
+
+[node name="MainMenu" type="Control" unique_id=628753627]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mkp5f")
+script = ExtResource("2_1x88f")
+
+[node name="Buttons" type="CenterContainer" parent="." unique_id=2136608619]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Buttons" unique_id=139792746]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="Buttons/VBoxContainer" unique_id=894147687]
+layout_mode = 2
+text = "Play"
+
+[node name="HelpButton" type="Button" parent="Buttons/VBoxContainer" unique_id=1463239088]
+layout_mode = 2
+text = "How to Play
+"
+
+[node name="SettingsButton" type="Button" parent="Buttons/VBoxContainer" unique_id=289657507]
+layout_mode = 2
+text = "Settings"
+
+[node name="CreditsButton" type="Button" parent="Buttons/VBoxContainer" unique_id=723951358]
+layout_mode = 2
+text = "Credits"
+
+[node name="Help" parent="." unique_id=703864850 instance=ExtResource("3_0p1rw")]
+layout_mode = 0
+anchors_preset = 0
