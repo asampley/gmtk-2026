@@ -1,3 +1,4 @@
+class_name GameManager
 extends Node
 
 
@@ -15,6 +16,7 @@ signal game_manager_loaded()
 
 
 func _ready() -> void:
+	ServiceLocator.game_manager = self
 	game_manager_loaded.emit()
 
 func load_level(level_template: LevelTemplate) -> void:

@@ -1,7 +1,10 @@
 extends Control
 
+
 @onready var buttons: Control = %Buttons
 @onready var sub_menu: Control = %SubMenu
+@onready var level_select: ItemList = %LevelSelect
+
 
 func _on_credits_button_pressed() -> void:
 	pass # Replace with function body.

@@ -1,7 +1,11 @@
 extends Control
 
+
+@export var level_button_prefab: PackedScene
+
 @onready var help_menu: Control = %HelpMenu
-@onready var level_select: Control = %LevelSelect
+@onready var level_select_parent: Control = %LevelSelect
+
 
 func _ready() -> void:
 	_hide_all()
@@ -18,7 +22,13 @@ func _on_help_button_pressed() -> void:
 
 func _on_play_button_pressed() -> void:
 	self.visible = true
-	level_select.visible = true
+	level_select_parent.visible = true
+	for child: Node in level_select_parent:
+		child.queue_free()
+	for level: LevelTemplate in ResourceDataHandler.resource_dict["levels"]:
+		var button: Button = level_button_prefab.instantiate()
+		level_select_parent.add_child(button)
+		button.pressed.connect(ServiceLocator.game_manager.load_level.bind(level))
 
 func _on_close_pressed() -> void:
 	self.visible = false
@@ -27,4 +37,4 @@ func _on_close_pressed() -> void:
 
 func _hide_all() -> void:
 	help_menu.visible = false
-	level_select.visible = false
+	level_select_parent.visible = false
