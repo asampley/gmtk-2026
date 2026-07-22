@@ -1,9 +1,9 @@
 [gd_resource type="StyleBoxTexture" format=3 uid="uid://c70td424pupup"]
 
-[ext_resource type="Texture2D" uid="uid://0xp6c1vfmdtu" path="res://themes/minimalist/button/minimalist_button_hovered.png" id="1_yrws7"]
+[ext_resource type="Texture2D" uid="uid://c7fftm7gmeph0" path="res://themes/gruvbox_retro/panel/primary_panel.png" id="1_aiq2i"]
 
 [resource]
-texture = ExtResource("1_yrws7")
+texture = ExtResource("1_aiq2i")
 texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0

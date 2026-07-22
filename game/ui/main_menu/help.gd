@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Control
 
 @onready var help_panes: Control = %HelpPanes
 

@@ -3,8 +3,10 @@
 [ext_resource type="Theme" uid="uid://b5vdal8vwfpwb" path="res://themes/gruvbox_retro/gruvbox_retro_theme.tres" id="1_mkp5f"]
 [ext_resource type="Script" uid="uid://drip7u43q2rp5" path="res://game/ui/main_menu/main_menu.gd" id="2_1x88f"]
 [ext_resource type="PackedScene" uid="uid://ctdjsi1ruci6r" path="res://game/ui/main_menu/help_menu.tscn" id="3_0p1rw"]
+[ext_resource type="Script" uid="uid://dpvm5tyjh7xus" path="res://game/ui/main_menu/main_menu_sub_menu.gd" id="3_m1bca"]
+[ext_resource type="PackedScene" uid="uid://drjsd7n8y27do" path="res://game/ui/main_menu/level_select.tscn" id="4_1x88f"]
 
-[node name="MainMenu" type="Control" unique_id=628753627 node_paths=PackedStringArray("help_menu")]
+[node name="MainMenu" type="Control" unique_id=628753627]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,9 +15,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_mkp5f")
 script = ExtResource("2_1x88f")
-help_menu = NodePath("Help")
 
 [node name="Buttons" type="CenterContainer" parent="." unique_id=2136608619]
+unique_name_in_owner = true
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -42,11 +44,43 @@ text = "Settings"
 layout_mode = 2
 text = "Credits"
 
-[node name="Help" parent="." unique_id=703864850 instance=ExtResource("3_0p1rw")]
+[node name="SubMenu" type="PanelContainer" parent="." unique_id=551047749]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_m1bca")
 
-[connection signal="pressed" from="Buttons/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Buttons/VBoxContainer/HelpButton" to="." method="_on_help_button_pressed"]
-[connection signal="pressed" from="Buttons/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="Buttons/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[node name="VBoxContainer" type="VBoxContainer" parent="SubMenu" unique_id=1485081140]
+layout_mode = 2
+
+[node name="BoxContainer" type="PanelContainer" parent="SubMenu/VBoxContainer" unique_id=176367542]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HelpMenu" parent="SubMenu/VBoxContainer/BoxContainer" unique_id=703864850 instance=ExtResource("3_0p1rw")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="LevelSelect" parent="SubMenu/VBoxContainer/BoxContainer" unique_id=1730026072 instance=ExtResource("4_1x88f")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="Close" type="Button" parent="SubMenu/VBoxContainer" unique_id=1701273957]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Close"
+
+[connection signal="pressed" from="Buttons/VBoxContainer/PlayButton" to="SubMenu" method="_on_play_button_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/HelpButton" to="SubMenu" method="_on_help_button_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/SettingsButton" to="SubMenu" method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/CreditsButton" to="SubMenu" method="_on_credits_button_pressed"]
+[connection signal="visibility_changed" from="SubMenu" to="." method="_on_sub_menu_visibility_changed"]
+[connection signal="pressed" from="SubMenu/VBoxContainer/Close" to="SubMenu" method="_on_close_pressed"]
