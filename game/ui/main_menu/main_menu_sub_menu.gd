@@ -3,6 +3,9 @@ extends Control
 @onready var help_menu: Control = %HelpMenu
 @onready var level_select: Control = %LevelSelect
 
+func _ready() -> void:
+	_hide_all()
+
 func _on_credits_button_pressed() -> void:
 	pass
 
@@ -20,5 +23,8 @@ func _on_play_button_pressed() -> void:
 func _on_close_pressed() -> void:
 	self.visible = false
 
+	_hide_all()
+
+func _hide_all() -> void:
 	help_menu.visible = false
 	level_select.visible = false

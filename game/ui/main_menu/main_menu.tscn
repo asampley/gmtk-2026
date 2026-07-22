@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://6f6fc3u2qijv"]
 
-[ext_resource type="Theme" uid="uid://b5vdal8vwfpwb" path="res://themes/gruvbox_retro/gruvbox_retro_theme.tres" id="1_mkp5f"]
+[ext_resource type="Theme" uid="uid://cick0d7gevra3" path="res://themes/minimalist/minimalist_theme.tres" id="1_0p1rw"]
 [ext_resource type="Script" uid="uid://drip7u43q2rp5" path="res://game/ui/main_menu/main_menu.gd" id="2_1x88f"]
 [ext_resource type="PackedScene" uid="uid://ctdjsi1ruci6r" path="res://game/ui/main_menu/help_menu.tscn" id="3_0p1rw"]
 [ext_resource type="Script" uid="uid://dpvm5tyjh7xus" path="res://game/ui/main_menu/main_menu_sub_menu.gd" id="3_m1bca"]
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_mkp5f")
+theme = ExtResource("1_0p1rw")
 script = ExtResource("2_1x88f")
 
 [node name="Buttons" type="CenterContainer" parent="." unique_id=2136608619]
