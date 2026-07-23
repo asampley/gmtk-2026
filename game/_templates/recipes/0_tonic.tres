@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://db10tnu7dstys"]
 
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_756rb"]
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_bt44s"]
 [ext_resource type="Resource" uid="uid://f2jew64p8lqd" path="res://game/_templates/reagents/tonic.tres" id="1_l0b62"]
 [ext_resource type="Resource" uid="uid://di1uvsqiwm7xw" path="res://game/_templates/reagents/vinegar.tres" id="2_ih525"]
 [ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="2_ur3dr"]

@@ -14,7 +14,11 @@ static func _render_recipe(page: RecipeDiagram, recipe: Recipe) -> void:
 
 func _ready() -> void:
 	for resource: Resource in ResourceDataHandler.resource_dict["recipes"]:
-		recipes.append(resource as Recipe)
+		if resource is Recipe:
+			var recipe: Recipe = resource as Recipe
+
+			if recipe.desirable:
+				recipes.append(recipe)
 
 	set_page_flip(0)
 	_render_recipes()

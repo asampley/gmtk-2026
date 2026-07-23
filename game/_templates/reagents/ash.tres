@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://bsx6q6qat7bx3"]
+
+[ext_resource type="Texture2D" uid="uid://dexc3siioceex" path="res://assets/icons/close.svg" id="1_46yyb"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_fabnm"]
+
+[resource]
+script = ExtResource("1_fabnm")
+name = "Ashes"
+icon = ExtResource("1_46yyb")
+metadata/_custom_type_script = "uid://xlcs11xcua2v"
