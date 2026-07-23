@@ -1,5 +1,4 @@
 class_name Tool
-extends Resource
+extends TextureRect
 
-@export var name: String
-@export var icon: Texture2D
+@export var tool_template: ToolTemplate

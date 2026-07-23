@@ -12,8 +12,10 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_jrm0s")
+recipes = null
+time_limit_s = null
 
-[node name="Button" type="Button" parent="." unique_id=131712094]
+[node name="Cauldron" type="Button" parent="." unique_id=131712094]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -28,13 +30,13 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Cauldron"
 
-[node name="Button2" type="Button" parent="." unique_id=1835391321]
+[node name="Button" type="Button" parent="." unique_id=1835391321]
 layout_mode = 0
 offset_left = 276.0
 offset_top = 158.0
 offset_right = 355.0
 offset_bottom = 228.0
-text = "Plant Pot"
+text = "Jar of Mordred's Powder"
 
 [node name="Button3" type="Button" parent="." unique_id=1132609395]
 layout_mode = 0
@@ -42,5 +44,5 @@ offset_left = 516.0
 offset_top = 377.0
 offset_right = 630.0
 offset_bottom = 447.0
-text = "Mortar and Pestle"
+text = "Bottle of Vinegar"
 autowrap_mode = 3
