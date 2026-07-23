@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ctdjsi1ruci6r"]
 
 [ext_resource type="Script" uid="uid://kt27f2cscwau" path="res://game/ui/main_menu/help.gd" id="1_4ii5f"]
+[ext_resource type="Texture2D" uid="uid://c8d5gjco5df6q" path="res://assets/icons/turn_page.svg" id="2_cuf0d"]
 [ext_resource type="Texture2D" uid="uid://w5kafc3luitw" path="res://icon.svg" id="2_jd775"]
 
 [sub_resource type="Theme" id="Theme_tf6c0"]
@@ -23,9 +24,12 @@ alignment = 1
 [node name="Prev" type="Button" parent="HBoxContainer" unique_id=1228634700]
 unique_name_in_owner = true
 layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(-1, 1)
 theme = SubResource("Theme_tf6c0")
 theme_override_font_sizes/font_size = 120
-text = "<"
+icon = ExtResource("2_cuf0d")
+flat = true
 
 [node name="HelpPanes" type="Control" parent="HBoxContainer" unique_id=115891911]
 unique_name_in_owner = true
@@ -114,7 +118,8 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 120
-text = ">"
+icon = ExtResource("2_cuf0d")
+flat = true
 
 [connection signal="pressed" from="HBoxContainer/Prev" to="." method="_on_prev_pressed"]
 [connection signal="pressed" from="HBoxContainer/Next" to="." method="_on_next_pressed"]

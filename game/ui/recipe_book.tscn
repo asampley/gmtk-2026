@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dod3mbfhtr8wc" path="res://themes/gruvbox_retro/panel/root_panel.png" id="1_8treb"]
 [ext_resource type="Script" uid="uid://caajq6jfamdah" path="res://game/ui/recipe_book.gd" id="1_y3h03"]
 [ext_resource type="PackedScene" uid="uid://cvf0r1wq8t8ng" path="res://game/ui/recipe_diagram.tscn" id="3_6ggbs"]
+[ext_resource type="Texture2D" uid="uid://dexc3siioceex" path="res://assets/icons/close.svg" id="4_vogmg"]
+[ext_resource type="Texture2D" uid="uid://c8d5gjco5df6q" path="res://assets/icons/turn_page.svg" id="5_67vs8"]
 
 [node name="RecipeBook" type="Control" unique_id=2082085524]
 layout_mode = 3
@@ -51,3 +53,47 @@ offset_left = 40.0
 offset_top = 40.0
 offset_right = -40.0
 offset_bottom = -40.0
+
+[node name="Close" type="Button" parent="." unique_id=1933329642]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -136.0
+offset_bottom = 136.0
+grow_horizontal = 0
+icon = ExtResource("4_vogmg")
+flat = true
+
+[node name="TurnPageForward" type="Button" parent="." unique_id=1948495096]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -136.0
+offset_top = -136.0
+grow_horizontal = 0
+grow_vertical = 0
+icon = ExtResource("5_67vs8")
+flat = true
+
+[node name="TurnPageBackward" type="Button" parent="." unique_id=1430135984]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -136.0
+offset_right = 136.0
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(-1, 1)
+icon = ExtResource("5_67vs8")
+flat = true
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="TurnPageForward" to="." method="_on_turn_page_forward_pressed"]
+[connection signal="pressed" from="TurnPageBackward" to="." method="_on_turn_page_backward_pressed"]
