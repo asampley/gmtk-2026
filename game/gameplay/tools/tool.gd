@@ -2,6 +2,7 @@ class_name Tool
 extends TextureRect
 
 @export var tool_template: ToolTemplate
+@export var held_reagents_ui: HeldReagentsUI
 
 var initialized: bool = false
 var selection_manager: SelectionManager
@@ -14,6 +15,7 @@ var removable_reagent: Reagent:
 		else:
 			return reagents[0]
 
+signal updated_reagents(reagents_out: Array[Reagent])
 
 func initialize(selection_manager_in: SelectionManager) -> void:
 	selection_manager = selection_manager_in
@@ -23,6 +25,7 @@ func initialize(selection_manager_in: SelectionManager) -> void:
 			var reagent_generation := ReagentGeneration.new()
 			reagent_generation.initialize(reagent_generation_template)
 			reagent_generators.append(reagent_generation)
+	held_reagents_ui.initialize(self)
 	initialized = true
 
 func _gui_input(event: InputEvent) -> void:
@@ -45,7 +48,9 @@ func can_take_reagent(reagent: Reagent) -> bool:
 func add_reagent(reagent: Reagent) -> void:
 	if !reagents.has(reagent):
 		reagents.append(reagent)
+		updated_reagents.emit(reagents)
 
 func remove_reagent(reagent: Reagent) -> void:
 	if reagents.has(reagent):
 		reagents.erase(reagent)
+		updated_reagents.emit(reagents)

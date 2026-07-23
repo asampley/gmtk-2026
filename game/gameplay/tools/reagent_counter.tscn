@@ -10,6 +10,7 @@ size_flags_vertical = 3
 script = ExtResource("1_07uex")
 
 [node name="TextureProgressRect" type="TextureProgressBar" parent="." unique_id=1845124334]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
@@ -19,7 +20,8 @@ fill_mode = 4
 nine_patch_stretch = true
 texture_progress = ExtResource("1_b3qq4")
 
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=1347986081]
+[node name="Icon" type="TextureRect" parent="." unique_id=1347986081]
+unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("2_07uex")
 expand_mode = 2

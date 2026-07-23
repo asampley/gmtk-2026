@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://xtumlcime4sh"]
 
-[ext_resource type="Texture2D" uid="uid://w5kafc3luitw" path="res://icon.svg" id="1_m6gyp"]
-[ext_resource type="Texture2D" uid="uid://cxal7c4aj01g3" path="res://assets/icons/vinegar.svg" id="2_68goh"]
+[ext_resource type="Script" uid="uid://c8cute52enlko" path="res://game/gameplay/tools/held_reagents_ui.gd" id="1_68goh"]
+[ext_resource type="PackedScene" uid="uid://l0tjrdtbfjwg" path="res://game/gameplay/tools/reagent_counter.tscn" id="2_m6gyp"]
 
-[node name="HeldReagents" type="HBoxContainer" unique_id=702341484]
+[node name="HeldReagentsUI" type="HBoxContainer" unique_id=702341484]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -12,24 +12,5 @@ offset_right = 71.0
 offset_bottom = 69.0
 grow_horizontal = 2
 alignment = 1
-
-[node name="AspectRatioContainer" type="MarginContainer" parent="." unique_id=838920600]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 3
-
-[node name="TextureProgressRect" type="TextureProgressBar" parent="AspectRatioContainer" unique_id=1843814194]
-layout_mode = 2
-size_flags_horizontal = 3
-max_value = 1.0
-step = 0.01
-value = 1.0
-fill_mode = 4
-nine_patch_stretch = true
-texture_progress = ExtResource("1_m6gyp")
-
-[node name="TextureRect2" type="TextureRect" parent="AspectRatioContainer" unique_id=756009989]
-layout_mode = 2
-texture = ExtResource("2_68goh")
-expand_mode = 2
-stretch_mode = 5
+script = ExtResource("1_68goh")
+reagent_counter_prefab = ExtResource("2_m6gyp")

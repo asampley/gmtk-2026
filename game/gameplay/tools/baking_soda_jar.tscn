@@ -5,14 +5,20 @@
 [ext_resource type="Resource" uid="uid://dxd1xg2wj5c74" path="res://game/_templates/tools/saleratus_jar.tres" id="3_xj07l"]
 [ext_resource type="PackedScene" uid="uid://xtumlcime4sh" path="res://game/gameplay/tools/held_reagents_parent.tscn" id="4_8xdlp"]
 
-[node name="BakingSodaJar" type="TextureRect" unique_id=1324714557]
+[node name="BakingSodaJar" type="TextureRect" unique_id=1324714557 node_paths=PackedStringArray("held_reagents_ui")]
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_8xdlp")
 script = ExtResource("2_hyo4g")
 tool_template = ExtResource("3_xj07l")
+held_reagents_ui = NodePath("HeldReagents")
 metadata/_custom_type_script = "uid://cp85lcgd1nglo"
 
 [node name="HeldReagents" parent="." unique_id=702341484 instance=ExtResource("4_8xdlp")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_right = 142.0
+grow_horizontal = 1

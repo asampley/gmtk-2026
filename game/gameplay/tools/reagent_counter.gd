@@ -1,11 +1,10 @@
+class_name ReagentCounter
 extends MarginContainer
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@onready var texture_progress_rect: TextureProgressBar = %TextureProgressRect
+@onready var icon: TextureRect = %Icon
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func update(reagent: Reagent) -> void:
+	icon.texture = reagent.icon
