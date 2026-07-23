@@ -5,6 +5,7 @@ extends Node
 @onready var level_parent: CanvasLayer = %LevelParent
 @onready var hud_layer: CanvasLayer = %HudLayer
 @onready var pause_layer: CanvasLayer = %PauseLayer
+@onready var menu_layer: CanvasLayer = %MenuLayer
 @onready var transition_layer: TransitionManager = %TransitionLayer
 @onready var debug_layer: CanvasLayer = %DebugLayer
 
@@ -23,6 +24,7 @@ func load_level(level_template: LevelTemplate) -> void:
 	transition_layer.begin_transition()
 	_deferred_load_level.call_deferred(level_template)
 	transition_layer.end_transition()
+	menu_layer.hide()
 
 func _deferred_load_level(level_template: LevelTemplate) -> void:
 	if level_scene:

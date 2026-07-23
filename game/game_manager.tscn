@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dp2b7kp7c1hr3"]
 
 [ext_resource type="Script" uid="uid://bxh3lvkd03a4x" path="res://game/core/game_manager.gd" id="1_5ghhe"]
-[ext_resource type="PackedScene" uid="uid://6f6fc3u2qijv" path="res://game/ui/main_menu/main_menu.tscn" id="2_fp1wv"]
+[ext_resource type="PackedScene" uid="uid://cmmvnrit1fr5x" path="res://game/ui/main_menu/menu_layer.tscn" id="2_fp1wv"]
 [ext_resource type="Script" uid="uid://b3apsqri2ue3y" path="res://game/core/transition_manager.gd" id="3_fp1wv"]
 [ext_resource type="PackedScene" uid="uid://dping0fholceh" path="res://utilities/debug_terminal/debug_terminal.tscn" id="3_wimwi"]
 
@@ -11,12 +11,13 @@ script = ExtResource("1_5ghhe")
 [node name="LevelParent" type="CanvasLayer" parent="." unique_id=1337681768]
 unique_name_in_owner = true
 
+[node name="PauseLayer" type="CanvasLayer" parent="." unique_id=515703332]
+unique_name_in_owner = true
+
 [node name="HudLayer" type="CanvasLayer" parent="." unique_id=1321582583]
 unique_name_in_owner = true
 
-[node name="Menu" parent="HudLayer" unique_id=628753627 instance=ExtResource("2_fp1wv")]
-
-[node name="PauseLayer" type="CanvasLayer" parent="." unique_id=515703332]
+[node name="MenuLayer" parent="." unique_id=1079292625 instance=ExtResource("2_fp1wv")]
 unique_name_in_owner = true
 
 [node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=2075925208]
