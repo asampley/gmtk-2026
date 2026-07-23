@@ -37,7 +37,15 @@ func _process(delta: float) -> void:
 		if reagent_generator.max_reagents >= 1:
 			add_reagent(reagent_generator.reagent)
 
+func can_take_reagent(reagent: Reagent) -> bool:
+	if reagents.has(reagent):
+		return false
+	return true
 
 func add_reagent(reagent: Reagent) -> void:
 	if !reagents.has(reagent):
 		reagents.append(reagent)
+
+func remove_reagent(reagent: Reagent) -> void:
+	if reagents.has(reagent):
+		reagents.erase(reagent)
