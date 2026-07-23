@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://byut73koqqbl0"]
+
+[ext_resource type="Texture2D" uid="uid://cta63dnyufr4b" path="res://assets/icons/cauldron.svg" id="1_iyty4"]
+[ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tool.gd" id="2_4w802"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="3_g3jpw"]
+[ext_resource type="Texture2D" uid="uid://w5kafc3luitw" path="res://icon.svg" id="4_g3jpw"]
+[ext_resource type="Texture2D" uid="uid://cxal7c4aj01g3" path="res://assets/icons/vinegar.svg" id="5_j444v"]
+
+[node name="Cauldron" type="TextureRect" unique_id=953902506]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 348.0
+offset_top = 636.0
+offset_right = -312.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_iyty4")
+script = ExtResource("2_4w802")
+tool_template = ExtResource("3_g3jpw")
+metadata/_custom_type_script = "uid://cp85lcgd1nglo"
+
+[node name="HeldReagents" type="HBoxContainer" parent="." unique_id=2066690650]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -71.0
+offset_right = 71.0
+offset_bottom = 69.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="AspectRatioContainer" type="MarginContainer" parent="HeldReagents" unique_id=734957674]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="TextureProgressRect" type="TextureProgressBar" parent="HeldReagents/AspectRatioContainer" unique_id=724075341]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+value = 1.0
+fill_mode = 4
+nine_patch_stretch = true
+texture_progress = ExtResource("4_g3jpw")
+
+[node name="TextureRect2" type="TextureRect" parent="HeldReagents/AspectRatioContainer" unique_id=1699149773]
+layout_mode = 2
+texture = ExtResource("5_j444v")
+expand_mode = 2
+stretch_mode = 5

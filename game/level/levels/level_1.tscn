@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://c7d5ruk3rkv1l"]
 
 [ext_resource type="Script" uid="uid://ch04hx6edyi2f" path="res://game/level/level.gd" id="1_jrm0s"]
-[ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tool.gd" id="2_88k7m"]
-[ext_resource type="Texture2D" uid="uid://cta63dnyufr4b" path="res://assets/icons/cauldron.svg" id="2_jvby6"]
-[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="3_vh68e"]
+[ext_resource type="PackedScene" uid="uid://byut73koqqbl0" path="res://game/gameplay/tools/cauldron.tscn" id="2_88k7m"]
 
 [node name="Level1" type="Control" unique_id=324419999]
 layout_mode = 3
@@ -16,13 +14,5 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_jrm0s")
 
-[node name="Cauldron" type="TextureRect" parent="." unique_id=1423441620]
+[node name="Cauldron" parent="." unique_id=953902506 instance=ExtResource("2_88k7m")]
 layout_mode = 0
-offset_left = 356.0
-offset_top = 750.0
-offset_right = 484.0
-offset_bottom = 878.0
-texture = ExtResource("2_jvby6")
-script = ExtResource("2_88k7m")
-tool_template = ExtResource("3_vh68e")
-metadata/_custom_type_script = "uid://cp85lcgd1nglo"
