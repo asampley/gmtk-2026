@@ -52,6 +52,15 @@ window/stretch/scale_mode="integer"
 
 enabled=PackedStringArray("res://addons/talo/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "blue",
+"res://game/": "green",
+"res://game/_templates/": "yellow",
+"res://utilities/": "gray"
+}
+
 [input]
 
 debug_menu={

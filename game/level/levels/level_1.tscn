@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ch04hx6edyi2f" path="res://game/level/level.gd" id="1_jrm0s"]
 [ext_resource type="PackedScene" uid="uid://byut73koqqbl0" path="res://game/gameplay/tools/cauldron.tscn" id="2_88k7m"]
+[ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tool.gd" id="3_vh68e"]
 
 [node name="Level1" type="Control" unique_id=324419999 node_paths=PackedStringArray("tools")]
 layout_mode = 3
@@ -16,13 +17,20 @@ script = ExtResource("1_jrm0s")
 tools = [NodePath("Cauldron")]
 
 [node name="Cauldron" parent="." unique_id=953902506 instance=ExtResource("2_88k7m")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 0.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = -128.0
+offset_right = 64.0
 offset_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
+grow_vertical = 0
+
+[node name="BakingSoda" type="TextureRect" parent="." unique_id=1186832112]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_vh68e")
+metadata/_custom_type_script = "uid://cp85lcgd1nglo"
