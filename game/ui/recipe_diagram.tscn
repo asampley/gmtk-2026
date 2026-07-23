@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cvf0r1wq8t8ng"]
 
 [ext_resource type="Script" uid="uid://bf7xlggogg0yo" path="res://game/ui/recipe_diagram.gd" id="1_wl5bk"]
-[ext_resource type="Texture2D" uid="uid://w5kafc3luitw" path="res://icon.svg" id="2_diud7"]
+[ext_resource type="Texture2D" uid="uid://csycu1k846qng" path="res://assets/icons/reaction.svg" id="2_diud7"]
 
 [node name="RecipeDiagram" type="VBoxContainer" unique_id=2082063247]
 anchors_preset = 15
@@ -24,20 +24,29 @@ theme_override_font_sizes/mono_font_size = 40
 fit_content = true
 horizontal_alignment = 1
 
-[node name="RecipeReagents" type="HFlowContainer" parent="." unique_id=937979826]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=592235247]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="RecipeReagents" type="HFlowContainer" parent="VBoxContainer" unique_id=937979826]
 unique_name_in_owner = true
 layout_mode = 2
 alignment = 1
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=289803728]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="VBoxContainer" unique_id=289803728]
 layout_mode = 2
 
-[node name="ToolIcon" type="TextureRect" parent="AspectRatioContainer" unique_id=102857970]
+[node name="ToolIcon" type="TextureRect" parent="VBoxContainer/AspectRatioContainer" unique_id=102857970]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ReactionIcon" type="TextureRect" parent="VBoxContainer/AspectRatioContainer" unique_id=1391582308]
 unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("2_diud7")
 
-[node name="RecipeProducts" type="HFlowContainer" parent="." unique_id=1332819956]
+[node name="RecipeProducts" type="HFlowContainer" parent="VBoxContainer" unique_id=1332819956]
 unique_name_in_owner = true
 layout_mode = 2
 alignment = 1

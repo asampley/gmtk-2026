@@ -32,10 +32,10 @@ texture = ExtResource("1_8treb")
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
-offset_left = 15.0
-offset_top = 15.0
-offset_right = -15.0
-offset_bottom = -15.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = -40.0
+offset_bottom = -40.0
 
 [node name="PageRight" type="TextureRect" parent="HBoxContainer" unique_id=533002998]
 layout_mode = 2
@@ -47,7 +47,7 @@ texture = ExtResource("1_8treb")
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
-offset_left = 15.0
-offset_top = 15.0
-offset_right = -15.0
-offset_bottom = -15.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = -40.0
+offset_bottom = -40.0
