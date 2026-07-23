@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://c7d5ruk3rkv1l"]
 
 [ext_resource type="Script" uid="uid://ch04hx6edyi2f" path="res://game/level/level.gd" id="1_jrm0s"]
+[ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tool.gd" id="2_88k7m"]
+[ext_resource type="Texture2D" uid="uid://cta63dnyufr4b" path="res://assets/icons/cauldron.svg" id="2_jvby6"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="3_vh68e"]
 
 [node name="Level1" type="Control" unique_id=324419999]
 layout_mode = 3
@@ -12,37 +15,14 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_jrm0s")
-recipes = null
-time_limit_s = null
 
-[node name="Cauldron" type="Button" parent="." unique_id=131712094]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -81.0
-offset_top = -223.0
-offset_right = 94.0
-offset_bottom = -40.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Cauldron"
-
-[node name="Button" type="Button" parent="." unique_id=1835391321]
+[node name="Cauldron" type="TextureRect" parent="." unique_id=1423441620]
 layout_mode = 0
-offset_left = 276.0
-offset_top = 158.0
-offset_right = 355.0
-offset_bottom = 228.0
-text = "Jar of Mordred's Powder"
-
-[node name="Button3" type="Button" parent="." unique_id=1132609395]
-layout_mode = 0
-offset_left = 516.0
-offset_top = 377.0
-offset_right = 630.0
-offset_bottom = 447.0
-text = "Bottle of Vinegar"
-autowrap_mode = 3
+offset_left = 356.0
+offset_top = 750.0
+offset_right = 484.0
+offset_bottom = 878.0
+texture = ExtResource("2_jvby6")
+script = ExtResource("2_88k7m")
+tool_template = ExtResource("3_vh68e")
+metadata/_custom_type_script = "uid://cp85lcgd1nglo"

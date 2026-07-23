@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 
 func initialize_tool_recipe_arrays() -> void:
 	for recipe: Recipe in ResourceDataHandler.resource_dict["recipes"]:
-		if recipe.tool.name == "Cauldron":
+		if recipe.tool_template.name == "Cauldron":
 			cauldron_recipes.append(recipe)
 
 func initialize_tools() -> void:

@@ -20,7 +20,7 @@ func render_recipe(recipe: Recipe) -> void:
 		tool_icon.texture = null;
 	else:
 		title.text = recipe.name
-		tool_icon.texture = recipe.tool.icon
+		tool_icon.texture = recipe.tool_template.icon
 
 		for reagent in recipe.reagents:
 			var texture_rect := TextureRect.new()
