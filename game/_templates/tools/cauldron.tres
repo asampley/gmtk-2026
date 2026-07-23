@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Tool" format=3 uid="uid://36kx2v6jr1s5"]
 
 [ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tool.gd" id="1_6t550"]
-[ext_resource type="Texture2D" uid="uid://cx2da5yh0bfo4" path="res://themes/gruvbox_retro/buttons/button_pressed.png" id="1_60sgx"]
+[ext_resource type="Texture2D" uid="uid://cta63dnyufr4b" path="res://assets/icons/cauldron.svg" id="1_60sgx"]
 
 [resource]
 script = ExtResource("1_6t550")

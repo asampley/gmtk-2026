@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://b51n6jxylo7sc"]
 
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_flfir"]
-[ext_resource type="Texture2D" uid="uid://cx2da5yh0bfo4" path="res://themes/gruvbox_retro/buttons/button_pressed.png" id="1_jv347"]
+[ext_resource type="Texture2D" uid="uid://dcmu7ms0vnot3" path="res://assets/icons/baking_soda.svg" id="1_jv347"]
 
 [resource]
 script = ExtResource("1_flfir")
-name = "Mordred's Powder"
+name = "Saleratus"
 icon = ExtResource("1_jv347")
 metadata/_custom_type_script = "uid://xlcs11xcua2v"
