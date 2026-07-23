@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dpvm5tyjh7xus" path="res://game/ui/main_menu/main_menu_sub_menu.gd" id="3_xiv61"]
 [ext_resource type="PackedScene" uid="uid://ctdjsi1ruci6r" path="res://game/ui/main_menu/help_menu.tscn" id="4_qqyup"]
 [ext_resource type="PackedScene" uid="uid://drjsd7n8y27do" path="res://game/ui/main_menu/level_select.tscn" id="5_pibm0"]
+[ext_resource type="PackedScene" uid="uid://db2dopar5raq8" path="res://game/ui/recipe_book.tscn" id="6_na7cv"]
 
 [node name="MenuLayer" type="CanvasLayer" unique_id=1079292625]
 script = ExtResource("1_r2x38")
@@ -37,6 +38,10 @@ text = "Play"
 layout_mode = 2
 text = "How to Play
 "
+
+[node name="RecipesButton" type="Button" parent="Menu/Buttons/VBoxContainer" unique_id=565994662]
+layout_mode = 2
+text = "Recipes"
 
 [node name="SettingsButton" type="Button" parent="Menu/Buttons/VBoxContainer" unique_id=289657507]
 layout_mode = 2
@@ -81,8 +86,13 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Close"
 
+[node name="RecipeBook" parent="." unique_id=2082085524 instance=ExtResource("6_na7cv")]
+unique_name_in_owner = true
+visible = false
+
 [connection signal="pressed" from="Menu/Buttons/VBoxContainer/PlayButton" to="Menu/SubMenu" method="_on_play_button_pressed"]
 [connection signal="pressed" from="Menu/Buttons/VBoxContainer/HelpButton" to="Menu/SubMenu" method="_on_help_button_pressed"]
+[connection signal="pressed" from="Menu/Buttons/VBoxContainer/RecipesButton" to="." method="_on_recipes_button_pressed"]
 [connection signal="pressed" from="Menu/Buttons/VBoxContainer/SettingsButton" to="Menu/SubMenu" method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Menu/Buttons/VBoxContainer/CreditsButton" to="Menu/SubMenu" method="_on_credits_button_pressed"]
 [connection signal="visibility_changed" from="Menu/SubMenu" to="Menu" method="_on_sub_menu_visibility_changed"]

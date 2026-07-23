@@ -31,7 +31,7 @@ func _deferred_load_level(level_template: LevelTemplate) -> void:
 		level_scene.queue_free()
 	await get_tree().process_frame
 	level_scene = level_template.level_scene.instantiate()
-	
+
 	if level_scene == null:
 		push_error("Loaded level is not type Level or does not exist.")
 		return

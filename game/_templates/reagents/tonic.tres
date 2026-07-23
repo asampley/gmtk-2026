@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://f2jew64p8lqd"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_orrrg"]
+[ext_resource type="Texture2D" uid="uid://cx2da5yh0bfo4" path="res://themes/gruvbox_retro/buttons/button_pressed.png" id="1_pbm3a"]
+
+[resource]
+script = ExtResource("1_orrrg")
+name = "Tonic"
+icon = ExtResource("1_pbm3a")
+metadata/_custom_type_script = "uid://xlcs11xcua2v"

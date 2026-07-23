@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://db2dopar5raq8"]
+
+[ext_resource type="Texture2D" uid="uid://dod3mbfhtr8wc" path="res://themes/gruvbox_retro/panel/root_panel.png" id="1_8treb"]
+[ext_resource type="Script" uid="uid://caajq6jfamdah" path="res://game/ui/recipe_book.gd" id="1_y3h03"]
+[ext_resource type="PackedScene" uid="uid://cvf0r1wq8t8ng" path="res://game/ui/recipe_diagram.tscn" id="3_6ggbs"]
+
+[node name="RecipeBook" type="Control" unique_id=2082085524]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y3h03")
+
+[node name="HBoxContainer" type="GridContainer" parent="." unique_id=619510137]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="PageLeft" type="TextureRect" parent="HBoxContainer" unique_id=387419470]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_8treb")
+
+[node name="RecipeLeft" parent="HBoxContainer/PageLeft" unique_id=1161861068 instance=ExtResource("3_6ggbs")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+
+[node name="PageRight" type="TextureRect" parent="HBoxContainer" unique_id=533002998]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_8treb")
+
+[node name="RecipeRight" parent="HBoxContainer/PageRight" unique_id=814593887 instance=ExtResource("3_6ggbs")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0

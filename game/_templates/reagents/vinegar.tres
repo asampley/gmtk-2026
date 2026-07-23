@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://di1uvsqiwm7xw"]
+
+[ext_resource type="Texture2D" uid="uid://cx2da5yh0bfo4" path="res://themes/gruvbox_retro/buttons/button_pressed.png" id="1_dvetn"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_oo27h"]
+
+[resource]
+script = ExtResource("1_oo27h")
+name = "Vinegar"
+icon = ExtResource("1_dvetn")
+metadata/_custom_type_script = "uid://xlcs11xcua2v"
