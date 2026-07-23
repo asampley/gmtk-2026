@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://deny5pob0arye"]
+
+[ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="1_mhind"]
+[ext_resource type="Resource" uid="uid://5yyqa8b51rv5" path="res://game/_templates/tools/vinegar_bottle.tres" id="2_qe74k"]
+[ext_resource type="Script" uid="uid://c8cute52enlko" path="res://game/gameplay/tools/held_reagents_ui.gd" id="3_hg5lt"]
+[ext_resource type="PackedScene" uid="uid://l0tjrdtbfjwg" path="res://game/gameplay/tools/reagent_counter.tscn" id="4_qe74k"]
+
+[node name="VinegarBottle" type="TextureRect" unique_id=628393831 node_paths=PackedStringArray("held_reagents_ui")]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mhind")
+tool_template = ExtResource("2_qe74k")
+held_reagents_ui = NodePath("HeldReagentsUI")
+metadata/_custom_type_script = "uid://cp85lcgd1nglo"
+
+[node name="HeldReagentsUI" type="HBoxContainer" parent="." unique_id=1954010034]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_hg5lt")
+reagent_counter_prefab = ExtResource("4_qe74k")
+metadata/_custom_type_script = "uid://c8cute52enlko"

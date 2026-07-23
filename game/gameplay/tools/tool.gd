@@ -29,7 +29,7 @@ func initialize(selection_manager_in: SelectionManager) -> void:
 	initialized = true
 
 func _gui_input(event: InputEvent) -> void:
-	if event.is_pressed() && event.button_index == MOUSE_BUTTON_LEFT:
+	if is_selection_event(event):
 		selection_manager.select(self)
 
 func _process(delta: float) -> void:
@@ -39,6 +39,13 @@ func _process(delta: float) -> void:
 		reagent_generator.update(delta)
 		if reagent_generator.max_reagents >= 1:
 			add_reagent(reagent_generator.reagent)
+
+func is_selection_event(event: InputEvent) -> bool:
+	if !(event is InputEventMouseButton && event.button_index == MOUSE_BUTTON_LEFT):
+		return false
+	if !(event.is_action_pressed("left_mouse") || event.is_action_released("left_mouse")):
+		return false
+	return true
 
 func can_take_reagent(reagent: Reagent) -> bool:
 	if reagents.has(reagent):

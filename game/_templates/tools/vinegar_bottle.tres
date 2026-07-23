@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://5yyqa8b51rv5"]
+
+[ext_resource type="Texture2D" uid="uid://cxal7c4aj01g3" path="res://assets/icons/vinegar.svg" id="1_7424w"]
+[ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="2_uwdut"]
+[ext_resource type="Resource" uid="uid://di1uvsqiwm7xw" path="res://game/_templates/reagents/vinegar.tres" id="3_uwdut"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="4_k6olc"]
+
+[sub_resource type="Resource" id="Resource_hqp2q"]
+script = ExtResource("2_uwdut")
+reagent = ExtResource("3_uwdut")
+metadata/_custom_type_script = "uid://b6f4ge1t4ys5r"
+
+[resource]
+script = ExtResource("4_k6olc")
+name = "Jar of Saleratus"
+icon = ExtResource("1_7424w")
+reagent_generation_templates = Array[ExtResource("2_uwdut")]([SubResource("Resource_hqp2q")])
+metadata/_custom_type_script = "uid://dhqopjqxgslsw"

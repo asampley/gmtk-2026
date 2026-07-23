@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://ch04hx6edyi2f" path="res://game/level/level.gd" id="1_jrm0s"]
 [ext_resource type="PackedScene" uid="uid://byut73koqqbl0" path="res://game/gameplay/tools/cauldron.tscn" id="2_88k7m"]
 [ext_resource type="PackedScene" uid="uid://ddkrgwrded4to" path="res://game/gameplay/tools/baking_soda_jar.tscn" id="3_vh68e"]
+[ext_resource type="PackedScene" uid="uid://deny5pob0arye" path="res://game/gameplay/tools/vinegar_bottle.tscn" id="4_u7os6"]
+[ext_resource type="Texture2D" uid="uid://cxal7c4aj01g3" path="res://assets/icons/vinegar.svg" id="5_htl7y"]
 
 [node name="Level1" type="Control" unique_id=324419999 node_paths=PackedStringArray("tools")]
 layout_mode = 3
@@ -14,7 +16,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_jrm0s")
-tools = [NodePath("Cauldron"), NodePath("BakingSodaJar")]
+tools = [NodePath("Cauldron"), NodePath("BakingSodaJar"), NodePath("VinegarBottle")]
 
 [node name="Cauldron" parent="." unique_id=953902506 instance=ExtResource("2_88k7m")]
 layout_mode = 1
@@ -34,3 +36,11 @@ offset_left = 477.0
 offset_top = 516.0
 offset_right = 605.0
 offset_bottom = 644.0
+
+[node name="VinegarBottle" parent="." unique_id=628393831 instance=ExtResource("4_u7os6")]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 492.0
+offset_right = 390.0
+offset_bottom = 620.0
+texture = ExtResource("5_htl7y")
