@@ -17,9 +17,9 @@ func _ready() -> void:
 		recipes.append(resource as Recipe)
 
 	set_page_flip(0)
-	render_recipes()
+	_render_recipes()
 
-func render_recipes() -> void:
+func _render_recipes() -> void:
 	if recipes.size() > page_flip * 2:
 		_render_recipe(page_left, recipes[page_flip * 2])
 	else:
@@ -35,9 +35,11 @@ func _on_close_pressed() -> void:
 
 func _on_turn_page_forward_pressed() -> void:
 	set_page_flip(page_flip + 1)
+	_render_recipes()
 
 func _on_turn_page_backward_pressed() -> void:
 	set_page_flip(page_flip - 1)
+	_render_recipes()
 
 func set_page_flip(i: int) -> void:
 	page_flip = clamp(0, (recipes.size() + 1) / 2, i)

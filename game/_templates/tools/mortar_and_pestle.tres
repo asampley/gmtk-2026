@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://chu73en3fbq1i"]
+
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tool_template.gd" id="1_f1e5r"]
+
+[resource]
+script = ExtResource("1_f1e5r")
+name = "Mortar and Pestle"
+metadata/_custom_type_script = "uid://dhqopjqxgslsw"

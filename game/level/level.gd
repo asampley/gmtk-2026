@@ -16,7 +16,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if time_elapsed_s <= 0:
 		return
-	
+
 	time_elapsed_s += delta
 	if time_elapsed_s >= time_elapsed_s:
 		print_debug("Level Lost")
@@ -27,4 +27,4 @@ func initialize_tool_recipe_arrays() -> void:
 			cauldron_recipes.append(recipe)
 
 func initialize_tools() -> void:
-	
+	pass

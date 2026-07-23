@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://mfaw4agb0gfy"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_ssjox"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="2_04nak"]
+[ext_resource type="Resource" uid="uid://dh4ssaa010478" path="res://game/_templates/reagents/eversleep.tres" id="2_s31em"]
+[ext_resource type="Resource" uid="uid://mr5biuqtsed4" path="res://game/_templates/reagents/nightshade_powder.tres" id="2_tjv8e"]
+[ext_resource type="Resource" uid="uid://f2jew64p8lqd" path="res://game/_templates/reagents/tonic.tres" id="3_s31em"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="6_lfjsv"]
+
+[resource]
+script = ExtResource("2_04nak")
+name = "Eversleep"
+reagents = Array[ExtResource("1_ssjox")]([ExtResource("3_s31em"), ExtResource("2_tjv8e")])
+products = Array[ExtResource("1_ssjox")]([ExtResource("2_s31em")])
+tool = ExtResource("6_lfjsv")
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

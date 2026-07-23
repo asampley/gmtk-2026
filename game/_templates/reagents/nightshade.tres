@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://b1b0p5a15lljp"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_ee3ea"]
+
+[resource]
+script = ExtResource("1_ee3ea")
+name = "Nightshade"
+metadata/_custom_type_script = "uid://xlcs11xcua2v"

@@ -55,6 +55,8 @@ offset_left = 40.0
 offset_top = 40.0
 offset_right = -40.0
 offset_bottom = -40.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(-1, 1)
 
 [node name="Close" type="Button" parent="." unique_id=1933329642]
 layout_mode = 1
