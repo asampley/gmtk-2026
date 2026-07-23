@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://db2dopar5raq8"]
 
-[ext_resource type="Texture2D" uid="uid://dod3mbfhtr8wc" path="res://themes/gruvbox_retro/panel/root_panel.png" id="1_8treb"]
 [ext_resource type="Script" uid="uid://caajq6jfamdah" path="res://game/ui/recipe_book.gd" id="1_y3h03"]
+[ext_resource type="Texture2D" uid="uid://dur572ftuabgy" path="res://assets/icons/book_half.svg" id="2_vwcaq"]
 [ext_resource type="PackedScene" uid="uid://cvf0r1wq8t8ng" path="res://game/ui/recipe_diagram.tscn" id="3_6ggbs"]
 [ext_resource type="Texture2D" uid="uid://dexc3siioceex" path="res://assets/icons/close.svg" id="4_vogmg"]
 [ext_resource type="Texture2D" uid="uid://c8d5gjco5df6q" path="res://assets/icons/turn_page.svg" id="5_67vs8"]
@@ -28,7 +28,7 @@ columns = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_8treb")
+texture = ExtResource("2_vwcaq")
 
 [node name="RecipeLeft" parent="HBoxContainer/PageLeft" unique_id=1161861068 instance=ExtResource("3_6ggbs")]
 unique_name_in_owner = true
@@ -43,7 +43,9 @@ offset_bottom = -40.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_8treb")
+offset_transform_enabled = true
+offset_transform_scale = Vector2(-1, 1)
+texture = ExtResource("2_vwcaq")
 
 [node name="RecipeRight" parent="HBoxContainer/PageRight" unique_id=814593887 instance=ExtResource("3_6ggbs")]
 unique_name_in_owner = true
