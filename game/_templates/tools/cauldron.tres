@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://36kx2v6jr1s5"]
 
-[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tool_template.gd" id="1_6t550"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="1_6t550"]
 [ext_resource type="Texture2D" uid="uid://cta63dnyufr4b" path="res://assets/icons/cauldron.svg" id="1_60sgx"]
 
 [resource]

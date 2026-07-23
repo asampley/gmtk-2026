@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://chu73en3fbq1i"]
 
-[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tool_template.gd" id="1_f1e5r"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="1_f1e5r"]
 [ext_resource type="Texture2D" uid="uid://besj0tm4eeatf" path="res://assets/icons/mortar_and_pestle.svg" id="1_jehdo"]
 
 [resource]

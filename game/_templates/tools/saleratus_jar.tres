@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://dxd1xg2wj5c74"]
+
+[ext_resource type="Texture2D" uid="uid://dcmu7ms0vnot3" path="res://assets/icons/baking_soda.svg" id="1_8fhp7"]
+[ext_resource type="Resource" uid="uid://b51n6jxylo7sc" path="res://game/_templates/reagents/baking_soda.tres" id="2_hgjyi"]
+[ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="3_8fhp7"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="4_hgjyi"]
+
+[sub_resource type="Resource" id="Resource_8fhp7"]
+script = ExtResource("3_8fhp7")
+reagent = ExtResource("2_hgjyi")
+metadata/_custom_type_script = "uid://b6f4ge1t4ys5r"
+
+[resource]
+script = ExtResource("4_hgjyi")
+name = "Jar of Mortreds Powder"
+icon = ExtResource("1_8fhp7")
+reagent_generation_templates = Array[ExtResource("3_8fhp7")]([SubResource("Resource_8fhp7")])
+metadata/_custom_type_script = "uid://dhqopjqxgslsw"

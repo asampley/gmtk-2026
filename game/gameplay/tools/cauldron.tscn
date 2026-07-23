@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://byut73koqqbl0"]
 
 [ext_resource type="Texture2D" uid="uid://cta63dnyufr4b" path="res://assets/icons/cauldron.svg" id="1_iyty4"]
-[ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tool.gd" id="2_4w802"]
+[ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_4w802"]
 [ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="3_g3jpw"]
 [ext_resource type="PackedScene" uid="uid://xtumlcime4sh" path="res://game/gameplay/tools/held_reagents_parent.tscn" id="4_4w802"]
 
 [node name="Cauldron" type="TextureRect" unique_id=953902506]
-anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 348.0
@@ -23,3 +22,8 @@ metadata/_custom_type_script = "uid://cp85lcgd1nglo"
 [node name="HeldReagentsParent" parent="." unique_id=702341484 instance=ExtResource("4_4w802")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_right = 142.0
+grow_horizontal = 1
