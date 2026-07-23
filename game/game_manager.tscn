@@ -11,12 +11,6 @@ script = ExtResource("1_5ghhe")
 [node name="LevelParent" type="CanvasLayer" parent="." unique_id=1337681768]
 unique_name_in_owner = true
 
-[node name="Level1" type="Control" parent="LevelParent" unique_id=2137202737]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="HudLayer" type="CanvasLayer" parent="." unique_id=1321582583]
 unique_name_in_owner = true
 

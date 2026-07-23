@@ -9,7 +9,6 @@ func _ready() -> void:
 		set_item_metadata(i, level)
 		i += 1
 
-
 func _on_item_selected(index: int) -> void:
 	var level: LevelTemplate = get_item_metadata(index)
 	ServiceLocator.game_manager.load_level(level)
