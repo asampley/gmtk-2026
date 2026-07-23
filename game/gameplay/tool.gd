@@ -5,5 +5,5 @@ extends TextureRect
 
 
 func _gui_input(event: InputEvent) -> void:
-	if event == InputEventMouseButton:
+	if event.is_pressed() && event.button_index == MOUSE_BUTTON_LEFT:
 		print("click")

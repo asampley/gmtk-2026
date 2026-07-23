@@ -16,10 +16,6 @@ func toggle_terminal() -> void:
 
 func _on_line_edit_text_submitted(new_text: String) -> void:
 	match new_text:
-		"fps":
-			EventBus.debug_events.toggle_fps_counter.emit()
-		"die":
-			EventBus.debug_events.die.emit()
 		_:
 			new_text = "Invalid Command"
 	update_command_history(new_text)

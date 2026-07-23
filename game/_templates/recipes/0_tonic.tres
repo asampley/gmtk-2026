@@ -5,10 +5,12 @@
 [ext_resource type="Resource" uid="uid://di1uvsqiwm7xw" path="res://game/_templates/reagents/vinegar.tres" id="2_ih525"]
 [ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="2_ur3dr"]
 [ext_resource type="Resource" uid="uid://b51n6jxylo7sc" path="res://game/_templates/reagents/baking_soda.tres" id="3_l0b62"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="6_7vpii"]
 
 [resource]
 script = ExtResource("2_ur3dr")
 name = "Tonic"
 reagents = Array[ExtResource("1_756rb")]([ExtResource("2_ih525"), ExtResource("3_l0b62")])
 products = Array[ExtResource("1_756rb")]([ExtResource("1_l0b62")])
+tool_template = ExtResource("6_7vpii")
 metadata/_custom_type_script = "uid://c4imnao3ortw8"

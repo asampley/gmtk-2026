@@ -1,5 +1,6 @@
 extends Node
 
+@warning_ignore_start("unused_signal")
 
 var game_events := GameEvents.new()
 var ui_events := UIEvents.new()
@@ -23,3 +24,5 @@ class DebugEvents:
 class SetupEvents:
 	signal player_identified()
 	signal preloading_completed()
+
+@warning_ignore_restore("unused_signal")

@@ -11,5 +11,5 @@ script = ExtResource("2_bpmwq")
 name = "Powder Nightshade"
 reagents = Array[ExtResource("1_bxjyl")]([ExtResource("2_ueth8")])
 products = Array[ExtResource("1_bxjyl")]([ExtResource("2_yvm8y")])
-tool = ExtResource("5_yvm8y")
+tool_template = ExtResource("5_yvm8y")
 metadata/_custom_type_script = "uid://c4imnao3ortw8"
