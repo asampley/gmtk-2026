@@ -6,11 +6,17 @@ extends Node
 @export var recipes: Array[Recipe]
 @export var time_limit_s: float = 0
 
+
 var selection_manager := SelectionManager.new()
 var time_elapsed_s: float
 var cauldron_recipes: Array[Recipe]
 
 func _ready() -> void:
+	var selection_icon := SelectionIcon.new()
+	add_child(selection_icon)
+	selection_icon.size = Vector2(100,100)
+	selection_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	selection_manager.initialize(selection_icon)
 	time_elapsed_s = 0
 	initialize_tool_recipe_arrays()
 	initialize_tools()

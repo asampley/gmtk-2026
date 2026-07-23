@@ -1,8 +1,17 @@
 class_name SelectionManager
 
+var selection_icon: SelectionIcon
 
-var current_selection: Tool
+var current_selection: Tool:
+	set(tool):
+		current_selection = tool
+		if current_selection:
+			selection_icon.set_icon(current_selection.removable_reagent.icon)
+		else:
+			selection_icon.set_icon(null)
 
+func initialize(selection_icon_in: SelectionIcon) -> void:
+	selection_icon = selection_icon_in
 
 func select(selection: Tool) -> void:
 	if current_selection:
