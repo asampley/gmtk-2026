@@ -5,13 +5,15 @@ extends Control
 
 @onready var help_menu: Control = %HelpMenu
 @onready var level_select: Control = %LevelSelect
+@onready var credits: Control = %Credits
 
 
 func _ready() -> void:
 	_hide_all()
 
 func _on_credits_button_pressed() -> void:
-	pass
+	self.visible = true
+	credits.visible = true
 
 func _on_settings_button_pressed() -> void:
 	pass # Replace with function body.
@@ -33,3 +35,4 @@ func _on_close_pressed() -> void:
 func _hide_all() -> void:
 	help_menu.visible = false
 	level_select.visible = false
+	credits.visible = false

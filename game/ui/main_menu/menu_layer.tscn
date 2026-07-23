@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ctdjsi1ruci6r" path="res://game/ui/main_menu/help_menu.tscn" id="4_qqyup"]
 [ext_resource type="PackedScene" uid="uid://drjsd7n8y27do" path="res://game/ui/main_menu/level_select.tscn" id="5_pibm0"]
 [ext_resource type="PackedScene" uid="uid://db2dopar5raq8" path="res://game/ui/recipe_book.tscn" id="6_na7cv"]
+[ext_resource type="PackedScene" uid="uid://by2uic8pmpskv" path="res://game/ui/main_menu/credits.tscn" id="6_qqyup"]
 [ext_resource type="Texture2D" uid="uid://dexc3siioceex" path="res://assets/icons/close.svg" id="6_xiv61"]
 
 [node name="MenuLayer" type="CanvasLayer" unique_id=1079292625]
@@ -80,6 +81,10 @@ layout_mode = 2
 [node name="LevelSelect" parent="Menu/SubMenu/VBoxContainer/BoxContainer" unique_id=1730026072 instance=ExtResource("5_pibm0")]
 unique_name_in_owner = true
 visible = false
+layout_mode = 2
+
+[node name="Credits" parent="Menu/SubMenu/VBoxContainer/BoxContainer" unique_id=335273773 instance=ExtResource("6_qqyup")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Close" type="Button" parent="Menu/SubMenu" unique_id=1701273957]
