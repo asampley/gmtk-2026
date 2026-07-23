@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://db2dopar5raq8"]
 
-[ext_resource type="Script" uid="uid://caajq6jfamdah" path="res://game/ui/recipe_book.gd" id="1_y3h03"]
+[ext_resource type="Script" uid="uid://caajq6jfamdah" path="res://game/ui/recipe_book/recipe_book.gd" id="1_y3h03"]
 [ext_resource type="Texture2D" uid="uid://dur572ftuabgy" path="res://assets/icons/book_half.svg" id="2_vwcaq"]
-[ext_resource type="PackedScene" uid="uid://cvf0r1wq8t8ng" path="res://game/ui/recipe_diagram.tscn" id="3_6ggbs"]
+[ext_resource type="PackedScene" uid="uid://cvf0r1wq8t8ng" path="res://game/ui/recipe_book/recipe_diagram.tscn" id="3_6ggbs"]
 [ext_resource type="Texture2D" uid="uid://dexc3siioceex" path="res://assets/icons/close.svg" id="4_vogmg"]
 [ext_resource type="Texture2D" uid="uid://c8d5gjco5df6q" path="res://assets/icons/turn_page.svg" id="5_67vs8"]
 

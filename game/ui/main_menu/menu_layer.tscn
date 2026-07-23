@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dpvm5tyjh7xus" path="res://game/ui/main_menu/main_menu_sub_menu.gd" id="3_xiv61"]
 [ext_resource type="PackedScene" uid="uid://ctdjsi1ruci6r" path="res://game/ui/main_menu/help_menu.tscn" id="4_qqyup"]
 [ext_resource type="PackedScene" uid="uid://drjsd7n8y27do" path="res://game/ui/main_menu/level_select.tscn" id="5_pibm0"]
-[ext_resource type="PackedScene" uid="uid://db2dopar5raq8" path="res://game/ui/recipe_book.tscn" id="6_na7cv"]
+[ext_resource type="PackedScene" uid="uid://db2dopar5raq8" path="res://game/ui/recipe_book/recipe_book.tscn" id="6_na7cv"]
 [ext_resource type="PackedScene" uid="uid://by2uic8pmpskv" path="res://game/ui/main_menu/credits.tscn" id="6_qqyup"]
 [ext_resource type="Texture2D" uid="uid://dexc3siioceex" path="res://assets/icons/close.svg" id="6_xiv61"]
 
