@@ -22,4 +22,5 @@ func on_updated_reagents(reagents: Array[Reagent]) -> void:
 	var keys := reagent_to_counter.keys()
 	for key: Reagent in keys:
 		if !reagents.has(key):
+			remove_child(reagent_to_counter[key])
 			reagent_to_counter.erase(key)
