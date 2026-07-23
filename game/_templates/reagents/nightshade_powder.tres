@@ -1,8 +1,10 @@
 [gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://mr5biuqtsed4"]
 
+[ext_resource type="Texture2D" uid="uid://b7y2x1mrn8e38" path="res://assets/icons/nightshade_powder.svg" id="1_fj3hn"]
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_gho82"]
 
 [resource]
 script = ExtResource("1_gho82")
 name = "Nightshade Powder"
+icon = ExtResource("1_fj3hn")
 metadata/_custom_type_script = "uid://xlcs11xcua2v"

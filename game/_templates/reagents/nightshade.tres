@@ -1,8 +1,10 @@
 [gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://b1b0p5a15lljp"]
 
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_ee3ea"]
+[ext_resource type="Texture2D" uid="uid://b8vm0qeigden8" path="res://assets/icons/nightshade.svg" id="1_gfihf"]
 
 [resource]
 script = ExtResource("1_ee3ea")
 name = "Nightshade"
+icon = ExtResource("1_gfihf")
 metadata/_custom_type_script = "uid://xlcs11xcua2v"

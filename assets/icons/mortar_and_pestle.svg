@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="mortar_and_pestle.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="2.9103734"
+     inkscape:cx="50.680782"
+     inkscape:cy="79.199459"
+     inkscape:window-width="1280"
+     inkscape:window-height="768"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#999999;fill-opacity:1;stroke:#4d4d4d;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 25.42629,48.79099 c -1.729911,20.064196 9.277161,45.355004 27.487882,45.011406 -16.492729,0.343598 -26.800685,18.897924 -26.800685,18.897924 0,0 18.897919,9.27716 41.575421,8.93356 22.677502,-0.3436 38.826642,-9.62076 38.826642,-9.62076 0,0 -10.651563,-16.83633 -23.708307,-16.492732 C 96.207585,96.207586 108.26317,62.660808 106.85914,45.011406 93.429159,36.295565 86.243228,30.580268 66.658113,30.23667 51.84974,29.976874 40.556544,35.942363 25.42629,48.79099 Z"
+       id="path14"
+       sodipodi:nodetypes="cccscccsc" />
+    <path
+       style="fill:#999999;fill-opacity:1;stroke:#4d4d4d;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 25.082692,48.79099 c 0,0 22.333903,10.651554 41.575421,9.620758 C 85.89963,57.380953 107.20274,45.355004 107.20274,45.355004"
+       id="path15" />
+    <path
+       style="fill:#999999;fill-opacity:1;stroke:#4d4d4d;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 29.549472,5.4975764 c -13.91574,9.1053606 4.81038,45.6986026 4.81038,45.6986026 0,0 16.14913,7.902766 20.615911,7.215569 4.466781,-0.687197 1.374394,-34.359852 -4.466781,-39.51383 -5.841175,-5.153977 -7.04377,-22.5057022 -20.95951,-13.4003416 z"
+       id="path16"
+       sodipodi:nodetypes="zcssz" />
+  </g>
+</svg>
