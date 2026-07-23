@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://l0tjrdtbfjwg"]
 
 [ext_resource type="Script" uid="uid://6t26vusheqgw" path="res://game/gameplay/tools/reagent_counter.gd" id="1_07uex"]
-[ext_resource type="Texture2D" uid="uid://w5kafc3luitw" path="res://icon.svg" id="1_b3qq4"]
 [ext_resource type="Texture2D" uid="uid://cxal7c4aj01g3" path="res://assets/icons/vinegar.svg" id="2_07uex"]
+[ext_resource type="Texture2D" uid="uid://bw5po70vt00nn" path="res://assets/mask_and_ui/circle_outer.svg" id="3_fey4m"]
+[ext_resource type="Texture2D" uid="uid://b8lor5cd8kgja" path="res://assets/mask_and_ui/circle_timer.svg" id="3_sc241"]
+[ext_resource type="Texture2D" uid="uid://blrhfxydxv5u2" path="res://assets/mask_and_ui/circle_inner.svg" id="4_w4k25"]
 
 [node name="ReagentCounter" type="MarginContainer" unique_id=776641402]
 anchors_preset = 15
@@ -14,20 +16,35 @@ size_flags_horizontal = 6
 size_flags_vertical = 3
 script = ExtResource("1_07uex")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=308696388]
+self_modulate = Color(0.8666667, 0.6627451, 0.3882353, 1)
+layout_mode = 2
+texture = ExtResource("3_fey4m")
+
 [node name="TextureProgressRect" type="TextureProgressBar" parent="." unique_id=1845124334]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
 step = 0.01
-value = 1.0
+value = 0.63
 fill_mode = 4
 nine_patch_stretch = true
-texture_progress = ExtResource("1_b3qq4")
+texture_progress = ExtResource("3_sc241")
 
-[node name="Icon" type="TextureRect" parent="." unique_id=1347986081]
-unique_name_in_owner = true
+[node name="IconMask" type="TextureRect" parent="." unique_id=106386079]
+clip_children = 1
 layout_mode = 2
+texture = ExtResource("4_w4k25")
+
+[node name="Icon" type="TextureRect" parent="IconMask" unique_id=1347986081]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_07uex")
 expand_mode = 2
 stretch_mode = 5
