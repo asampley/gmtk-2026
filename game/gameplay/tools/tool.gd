@@ -33,11 +33,6 @@ func initialize(selection_manager_in: SelectionManager) -> void:
 			reagent_generation.initialize(reagent_generation_template)
 			reagent_generators.append(reagent_generation)
 	held_reagents_ui.initialize(self)
-	recipes = ResourceDataHandler.resource_dict["recipes"]
-	recipes = recipes.filter(func(recipe: Recipe) -> bool:
-		return recipe.tool_template == tool_template
-	)
-	setup_whitelist()
 	if reagent_readers.size() > 0:
 		for reagent_reader: ReagentReader in reagent_readers:
 			reagent_reader.initialize(self)
