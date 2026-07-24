@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://ca0ys6rnlgdof"]
+
+[ext_resource type="Script" uid="uid://c1fgmmp728jvx" path="res://game/ui/level_complete/level_complete_menu.gd" id="1_1xycn"]
+[ext_resource type="Script" uid="uid://doybu0kewlpx4" path="res://utilities/ui/overrides/advanced_button.gd" id="1_dli45"]
+
+[node name="LevelCompleteMenu" type="PanelContainer" unique_id=471476303]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.0
+offset_top = -81.5
+offset_right = 148.0
+offset_bottom = 81.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_1xycn")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=966336325]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=138909337]
+layout_mode = 2
+alignment = 1
+
+[node name="LevelComplete" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2002590604]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 40
+text = "Level Complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=488323534]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="NextLevelButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1404126221]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 30
+text = "Next Level"
+script = ExtResource("1_dli45")
+metadata/_custom_type_script = "uid://doybu0kewlpx4"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]

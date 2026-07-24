@@ -23,6 +23,7 @@ func on_task_completed(index: int) -> void:
 	if !index_to_task_ui.has(index):
 		return
 	index_to_task_ui[index].complete()
+	index_to_task_ui.erase(index)
 	tasks_completed += 1
 	if tasks_completed >= tasks.size():
-		print_debug("Winner")
+		EventBus.game_events.level_completed.emit()
