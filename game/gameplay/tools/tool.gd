@@ -29,8 +29,9 @@ func initialize(selection_manager_in: SelectionManager) -> void:
 	initialized = true
 
 func _gui_input(event: InputEvent) -> void:
-	if is_selection_event(event):
-		selection_manager.select(self)
+	if is_selection_event(event) :
+		selection_manager.select(self, event.is_action_released("left_mouse"))
+		accept_event()
 
 func _process(delta: float) -> void:
 	if ! initialized:
@@ -43,7 +44,7 @@ func _process(delta: float) -> void:
 func is_selection_event(event: InputEvent) -> bool:
 	if !(event is InputEventMouseButton && event.button_index == MOUSE_BUTTON_LEFT):
 		return false
-	if !(event.is_action_pressed("left_mouse") || event.is_action_released("left_mouse")):
+	if !(event.is_action_released("left_mouse")):
 		return false
 	return true
 
@@ -61,3 +62,19 @@ func remove_reagent(reagent: Reagent) -> void:
 	if reagents.has(reagent):
 		reagents.erase(reagent)
 		updated_reagents.emit(reagents)
+
+func _get_drag_data(at_position: Vector2) -> Variant:
+	return self
+
+func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
+	if data is Tool:
+		var tool := data as Tool
+		var reagent := tool.removable_reagent
+		if reagent && can_take_reagent(reagent):
+			return true
+	return false
+
+func _drop_data(at_position: Vector2, data: Variant) -> void:
+	var tool := data as Tool
+	add_reagent(tool.removable_reagent)
+	tool.remove_reagent(tool.removable_reagent)

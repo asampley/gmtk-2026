@@ -20,6 +20,8 @@ script = ExtResource("1_07uex")
 self_modulate = Color(0.8666667, 0.6627451, 0.3882353, 1)
 layout_mode = 2
 texture = ExtResource("3_fey4m")
+expand_mode = 2
+stretch_mode = 5
 
 [node name="TextureProgressRect" type="TextureProgressBar" parent="." unique_id=1845124334]
 unique_name_in_owner = true
@@ -36,6 +38,8 @@ texture_progress = ExtResource("3_sc241")
 clip_children = 1
 layout_mode = 2
 texture = ExtResource("4_w4k25")
+expand_mode = 2
+stretch_mode = 5
 
 [node name="Icon" type="TextureRect" parent="IconMask" unique_id=1347986081]
 unique_name_in_owner = true

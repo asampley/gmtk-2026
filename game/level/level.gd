@@ -12,6 +12,7 @@ var time_elapsed_s: float
 var cauldron_recipes: Array[Recipe]
 
 func _ready() -> void:
+	add_child(selection_manager)
 	var selection_icon := SelectionIcon.new()
 	add_child(selection_icon)
 	selection_icon.size = Vector2(100,100)

@@ -1,7 +1,8 @@
 class_name SelectionManager
+extends Node
+
 
 var selection_icon: SelectionIcon
-
 var current_selection: Tool:
 	set(tool):
 		current_selection = tool
@@ -10,10 +11,15 @@ var current_selection: Tool:
 		else:
 			selection_icon.set_icon(null)
 
+
 func initialize(selection_icon_in: SelectionIcon) -> void:
 	selection_icon = selection_icon_in
 
-func select(selection: Tool) -> void:
+func _unhandled_input(event: InputEvent) -> void:
+	if !(event.is_action("left_mouse")):
+		clear_selection()
+
+func select(selection: Tool, is_pressed: bool = true) -> void:
 	if current_selection:
 		if current_selection == selection:
 			return
@@ -21,8 +27,11 @@ func select(selection: Tool) -> void:
 		if reagent && selection.can_take_reagent(reagent):
 			current_selection.remove_reagent(reagent)
 			selection.add_reagent(reagent)
-			current_selection = null
+			clear_selection()
 	else:
 		if selection.removable_reagent:
 			current_selection = selection
 			print(current_selection.removable_reagent.name)
+
+func clear_selection() -> void:
+	current_selection = null
