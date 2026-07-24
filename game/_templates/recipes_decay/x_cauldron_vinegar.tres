@@ -11,6 +11,6 @@ script = ExtResource("4_t8f4f")
 name = "Evaporate Vinegar"
 reagents = Array[ExtResource("2_8rpb5")]([ExtResource("3_watj8")])
 tool_template = ExtResource("5_rxkyy")
-time = 60.0
+time = 3.0
 desirable = false
 metadata/_custom_type_script = "uid://c4imnao3ortw8"

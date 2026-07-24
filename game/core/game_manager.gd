@@ -12,12 +12,22 @@ extends Node
 
 var current_level: LevelTemplate
 var level_scene: Level
+var recipes: Array[Recipe]
 
 signal game_manager_loaded()
 
 
 func _ready() -> void:
 	ServiceLocator.game_manager = self
+
+	for resource: Resource in ResourceDataHandler.resource_dict["recipes"]:
+		if resource is Recipe:
+			recipes.append(resource)
+
+	for resource: Resource in ResourceDataHandler.resource_dict["recipes_decay"]:
+		if resource is Recipe:
+			recipes.append(resource)
+
 	game_manager_loaded.emit()
 
 func load_level(level_template: LevelTemplate) -> void:

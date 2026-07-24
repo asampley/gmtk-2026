@@ -89,8 +89,7 @@ func remove_reagents(old_reagents: Array[Reagent]) -> void:
 # Ties are broken by shortest duration
 func _calculate_recipes() -> void:
 	print_debug("Recalculating recipes for ", self)
-	#var recipes := ServiceLocator.game_manager.level_scene.recipes\
-	var recipes := ResourceDataHandler.resource_dict["recipes"]
+	var recipes := ServiceLocator.game_manager.recipes
 	recipes = recipes.filter(func(recipe: Recipe) -> bool:
 		return recipe.tool_template == tool_template
 	)
@@ -111,9 +110,29 @@ func _calculate_recipes() -> void:
 
 # Advances reactions with a delta time
 func _progress_reaction(delta: float) -> void:
+	# Used to determine if undesirable reactions should continue. Desirable reactions take precedence.
+	var reagent_has_desirable_recipe: Dictionary[Reagent, bool]
+
+	for recipe in reaction_progress.recipe_progress:
+		if recipe.desirable:
+			for reagent in recipe.reagents:
+				reagent_has_desirable_recipe[reagent] = true
+
+	var recipes_advancing: Array[Recipe] = reaction_progress.recipe_progress.keys()\
+		.filter(func(recipe: Recipe) -> bool:
+			# Stop advancing undesirable recipes if there is a desirable one
+			# Perhaps a priority should exist?
+			if !recipe.desirable:
+				for reagent in recipe.reagents:
+					if reagent_has_desirable_recipe.get(reagent):
+						return false
+
+			return true)
+
 	var reagents_to_remove: Array[Reagent] = []
 	var reagents_to_add: Array[Reagent] = []
-	for recipe in reaction_progress.recipe_progress:
+
+	for recipe in recipes_advancing:
 		var rp := reaction_progress.recipe_progress[recipe]
 		var time_multiplier := rp.time_multiplier
 		rp.progress += delta / recipe.time / time_multiplier
@@ -121,17 +140,19 @@ func _progress_reaction(delta: float) -> void:
 		if rp.progress >= 1.0:
 			reagents_to_add.append_array(recipe.products)
 			reagents_to_remove.append_array(recipe.reagents)
+
 	if reagents_to_remove.size() > 0:
 		remove_reagents(reagents_to_remove)
 	if reagents_to_add.size() > 0:
 		# reset recipes by removing first
 		remove_reagents(reagents_to_add)
 		add_reagents(reagents_to_add)
+
 	for reagent in reagents:
 		var time_remaining := INF
 		var progress := 0.0
 		var desireable := true
-		for recipe in reaction_progress.recipe_progress:
+		for recipe in recipes_advancing:
 			if recipe.reagents.has(reagent):
 				var rp :=reaction_progress.recipe_progress[recipe]
 				if rp.estimated_remaining < time_remaining:
