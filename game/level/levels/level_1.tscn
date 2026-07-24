@@ -14,10 +14,13 @@
 [ext_resource type="Resource" uid="uid://di1uvsqiwm7xw" path="res://game/_templates/reagents/vinegar.tres" id="7_txkky"]
 [ext_resource type="Resource" uid="uid://f2jew64p8lqd" path="res://game/_templates/reagents/tonic.tres" id="10_sav1n"]
 [ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="12_gyfmu"]
+[ext_resource type="PackedScene" uid="uid://cx8u8fll1cg2c" path="res://game/popups/popup_manager.tscn" id="15_bblwl"]
+[ext_resource type="PackedScene" uid="uid://4eppg42uma7o" path="res://game/popups/popup_ui.tscn" id="16_jymfr"]
+[ext_resource type="Script" uid="uid://bv4xqu77fk6r2" path="res://game/popups/popup_trigger_level_start.gd" id="17_jymfr"]
 
 [sub_resource type="Resource" id="Resource_uv88r"]
 script = ExtResource("12_gyfmu")
-text = "Drag or click on the [b]Salleratus Jar[/b] and put it into the [b]Cauldron[/b]"
+text = "Salleratus in the [b]Cauldron[/b]"
 metadata/_custom_type_script = "uid://c7s7risns0jw2"
 
 [sub_resource type="Resource" id="Resource_c6pbk"]
@@ -120,3 +123,22 @@ offset_right = 546.0
 offset_bottom = 448.0
 texture = ExtResource("5_htl7y")
 will_decay = false
+
+[node name="PopupManager" parent="." unique_id=993331616 node_paths=PackedStringArray("index_to_popup") instance=ExtResource("15_bblwl")]
+layout_mode = 1
+index_to_popup = {
+0: NodePath("PopupUI"),
+1: NodePath("PopupUI2")
+}
+
+[node name="PopupUI" parent="PopupManager" unique_id=1978143687 instance=ExtResource("16_jymfr")]
+layout_mode = 0
+anchors_preset = 0
+
+[node name="PopupUI2" parent="PopupManager" unique_id=698939904 instance=ExtResource("16_jymfr")]
+layout_mode = 0
+anchors_preset = 0
+
+[node name="PopupTriggerLevelStart" type="Node" parent="." unique_id=1211603721]
+script = ExtResource("17_jymfr")
+metadata/_custom_type_script = "uid://bv4xqu77fk6r2"

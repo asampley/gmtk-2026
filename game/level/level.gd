@@ -2,8 +2,6 @@ class_name Level
 extends Node
 
 
-@export var time_limit_s: float = 0
-
 @onready var tools: Control = %Tools
 
 
