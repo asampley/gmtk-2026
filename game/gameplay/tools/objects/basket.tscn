@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://xmhfrf35n264"]
+
+[ext_resource type="Texture2D" uid="uid://dsohikfo1h36w" path="res://assets/world_objects/basket.png" id="1_e2qry"]
+[ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_s6cua"]
+[ext_resource type="Resource" uid="uid://creyd7ac3iog7" path="res://game/_templates/tools/basket.tres" id="3_s6cua"]
+[ext_resource type="PackedScene" uid="uid://xtumlcime4sh" path="res://game/gameplay/tools/held_reagents_parent.tscn" id="4_khpb6"]
+
+[node name="Basket" type="TextureRect" unique_id=953902506 node_paths=PackedStringArray("held_reagents_ui")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = 276.0
+offset_right = -166.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_e2qry")
+script = ExtResource("2_s6cua")
+tool_template = ExtResource("3_s6cua")
+held_reagents_ui = NodePath("HeldReagentsParent")
+metadata/_custom_type_script = "uid://cp85lcgd1nglo"
+
+[node name="HeldReagentsParent" parent="." unique_id=702341484 instance=ExtResource("4_khpb6")]
+layout_mode = 1
+anchors_preset = 8
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -69.0
+offset_right = 110.0
+offset_bottom = -10.0
+grow_vertical = 2

@@ -5,6 +5,9 @@ extends TextureRect
 @export var tool_template: ToolTemplate
 @export var held_reagents_ui: HeldReagentsUI
 @export var task_signal_reader: TaskSignalReader
+@export var reagent_whitelist: Array[Reagent]
+@export var is_locked: bool = false
+@export var will_decay: bool = true
 
 var initialized: bool = false
 var selection_manager: SelectionManager
