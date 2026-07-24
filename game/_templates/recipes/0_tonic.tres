@@ -14,4 +14,5 @@ name = "Tonic"
 reagents = Array[ExtResource("1_756rb")]([ExtResource("2_ih525"), ExtResource("3_l0b62")])
 products = Array[ExtResource("1_756rb")]([ExtResource("1_l0b62")])
 tool_template = ExtResource("6_7vpii")
+time = 5.0
 metadata/_custom_type_script = "uid://c4imnao3ortw8"

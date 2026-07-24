@@ -15,6 +15,9 @@ grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 3
 script = ExtResource("1_07uex")
+_desirable_color = Color(0.69803923, 0.6862745, 0.36078432, 1)
+_undesirable_color = Color(0.8117647, 0.41568628, 0.30980393, 1)
+_stable_color = Color(0.14509805, 0.15294118, 0.16470589, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=308696388]
 self_modulate = Color(0.8666667, 0.6627451, 0.3882353, 1)
@@ -29,7 +32,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
 step = 0.01
-value = 0.63
+value = 1.0
 fill_mode = 4
 nine_patch_stretch = true
 texture_progress = ExtResource("3_sc241")
