@@ -4,7 +4,7 @@ extends TextureRect
 
 @export var tool_template: ToolTemplate
 @export var held_reagents_ui: HeldReagentsUI
-@export var task_signal_reader: TaskSignalReader
+@export var reagent_readers: Array[ReagentReader]
 @export var reagent_whitelist: Array[Reagent]
 @export var is_locked: bool = false
 @export var will_decay: bool = true
@@ -38,8 +38,9 @@ func initialize(selection_manager_in: SelectionManager) -> void:
 		return recipe.tool_template == tool_template
 	)
 	setup_whitelist()
-	if task_signal_reader:
-		task_signal_reader.initialize(self)
+	if reagent_readers.size() > 0:
+		for reagent_reader: ReagentReader in reagent_readers:
+			reagent_reader.initialize(self)
 	initialized = true
 
 func _gui_input(event: InputEvent) -> void:
