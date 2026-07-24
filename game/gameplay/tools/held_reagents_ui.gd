@@ -10,15 +10,16 @@ var reagent_to_counter: Dictionary[Reagent, ReagentCounter] = {}
 func initialize(tool_in: Tool) -> void:
 	tool_in.updated_reagents.connect(on_updated_reagents)
 
-func on_updated_reagents(reagents: Array[Reagent]) -> void:
+func on_updated_reagents(reagents_to_progress: Dictionary[Reagent, ReactionProgress]) -> void:
+	var reagents: Array[Reagent] = reagents_to_progress.keys()
 	for reagent: Reagent in reagents:
 		if reagent_to_counter.has(reagent):
-			reagent_to_counter[reagent].update(reagent)
+			reagent_to_counter[reagent].update(reagent, reagents_to_progress[reagent])
 		else:
 			var reagent_counter_ui: ReagentCounter = reagent_counter_prefab.instantiate()
 			reagent_to_counter[reagent] = reagent_counter_ui
 			add_child(reagent_counter_ui)
-			reagent_counter_ui.update(reagent)
+			reagent_counter_ui.update(reagent, reagents_to_progress[reagent])
 	var keys := reagent_to_counter.keys()
 	for key: Reagent in keys:
 		if !reagents.has(key):

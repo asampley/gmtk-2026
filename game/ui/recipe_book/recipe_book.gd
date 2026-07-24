@@ -17,8 +17,8 @@ func _ready() -> void:
 		if resource is Recipe:
 			var recipe: Recipe = resource as Recipe
 
-			if recipe.desirable:
-				recipes.append(recipe)
+			#if recipe.desirable:
+				#recipes.append(recipe)
 
 	set_page_flip(0)
 	_render_recipes()

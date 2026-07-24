@@ -9,17 +9,10 @@ extends MarginContainer
 @onready var icon: TextureRect = %Icon
 
 
-func update(reagent: Reagent) -> void:
+func update(reagent: Reagent, reaction_progress: ReactionProgress) -> void:
 	icon.texture = reagent.icon
-
-enum TimerColor {
-	DESIRABLE,
-	UNDESIRABLE,
-	STABLE,
-}
-
-func set_color(color_options: TimerColor) -> void:
+	var color_options: ReactionProgress.ReagentState = reaction_progress.reagent_state
 	match color_options:
-		TimerColor.STABLE: texture_progress_rect.self_modulate = _stable_color
-		TimerColor.DESIRABLE: texture_progress_rect.self_modulate = _desirable_color
-		TimerColor.UNDESIRABLE: texture_progress_rect.self_modulate = _undesirable_color
+		ReactionProgress.ReagentState.STABLE: texture_progress_rect.self_modulate = _stable_color
+		ReactionProgress.ReagentState.DESIRABLE: texture_progress_rect.self_modulate = _desirable_color
+		ReactionProgress.ReagentState.UNDESIRABLE: texture_progress_rect.self_modulate = _undesirable_color
