@@ -16,3 +16,4 @@ func update(reagent: Reagent, reaction_progress: ReactionProgress) -> void:
 		ReactionProgress.ReagentState.STABLE: texture_progress_rect.self_modulate = _stable_color
 		ReactionProgress.ReagentState.DESIRABLE: texture_progress_rect.self_modulate = _desirable_color
 		ReactionProgress.ReagentState.UNDESIRABLE: texture_progress_rect.self_modulate = _undesirable_color
+	texture_progress_rect.value = reaction_progress.progress_percent

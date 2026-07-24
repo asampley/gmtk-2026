@@ -19,8 +19,6 @@ var removable_reagent: Reagent:
 		else:
 			return reagent_to_reaction_progress.keys().front()
 
-var reaction_progress: ReactionProgress = ReactionProgress.new()
-
 signal updated_reagents(reagents_out: Dictionary[Reagent, ReactionProgress])
 
 func initialize(selection_manager_in: SelectionManager) -> void:
@@ -101,7 +99,7 @@ func add_reagents(new_reagents: Array[Reagent]) -> void:
 	for reagent: Reagent in new_reagents:
 		if !reagent_to_reaction_progress.has(reagent):
 			reagent_to_reaction_progress[reagent] = ReactionProgress.new()
-			reaction_progress.initialize(reagent.get_decay_template(tool_template))
+			reagent_to_reaction_progress[reagent].initialize(reagent.get_decay_template(tool_template))
 	if reagent_to_reaction_progress.size() != array_size:
 		_calculate_recipes()
 	updated_reagents.emit(reagent_to_reaction_progress)
@@ -133,47 +131,19 @@ func has_all_reagents_for_recipe(reagents: Array[Reagent]) -> bool:
 
 # Advances reactions with a delta time
 func _progress_reaction(delta: float) -> void:
-	pass
-	#var reagents_to_remove: Array[Reagent] = []
-	#var reagents_to_add: Array[Reagent] = []
-	#for recipe in reaction_progress.recipe_progress:
-		#var rp := reaction_progress.recipe_progress[recipe]
-		#var time_multiplier := rp.time_multiplier
-		#rp.progress += delta / recipe.time / time_multiplier
-		#rp.estimated_remaining = recipe.time * time_multiplier * (1.0 - rp.progress)
-		#if rp.progress >= 1.0:
-			#reagents_to_add.append_array(recipe.products)
-			#reagents_to_remove.append_array(recipe.reagents)
-	#if reagents_to_remove.size() > 0:
-		#remove_reagents(reagents_to_remove)
-	#if reagents_to_add.size() > 0:
-		## reset recipes by removing first
-		#remove_reagents(reagents_to_add)
-		#add_reagents(reagents_to_add)
-	#for reagent in reagents:
-		#var time_remaining := INF
-		#var progress := 0.0
-		#var desireable := true
-		#for recipe in reaction_progress.recipe_progress:
-			#if recipe.reagents.has(reagent):
-				#var rp :=reaction_progress.recipe_progress[recipe]
-				#if rp.estimated_remaining < time_remaining:
-					#time_remaining = rp.estimated_remaining
-					#progress = rp.progress
-					#desireable = recipe.desirable
-		#var reagent_counter := held_reagents_ui.reagent_to_counter[reagent]
-		#reagent_counter.texture_progress_rect.value = 1.0 - progress
-		#if time_remaining == INF:
-			#reagent_counter.set_color(ReagentCounter.TimerColor.STABLE)
-		#elif desireable:
-			#reagent_counter.set_color(ReagentCounter.TimerColor.DESIRABLE)
-		#else:
-			#reagent_counter.set_color(ReagentCounter.TimerColor.UNDESIRABLE)
+	var reagents: Array[Reagent] = reagent_to_reaction_progress.keys()
+	for reagent: Reagent in reagents:
+		if reagent_to_reaction_progress[reagent].reagent_state != ReactionProgress.ReagentState.STABLE:
+			if reagent_to_reaction_progress[reagent].progress(delta, reagent_to_reaction_progress.keys()):
+				reagent_to_reaction_progress.erase(reagent)
+				if reagent.get_decay_template(tool_template).product:
+					add_reagent(reagent.get_decay_template(tool_template).product)
+	updated_reagents.emit(reagent_to_reaction_progress)
 
-func _get_drag_data(at_position: Vector2) -> Variant:
+func _get_drag_data(_at_position: Vector2) -> Variant:
 	return self
 
-func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
+func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 	if data is Tool:
 		var tool := data as Tool
 		var reagent := tool.removable_reagent
@@ -181,7 +151,7 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 			return true
 	return false
 
-func _drop_data(at_position: Vector2, data: Variant) -> void:
+func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	var tool := data as Tool
 	add_reagent(tool.removable_reagent)
 	tool.remove_reagent(tool.removable_reagent)

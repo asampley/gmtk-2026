@@ -3,7 +3,6 @@ extends Node
 
 
 @export var tools: Array[Tool]
-@export var recipes: Array[Recipe]
 @export var time_limit_s: float = 0
 
 

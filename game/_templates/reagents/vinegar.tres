@@ -4,11 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://cxal7c4aj01g3" path="res://assets/icons/vinegar.svg" id="1_dvetn"]
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_oo27h"]
 [ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="2_blqdw"]
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="2_d4rpy"]
 
 [sub_resource type="Resource" id="Resource_sav1n"]
 script = ExtResource("1_70j8o")
 tool = ExtResource("2_blqdw")
-time_s = 20.0
+time_s = 1.0
 is_desirable = false
 metadata/_custom_type_script = "uid://cmjlcdkdphdjo"
 

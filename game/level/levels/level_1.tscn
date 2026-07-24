@@ -42,6 +42,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_jrm0s")
 tools = [NodePath("Tools/Cauldron"), NodePath("Tools/BakingSodaJar"), NodePath("Tools/VinegarBottle")]
+recipes = null
+time_limit_s = null
 
 [node name="Background" type="TextureRect" parent="." unique_id=1004434688]
 layout_mode = 0
