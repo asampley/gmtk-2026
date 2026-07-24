@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ch04hx6edyi2f" path="res://game/level/level.gd" id="1_jrm0s"]
 [ext_resource type="PackedScene" uid="uid://byut73koqqbl0" path="res://game/gameplay/tools/objects/cauldron.tscn" id="2_88k7m"]
-[ext_resource type="Texture2D" uid="uid://drr2dfvdqss1h" path="res://assets/background.png" id="2_jymfr"]
+[ext_resource type="Texture2D" uid="uid://dx5bicctr66x" path="res://assets/world_objects/room.svg" id="2_jymfr"]
 [ext_resource type="PackedScene" uid="uid://ddkrgwrded4to" path="res://game/gameplay/tools/objects/baking_soda_jar.tscn" id="3_vh68e"]
 [ext_resource type="Script" uid="uid://d37jru5ijnbu3" path="res://game/task_system/task_reagent_reader.gd" id="4_aqc83"]
 [ext_resource type="PackedScene" uid="uid://deny5pob0arye" path="res://game/gameplay/tools/objects/vinegar_bottle.tscn" id="4_u7os6"]
@@ -75,10 +75,10 @@ offset_bottom = 40.0
 
 [node name="Basket" parent="Tools" unique_id=953902506 node_paths=PackedStringArray("reagent_readers") instance=ExtResource("5_txkky")]
 layout_mode = 1
-offset_left = -17.0
-offset_top = 625.0
-offset_right = 143.0
-offset_bottom = 785.0
+offset_left = 25.0
+offset_top = 583.0
+offset_right = 185.0
+offset_bottom = 743.0
 reagent_readers = [NodePath("TaskSignalReader")]
 reagent_whitelist = Array[ExtResource("5_gyfmu")]([ExtResource("10_sav1n")])
 is_locked = true
@@ -96,10 +96,10 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 223.0
-offset_top = 574.0
-offset_right = 540.0
-offset_bottom = 849.0
+offset_left = 209.0
+offset_top = 388.0
+offset_right = 607.8436
+offset_bottom = 734.0
 grow_horizontal = 1
 grow_vertical = 1
 reagent_readers = [NodePath("TaskSignalReader")]
@@ -125,10 +125,10 @@ will_decay = false
 
 [node name="VinegarBottle" parent="Tools" unique_id=628393831 instance=ExtResource("4_u7os6")]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 540.0
-offset_right = 142.0
-offset_bottom = 626.0
+offset_left = 71.0
+offset_top = 396.0
+offset_right = 157.0
+offset_bottom = 482.0
 texture = ExtResource("5_htl7y")
 expand_mode = 3
 will_decay = false

@@ -11,6 +11,6 @@ script = ExtResource("3_35lis")
 name = "Evaporate"
 reagents = Array[ExtResource("2_xw0b6")]([ExtResource("3_4rihi")])
 tool_template = ExtResource("5_6xgu4")
-time = 15.0
+time = 5.0
 desirable = false
 metadata/_custom_type_script = "uid://c4imnao3ortw8"

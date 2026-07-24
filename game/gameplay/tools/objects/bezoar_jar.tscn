@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://duxjiatwfjfo4"]
+
+[ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="1_hbnhc"]
+[ext_resource type="Texture2D" uid="uid://b6tnk7w6huea8" path="res://assets/icons/bezoar.svg" id="1_phqx5"]
+[ext_resource type="Resource" uid="uid://ftc5tg3eghlv" path="res://game/_templates/tools/bezoar_jar.tres" id="2_hbnhc"]
+[ext_resource type="Script" uid="uid://c8cute52enlko" path="res://game/gameplay/tools/held_reagents_ui.gd" id="3_y6ryc"]
+[ext_resource type="PackedScene" uid="uid://l0tjrdtbfjwg" path="res://game/gameplay/tools/reagent_counter.tscn" id="4_oj26c"]
+
+[node name="Bezoar Jar" type="TextureRect" unique_id=628393831 node_paths=PackedStringArray("held_reagents_ui")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_phqx5")
+expand_mode = 1
+script = ExtResource("1_hbnhc")
+tool_template = ExtResource("2_hbnhc")
+held_reagents_ui = NodePath("HeldReagentsUI")
+metadata/_custom_type_script = "uid://cp85lcgd1nglo"
+
+[node name="HeldReagentsUI" type="HBoxContainer" parent="." unique_id=1954010034]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_y6ryc")
+reagent_counter_prefab = ExtResource("4_oj26c")
+metadata/_custom_type_script = "uid://c8cute52enlko"
