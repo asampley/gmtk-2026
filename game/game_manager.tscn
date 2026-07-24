@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bxh3lvkd03a4x" path="res://game/core/game_manager.gd" id="1_5ghhe"]
 [ext_resource type="PackedScene" uid="uid://cmmvnrit1fr5x" path="res://game/ui/main_menu/menu_layer.tscn" id="2_fp1wv"]
-[ext_resource type="Script" uid="uid://carvbp3me1vmm" path="res://game/audio_mute.gd" id="2_wimwi"]
 [ext_resource type="Script" uid="uid://b3apsqri2ue3y" path="res://game/core/transition_manager.gd" id="3_fp1wv"]
 [ext_resource type="PackedScene" uid="uid://dping0fholceh" path="res://utilities/debug_terminal/debug_terminal.tscn" id="3_wimwi"]
 
@@ -17,11 +16,6 @@ unique_name_in_owner = true
 
 [node name="HudLayer" type="CanvasLayer" parent="." unique_id=1321582583]
 unique_name_in_owner = true
-
-[node name="AudioMute" type="TextureButton" parent="HudLayer" unique_id=1300783996]
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_wimwi")
 
 [node name="MenuLayer" parent="." unique_id=1079292625 instance=ExtResource("2_fp1wv")]
 unique_name_in_owner = true
