@@ -9,10 +9,10 @@
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 348.0
-offset_top = 636.0
-offset_right = -312.0
-offset_bottom = -24.0
+offset_left = 120.0
+offset_top = 276.0
+offset_right = -166.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_iyty4")
@@ -22,12 +22,10 @@ held_reagents_ui = NodePath("HeldReagentsParent")
 metadata/_custom_type_script = "uid://cp85lcgd1nglo"
 
 [node name="HeldReagentsParent" parent="." unique_id=702341484 instance=ExtResource("4_4w802")]
-layout_mode = 0
-anchors_preset = 0
-anchor_left = 0.0
-anchor_right = 0.0
-offset_left = 4.0
-offset_top = -5.0
-offset_right = 146.0
-offset_bottom = 37.0
-grow_horizontal = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -21.0
+offset_bottom = 21.0
+grow_vertical = 2
