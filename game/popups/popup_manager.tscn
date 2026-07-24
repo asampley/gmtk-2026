@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cx8u8fll1cg2c"]
+
+[ext_resource type="Script" uid="uid://y6mi8eflcx8o" path="res://game/popups/popup_manager.gd" id="1_852f8"]
+[ext_resource type="PackedScene" uid="uid://4eppg42uma7o" path="res://game/popups/popup_ui.tscn" id="2_le4ec"]
+
+[node name="PopupManager" type="Control" unique_id=993331616]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_852f8")
+popup_ui_prefab = ExtResource("2_le4ec")
