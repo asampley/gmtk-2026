@@ -69,38 +69,31 @@ func remove_reagent(reagent: Reagent) -> void:
 
 func add_reagents(new_reagents: Array[Reagent]) -> void:
 	var size := reagents.size();
-
 	for reagent in new_reagents:
 		if !reagents.has(reagent):
 			reagents.append(reagent)
-
 	if reagents.size() != size:
-		updated_reagents.emit(reagents)
 		_calculate_recipes()
+	updated_reagents.emit(reagents)
 
 func remove_reagents(old_reagents: Array[Reagent]) -> void:
 	var size := reagents.size()
-
 	for reagent in old_reagents:
 		if reagents.has(reagent):
 			reagents.erase(reagent)
-
 	if size != reagents.size():
-		updated_reagents.emit(reagents)
 		_calculate_recipes()
+	updated_reagents.emit(reagents)
 
 # Calculate recipes that should be in progress
 # Ties are broken by shortest duration
 func _calculate_recipes() -> void:
 	print_debug("Recalculating recipes for ", self)
-
 	#var recipes := ServiceLocator.game_manager.level_scene.recipes\
 	var recipes := ResourceDataHandler.resource_dict["recipes"]
-
 	recipes = recipes.filter(func(recipe: Recipe) -> bool:
 		return recipe.tool_template == tool_template
 	)
-
 	for recipe: Recipe in recipes:
 		var recipe_progress := reaction_progress.recipe_progress
 		if !Globals.has_all(reagents, recipe.reagents):
@@ -108,40 +101,32 @@ func _calculate_recipes() -> void:
 				reaction_progress.recipe_progress.erase(recipe)
 		else:
 			var time_multiplier := 1.0
-
 			for catalyst in recipe.catalysts:
 				if reagents.has(catalyst):
 					time_multiplier *= recipe.catalysts[catalyst].time_multiplier
-
 			if !recipe_progress.has(recipe):
 				reaction_progress.recipe_progress[recipe] = ReactionProgress.RecipeProgress.new()
 				recipe_progress[recipe].estimated_remaining = recipe.time * time_multiplier
-
 			recipe_progress[recipe].time_multiplier = time_multiplier
 
 # Advances reactions with a delta time
 func _progress_reaction(delta: float) -> void:
 	var reagents_to_remove: Array[Reagent] = []
 	var reagents_to_add: Array[Reagent] = []
-
 	for recipe in reaction_progress.recipe_progress:
 		var rp := reaction_progress.recipe_progress[recipe]
 		var time_multiplier := rp.time_multiplier
-
 		rp.progress += delta / recipe.time / time_multiplier
 		rp.estimated_remaining = recipe.time * time_multiplier * (1.0 - rp.progress)
-
 		if rp.progress >= 1.0:
 			reagents_to_add.append_array(recipe.products)
 			reagents_to_remove.append_array(recipe.reagents)
-
 	if reagents_to_remove.size() > 0:
 		remove_reagents(reagents_to_remove)
 	if reagents_to_add.size() > 0:
 		# reset recipes by removing first
 		remove_reagents(reagents_to_add)
 		add_reagents(reagents_to_add)
-
 	for reagent in reagents:
 		var time_remaining := INF
 		var progress := 0.0
@@ -153,9 +138,7 @@ func _progress_reaction(delta: float) -> void:
 					time_remaining = rp.estimated_remaining
 					progress = rp.progress
 					desireable = recipe.desirable
-
 		var reagent_counter := held_reagents_ui.reagent_to_counter[reagent]
-
 		reagent_counter.texture_progress_rect.value = 1.0 - progress
 		if time_remaining == INF:
 			reagent_counter.set_color(ReagentCounter.TimerColor.STABLE)

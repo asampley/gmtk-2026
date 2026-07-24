@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dc83tubjmui7w" path="res://game/task_system/task_manager.tscn" id="6_htl7y"]
 [ext_resource type="Resource" uid="uid://b51n6jxylo7sc" path="res://game/_templates/reagents/baking_soda.tres" id="6_sav1n"]
 [ext_resource type="Resource" uid="uid://di1uvsqiwm7xw" path="res://game/_templates/reagents/vinegar.tres" id="7_txkky"]
+[ext_resource type="Resource" uid="uid://f2jew64p8lqd" path="res://game/_templates/reagents/tonic.tres" id="10_sav1n"]
 [ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="12_gyfmu"]
 
 [sub_resource type="Resource" id="Resource_uv88r"]
@@ -74,7 +75,8 @@ task_signal_reader = NodePath("TaskSignalReader")
 script = ExtResource("4_aqc83")
 reagent_to_index = Dictionary[ExtResource("5_gyfmu"), int]({
 ExtResource("6_sav1n"): 0,
-ExtResource("7_txkky"): 1
+ExtResource("7_txkky"): 1,
+ExtResource("10_sav1n"): 2
 })
 metadata/_custom_type_script = "uid://d37jru5ijnbu3"
 
