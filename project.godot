@@ -48,6 +48,7 @@ gdscript/warnings/unsafe_void_return=2
 
 window/size/viewport_width=820
 window/size/viewport_height=820
+window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
