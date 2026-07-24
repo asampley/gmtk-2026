@@ -12,7 +12,7 @@ metadata/_custom_type_script = "uid://b6f4ge1t4ys5r"
 
 [resource]
 script = ExtResource("4_hgjyi")
-name = "Jar of Mortreds Powder"
+name = "Jar of Saleratus"
 icon = ExtResource("1_8fhp7")
 reagent_generation_templates = Array[ExtResource("3_8fhp7")]([SubResource("Resource_8fhp7")])
 metadata/_custom_type_script = "uid://dhqopjqxgslsw"

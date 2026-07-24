@@ -19,7 +19,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if !(event.is_action("left_mouse")):
 		clear_selection()
 
-func select(selection: Tool, is_pressed: bool = true) -> void:
+func select(selection: Tool) -> void:
 	if current_selection:
 		if current_selection == selection:
 			return

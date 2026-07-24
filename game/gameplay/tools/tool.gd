@@ -1,8 +1,10 @@
 class_name Tool
 extends TextureRect
 
+
 @export var tool_template: ToolTemplate
 @export var held_reagents_ui: HeldReagentsUI
+@export var task_signal_reader: TaskSignalReader
 
 var initialized: bool = false
 var selection_manager: SelectionManager
@@ -28,11 +30,13 @@ func initialize(selection_manager_in: SelectionManager) -> void:
 			reagent_generation.initialize(reagent_generation_template)
 			reagent_generators.append(reagent_generation)
 	held_reagents_ui.initialize(self)
+	if task_signal_reader:
+		task_signal_reader.initialize(self)
 	initialized = true
 
 func _gui_input(event: InputEvent) -> void:
 	if is_selection_event(event) :
-		selection_manager.select(self, event.is_action_released("left_mouse"))
+		selection_manager.select(self)
 		accept_event()
 
 func _process(delta: float) -> void:
