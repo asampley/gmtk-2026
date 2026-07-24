@@ -33,6 +33,12 @@ text = "Alex Sampley"
 fit_content = true
 horizontal_alignment = 1
 
+[node name="Harry" type="RichTextLabel" parent="VBoxContainer" unique_id=1529939987]
+layout_mode = 2
+text = "Harry dal Bello"
+fit_content = true
+horizontal_alignment = 1
+
 [node name="HSeparator1" type="HSeparator" parent="VBoxContainer" unique_id=1600443205]
 layout_mode = 2
 
