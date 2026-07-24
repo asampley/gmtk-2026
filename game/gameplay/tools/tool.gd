@@ -134,6 +134,8 @@ func _progress_reaction(delta: float) -> void:
 	if reagents_to_remove.size() > 0:
 		remove_reagents(reagents_to_remove)
 	if reagents_to_add.size() > 0:
+		# reset recipes by removing first
+		remove_reagents(reagents_to_add)
 		add_reagents(reagents_to_add)
 
 	for reagent in reagents:
