@@ -72,8 +72,7 @@ func add_reagents(new_reagents: Array[Reagent]) -> void:
 
 	if reagents.size() != size:
 		updated_reagents.emit(reagents)
-
-	_calculate_recipes()
+		_calculate_recipes()
 
 func remove_reagents(old_reagents: Array[Reagent]) -> void:
 	var size := reagents.size()
@@ -84,8 +83,7 @@ func remove_reagents(old_reagents: Array[Reagent]) -> void:
 
 	if size != reagents.size():
 		updated_reagents.emit(reagents)
-
-	_calculate_recipes()
+		_calculate_recipes()
 
 # Calculate recipes that should be in progress
 # Ties are broken by shortest duration

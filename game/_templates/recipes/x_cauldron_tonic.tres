@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://db4ng7bwk6iu3"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_tfc0c"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_xw0b6"]
+[ext_resource type="Resource" uid="uid://f2jew64p8lqd" path="res://game/_templates/reagents/tonic.tres" id="3_4rihi"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_35lis"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="5_6xgu4"]
+
+[resource]
+script = ExtResource("3_35lis")
+name = "Evaporate"
+reagents = Array[ExtResource("2_xw0b6")]([ExtResource("3_4rihi")])
+tool_template = ExtResource("5_6xgu4")
+time = 15.0
+desirable = false
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

@@ -20,7 +20,7 @@ _undesirable_color = Color(0.8117647, 0.41568628, 0.30980393, 1)
 _stable_color = Color(0.14509805, 0.15294118, 0.16470589, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=308696388]
-self_modulate = Color(0.8666667, 0.6627451, 0.3882353, 1)
+self_modulate = Color(0.85882354, 0.75686276, 0.6862745, 1)
 layout_mode = 2
 texture = ExtResource("3_fey4m")
 expand_mode = 2
