@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://d15gqw48ofq6d"]
+
+[ext_resource type="Script" uid="uid://ch04hx6edyi2f" path="res://game/level/level.gd" id="1_av51y"]
+[ext_resource type="Texture2D" uid="uid://drr2dfvdqss1h" path="res://assets/background.png" id="2_csbb7"]
+[ext_resource type="PackedScene" uid="uid://dc83tubjmui7w" path="res://game/task_system/task_manager.tscn" id="3_jkqj6"]
+[ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="4_iak1s"]
+[ext_resource type="PackedScene" uid="uid://xmhfrf35n264" path="res://game/gameplay/tools/objects/basket.tscn" id="5_oq22a"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="6_lp1lv"]
+[ext_resource type="Script" uid="uid://d37jru5ijnbu3" path="res://game/task_system/task_reagent_reader.gd" id="8_fkgh4"]
+[ext_resource type="PackedScene" uid="uid://byut73koqqbl0" path="res://game/gameplay/tools/objects/cauldron.tscn" id="9_d7c3w"]
+[ext_resource type="Resource" uid="uid://b51n6jxylo7sc" path="res://game/_templates/reagents/baking_soda.tres" id="10_iak1s"]
+[ext_resource type="PackedScene" uid="uid://deny5pob0arye" path="res://game/gameplay/tools/objects/vinegar_bottle.tscn" id="11_csbb7"]
+[ext_resource type="Resource" uid="uid://di1uvsqiwm7xw" path="res://game/_templates/reagents/vinegar.tres" id="11_oq22a"]
+[ext_resource type="Script" uid="uid://bv4xqu77fk6r2" path="res://game/popups/popup_trigger_level_start.gd" id="12_418xc"]
+[ext_resource type="PackedScene" uid="uid://ddkrgwrded4to" path="res://game/gameplay/tools/objects/jar_of_saleratus.tscn" id="12_jkqj6"]
+[ext_resource type="Resource" uid="uid://f2jew64p8lqd" path="res://game/_templates/reagents/tonic.tres" id="12_lp1lv"]
+[ext_resource type="PackedScene" uid="uid://cx8u8fll1cg2c" path="res://game/popups/popup_manager.tscn" id="13_3hquf"]
+[ext_resource type="PackedScene" uid="uid://4eppg42uma7o" path="res://game/popups/popup_ui.tscn" id="14_7y2qq"]
+
+[sub_resource type="Resource" id="Resource_uv88r"]
+script = ExtResource("4_iak1s")
+text = "Saleratus in Cauldron"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_c6pbk"]
+script = ExtResource("4_iak1s")
+index = 1
+text = "Vinegar in Cauldron"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_yl5aw"]
+script = ExtResource("4_iak1s")
+index = 2
+text = "Tonic formed in Cauldron"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_csbb7"]
+script = ExtResource("4_iak1s")
+index = 3
+text = "Tonic moved to Basket"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[node name="Level2" type="Control" unique_id=324419999]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_av51y")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1004434688]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_csbb7")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="TaskManager" parent="." unique_id=1701545271 instance=ExtResource("3_jkqj6")]
+layout_mode = 0
+tasks = Array[ExtResource("4_iak1s")]([SubResource("Resource_uv88r"), SubResource("Resource_c6pbk"), SubResource("Resource_yl5aw"), SubResource("Resource_csbb7")])
+
+[node name="Tools" type="Control" parent="." unique_id=97151938]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Basket" parent="Tools" unique_id=953902506 node_paths=PackedStringArray("reagent_readers") instance=ExtResource("5_oq22a")]
+layout_mode = 1
+offset_left = -17.0
+offset_top = 625.0
+offset_right = 143.0
+offset_bottom = 785.0
+reagent_readers = [NodePath("TaskSignalReader")]
+reagent_whitelist = Array[ExtResource("6_lp1lv")]([ExtResource("12_lp1lv")])
+is_locked = true
+will_decay = false
+
+[node name="TaskSignalReader" type="Node" parent="Tools/Basket" unique_id=463352272]
+script = ExtResource("8_fkgh4")
+reagent_to_index = Dictionary[ExtResource("6_lp1lv"), int]({
+ExtResource("12_lp1lv"): 3
+})
+metadata/_custom_type_script = "uid://d37jru5ijnbu3"
+
+[node name="Cauldron" parent="Tools" unique_id=137771067 node_paths=PackedStringArray("reagent_readers") instance=ExtResource("9_d7c3w")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 223.0
+offset_top = 574.0
+offset_right = 540.0
+offset_bottom = 849.0
+grow_horizontal = 1
+grow_vertical = 1
+reagent_readers = [NodePath("TaskSignalReader")]
+reagent_whitelist = Array[ExtResource("6_lp1lv")]([ExtResource("12_lp1lv")])
+
+[node name="TaskSignalReader" type="Node" parent="Tools/Cauldron" unique_id=820037567]
+script = ExtResource("8_fkgh4")
+reagent_to_index = Dictionary[ExtResource("6_lp1lv"), int]({
+ExtResource("10_iak1s"): 0,
+ExtResource("11_oq22a"): 1,
+ExtResource("12_lp1lv"): 2
+})
+metadata/_custom_type_script = "uid://d37jru5ijnbu3"
+
+[node name="VinegarBottle" parent="Tools" unique_id=628393831 instance=ExtResource("11_csbb7")]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 453.0
+offset_right = 74.0
+offset_bottom = 517.0
+
+[node name="BakingSodaJar" parent="Tools" unique_id=1324714557 instance=ExtResource("12_jkqj6")]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 461.0
+offset_right = 114.0
+offset_bottom = 525.0
+
+[node name="PopupTriggerLevelStart" type="Node" parent="." unique_id=1211603721]
+script = ExtResource("12_418xc")
+metadata/_custom_type_script = "uid://bv4xqu77fk6r2"
+
+[node name="PopupManager" parent="." unique_id=993331616 node_paths=PackedStringArray("index_to_popup") instance=ExtResource("13_3hquf")]
+visible = false
+layout_mode = 1
+mouse_filter = 2
+index_to_popup = {
+0: NodePath("PopupUI"),
+1: NodePath("PopupUI2")
+}
+
+[node name="PopupUI" parent="PopupManager" unique_id=1978143687 instance=ExtResource("14_7y2qq")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 300.0
+offset_bottom = 205.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="PopupUI2" parent="PopupManager" unique_id=698939904 instance=ExtResource("14_7y2qq")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 300.0
+offset_bottom = 205.0
+grow_horizontal = 1
+grow_vertical = 1

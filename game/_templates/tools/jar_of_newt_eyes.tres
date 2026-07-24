@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://dfmb8uj1p31v3"]
+
+[ext_resource type="Texture2D" uid="uid://doycghdlvhke7" path="res://assets/icons/jar_of_newt_eyes.png" id="1_5nr0s"]
+[ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="1_qtgi7"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_ugmdi"]
+[ext_resource type="Resource" uid="uid://bdnjwyd52l8f8" path="res://game/_templates/reagents/eye_of_newt.tres" id="3_iw2yw"]
+
+[sub_resource type="Resource" id="Resource_5nr0s"]
+script = ExtResource("1_qtgi7")
+reagent = ExtResource("3_iw2yw")
+metadata/_custom_type_script = "uid://b6f4ge1t4ys5r"
+
+[resource]
+script = ExtResource("2_ugmdi")
+name = "Jar of Newt Eyes"
+icon = ExtResource("1_5nr0s")
+reagent_generation_templates = Array[ExtResource("1_qtgi7")]([SubResource("Resource_5nr0s")])
+metadata/_custom_type_script = "uid://dhqopjqxgslsw"

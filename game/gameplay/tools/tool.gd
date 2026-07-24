@@ -44,7 +44,6 @@ func initialize(selection_manager_in: SelectionManager) -> void:
 	initialized = true
 
 func _gui_input(event: InputEvent) -> void:
-	pass
 	if is_selection_event(event) :
 		selection_manager.select(self)
 		accept_event()
