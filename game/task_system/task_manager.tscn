@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dc83tubjmui7w"]
+
+[ext_resource type="Script" uid="uid://0pdw32kjx1ve" path="res://game/task_system/task_manager.gd" id="1_dtb76"]
+[ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="2_nioph"]
+[ext_resource type="PackedScene" uid="uid://dacrv8g022xl8" path="res://game/task_system/task_ui.tscn" id="3_k6jai"]
+
+[sub_resource type="Resource" id="Resource_uv88r"]
+script = ExtResource("2_nioph")
+text = "Stomp Pebis"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_c6pbk"]
+script = ExtResource("2_nioph")
+text = "Vore"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_yl5aw"]
+script = ExtResource("2_nioph")
+text = "Refenestrate"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_4gc6t"]
+script = ExtResource("2_nioph")
+text = "Buinch of stuff"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[node name="TaskManager" type="PanelContainer" unique_id=1701545271]
+offset_right = 163.0
+offset_bottom = 171.0
+script = ExtResource("1_dtb76")
+tasks = Array[ExtResource("2_nioph")]([SubResource("Resource_uv88r"), SubResource("Resource_c6pbk"), SubResource("Resource_yl5aw"), SubResource("Resource_4gc6t")])
+task_ui_prefab = ExtResource("3_k6jai")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=207352177]
+layout_mode = 2
+
+[node name="TaskParent" type="VBoxContainer" parent="MarginContainer" unique_id=577245531]
+unique_name_in_owner = true
+layout_mode = 2

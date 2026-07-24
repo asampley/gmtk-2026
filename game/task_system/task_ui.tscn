@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dacrv8g022xl8"]
+
+[ext_resource type="Script" uid="uid://ct1071kwg35mn" path="res://game/task_system/task_ui.gd" id="1_0xbta"]
+
+[node name="TaskUI" type="RichTextLabel" unique_id=1533571045]
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "[s]Put the stuff in the pot[/s]"
+fit_content = true
+script = ExtResource("1_0xbta")
