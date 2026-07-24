@@ -5,16 +5,19 @@ extends TextureRect
 @export var tool_template: ToolTemplate
 @export var held_reagents_ui: HeldReagentsUI
 @export var task_signal_reader: TaskSignalReader
+@export var reagent_whitelist: Array[Reagent]
+@export var is_locked: bool = false
+@export var will_decay: bool = true
 
 var initialized: bool = false
 var selection_manager: SelectionManager
 var reagent_generators: Array[ReagentGeneration]
-var reagent_whitelist: Array[Reagent]
+
 var recipes: Array[Resource]
 var reagent_to_reaction_progress: Dictionary[Reagent, ReactionProgress] = {}
 var removable_reagent: Reagent:
 	get:
-		if reagent_to_reaction_progress.size() != 1:
+		if reagent_to_reaction_progress.size() != 1 || is_locked:
 			return null
 		else:
 			return reagent_to_reaction_progress.keys().front()
@@ -52,8 +55,8 @@ func _process(delta: float) -> void:
 		reagent_generator.update(delta)
 		if reagent_generator.max_reagents >= 1:
 			add_reagent(reagent_generator.reagent)
-	
-	_progress_reaction(delta)
+	if will_decay:
+		_progress_reaction(delta)
 
 func setup_whitelist() -> void:
 	for generator: ReagentGeneration in reagent_generators:

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://deny5pob0arye" path="res://game/gameplay/tools/objects/vinegar_bottle.tscn" id="4_u7os6"]
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="5_gyfmu"]
 [ext_resource type="Texture2D" uid="uid://cxal7c4aj01g3" path="res://assets/icons/vinegar.svg" id="5_htl7y"]
+[ext_resource type="PackedScene" uid="uid://xmhfrf35n264" path="res://game/gameplay/tools/objects/basket.tscn" id="5_txkky"]
 [ext_resource type="PackedScene" uid="uid://dc83tubjmui7w" path="res://game/task_system/task_manager.tscn" id="6_htl7y"]
 [ext_resource type="Resource" uid="uid://b51n6jxylo7sc" path="res://game/_templates/reagents/baking_soda.tres" id="6_sav1n"]
 [ext_resource type="Resource" uid="uid://di1uvsqiwm7xw" path="res://game/_templates/reagents/vinegar.tres" id="7_txkky"]
@@ -31,7 +32,13 @@ index = 2
 text = "Wait for the mixture to form a Tonic"
 metadata/_custom_type_script = "uid://c7s7risns0jw2"
 
-[node name="Level1" type="Control" unique_id=324419999 node_paths=PackedStringArray("tools")]
+[sub_resource type="Resource" id="Resource_24rpg"]
+script = ExtResource("12_gyfmu")
+index = 3
+text = "Drag the Tonic to the Basket"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[node name="Level1" type="Control" unique_id=324419999]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,9 +48,6 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_jrm0s")
-tools = [NodePath("Tools/Cauldron"), NodePath("Tools/BakingSodaJar"), NodePath("Tools/VinegarBottle")]
-recipes = null
-time_limit_s = null
 
 [node name="Background" type="TextureRect" parent="." unique_id=1004434688]
 layout_mode = 0
@@ -53,14 +57,32 @@ texture = ExtResource("2_htl7y")
 
 [node name="TaskManager" parent="." unique_id=1701545271 instance=ExtResource("6_htl7y")]
 layout_mode = 0
-tasks = Array[ExtResource("12_gyfmu")]([SubResource("Resource_uv88r"), SubResource("Resource_c6pbk"), SubResource("Resource_yl5aw")])
+tasks = Array[ExtResource("12_gyfmu")]([SubResource("Resource_uv88r"), SubResource("Resource_c6pbk"), SubResource("Resource_yl5aw"), SubResource("Resource_24rpg")])
 
 [node name="Tools" type="Control" parent="." unique_id=97151938]
+unique_name_in_owner = true
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Cauldron" parent="Tools" unique_id=953902506 node_paths=PackedStringArray("task_signal_reader") instance=ExtResource("2_88k7m")]
+[node name="Basket" parent="Tools" unique_id=953902506 instance=ExtResource("5_txkky")]
+layout_mode = 1
+offset_left = 27.0
+offset_top = 606.0
+offset_right = 187.0
+offset_bottom = 766.0
+reagent_whitelist = Array[ExtResource("5_gyfmu")]([ExtResource("10_sav1n")])
+is_locked = true
+will_decay = false
+
+[node name="TaskSignalReader" type="Node" parent="Tools/Basket" unique_id=463352272]
+script = ExtResource("4_aqc83")
+reagent_to_index = Dictionary[ExtResource("5_gyfmu"), int]({
+ExtResource("10_sav1n"): 3
+})
+metadata/_custom_type_script = "uid://d37jru5ijnbu3"
+
+[node name="Cauldron" parent="Tools" unique_id=137771067 node_paths=PackedStringArray("task_signal_reader") instance=ExtResource("2_88k7m")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -88,6 +110,7 @@ offset_left = 494.0
 offset_top = 346.0
 offset_right = 622.0
 offset_bottom = 474.0
+will_decay = false
 
 [node name="VinegarBottle" parent="Tools" unique_id=628393831 instance=ExtResource("4_u7os6")]
 layout_mode = 0
@@ -96,3 +119,4 @@ offset_top = 320.0
 offset_right = 546.0
 offset_bottom = 448.0
 texture = ExtResource("5_htl7y")
+will_decay = false

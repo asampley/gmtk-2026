@@ -2,8 +2,9 @@ class_name Level
 extends Node
 
 
-@export var tools: Array[Tool]
 @export var time_limit_s: float = 0
+
+@onready var tools: Control = %Tools
 
 
 var selection_manager := SelectionManager.new()
@@ -35,5 +36,5 @@ func initialize_tool_recipe_arrays() -> void:
 			cauldron_recipes.append(recipe)
 
 func initialize_tools() -> void:
-	for tool: Tool in tools:
+	for tool: Tool in tools.get_children():
 		tool.initialize(selection_manager)

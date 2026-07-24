@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://creyd7ac3iog7"]
+
+[ext_resource type="Texture2D" uid="uid://dsohikfo1h36w" path="res://assets/world_objects/basket.png" id="1_hs6cq"]
+[ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="2_1lrj5"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="3_v5u4d"]
+
+[resource]
+script = ExtResource("3_v5u4d")
+name = "Basket"
+icon = ExtResource("1_hs6cq")
+metadata/_custom_type_script = "uid://dhqopjqxgslsw"
