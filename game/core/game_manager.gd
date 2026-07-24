@@ -36,3 +36,7 @@ func _deferred_load_level(level_template: LevelTemplate) -> void:
 		push_error("Loaded level is not type Level or does not exist.")
 		return
 	level_parent.add_child(level_scene)
+
+
+func _on_mute_button_pressed() -> void:
+	pass # Replace with function body.

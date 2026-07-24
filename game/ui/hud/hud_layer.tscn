@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cujbgwdwtvq31"]
+
+[ext_resource type="Script" uid="uid://buuinc778urfj" path="res://game/ui/hud/sfx_control.gd" id="1_neg6t"]
+[ext_resource type="Script" uid="uid://dp6xb6rhth2ty" path="res://game/ui/hud/music_control.gd" id="2_6o5u7"]
+
+[node name="HudLayer" type="CanvasLayer" unique_id=1617507283]
+
+[node name="SFXLabel" type="RichTextLabel" parent="." unique_id=1048507308]
+offset_right = 81.0
+offset_bottom = 24.0
+text = "SFX level"
+
+[node name="SFXControl" type="HSlider" parent="." unique_id=810437090]
+offset_left = 1.0
+offset_top = 26.0
+offset_right = 125.0
+offset_bottom = 42.0
+script = ExtResource("1_neg6t")
+
+[node name="MusicLabel" type="RichTextLabel" parent="." unique_id=297430737]
+offset_top = 41.0
+offset_right = 115.0
+offset_bottom = 65.0
+text = "Music Level"
+
+[node name="MusicControl" type="HSlider" parent="." unique_id=2017093000]
+offset_top = 67.0
+offset_right = 124.0
+offset_bottom = 83.0
+script = ExtResource("2_6o5u7")
+
+[connection signal="ready" from="SFXControl" to="SFXControl" method="_on_ready"]
+[connection signal="value_changed" from="SFXControl" to="SFXControl" method="_on_value_changed"]
+[connection signal="ready" from="MusicControl" to="MusicControl" method="_on_ready"]
+[connection signal="value_changed" from="MusicControl" to="MusicControl" method="_on_value_changed"]

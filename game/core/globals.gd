@@ -19,4 +19,3 @@ func has_all(array: Array[Variant], values: Array[Variant]) -> bool:
 			return false
 
 	return true
-
