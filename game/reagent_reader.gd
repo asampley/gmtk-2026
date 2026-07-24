@@ -8,5 +8,5 @@ extends Node
 func initialize(tool_in: Tool) -> void:
 	tool_in.updated_reagents.connect(_on_updated_reagents)
 
-func _on_updated_reagents(reagents_to_progress: Dictionary[Reagent, ReactionProgress]) -> void:
+func _on_updated_reagents(reagents: Array[Reagent]) -> void:
 	pass
