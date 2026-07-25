@@ -11,6 +11,7 @@ extends Node
 @onready var transition_layer: TransitionManager = %TransitionLayer
 @onready var debug_layer: CanvasLayer = %DebugLayer
 @onready var music_manager: MusicManager = %MusicManager
+const TEST = preload("uid://brvy5qvw50re7")
 
 
 var current_level: LevelTemplate
@@ -22,7 +23,8 @@ signal game_manager_loaded()
 
 func _ready() -> void:
 	ServiceLocator.game_manager = self
-	#Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	#Input.set_custom_mouse_cursor(TEST, Input.CURSOR_DRAG)
 	
 	for resource: Resource in ResourceDataHandler.resource_dict["recipes"]:
 		if resource is Recipe:

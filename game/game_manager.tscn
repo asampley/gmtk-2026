@@ -4,11 +4,11 @@
 [ext_resource type="Resource" uid="uid://ci64vwvpqpf57" path="res://game/_templates/levels/level_1.tres" id="2_c11ku"]
 [ext_resource type="Script" uid="uid://7yqmb6d7mik2" path="res://game/menu_layer.gd" id="2_q0adu"]
 [ext_resource type="PackedScene" uid="uid://cujbgwdwtvq31" path="res://game/ui/hud/hud_layer.tscn" id="2_wimwi"]
-[ext_resource type="AudioStream" uid="uid://c2iqgjq4hu0hm" path="res://assets/audio/Gamejam Music V3 All Layers.mp3" id="3_5wfij"]
 [ext_resource type="Script" uid="uid://b3apsqri2ue3y" path="res://game/core/transition_manager.gd" id="3_fp1wv"]
 [ext_resource type="PackedScene" uid="uid://ca0ys6rnlgdof" path="res://game/ui/level_complete/level_complete_menu.tscn" id="3_q0adu"]
 [ext_resource type="PackedScene" uid="uid://dping0fholceh" path="res://utilities/debug_terminal/debug_terminal.tscn" id="3_wimwi"]
 [ext_resource type="Shader" uid="uid://vgufnnt4up2" path="res://utilities/shaders/universal_transition.gdshader" id="8_5wfij"]
+[ext_resource type="Script" uid="uid://clc0qnk153ygn" path="res://game/mouse_cursor.gd" id="8_feh72"]
 [ext_resource type="PackedScene" uid="uid://s33j33w8geni" path="res://game/gameplay/music_manager.tscn" id="10_85qha"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7mjia"]
@@ -43,31 +43,36 @@ shader_parameter/progress_bias = Vector2(0, 0)
 script = ExtResource("1_5ghhe")
 starting_level = ExtResource("2_c11ku")
 
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=289137489]
-unique_name_in_owner = true
-stream = ExtResource("3_5wfij")
-autoplay = true
-bus = &"Music"
-parameters/looping = true
-
 [node name="LevelParent" type="CanvasLayer" parent="." unique_id=1337681768]
 unique_name_in_owner = true
 
 [node name="PauseLayer" type="CanvasLayer" parent="." unique_id=515703332]
 unique_name_in_owner = true
+layer = 10
 
 [node name="HudLayer" parent="." unique_id=1743325382 instance=ExtResource("2_wimwi")]
 unique_name_in_owner = true
+layer = 20
 
 [node name="MenuLayer" type="CanvasLayer" parent="." unique_id=1079292625]
 unique_name_in_owner = true
+layer = 30
 script = ExtResource("2_q0adu")
 
 [node name="LevelCompleteMenu" parent="MenuLayer" unique_id=471476303 instance=ExtResource("3_q0adu")]
 visible = false
 
+[node name="CursorLayer" type="CanvasLayer" parent="." unique_id=801262457]
+layer = 40
+
+[node name="Cursor" type="TextureRect" parent="CursorLayer" unique_id=491043282]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("8_feh72")
+
 [node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=2075925208 node_paths=PackedStringArray("texture")]
 unique_name_in_owner = true
+layer = 100
 script = ExtResource("3_fp1wv")
 texture = NodePath("ColorRect")
 
@@ -82,6 +87,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="DebugLayer" type="CanvasLayer" parent="." unique_id=2141525577]
 unique_name_in_owner = true
+layer = 128
 
 [node name="DebugTerminal" parent="DebugLayer" unique_id=125272398 instance=ExtResource("3_wimwi")]
 offset_right = 227.0
