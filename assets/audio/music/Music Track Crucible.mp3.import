@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c26wd83r50blc"
+path="res://.godot/imported/Music Track Crucible.mp3-03234133ce96e42bb2d9e0799d6879f0.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/Music Track Crucible.mp3"
+dest_files=["res://.godot/imported/Music Track Crucible.mp3-03234133ce96e42bb2d9e0799d6879f0.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

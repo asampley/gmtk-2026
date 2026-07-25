@@ -53,7 +53,7 @@ func _deferred_load_level(level_template: LevelTemplate) -> void:
 		return
 	level_parent.add_child(level_scene)
 	current_level = level_template
-	level_scene.initialize(current_level.enabled_devices)
+	level_scene.initialize(current_level)
 
 func _on_level_complete_menu_next_level_requested() -> void:
 	load_level(current_level.next_level)

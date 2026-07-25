@@ -7,3 +7,4 @@ extends Resource
 @export var next_level: LevelTemplate
 
 @export var enabled_devices: Array[ToolTemplate]
+@export var tasks: Array[TaskTemplate]
