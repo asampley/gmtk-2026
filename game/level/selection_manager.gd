@@ -16,7 +16,7 @@ func initialize(selection_icon_in: SelectionIcon) -> void:
 	selection_icon = selection_icon_in
 
 func _unhandled_input(event: InputEvent) -> void:
-	if !(event.is_action("left_mouse")):
+	if event.is_action("left_mouse") || event.is_action("deselect"):
 		clear_selection()
 
 func select(selection: Tool) -> void:
