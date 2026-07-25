@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://xtumlcime4sh"]
 
 [ext_resource type="Script" uid="uid://c8cute52enlko" path="res://game/gameplay/tools/held_reagents_ui.gd" id="1_68goh"]
-[ext_resource type="PackedScene" uid="uid://l0tjrdtbfjwg" path="res://game/gameplay/tools/reagent_counter.tscn" id="2_m6gyp"]
+[ext_resource type="PackedScene" uid="uid://csgabd8qufkar" path="res://game/gameplay/tools/reagent_counter_2.tscn" id="2_m6gyp"]
 
 [node name="HeldReagentsUI" type="HBoxContainer" unique_id=702341484]
 anchors_preset = 5

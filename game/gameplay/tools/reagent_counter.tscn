@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://blrhfxydxv5u2" path="res://assets/mask_and_ui/circle_inner.svg" id="4_w4k25"]
 
 [node name="ReagentCounter" type="MarginContainer" unique_id=776641402]
+custom_minimum_size = Vector2(48, 48)
+custom_maximum_size = Vector2(48, 48)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -15,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 3
+tooltip_text = "ASHJKBNDJKNAS"
 script = ExtResource("1_07uex")
 _desirable_color = Color(0.45882353, 0.654902, 0.2627451, 1)
 _undesirable_color = Color(0.8117647, 0.34117648, 0.23529412, 1)

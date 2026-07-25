@@ -23,7 +23,7 @@ var desirable: bool:
 
 func initialize(reagent: Reagent) -> void:
 	icon.texture = reagent.icon
-	icon.tooltip_text = reagent.name
+	tooltip_text = reagent.name
 
 func _update_color() -> void:
 	if stable:

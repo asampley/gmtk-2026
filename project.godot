@@ -53,7 +53,7 @@ window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
-mouse_cursor/custom_image="uid://brvy5qvw50re7"
+mouse_cursor/tooltip_position_offset=Vector2(0, 70)
 
 [editor_plugins]
 

@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://csgabd8qufkar"]
+
+[ext_resource type="Script" uid="uid://6t26vusheqgw" path="res://game/gameplay/tools/reagent_counter.gd" id="1_8g0ip"]
+[ext_resource type="Texture2D" uid="uid://b8lor5cd8kgja" path="res://assets/mask_and_ui/circle_timer.svg" id="3_dgcy4"]
+[ext_resource type="Texture2D" uid="uid://bw5po70vt00nn" path="res://assets/mask_and_ui/circle_outer.svg" id="4_va0ck"]
+[ext_resource type="Texture2D" uid="uid://bh3w82uteew2e" path="res://assets/mask_and_ui/bar_timer.png" id="4_xayyd"]
+[ext_resource type="Texture2D" uid="uid://blrhfxydxv5u2" path="res://assets/mask_and_ui/circle_inner.svg" id="5_yud57"]
+[ext_resource type="Texture2D" uid="uid://cxal7c4aj01g3" path="res://assets/icons/vinegar.svg" id="6_830ch"]
+
+[node name="ReagentCounter" type="MarginContainer" unique_id=776641402]
+custom_minimum_size = Vector2(48, 128)
+custom_maximum_size = Vector2(48, 128)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+tooltip_text = "ASHJKBNDJKNAS"
+script = ExtResource("1_8g0ip")
+_desirable_color = Color(0.45882353, 0.654902, 0.2627451, 1)
+_undesirable_color = Color(0.8117647, 0.34117648, 0.23529412, 1)
+_stable_color = Color(0.12760001, 0.18458, 0.22, 0)
+_reaction_texture = ExtResource("4_xayyd")
+_stable_texture = ExtResource("3_dgcy4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1190585388]
+layout_mode = 2
+
+[node name="TextureProgressRect" type="TextureProgressBar" parent="VBoxContainer" unique_id=1845124334]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(24, 80)
+custom_maximum_size = Vector2(24, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_progress = ExtResource("4_xayyd")
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer" unique_id=152965557]
+self_modulate = Color(0.90588236, 0.8352941, 0.7019608, 1)
+custom_minimum_size = Vector2(48, 48)
+custom_maximum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_va0ck")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="IconMask" type="TextureRect" parent="VBoxContainer/TextureRect2" unique_id=416856450]
+clip_children = 1
+custom_minimum_size = Vector2(48, 48)
+custom_maximum_size = Vector2(48, 48)
+layout_mode = 0
+offset_top = -4.0
+offset_right = 96.0
+offset_bottom = 92.0
+texture = ExtResource("5_yud57")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TextureRect2/IconMask" unique_id=1871260897]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/TextureRect2/IconMask/MarginContainer" unique_id=698211944]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("6_830ch")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Control" type="MarginContainer" parent="VBoxContainer/TextureRect2" unique_id=283418084]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="OverflowNumber" type="RichTextLabel" parent="VBoxContainer/TextureRect2/Control" unique_id=472658062]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+bbcode_enabled = true
+text = "60"
+horizontal_alignment = 2
+vertical_alignment = 2
