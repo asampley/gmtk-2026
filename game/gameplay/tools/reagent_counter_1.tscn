@@ -18,9 +18,9 @@ grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 3
 script = ExtResource("1_0faif")
-_desirable_color = Color(0.45882353, 0.654902, 0.2627451, 1)
-_undesirable_color = Color(0.8117647, 0.34117648, 0.23529412, 1)
-_stable_color = Color(0.12760001, 0.18458, 0.22, 0)
+_desirable_color = Color(0.27450982, 0.50980395, 0.19607843, 1)
+_undesirable_color = Color(0.45882353, 0.14117648, 0.21960784, 1)
+_stable_color = Color(0.22352941, 0.2901961, 0.3137255, 1)
 _reaction_texture = ExtResource("2_njhc8")
 _stable_texture = ExtResource("3_0x5jt")
 

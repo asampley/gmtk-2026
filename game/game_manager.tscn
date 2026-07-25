@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://b3apsqri2ue3y" path="res://game/core/transition_manager.gd" id="3_fp1wv"]
 [ext_resource type="PackedScene" uid="uid://ca0ys6rnlgdof" path="res://game/ui/level_complete/level_complete_menu.tscn" id="3_q0adu"]
 [ext_resource type="PackedScene" uid="uid://dping0fholceh" path="res://utilities/debug_terminal/debug_terminal.tscn" id="3_wimwi"]
+[ext_resource type="Texture2D" uid="uid://brvy5qvw50re7" path="res://assets/mouse/test.png" id="7_lcamf"]
 [ext_resource type="Shader" uid="uid://vgufnnt4up2" path="res://utilities/shaders/universal_transition.gdshader" id="8_5wfij"]
 [ext_resource type="Script" uid="uid://clc0qnk153ygn" path="res://game/mouse_cursor.gd" id="8_feh72"]
 [ext_resource type="PackedScene" uid="uid://s33j33w8geni" path="res://game/gameplay/music_manager.tscn" id="10_85qha"]
@@ -68,6 +69,10 @@ layer = 40
 [node name="Cursor" type="TextureRect" parent="CursorLayer" unique_id=491043282]
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("7_lcamf")
+expand_mode = 1
+stretch_mode = 5
 script = ExtResource("8_feh72")
 
 [node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=2075925208 node_paths=PackedStringArray("texture")]

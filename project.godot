@@ -71,6 +71,7 @@ folder_colors={
 [gui]
 
 common/drag_threshold=3
+theme/custom="uid://cogqm6wn24nal"
 
 [input]
 
