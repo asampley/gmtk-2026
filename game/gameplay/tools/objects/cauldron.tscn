@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://byut73koqqbl0"]
 
-[ext_resource type="Texture2D" uid="uid://cta63dnyufr4b" path="res://assets/icons/cauldron.svg" id="1_iyty4"]
+[ext_resource type="Texture2D" uid="uid://b256x6pgdsc4" path="res://assets/world_objects/cauldron.svg" id="1_tmnft"]
 [ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_4w802"]
 [ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="3_g3jpw"]
 [ext_resource type="PackedScene" uid="uid://xtumlcime4sh" path="res://game/gameplay/tools/held_reagents_parent.tscn" id="4_4w802"]
@@ -16,7 +16,7 @@ offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
-texture = ExtResource("1_iyty4")
+texture = ExtResource("1_tmnft")
 script = ExtResource("2_4w802")
 tool_template = ExtResource("3_g3jpw")
 held_reagents_ui = NodePath("HeldReagentsParent")
