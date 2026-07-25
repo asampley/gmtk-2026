@@ -13,5 +13,5 @@ name = "Yellow Bile"
 reagents = Array[ExtResource("2_8oyta")]([ExtResource("4_xt8fl")])
 products = Array[ExtResource("2_8oyta")]([ExtResource("3_4up8f")])
 tool_template = ExtResource("6_8oyta")
-time = 15.0
+time = 12.0
 metadata/_custom_type_script = "uid://c4imnao3ortw8"

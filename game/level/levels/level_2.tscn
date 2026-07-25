@@ -27,7 +27,7 @@ metadata/_custom_type_script = "uid://c7s7risns0jw2"
 [sub_resource type="Resource" id="Resource_7khuu"]
 script = ExtResource("4_157ve")
 index = 1
-text = "Get a [b]Tonic[/b] ready. [b]Time it[b] to be ready when the bezoar into [b]Yellow bile[/b]"
+text = "Get a [b]Tonic[/b] ready. [b]Time it[/b] to be ready when the bezoar into [b]Yellow bile[/b]"
 metadata/_custom_type_script = "uid://c7s7risns0jw2"
 
 [sub_resource type="Resource" id="Resource_bmqof"]

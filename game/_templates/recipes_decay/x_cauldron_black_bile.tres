@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://cb3cuu0scs7o7"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_qrc7g"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_qxyq4"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_ir4w2"]
+[ext_resource type="Resource" uid="uid://c47nfpajofaxx" path="res://game/_templates/reagents/black_bile.tres" id="3_kir8j"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="5_clvr8"]
+
+[resource]
+script = ExtResource("3_ir4w2")
+reagents = Array[ExtResource("2_qxyq4")]([ExtResource("3_kir8j")])
+tool_template = ExtResource("5_clvr8")
+time = 3.5
+desirable = false
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

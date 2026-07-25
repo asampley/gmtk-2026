@@ -14,5 +14,5 @@ name = "Antacid"
 reagents = Array[ExtResource("2_r2lqd")]([ExtResource("4_en0mm"), ExtResource("5_58iwj")])
 products = Array[ExtResource("2_r2lqd")]([ExtResource("3_ws0py")])
 tool_template = ExtResource("7_fwllp")
-time = 4.0
+time = 2.0
 metadata/_custom_type_script = "uid://c4imnao3ortw8"

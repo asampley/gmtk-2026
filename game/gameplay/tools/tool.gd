@@ -72,20 +72,22 @@ func remove_reagent(reagent: Reagent) -> void:
 	remove_reagents([reagent])
 
 func add_reagents(new_reagents: Array[Reagent]) -> void:
-	var size := reagents.size();
+	var changed := false
 	for reagent in new_reagents:
 		if !reagents.has(reagent):
 			reagents.append(reagent)
-	if reagents.size() != size:
+			changed = true
+	if changed:
 		_calculate_recipes()
 	updated_reagents.emit(reagents)
 
 func remove_reagents(old_reagents: Array[Reagent]) -> void:
-	var size := reagents.size()
+	var changed := false
 	for reagent in old_reagents:
 		if reagents.has(reagent):
 			reagents.erase(reagent)
-	if size != reagents.size():
+			changed = true
+	if changed:
 		_calculate_recipes()
 	updated_reagents.emit(reagents)
 
@@ -145,20 +147,13 @@ func _progress_reaction(delta: float) -> void:
 			reagents_to_add.append_array(recipe.products)
 			reagents_to_remove.append_array(recipe.reagents)
 
-	if reagents_to_remove.size() > 0:
-		remove_reagents(reagents_to_remove)
-	if reagents_to_add.size() > 0:
-		# reset recipes by removing first
-		remove_reagents(reagents_to_add)
-		add_reagents(reagents_to_add)
-
 	for reagent in reagents:
 		var time_remaining := INF
 		var progress := 0.0
 		var desireable := true
 		for recipe in recipes_advancing:
 			if recipe.reagents.has(reagent):
-				var rp :=reaction_progress.recipe_progress[recipe]
+				var rp := reaction_progress.recipe_progress[recipe]
 				if rp.estimated_remaining < time_remaining:
 					time_remaining = rp.estimated_remaining
 					progress = rp.progress
@@ -171,6 +166,13 @@ func _progress_reaction(delta: float) -> void:
 			reagent_counter.set_color(ReagentCounter.TimerColor.DESIRABLE)
 		else:
 			reagent_counter.set_color(ReagentCounter.TimerColor.UNDESIRABLE)
+
+	if reagents_to_remove.size() > 0:
+		remove_reagents(reagents_to_remove)
+	if reagents_to_add.size() > 0:
+		# reset recipes by removing first
+		remove_reagents(reagents_to_add)
+		add_reagents(reagents_to_add)
 
 func _get_drag_data(at_position: Vector2) -> Variant:
 	return self

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://c47nfpajofaxx"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_6w364"]
+[ext_resource type="Texture2D" uid="uid://ru3a07lnd8jh" path="res://assets/icons/black_bile.svg" id="1_ps2qb"]
+
+[resource]
+script = ExtResource("1_6w364")
+name = "Black Bile"
+icon = ExtResource("1_ps2qb")
+metadata/_custom_type_script = "uid://xlcs11xcua2v"
