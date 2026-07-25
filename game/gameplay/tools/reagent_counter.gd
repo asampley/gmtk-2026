@@ -1,5 +1,5 @@
 class_name ReagentCounter
-extends MarginContainer
+extends Container
 
 @export var _desirable_color: Color
 @export var _undesirable_color: Color

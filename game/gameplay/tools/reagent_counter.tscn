@@ -59,8 +59,22 @@ texture = ExtResource("2_07uex")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OverflowNumber" type="RichTextLabel" parent="." unique_id=1497799583]
-unique_name_in_owner = true
+[node name="Control" type="Control" parent="." unique_id=1955726431]
 layout_mode = 2
+
+[node name="OverflowNumber" type="RichTextLabel" parent="Control" unique_id=1497799583]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -413.0
+offset_top = -397.0
+grow_horizontal = 0
+grow_vertical = 0
 bbcode_enabled = true
-fit_content = true
+text = "60"
+horizontal_alignment = 2
+vertical_alignment = 2
