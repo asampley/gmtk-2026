@@ -3,7 +3,7 @@ extends CanvasLayer
 
 
 @export var texture: ColorRect
-@export var scene_transition_min_s: float = 0.5
+@export var scene_transition_min_s: float = 1.0
 
 var tween: Tween
 
@@ -14,7 +14,7 @@ func begin_transition() -> void:
 	if tween:
 		tween.kill()
 	tween = create_tween()
-	tween.tween_method(set_shader_value, 1.0, 0.0, scene_transition_min_s)
+	tween.tween_method(set_shader_value, 1.0, 0, scene_transition_min_s)
 	texture.mouse_filter = Control.MOUSE_FILTER_STOP
 	await tween.finished
 	fade_completed.emit()
@@ -26,5 +26,5 @@ func end_transition() -> void:
 	if tween:
 		tween.kill()
 	tween = create_tween()
-	tween.tween_method(set_shader_value, 0.0, 1.0, scene_transition_min_s)
-	texture.mouse_filter =Control.MOUSE_FILTER_IGNORE
+	tween.tween_method(set_shader_value, -.10, 1.0, scene_transition_min_s)
+	texture.mouse_filter = Control.MOUSE_FILTER_IGNORE

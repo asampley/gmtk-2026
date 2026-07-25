@@ -1,3 +1,4 @@
+// https://github.com/cashew-olddew/Universal-Transition-Shader
 shader_type canvas_item;
 
 uniform bool use_sprite_alpha = true;

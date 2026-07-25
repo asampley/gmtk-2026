@@ -41,10 +41,9 @@ func _ready() -> void:
 func load_level(level_template: LevelTemplate, should_transition: bool = true) -> void:
 	if should_transition:
 		transition_layer.begin_transition()
-	_deferred_load_level.call_deferred(level_template)
-	
 	if should_transition:
 		await transition_layer.fade_completed
+	_deferred_load_level.call_deferred(level_template)
 	transition_layer.end_transition()
 	menu_layer.hide_children()
 
