@@ -16,14 +16,14 @@ grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 3
 script = ExtResource("1_07uex")
-_desirable_color = Color(0.69803923, 0.6862745, 0.36078432, 1)
-_undesirable_color = Color(0.8117647, 0.41568628, 0.30980393, 1)
-_stable_color = Color(0.14509805, 0.15294118, 0.16470589, 1)
+_desirable_color = Color(0.45882353, 0.654902, 0.2627451, 1)
+_undesirable_color = Color(0.8117647, 0.34117648, 0.23529412, 1)
+_stable_color = Color(0.12760001, 0.18458, 0.22, 0)
 _reaction_texture = ExtResource("2_sc241")
 _stable_texture = ExtResource("3_sc241")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=308696388]
-self_modulate = Color(0.85882354, 0.75686276, 0.6862745, 1)
+self_modulate = Color(0.90588236, 0.8352941, 0.7019608, 1)
 layout_mode = 2
 texture = ExtResource("3_fey4m")
 expand_mode = 2
@@ -61,6 +61,7 @@ stretch_mode = 5
 
 [node name="Control" type="Control" parent="." unique_id=1955726431]
 layout_mode = 2
+mouse_filter = 1
 
 [node name="OverflowNumber" type="RichTextLabel" parent="Control" unique_id=1497799583]
 unique_name_in_owner = true
@@ -74,6 +75,7 @@ offset_left = -413.0
 offset_top = -397.0
 grow_horizontal = 0
 grow_vertical = 0
+mouse_filter = 1
 bbcode_enabled = true
 text = "60"
 horizontal_alignment = 2
