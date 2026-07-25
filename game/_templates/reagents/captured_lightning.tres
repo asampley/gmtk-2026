@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://w2x5oknjj2nd"]
+
+[ext_resource type="Script" uid="uid://cmjlcdkdphdjo" path="res://game/gameplay/decay_template.gd" id="1_qs1dk"]
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="2_6lawp"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_b12sq"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="3_bqhua"]
+[ext_resource type="Texture2D" uid="uid://smigs8hmvdaq" path="res://assets/icons/captured_lightning.png" id="4_vfy34"]
+
+[sub_resource type="Resource" id="Resource_4gomd"]
+script = ExtResource("1_qs1dk")
+tool = ExtResource("3_bqhua")
+time_s = 0.3
+is_desirable = false
+metadata/_custom_type_script = "uid://cmjlcdkdphdjo"
+
+[resource]
+script = ExtResource("2_b12sq")
+name = "Captured Lightning"
+icon = ExtResource("4_vfy34")
+decay_templates = Array[ExtResource("1_qs1dk")]([SubResource("Resource_4gomd")])
+metadata/_custom_type_script = "uid://xlcs11xcua2v"

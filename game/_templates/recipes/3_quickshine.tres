@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://bjdbrr0i63io7"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_ooxrd"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="2_o6jid"]
+[ext_resource type="Resource" uid="uid://ba3hmsavyi2cd" path="res://game/_templates/reagents/quickshine.tres" id="2_s1hld"]
+[ext_resource type="Resource" uid="uid://b51n6jxylo7sc" path="res://game/_templates/reagents/baking_soda.tres" id="3_27gnd"]
+[ext_resource type="Resource" uid="uid://w2x5oknjj2nd" path="res://game/_templates/reagents/captured_lightning.tres" id="4_6ccix"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="6_uf6es"]
+
+[resource]
+script = ExtResource("2_o6jid")
+name = "Quickshine"
+reagents = Array[ExtResource("1_ooxrd")]([ExtResource("3_27gnd"), ExtResource("4_6ccix")])
+products = Array[ExtResource("1_ooxrd")]([ExtResource("2_s1hld")])
+tool_template = ExtResource("6_uf6es")
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://ba3hmsavyi2cd"]
+
+[ext_resource type="Script" uid="uid://cmjlcdkdphdjo" path="res://game/gameplay/decay_template.gd" id="1_whu3t"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_xvg5n"]
+[ext_resource type="Texture2D" uid="uid://he210a7tgy3b" path="res://assets/icons/quickshine.png" id="4_wgxxb"]
+
+[resource]
+script = ExtResource("2_xvg5n")
+name = "Quickshine"
+icon = ExtResource("4_wgxxb")
+metadata/_custom_type_script = "uid://xlcs11xcua2v"

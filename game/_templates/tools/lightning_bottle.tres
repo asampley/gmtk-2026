@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://dedqsrtd4p8g2"]
+
+[ext_resource type="Texture2D" uid="uid://bj31f277vyp58" path="res://assets/icons/lightning_in_a_bottle.png" id="1_3tguc"]
+[ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="1_cwdf7"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_yuw53"]
+[ext_resource type="Resource" uid="uid://w2x5oknjj2nd" path="res://game/_templates/reagents/captured_lightning.tres" id="3_qypy1"]
+
+[sub_resource type="Resource" id="Resource_3tguc"]
+script = ExtResource("1_cwdf7")
+reagent = ExtResource("3_qypy1")
+metadata/_custom_type_script = "uid://b6f4ge1t4ys5r"
+
+[resource]
+script = ExtResource("2_yuw53")
+name = "Lightning Bottle"
+icon = ExtResource("1_3tguc")
+reagent_generation_templates = Array[ExtResource("1_cwdf7")]([SubResource("Resource_3tguc")])
+metadata/_custom_type_script = "uid://dhqopjqxgslsw"

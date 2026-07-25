@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://cg7gnusvb8pls"]
+
+[ext_resource type="Script" uid="uid://ch04hx6edyi2f" path="res://game/level/level.gd" id="1_1mp24"]
+[ext_resource type="Texture2D" uid="uid://drr2dfvdqss1h" path="res://assets/background.png" id="2_3ges1"]
+[ext_resource type="PackedScene" uid="uid://dc83tubjmui7w" path="res://game/task_system/task_manager.tscn" id="3_02w4x"]
+[ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="4_2w46e"]
+[ext_resource type="PackedScene" uid="uid://xmhfrf35n264" path="res://game/gameplay/tools/objects/basket.tscn" id="5_emlq1"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="6_dd7wj"]
+[ext_resource type="Resource" uid="uid://f2jew64p8lqd" path="res://game/_templates/reagents/tonic.tres" id="7_r5uni"]
+[ext_resource type="Script" uid="uid://d37jru5ijnbu3" path="res://game/task_system/task_reagent_reader.gd" id="8_lxsh7"]
+[ext_resource type="PackedScene" uid="uid://byut73koqqbl0" path="res://game/gameplay/tools/objects/cauldron.tscn" id="9_6fwmt"]
+[ext_resource type="Resource" uid="uid://b51n6jxylo7sc" path="res://game/_templates/reagents/baking_soda.tres" id="10_b1gag"]
+[ext_resource type="Resource" uid="uid://ba3hmsavyi2cd" path="res://game/_templates/reagents/quickshine.tres" id="11_a8y70"]
+[ext_resource type="Resource" uid="uid://w2x5oknjj2nd" path="res://game/_templates/reagents/captured_lightning.tres" id="12_3ges1"]
+[ext_resource type="PackedScene" uid="uid://d3ioxxs1ek3l8" path="res://game/gameplay/tools/objects/lightning_bottle.tscn" id="13_1mp24"]
+[ext_resource type="PackedScene" uid="uid://ddkrgwrded4to" path="res://game/gameplay/tools/objects/jar_of_saleratus.tscn" id="13_ww2b5"]
+[ext_resource type="Script" uid="uid://bv4xqu77fk6r2" path="res://game/popups/popup_trigger_level_start.gd" id="14_qud4e"]
+[ext_resource type="PackedScene" uid="uid://cx8u8fll1cg2c" path="res://game/popups/popup_manager.tscn" id="15_cmwo1"]
+[ext_resource type="PackedScene" uid="uid://4eppg42uma7o" path="res://game/popups/popup_ui.tscn" id="16_u86lu"]
+
+[sub_resource type="Resource" id="Resource_uv88r"]
+script = ExtResource("4_2w46e")
+text = "Add Captured Lightning to the Cauldron"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_c6pbk"]
+script = ExtResource("4_2w46e")
+index = 1
+text = "Lightning Decays quickly! Try adding Salurus first."
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_yl5aw"]
+script = ExtResource("4_2w46e")
+index = 2
+text = "Now add Lightning to complete the recipe."
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_csbb7"]
+script = ExtResource("4_2w46e")
+index = 3
+text = "Quickshine moved to Basket"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[node name="Level3" type="Control" unique_id=324419999]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_1mp24")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1004434688]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3ges1")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="TaskManager" parent="." unique_id=1701545271 instance=ExtResource("3_02w4x")]
+layout_mode = 0
+tasks = Array[ExtResource("4_2w46e")]([SubResource("Resource_uv88r"), SubResource("Resource_c6pbk"), SubResource("Resource_yl5aw"), SubResource("Resource_csbb7")])
+
+[node name="Tools" type="Control" parent="." unique_id=97151938]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Basket" parent="Tools" unique_id=953902506 node_paths=PackedStringArray("reagent_readers") instance=ExtResource("5_emlq1")]
+layout_mode = 1
+offset_left = -17.0
+offset_top = 625.0
+offset_right = 143.0
+offset_bottom = 785.0
+reagent_readers = [NodePath("TaskSignalReader")]
+reagent_whitelist = Array[ExtResource("6_dd7wj")]([ExtResource("11_a8y70")])
+is_locked = true
+will_decay = false
+
+[node name="TaskSignalReader" type="Node" parent="Tools/Basket" unique_id=463352272]
+script = ExtResource("8_lxsh7")
+reagent_to_index = Dictionary[ExtResource("6_dd7wj"), int]({
+ExtResource("11_a8y70"): 3
+})
+metadata/_custom_type_script = "uid://d37jru5ijnbu3"
+
+[node name="Cauldron" parent="Tools" unique_id=137771067 node_paths=PackedStringArray("reagent_readers") instance=ExtResource("9_6fwmt")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 223.0
+offset_top = 574.0
+offset_right = 540.0
+offset_bottom = 849.0
+grow_horizontal = 1
+grow_vertical = 1
+reagent_readers = [NodePath("TaskSignalReader")]
+reagent_whitelist = Array[ExtResource("6_dd7wj")]([ExtResource("7_r5uni")])
+
+[node name="TaskSignalReader" type="Node" parent="Tools/Cauldron" unique_id=820037567]
+script = ExtResource("8_lxsh7")
+reagent_to_index = Dictionary[ExtResource("6_dd7wj"), int]({
+ExtResource("10_b1gag"): 1,
+ExtResource("11_a8y70"): 2,
+ExtResource("12_3ges1"): 0
+})
+metadata/_custom_type_script = "uid://d37jru5ijnbu3"
+
+[node name="BakingSodaJar" parent="Tools" unique_id=1324714557 instance=ExtResource("13_ww2b5")]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 461.0
+offset_right = 114.0
+offset_bottom = 525.0
+
+[node name="LightningBottle" parent="Tools" unique_id=628393831 instance=ExtResource("13_1mp24")]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 531.0
+offset_right = 98.0
+offset_bottom = 611.0
+
+[node name="PopupTriggerLevelStart" type="Node" parent="." unique_id=1211603721]
+script = ExtResource("14_qud4e")
+metadata/_custom_type_script = "uid://bv4xqu77fk6r2"
+
+[node name="PopupManager" parent="." unique_id=993331616 node_paths=PackedStringArray("index_to_popup") instance=ExtResource("15_cmwo1")]
+visible = false
+layout_mode = 1
+mouse_filter = 2
+index_to_popup = {
+0: NodePath("PopupUI"),
+1: NodePath("PopupUI2")
+}
+
+[node name="PopupUI" parent="PopupManager" unique_id=1978143687 instance=ExtResource("16_u86lu")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 300.0
+offset_bottom = 205.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="PopupUI2" parent="PopupManager" unique_id=698939904 instance=ExtResource("16_u86lu")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 300.0
+offset_bottom = 205.0
+grow_horizontal = 1
+grow_vertical = 1

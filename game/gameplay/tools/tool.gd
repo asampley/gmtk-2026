@@ -103,18 +103,18 @@ func add_reagents(new_reagents: Array[Reagent]) -> void:
 		if !reagent_to_reaction_progress.has(reagent):
 			reagent_to_reaction_progress[reagent] = ReactionProgress.new()
 			reagent_to_reaction_progress[reagent].initialize(reagent.get_decay_template(tool_template))
+	updated_reagents.emit(reagent_to_reaction_progress)
 	if reagent_to_reaction_progress.size() != array_size:
 		_calculate_recipes()
-	updated_reagents.emit(reagent_to_reaction_progress)
 
 func remove_reagents(old_reagents: Array[Reagent]) -> void:
 	var array_size := reagent_to_reaction_progress.size()
 	for reagent in old_reagents:
 		if reagent_to_reaction_progress.has(reagent):
 			reagent_to_reaction_progress.erase(reagent)
+	updated_reagents.emit(reagent_to_reaction_progress)
 	if array_size != reagent_to_reaction_progress.size():
 		_calculate_recipes()
-	updated_reagents.emit(reagent_to_reaction_progress)
 
 # Check if all required ingredients exist. 
 # Then immediately make the product and remove reagents if so.
