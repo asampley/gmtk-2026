@@ -35,14 +35,16 @@ func _ready() -> void:
 			recipes.append(resource)
 	
 	game_manager_loaded.emit()
-	load_level(starting_level)
+	load_level(starting_level, false)
 	music_manager.play()
 
-func load_level(level_template: LevelTemplate) -> void:
-	transition_layer.begin_transition()
+func load_level(level_template: LevelTemplate, should_transition: bool = true) -> void:
+	if should_transition:
+		transition_layer.begin_transition()
 	_deferred_load_level.call_deferred(level_template)
 	
-	await transition_layer.fade_completed
+	if should_transition:
+		await transition_layer.fade_completed
 	transition_layer.end_transition()
 	menu_layer.hide_children()
 
