@@ -3,16 +3,11 @@
 [ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="1_4ys6e"]
 [ext_resource type="PackedScene" uid="uid://d15gqw48ofq6d" path="res://game/level/levels/level_2.tscn" id="1_kcd7p"]
 [ext_resource type="Script" uid="uid://cdg0e4kmye577" path="res://game/level/level_template.gd" id="2_3qgf5"]
-[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="2_p1p2p"]
 [ext_resource type="Resource" uid="uid://dx82wchjfxdr7" path="res://game/_templates/levels/level_3.tres" id="2_r2hqu"]
-[ext_resource type="Resource" uid="uid://5yyqa8b51rv5" path="res://game/_templates/tools/vinegar_bottle.tres" id="3_vvdoh"]
-[ext_resource type="Resource" uid="uid://dxd1xg2wj5c74" path="res://game/_templates/tools/saleratus_jar.tres" id="4_m5pg7"]
-[ext_resource type="Resource" uid="uid://ftc5tg3eghlv" path="res://game/_templates/tools/bezoar_jar.tres" id="5_jlbu6"]
 
 [resource]
 script = ExtResource("2_3qgf5")
 level_name = "Level 2"
 level_scene = ExtResource("1_kcd7p")
 next_level = ExtResource("2_r2hqu")
-enabled_devices = Array[ExtResource("1_4ys6e")]([ExtResource("2_p1p2p"), ExtResource("3_vvdoh"), ExtResource("4_m5pg7"), ExtResource("5_jlbu6")])
 metadata/_custom_type_script = "uid://cdg0e4kmye577"

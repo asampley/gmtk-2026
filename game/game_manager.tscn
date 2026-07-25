@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://ci64vwvpqpf57" path="res://game/_templates/levels/level_1.tres" id="2_c11ku"]
 [ext_resource type="Script" uid="uid://7yqmb6d7mik2" path="res://game/menu_layer.gd" id="2_q0adu"]
 [ext_resource type="PackedScene" uid="uid://cujbgwdwtvq31" path="res://game/ui/hud/hud_layer.tscn" id="2_wimwi"]
-[ext_resource type="PackedScene" uid="uid://db2dopar5raq8" path="res://game/ui/recipe_book/recipe_book.tscn" id="3_c11ku"]
+[ext_resource type="AudioStream" uid="uid://c2iqgjq4hu0hm" path="res://assets/audio/Gamejam Music V3 All Layers.mp3" id="3_5wfij"]
 [ext_resource type="Script" uid="uid://b3apsqri2ue3y" path="res://game/core/transition_manager.gd" id="3_fp1wv"]
 [ext_resource type="PackedScene" uid="uid://ca0ys6rnlgdof" path="res://game/ui/level_complete/level_complete_menu.tscn" id="3_q0adu"]
 [ext_resource type="PackedScene" uid="uid://dping0fholceh" path="res://utilities/debug_terminal/debug_terminal.tscn" id="3_wimwi"]
@@ -43,6 +43,13 @@ shader_parameter/progress_bias = Vector2(0, 0)
 script = ExtResource("1_5ghhe")
 starting_level = ExtResource("2_c11ku")
 
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=289137489]
+unique_name_in_owner = true
+stream = ExtResource("3_5wfij")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
 [node name="LevelParent" type="CanvasLayer" parent="." unique_id=1337681768]
 unique_name_in_owner = true
 
@@ -57,9 +64,6 @@ unique_name_in_owner = true
 script = ExtResource("2_q0adu")
 
 [node name="LevelCompleteMenu" parent="MenuLayer" unique_id=471476303 instance=ExtResource("3_q0adu")]
-visible = false
-
-[node name="RecipeBook" parent="MenuLayer" unique_id=2082085524 instance=ExtResource("3_c11ku")]
 visible = false
 
 [node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=2075925208 node_paths=PackedStringArray("texture")]
