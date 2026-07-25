@@ -11,7 +11,8 @@ var index_to_task_ui: Dictionary[int, TaskUI] = {}
 var tasks_completed: int
 
 
-func _ready() -> void:
+func initialize(tasks_in: Array[TaskTemplate]) -> void:
+	tasks = tasks_in
 	for task: TaskTemplate in tasks:
 		var task_ui: TaskUI = task_ui_prefab.instantiate()
 		task_parent.add_child(task_ui)

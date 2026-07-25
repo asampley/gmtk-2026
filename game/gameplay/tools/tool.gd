@@ -8,6 +8,8 @@ extends TextureRect
 @export var reagent_whitelist: Array[Reagent]
 @export var is_locked: bool = false
 @export var will_decay: bool = true
+@export var changes_music: bool
+@export var music_bus: String
 
 var initialized: bool = false
 var selection_manager: SelectionManager
@@ -113,10 +115,7 @@ func add_reagents(new_reagents: Array[Reagent]) -> void:
 			reagents.append(reagent)
 			changed = true
 	if changed:
-		_calculate_recipes()
-		_flag_updated_reagents = true
-		updated_reagents.emit(reagents)
-		updated_reactions.emit(reaction_progress)
+		update_changes()
 
 func remove_reagents(old_reagents: Array[Reagent]) -> void:
 	var changed := false
@@ -125,10 +124,18 @@ func remove_reagents(old_reagents: Array[Reagent]) -> void:
 			reagents.erase(reagent)
 			changed = true
 	if changed:
-		_calculate_recipes()
-		_flag_updated_reagents = true
-		updated_reagents.emit(reagents)
-		updated_reactions.emit(reaction_progress)
+		update_changes()
+
+func update_changes() -> void:
+	_calculate_recipes()
+	_flag_updated_reagents = true
+	updated_reagents.emit(reagents)
+	updated_reactions.emit(reaction_progress)
+	if changes_music:
+		if reagents.size() > 0:
+			EventBus.audio_events.music_bus_audible.emit(music_bus)
+		else:
+			EventBus.audio_events.music_bus_muted.emit(music_bus)
 
 # Calculate recipes that should be in progress
 # Ties are broken by shortest duration
@@ -195,7 +202,6 @@ func _progress_reaction(pulse: int, tick: int, per_pulse: int) -> void:
 		# reset recipes by removing first
 		remove_reagents(reagents_to_add)
 		add_reagents(reagents_to_add)
-
 
 func _get_drag_data(at_position: Vector2) -> Variant:
 	return self

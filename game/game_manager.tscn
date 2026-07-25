@@ -9,6 +9,13 @@
 [ext_resource type="PackedScene" uid="uid://ca0ys6rnlgdof" path="res://game/ui/level_complete/level_complete_menu.tscn" id="3_q0adu"]
 [ext_resource type="PackedScene" uid="uid://dping0fholceh" path="res://utilities/debug_terminal/debug_terminal.tscn" id="3_wimwi"]
 [ext_resource type="Shader" uid="uid://vgufnnt4up2" path="res://utilities/shaders/universal_transition.gdshader" id="8_5wfij"]
+[ext_resource type="Script" uid="uid://ct67puho0y0rs" path="res://game/music_manager.gd" id="10_7ra1o"]
+[ext_resource type="AudioStream" uid="uid://c13irigdpb2c3" path="res://assets/audio/music/Music Track Base (Clarinet, Tuba, Clock).mp3" id="10_77vnv"]
+[ext_resource type="AudioStream" uid="uid://xvrmit7narcd" path="res://assets/audio/music/Music Track Cauldron.mp3" id="11_7ra1o"]
+[ext_resource type="AudioStream" uid="uid://c26wd83r50blc" path="res://assets/audio/music/Music Track Crucible.mp3" id="12_pr2qf"]
+[ext_resource type="AudioStream" uid="uid://cvpqnr6rugmgj" path="res://assets/audio/music/Music Track Knife and Triangle.mp3" id="13_ouuen"]
+[ext_resource type="AudioStream" uid="uid://dljho4pc2kn4x" path="res://assets/audio/music/Music Track Pestle and Mortar.mp3" id="14_1i2cx"]
+[ext_resource type="AudioStream" uid="uid://bll5benfqv443" path="res://assets/audio/music/Music Track Vocals .mp3" id="15_5aekg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7mjia"]
 shader = ExtResource("8_5wfij")
@@ -80,5 +87,39 @@ unique_name_in_owner = true
 
 [node name="DebugTerminal" parent="DebugLayer" unique_id=125272398 instance=ExtResource("3_wimwi")]
 offset_right = 227.0
+
+[node name="MusicManager" type="Node" parent="." unique_id=1198011189]
+unique_name_in_owner = true
+script = ExtResource("10_7ra1o")
+
+[node name="BaseMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=1871600200]
+stream = ExtResource("10_77vnv")
+bus = &"Base_Music"
+parameters/looping = true
+
+[node name="CauldronMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=1914931440]
+stream = ExtResource("11_7ra1o")
+bus = &"Cauldron"
+parameters/looping = true
+
+[node name="CrucibleMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=485247422]
+stream = ExtResource("12_pr2qf")
+bus = &"Crucible"
+parameters/looping = true
+
+[node name="KnifeMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=332163247]
+stream = ExtResource("13_ouuen")
+bus = &"Knife"
+parameters/looping = true
+
+[node name="MortarMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=2136376854]
+stream = ExtResource("14_1i2cx")
+bus = &"Mortar"
+parameters/looping = true
+
+[node name="VocalMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=1555908123]
+stream = ExtResource("15_5aekg")
+bus = &"Vocals"
+parameters/looping = true
 
 [connection signal="next_level_requested" from="MenuLayer/LevelCompleteMenu" to="." method="_on_level_complete_menu_next_level_requested"]

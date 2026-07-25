@@ -19,6 +19,8 @@ texture = ExtResource("1_iyty4")
 script = ExtResource("2_4w802")
 tool_template = ExtResource("3_g3jpw")
 held_reagents_ui = NodePath("HeldReagentsParent")
+changes_music = true
+music_bus = "Cauldron"
 metadata/_custom_type_script = "uid://cp85lcgd1nglo"
 
 [node name="HeldReagentsParent" parent="." unique_id=702341484 instance=ExtResource("4_4w802")]

@@ -3,15 +3,18 @@ extends Node
 
 
 @onready var tools: Control = %Tools
+@onready var task_manager: TaskManager = %TaskManager
 
 var selection_manager := SelectionManager.new()
 var enabled_tools: Array[Tool]
 
 var initialized: bool = false
 
-func initialize(enabled_tools_in: Array[ToolTemplate]) -> void:
+
+func initialize(template: LevelTemplate) -> void:
+	task_manager.initialize(template.tasks)
 	initialize_selection_manager()
-	initialize_tools(enabled_tools_in)
+	initialize_tools(template.enabled_devices)
 	for tool: Tool in enabled_tools:
 		tool.on_pulse(0)
 	PulseTimer.pulse.connect(on_pulse)
