@@ -45,6 +45,7 @@ func initialize(selection_manager_in: SelectionManager) -> void:
 		for reagent_reader: ReagentReader in reagent_readers:
 			reagent_reader.initialize(self)
 	setup_whitelist()
+	tooltip_text = tool_template.name
 	initialized = true
 
 func _gui_input(event: InputEvent) -> void:

@@ -21,8 +21,9 @@ var desirable: bool:
 		desirable = value
 		_update_color()
 
-func update(reagent: Reagent) -> void:
+func initialize(reagent: Reagent) -> void:
 	icon.texture = reagent.icon
+	icon.tooltip_text = reagent.name
 
 func _update_color() -> void:
 	if stable:

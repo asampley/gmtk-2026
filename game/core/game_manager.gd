@@ -21,6 +21,7 @@ signal game_manager_loaded()
 
 func _ready() -> void:
 	ServiceLocator.game_manager = self
+	#Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	
 	for resource: Resource in ResourceDataHandler.resource_dict["recipes"]:
 		if resource is Recipe:
