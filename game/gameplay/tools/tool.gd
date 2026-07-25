@@ -62,10 +62,10 @@ func pulse() -> void:
 	
 	_progress_reaction(1)
 	
-	if _flag_updated_reagents:
-		updated_reagents.emit(reagents)
-	if _flag_updated_reactions:
-		updated_reactions.emit(reaction_progress)
+	#if _flag_updated_reagents:
+		#updated_reagents.emit(reagents)
+	#if _flag_updated_reactions:
+		#updated_reactions.emit(reaction_progress)
 
 func setup_whitelist() -> void:
 	var recipes := ServiceLocator.game_manager.recipes
@@ -113,6 +113,8 @@ func add_reagents(new_reagents: Array[Reagent]) -> void:
 	if changed:
 		_calculate_recipes()
 		_flag_updated_reagents = true
+		updated_reagents.emit(reagents)
+		updated_reactions.emit(reaction_progress)
 
 func remove_reagents(old_reagents: Array[Reagent]) -> void:
 	var changed := false
@@ -123,6 +125,8 @@ func remove_reagents(old_reagents: Array[Reagent]) -> void:
 	if changed:
 		_calculate_recipes()
 		_flag_updated_reagents = true
+		updated_reagents.emit(reagents)
+		updated_reactions.emit(reaction_progress)
 
 # Calculate recipes that should be in progress
 # Ties are broken by shortest duration
