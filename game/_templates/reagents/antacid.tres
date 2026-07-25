@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://bb0jhg86b0277"]
+
+[ext_resource type="Texture2D" uid="uid://como6nsr7urm1" path="res://assets/icons/antacid.svg" id="1_i3gww"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_mfqqe"]
+
+[resource]
+script = ExtResource("1_mfqqe")
+name = "Antacid"
+icon = ExtResource("1_i3gww")
+metadata/_custom_type_script = "uid://xlcs11xcua2v"

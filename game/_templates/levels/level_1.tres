@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cdg0e4kmye577" path="res://game/level/level_template.gd" id="1_16102"]
 [ext_resource type="PackedScene" uid="uid://c7d5ruk3rkv1l" path="res://game/level/levels/level_1.tscn" id="1_lqufd"]
+[ext_resource type="Resource" uid="uid://rlwki0safuvy" path="res://game/_templates/levels/level_2.tres" id="2_mgf6a"]
 
 [resource]
 script = ExtResource("1_16102")
 level_name = "Level 1"
 level_scene = ExtResource("1_lqufd")
+next_level = ExtResource("2_mgf6a")
 metadata/_custom_type_script = "uid://cdg0e4kmye577"

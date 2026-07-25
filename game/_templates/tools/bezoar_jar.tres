@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://ftc5tg3eghlv"]
+
+[ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="1_dtqqh"]
+[ext_resource type="Texture2D" uid="uid://b6tnk7w6huea8" path="res://assets/icons/bezoar.svg" id="1_j4i4y"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_pp74o"]
+[ext_resource type="Resource" uid="uid://qg6c5gr6f1pt" path="res://game/_templates/reagents/bezoar.tres" id="3_2olxx"]
+
+[sub_resource type="Resource" id="Resource_j4i4y"]
+script = ExtResource("1_dtqqh")
+reagent = ExtResource("3_2olxx")
+metadata/_custom_type_script = "uid://b6f4ge1t4ys5r"
+
+[resource]
+script = ExtResource("2_pp74o")
+name = "Bezoar Jar"
+icon = ExtResource("1_j4i4y")
+reagent_generation_templates = Array[ExtResource("1_dtqqh")]([SubResource("Resource_j4i4y")])
+metadata/_custom_type_script = "uid://dhqopjqxgslsw"

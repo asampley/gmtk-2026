@@ -12,6 +12,8 @@ var setup_events := SetupEvents.new()
 
 class GameEvents:
 	signal task_completed(index: int)
+	signal popup_requested(index: int)
+	signal level_completed()
 
 class UIEvents:
 	signal fly_in_text_requested(text: String, position: Vector2, impact: float, direction: Vector2)
