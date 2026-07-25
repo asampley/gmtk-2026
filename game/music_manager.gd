@@ -6,6 +6,7 @@ extends Node
 @export var max_volume: float = 1.5
 
 var tween: Tween
+var all_buses: Array[String] = ["Cauldron", "Crucible", "Knife", "Mortar"]
 
 
 func _ready() -> void:
@@ -39,5 +40,11 @@ func on_music_bus_muted(bus_name: String) -> void:
 
 func tween_music(volume: float, index: int) -> void:
 	AudioServer.set_bus_volume_linear(index, volume)
-	print(AudioServer.get_bus_name(index))
-	
+	var max: float
+	for bus_name: String in all_buses:
+		var i: int = AudioServer.get_bus_index(bus_name)
+		var current_volume := AudioServer.get_bus_volume_linear(index)
+		if current_volume > max:
+			max = current_volume
+	var i: int = AudioServer.get_bus_index("Vocals")
+	AudioServer.set_bus_volume_linear(i, max)
