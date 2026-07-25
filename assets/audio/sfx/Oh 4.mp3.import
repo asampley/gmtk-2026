@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgq47korufesw"
+path="res://.godot/imported/Oh 4.mp3-309812530135b45b1d7a1b337c928dd5.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Oh 4.mp3"
+dest_files=["res://.godot/imported/Oh 4.mp3-309812530135b45b1d7a1b337c928dd5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

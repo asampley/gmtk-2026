@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://box2q3h1tywao"
+path="res://.godot/imported/Hmm 4.mp3-b563381c148d2ef2fd9ba26ed33ece31.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Hmm 4.mp3"
+dest_files=["res://.godot/imported/Hmm 4.mp3-b563381c148d2ef2fd9ba26ed33ece31.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

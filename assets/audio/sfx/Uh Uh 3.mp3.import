@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3r5gn38mkuxr"
+path="res://.godot/imported/Uh Uh 3.mp3-9523e05f2440e2fb0f3336f76ac50f76.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Uh Uh 3.mp3"
+dest_files=["res://.godot/imported/Uh Uh 3.mp3-9523e05f2440e2fb0f3336f76ac50f76.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

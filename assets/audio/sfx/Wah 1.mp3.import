@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpnngbt7cv8rh"
+path="res://.godot/imported/Wah 1.mp3-afdd6f84a101573e854fe28cd6529926.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Wah 1.mp3"
+dest_files=["res://.godot/imported/Wah 1.mp3-afdd6f84a101573e854fe28cd6529926.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

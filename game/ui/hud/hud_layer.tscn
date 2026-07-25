@@ -3,6 +3,38 @@
 [ext_resource type="Script" uid="uid://buuinc778urfj" path="res://game/ui/hud/sfx_control.gd" id="1_neg6t"]
 [ext_resource type="Script" uid="uid://dp6xb6rhth2ty" path="res://game/ui/hud/music_control.gd" id="2_6o5u7"]
 [ext_resource type="AudioStream" uid="uid://c2iqgjq4hu0hm" path="res://assets/audio/Gamejam Music V3 All Layers.mp3" id="3_ybqp3"]
+[ext_resource type="Script" uid="uid://cj03dpibtj3cx" path="res://game/ui/hud/sfx_player.gd" id="4_308m3"]
+[ext_resource type="AudioStream" uid="uid://cwepe1vj57eg7" path="res://assets/audio/sfx/Ah Ha 1.mp3" id="5_uii0s"]
+[ext_resource type="AudioStream" uid="uid://chnvdyok64cat" path="res://assets/audio/sfx/Ah Ha 2.mp3" id="6_cpucj"]
+[ext_resource type="AudioStream" uid="uid://cyx4mlp7djowl" path="res://assets/audio/sfx/Ah Ha 3.mp3" id="7_8atkp"]
+[ext_resource type="AudioStream" uid="uid://bgq0xo3kjx8w6" path="res://assets/audio/sfx/Hmm 1.mp3" id="8_ci6x5"]
+[ext_resource type="AudioStream" uid="uid://by2wh1dru3088" path="res://assets/audio/sfx/Hmm 2.mp3" id="9_hfkhn"]
+[ext_resource type="AudioStream" uid="uid://dkwm1v5owk2ld" path="res://assets/audio/sfx/Hmm 3.mp3" id="10_sbm1a"]
+[ext_resource type="AudioStream" uid="uid://box2q3h1tywao" path="res://assets/audio/sfx/Hmm 4.mp3" id="11_3riux"]
+[ext_resource type="AudioStream" uid="uid://by3ls6dncdsh8" path="res://assets/audio/sfx/Hmm 5.mp3" id="12_lr4pc"]
+[ext_resource type="AudioStream" uid="uid://de081iieunabg" path="res://assets/audio/sfx/Hmm 6.mp3" id="13_2raks"]
+[ext_resource type="AudioStream" uid="uid://c038u3ph3b54p" path="res://assets/audio/sfx/Hmm 7.mp3" id="14_hpb6h"]
+[ext_resource type="AudioStream" uid="uid://cloyt6cqrafdh" path="res://assets/audio/sfx/Hmm 8.mp3" id="15_4wgwb"]
+[ext_resource type="AudioStream" uid="uid://cfushwglgvikg" path="res://assets/audio/sfx/Huh 1.mp3" id="16_5u1a5"]
+[ext_resource type="AudioStream" uid="uid://cj6mugev88b0r" path="res://assets/audio/sfx/Grumpy Hmm 1.mp3" id="17_p4vcx"]
+[ext_resource type="AudioStream" uid="uid://elxbuntk3c7a" path="res://assets/audio/sfx/Grumpy Hmm 2.mp3" id="18_533w7"]
+[ext_resource type="AudioStream" uid="uid://kwj2si7upksx" path="res://assets/audio/sfx/Nah 1.mp3" id="19_qvgrf"]
+[ext_resource type="AudioStream" uid="uid://dflkoy7sgrqc0" path="res://assets/audio/sfx/Noo! 1.mp3" id="20_1w65y"]
+[ext_resource type="AudioStream" uid="uid://dbgsa3lwh6573" path="res://assets/audio/sfx/Noo! 2.mp3" id="21_7kuiq"]
+[ext_resource type="AudioStream" uid="uid://b5datvvqs54ua" path="res://assets/audio/sfx/Noo! 3.mp3" id="22_171wl"]
+[ext_resource type="AudioStream" uid="uid://yte1vc2hlgm1" path="res://assets/audio/sfx/Oh 1.mp3" id="23_26od6"]
+[ext_resource type="AudioStream" uid="uid://c84kdq8l5vvio" path="res://assets/audio/sfx/Oh 2.mp3" id="24_uqwsa"]
+[ext_resource type="AudioStream" uid="uid://dhl7kkinj17s0" path="res://assets/audio/sfx/Oh 3.mp3" id="25_1shhm"]
+[ext_resource type="AudioStream" uid="uid://dgq47korufesw" path="res://assets/audio/sfx/Oh 4.mp3" id="26_0maax"]
+[ext_resource type="AudioStream" uid="uid://da3hyy7nag1ol" path="res://assets/audio/sfx/Oh 5.mp3" id="27_rp10q"]
+[ext_resource type="AudioStream" uid="uid://by877erpgebeh" path="res://assets/audio/sfx/Uh Uh 1.mp3" id="28_fpjm1"]
+[ext_resource type="AudioStream" uid="uid://cr4j4ekxhgld7" path="res://assets/audio/sfx/Uh Uh 2.mp3" id="29_net2s"]
+[ext_resource type="AudioStream" uid="uid://b3r5gn38mkuxr" path="res://assets/audio/sfx/Uh Uh 3.mp3" id="30_ycnta"]
+[ext_resource type="AudioStream" uid="uid://dxmuy30bvx3kf" path="res://assets/audio/sfx/Uh Uh 4.mp3" id="31_efxls"]
+[ext_resource type="AudioStream" uid="uid://b2e24xtsx84de" path="res://assets/audio/sfx/Boh! 1.mp3" id="32_ep0ac"]
+[ext_resource type="AudioStream" uid="uid://bpnngbt7cv8rh" path="res://assets/audio/sfx/Wah 1.mp3" id="33_lt5fa"]
+[ext_resource type="AudioStream" uid="uid://3uv6k1qhoab4" path="res://assets/audio/sfx/Wah 2.mp3" id="34_enml5"]
+[ext_resource type="Script" uid="uid://b7avbeu2iww7d" path="res://game/ui/hud/sound_test.gd" id="35_cpucj"]
 
 [node name="HudLayer" type="CanvasLayer" unique_id=1743325382]
 
@@ -41,12 +73,34 @@ value = 0.5
 script = ExtResource("2_6o5u7")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=963535653]
+unique_name_in_owner = true
 stream = ExtResource("3_ybqp3")
 autoplay = true
 bus = &"Music"
 parameters/looping = true
 
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="." unique_id=1357625783]
+unique_name_in_owner = true
+bus = &"Game_Audio"
+script = ExtResource("4_308m3")
+ahha_sounds = Array[AudioStream]([ExtResource("5_uii0s"), ExtResource("6_cpucj"), ExtResource("7_8atkp")])
+hmm_sounds = Array[AudioStream]([ExtResource("8_ci6x5"), ExtResource("9_hfkhn"), ExtResource("10_sbm1a"), ExtResource("11_3riux"), ExtResource("12_lr4pc"), ExtResource("13_2raks"), ExtResource("14_hpb6h"), ExtResource("15_4wgwb"), ExtResource("16_5u1a5")])
+grumpy_sounds = Array[AudioStream]([ExtResource("17_p4vcx"), ExtResource("18_533w7")])
+no_sounds = Array[AudioStream]([ExtResource("19_qvgrf"), ExtResource("20_1w65y"), ExtResource("21_7kuiq"), ExtResource("22_171wl")])
+oh_sounds = Array[AudioStream]([ExtResource("23_26od6"), ExtResource("24_uqwsa"), ExtResource("25_1shhm"), ExtResource("26_0maax"), ExtResource("27_rp10q")])
+uhuh_sounds = Array[AudioStream]([ExtResource("28_fpjm1"), ExtResource("29_net2s"), ExtResource("30_ycnta"), ExtResource("31_efxls")])
+whimsy_sounds = Array[AudioStream]([ExtResource("32_ep0ac"), ExtResource("33_lt5fa"), ExtResource("34_enml5")])
+
+[node name="SoundTest" type="Button" parent="." unique_id=42716204]
+offset_left = 619.0
+offset_top = 8.0
+offset_right = 683.0
+offset_bottom = 39.0
+text = "hmm??"
+script = ExtResource("35_cpucj")
+
 [connection signal="ready" from="SFXControl" to="SFXControl" method="_on_ready"]
 [connection signal="value_changed" from="SFXControl" to="SFXControl" method="_on_value_changed"]
 [connection signal="ready" from="MusicControl" to="MusicControl" method="_on_ready"]
 [connection signal="value_changed" from="MusicControl" to="MusicControl" method="_on_value_changed"]
+[connection signal="pressed" from="SoundTest" to="SoundTest" method="_on_pressed"]

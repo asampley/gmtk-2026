@@ -8,8 +8,8 @@ var ui_events := UIEvents.new()
 var audio_events := AudioEvents.new()
 var debug_events := DebugEvents.new()
 var setup_events := SetupEvents.new()
-
-
+enum SFX {AHHA,HMM,GRUMPY,NO,OH,UHUH,WHIMSY}
+	
 class GameEvents:
 	signal task_completed(index: int)
 	signal popup_requested(index: int)
@@ -20,6 +20,7 @@ class UIEvents:
 
 class AudioEvents:
 	signal ui_audio_played(sound: AudioStream)
+	signal sfx_request(sfx_type: SFX)
 
 class DebugEvents:
 	signal toggle_fps_counter()
