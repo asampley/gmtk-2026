@@ -24,7 +24,6 @@ func initialize_selection_manager() -> void:
 	add_child(selection_manager)
 	var selection_icon := SelectionIcon.new()
 	add_child(selection_icon)
-	selection_icon.size = Vector2(100,100)
 	selection_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	selection_manager.initialize(selection_icon)
 
