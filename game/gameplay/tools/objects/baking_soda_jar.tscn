@@ -9,6 +9,8 @@
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_8xdlp")
+expand_mode = 1
+stretch_mode = 5
 script = ExtResource("2_hyo4g")
 tool_template = ExtResource("3_xj07l")
 held_reagents_ui = NodePath("HeldReagents")

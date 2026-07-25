@@ -6,28 +6,16 @@ extends Node
 
 var selection_manager := SelectionManager.new()
 var enabled_tools: Array[Tool]
-var time_elapsed_s: float
+
 var initialized: bool = false
 
 
 func initialize(enabled_tools_in: Array[ToolTemplate]) -> void:
-	time_elapsed_s = 0
 	initialize_selection_manager()
 	initialize_tools(enabled_tools_in)
 	for tool: Tool in enabled_tools:
 		tool.pulse()
-	initialized = true
-
-func _process(delta: float) -> void:
-	if !initialized:
-		return
-	
-	time_elapsed_s += delta
-	if time_elapsed_s >= 1:
-		for tool: Tool in enabled_tools:
-			tool.pulse()
-		time_elapsed_s -= 1 
-
+	PulseTimer.pulse.connect(on_pulse)
 
 func initialize_selection_manager() -> void:
 	add_child(selection_manager)
@@ -44,3 +32,7 @@ func initialize_tools(enabled_tools_in: Array[ToolTemplate]) -> void:
 			tool.initialize(selection_manager)
 		else:
 			tool.initialize(null)
+
+func on_pulse() -> void:
+	for tool: Tool in enabled_tools:
+		tool.pulse()

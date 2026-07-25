@@ -35,6 +35,7 @@ ServiceLocator="*uid://r867bk7n2n1p"
 Talo="*uid://cf5txmco4tia4"
 Analytics="*uid://dniun7l81oldd"
 Preloader="*uid://k7bdovd5nxwa"
+PulseTimer="*uid://3s2i8x2ivum8"
 
 [debug]
 
