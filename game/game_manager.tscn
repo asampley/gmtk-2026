@@ -89,41 +89,36 @@ unique_name_in_owner = true
 offset_right = 227.0
 
 [node name="MusicManager" type="Node" parent="." unique_id=1198011189]
+unique_name_in_owner = true
 script = ExtResource("10_7ra1o")
 
 [node name="BaseMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=1871600200]
 stream = ExtResource("10_77vnv")
-autoplay = true
 bus = &"Base_Music"
 parameters/looping = true
 
 [node name="CauldronMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=1914931440]
 stream = ExtResource("11_7ra1o")
-autoplay = true
 bus = &"Cauldron"
 parameters/looping = true
 
 [node name="CrucibleMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=485247422]
 stream = ExtResource("12_pr2qf")
-autoplay = true
 bus = &"Crucible"
 parameters/looping = true
 
 [node name="KnifeMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=332163247]
 stream = ExtResource("13_ouuen")
-autoplay = true
 bus = &"Knife"
 parameters/looping = true
 
 [node name="MortarMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=2136376854]
 stream = ExtResource("14_1i2cx")
-autoplay = true
 bus = &"Mortar"
 parameters/looping = true
 
 [node name="VocalMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=1555908123]
 stream = ExtResource("15_5aekg")
-autoplay = true
 bus = &"Base_Music"
 parameters/looping = true
 

@@ -10,6 +10,7 @@ extends Node
 @onready var menu_layer: MenuLayer = %MenuLayer
 @onready var transition_layer: TransitionManager = %TransitionLayer
 @onready var debug_layer: CanvasLayer = %DebugLayer
+@onready var music_manager: MusicManager = %MusicManager
 
 
 var current_level: LevelTemplate
@@ -33,6 +34,7 @@ func _ready() -> void:
 	
 	game_manager_loaded.emit()
 	load_level(starting_level)
+	music_manager.play()
 
 func load_level(level_template: LevelTemplate) -> void:
 	transition_layer.begin_transition()

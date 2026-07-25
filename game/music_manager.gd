@@ -1,3 +1,4 @@
+class_name MusicManager
 extends Node
 
 
@@ -10,6 +11,10 @@ var tween: Tween
 func _ready() -> void:
 	EventBus.audio_events.music_bus_audible.connect(on_music_bus_audible)
 	EventBus.audio_events.music_bus_muted.connect(on_music_bus_muted)
+
+func play() -> void:
+	for child: AudioStreamPlayer in get_children():
+		child.playing = true
 
 func _physics_process(delta: float) -> void:
 	var index: int = AudioServer.get_bus_index("Cauldron")
