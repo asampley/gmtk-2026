@@ -203,6 +203,16 @@ func _progress_reaction(pulse: int, tick: int, per_pulse: int) -> void:
 		add_reagents(reagents_to_add)
 
 func _get_drag_data(at_position: Vector2) -> Variant:
+	var preview_texture := TextureRect.new()
+	preview_texture.texture = removable_reagent.icon
+	print(preview_texture.position)
+	preview_texture.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	preview_texture.set_size(Vector2(64,64))
+	preview_texture.position -= Vector2(preview_texture.size.x / 2 - 15, 30)
+	print(preview_texture.position)
+	var preview := Control.new()
+	preview.add_child(preview_texture)
+	set_drag_preview(preview)
 	return self
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
