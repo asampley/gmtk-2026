@@ -6,6 +6,7 @@ var recipe_progress: Dictionary[Recipe, RecipeProgress] = {}
 var reagent_states: Dictionary[Reagent, Variant] = {}
 
 class RecipeProgress:
+	var paused: bool
 	var progress: float = 0.0
 	var time_multiplier: float = 1.0
 	var estimated_remaining: float = 0.0

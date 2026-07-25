@@ -20,9 +20,13 @@ var removable_reagent: Reagent:
 		else:
 			return reagents[0]
 
+var _flag_updated_reagents: bool = false
+var _flag_updated_reactions: bool = false
+
 var reaction_progress: ReactionProgress = ReactionProgress.new()
 
 signal updated_reagents(reagents_out: Array[Reagent])
+signal updated_reactions(reaction_progress: ReactionProgress)
 
 func initialize(selection_manager_in: SelectionManager) -> void:
 	selection_manager = selection_manager_in
@@ -53,6 +57,11 @@ func _process(delta: float) -> void:
 
 	_progress_reaction(delta)
 
+	if _flag_updated_reagents:
+		updated_reagents.emit(reagents)
+	if _flag_updated_reactions:
+		updated_reactions.emit(reaction_progress)
+
 func is_selection_event(event: InputEvent) -> bool:
 	if !(event is InputEventMouseButton && event.button_index == MOUSE_BUTTON_LEFT):
 		return false
@@ -79,7 +88,7 @@ func add_reagents(new_reagents: Array[Reagent]) -> void:
 			changed = true
 	if changed:
 		_calculate_recipes()
-	updated_reagents.emit(reagents)
+		_flag_updated_reagents = true
 
 func remove_reagents(old_reagents: Array[Reagent]) -> void:
 	var changed := false
@@ -89,16 +98,28 @@ func remove_reagents(old_reagents: Array[Reagent]) -> void:
 			changed = true
 	if changed:
 		_calculate_recipes()
-	updated_reagents.emit(reagents)
+		_flag_updated_reagents = true
 
 # Calculate recipes that should be in progress
 # Ties are broken by shortest duration
 func _calculate_recipes() -> void:
 	print_debug("Recalculating recipes for ", self)
+
 	var recipes := ServiceLocator.game_manager.recipes
 	recipes = recipes.filter(func(recipe: Recipe) -> bool:
 		return recipe.tool_template == tool_template
 	)
+
+	# Used to determine if undesirable reactions should continue. Desirable reactions take precedence.
+	var reagent_has_desirable_recipe: Dictionary[Reagent, bool]
+
+	for recipe in recipes:
+		if recipe.desirable && Globals.has_all(reagents, recipe.reagents):
+			for reagent in recipe.reagents:
+				reagent_has_desirable_recipe[reagent] = true
+
+	print_debug(reagent_has_desirable_recipe)
+
 	for recipe: Recipe in recipes:
 		var recipe_progress := reaction_progress.recipe_progress
 		if !Globals.has_all(reagents, recipe.reagents):
@@ -106,34 +127,28 @@ func _calculate_recipes() -> void:
 				reaction_progress.recipe_progress.erase(recipe)
 		else:
 			var time_multiplier := 1.0
+
 			for catalyst in recipe.catalysts:
 				if reagents.has(catalyst):
 					time_multiplier *= recipe.catalysts[catalyst].time_multiplier
+
 			if !recipe_progress.has(recipe):
 				reaction_progress.recipe_progress[recipe] = ReactionProgress.RecipeProgress.new()
 				recipe_progress[recipe].estimated_remaining = recipe.time * time_multiplier
+
 			recipe_progress[recipe].time_multiplier = time_multiplier
+
+			# disable undesirable recipes if there is a recipe desirable
+			var paused := !recipe.desirable && Globals.has_any(recipe.reagents, reagent_has_desirable_recipe.keys())
+
+			recipe_progress[recipe].paused = paused
+
+	_flag_updated_reactions = true
 
 # Advances reactions with a delta time
 func _progress_reaction(delta: float) -> void:
-	# Used to determine if undesirable reactions should continue. Desirable reactions take precedence.
-	var reagent_has_desirable_recipe: Dictionary[Reagent, bool]
-
-	for recipe in reaction_progress.recipe_progress:
-		if recipe.desirable:
-			for reagent in recipe.reagents:
-				reagent_has_desirable_recipe[reagent] = true
-
 	var recipes_advancing: Array[Recipe] = reaction_progress.recipe_progress.keys()\
-		.filter(func(recipe: Recipe) -> bool:
-			# Stop advancing undesirable recipes if there is a desirable one
-			# Perhaps a priority should exist?
-			if !recipe.desirable:
-				for reagent in recipe.reagents:
-					if reagent_has_desirable_recipe.get(reagent):
-						return false
-
-			return true)
+		.filter(func(recipe: Recipe) -> bool: return !reaction_progress.recipe_progress[recipe].paused)
 
 	var reagents_to_remove: Array[Reagent] = []
 	var reagents_to_add: Array[Reagent] = []
@@ -147,32 +162,13 @@ func _progress_reaction(delta: float) -> void:
 			reagents_to_add.append_array(recipe.products)
 			reagents_to_remove.append_array(recipe.reagents)
 
-	for reagent in reagents:
-		var time_remaining := INF
-		var progress := 0.0
-		var desireable := true
-		for recipe in recipes_advancing:
-			if recipe.reagents.has(reagent):
-				var rp := reaction_progress.recipe_progress[recipe]
-				if rp.estimated_remaining < time_remaining:
-					time_remaining = rp.estimated_remaining
-					progress = rp.progress
-					desireable = recipe.desirable
-		var reagent_counter := held_reagents_ui.reagent_to_counter[reagent]
-		reagent_counter.texture_progress_rect.value = 1.0 - progress
-		if time_remaining == INF:
-			reagent_counter.set_color(ReagentCounter.TimerColor.STABLE)
-		elif desireable:
-			reagent_counter.set_color(ReagentCounter.TimerColor.DESIRABLE)
-		else:
-			reagent_counter.set_color(ReagentCounter.TimerColor.UNDESIRABLE)
-
 	if reagents_to_remove.size() > 0:
 		remove_reagents(reagents_to_remove)
 	if reagents_to_add.size() > 0:
 		# reset recipes by removing first
 		remove_reagents(reagents_to_add)
 		add_reagents(reagents_to_add)
+
 
 func _get_drag_data(at_position: Vector2) -> Variant:
 	return self
