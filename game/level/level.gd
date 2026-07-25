@@ -16,7 +16,7 @@ func initialize(template: LevelTemplate) -> void:
 	initialize_selection_manager()
 	initialize_tools(template.enabled_devices)
 	for tool: Tool in enabled_tools:
-		tool.pulse()
+		tool.on_pulse(0)
 	PulseTimer.pulse.connect(on_pulse)
 	PulseTimer.tick.connect(on_tick)
 
@@ -36,10 +36,10 @@ func initialize_tools(enabled_tools_in: Array[ToolTemplate]) -> void:
 		else:
 			tool.initialize(null)
 
-func on_tick(tick: int, per_pulse: int) -> void:
+func on_tick(pulse: int, tick: int, per_pulse: int) -> void:
 	for tool in enabled_tools:
-		tool.tick(tick, per_pulse)
+		tool.on_tick(pulse, tick, per_pulse)
 
-func on_pulse() -> void:
+func on_pulse(pulse: int) -> void:
 	for tool in enabled_tools:
-		tool.pulse()
+		tool.on_pulse(pulse)

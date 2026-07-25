@@ -55,7 +55,7 @@ func _gui_input(event: InputEvent) -> void:
 		selection_manager.select(self)
 		accept_event()
 
-func pulse() -> void:
+func on_pulse(_pulse: int) -> void:
 	if !initialized:
 		return
 	for reagent_generator: ReagentGeneration in reagent_generators:
@@ -63,8 +63,8 @@ func pulse() -> void:
 		if reagent_generator.max_reagents >= 1:
 			add_reagent(reagent_generator.reagent)
 
-func tick(i: int, per_pulse: int) -> void:
-	_progress_reaction(i, per_pulse)
+func on_tick(pulse: int, tick: int, per_pulse: int) -> void:
+	_progress_reaction(pulse, tick, per_pulse)
 
 	#if _flag_updated_reagents:
 		#updated_reagents.emit(reagents)
@@ -181,7 +181,7 @@ func _calculate_recipes() -> void:
 	_flag_updated_reactions = true
 
 # Advances reactions with a delta time
-func _progress_reaction(tick: int, per_pulse: int) -> void:
+func _progress_reaction(pulse: int, tick: int, per_pulse: int) -> void:
 	var recipes_advancing: Array[Recipe] = reaction_progress.recipe_progress.keys()\
 		.filter(func(recipe: Recipe) -> bool: return !reaction_progress.recipe_progress[recipe].paused)
 
@@ -190,8 +190,7 @@ func _progress_reaction(tick: int, per_pulse: int) -> void:
 
 	for recipe in recipes_advancing:
 		var rp := reaction_progress.recipe_progress[recipe]
-		var time_multiplier := rp.time_multiplier
-		if fposmod(tick as float / per_pulse, time_multiplier) < 1.0 / per_pulse:
+		if posmod(pulse * per_pulse + tick, ceili(rp.time_multiplier * per_pulse)) == 0:
 			rp.remaining_time -= 1
 		if rp.remaining_time <= 0:
 			reagents_to_add.append_array(recipe.products)
