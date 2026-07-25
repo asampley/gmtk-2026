@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://cujbgwdwtvq31"]
 
 [ext_resource type="PackedScene" uid="uid://cmrcbcxxrpixv" path="res://game/ui/main_menu/bar_menu.tscn" id="1_308m3"]
-[ext_resource type="Script" uid="uid://buuinc778urfj" path="res://game/ui/hud/sfx_control.gd" id="1_neg6t"]
-[ext_resource type="Script" uid="uid://dp6xb6rhth2ty" path="res://game/ui/hud/music_control.gd" id="2_6o5u7"]
 [ext_resource type="Script" uid="uid://cj03dpibtj3cx" path="res://game/ui/hud/sfx_player.gd" id="4_308m3"]
 [ext_resource type="AudioStream" uid="uid://cwepe1vj57eg7" path="res://assets/audio/sfx/Ah Ha 1.mp3" id="5_uii0s"]
 [ext_resource type="AudioStream" uid="uid://chnvdyok64cat" path="res://assets/audio/sfx/Ah Ha 2.mp3" id="6_cpucj"]
@@ -78,50 +76,8 @@ offset_bottom = 39.0
 text = "hmm??"
 script = ExtResource("35_cpucj")
 
-[node name="SFXLabel" type="RichTextLabel" parent="Control" unique_id=352492184]
-layout_mode = 0
-offset_left = 691.0
-offset_top = 5.0
-offset_right = 815.0
-offset_bottom = 29.0
-text = "SFX level"
-
-[node name="SFXControl" type="HSlider" parent="Control" unique_id=1995173216]
-layout_mode = 0
-offset_left = 691.0
-offset_top = 29.0
-offset_right = 815.0
-offset_bottom = 45.0
-max_value = 1.0
-step = 0.001
-value = 0.5
-script = ExtResource("1_neg6t")
-
-[node name="MusicLabel" type="RichTextLabel" parent="Control" unique_id=663555652]
-layout_mode = 0
-offset_left = 691.0
-offset_top = 46.0
-offset_right = 815.0
-offset_bottom = 71.252174
-text = "Music Level"
-
-[node name="MusicControl" type="HSlider" parent="Control" unique_id=153420155]
-layout_mode = 0
-offset_left = 691.0
-offset_top = 72.0
-offset_right = 815.0
-offset_bottom = 88.0
-max_value = 1.0
-step = 0.001
-value = 0.5
-script = ExtResource("2_6o5u7")
-
 [connection signal="help" from="BarMenu" to="SubMenu" method="open_help"]
 [connection signal="level_select" from="BarMenu" to="SubMenu" method="open_level_select"]
 [connection signal="recipe_book" from="BarMenu" to="SubMenu" method="open_recipes"]
 [connection signal="sound_settings" from="BarMenu" to="SubMenu" method="open_sound_settings"]
 [connection signal="pressed" from="Control/SoundTest" to="Control/SoundTest" method="_on_pressed"]
-[connection signal="ready" from="Control/SFXControl" to="Control/SFXControl" method="_on_ready"]
-[connection signal="value_changed" from="Control/SFXControl" to="Control/SFXControl" method="_on_value_changed"]
-[connection signal="ready" from="Control/MusicControl" to="Control/MusicControl" method="_on_ready"]
-[connection signal="value_changed" from="Control/MusicControl" to="Control/MusicControl" method="_on_value_changed"]

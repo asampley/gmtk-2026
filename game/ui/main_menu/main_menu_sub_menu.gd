@@ -14,6 +14,7 @@ func _ready() -> void:
 
 func _open(control: Control) -> void:
 	print("Open menu: ", control)
+	_hide_all()
 	self.visible = true
 	control.visible = true
 

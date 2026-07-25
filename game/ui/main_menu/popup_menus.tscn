@@ -4,19 +4,25 @@
 [ext_resource type="PackedScene" uid="uid://ctdjsi1ruci6r" path="res://game/ui/main_menu/help_menu.tscn" id="2_jx5bl"]
 [ext_resource type="PackedScene" uid="uid://drjsd7n8y27do" path="res://game/ui/main_menu/level_select.tscn" id="3_p77ry"]
 [ext_resource type="PackedScene" uid="uid://by2uic8pmpskv" path="res://game/ui/main_menu/credits.tscn" id="4_aaxwj"]
-[ext_resource type="Texture2D" uid="uid://dexc3siioceex" path="res://assets/icons/close.svg" id="5_8fp0b"]
 [ext_resource type="PackedScene" uid="uid://db2dopar5raq8" path="res://game/ui/recipe_book/recipe_book.tscn" id="5_jx5bl"]
 [ext_resource type="Script" uid="uid://buuinc778urfj" path="res://game/ui/hud/sfx_control.gd" id="6_aaxwj"]
 [ext_resource type="Script" uid="uid://dp6xb6rhth2ty" path="res://game/ui/hud/music_control.gd" id="7_8fp0b"]
 
 [node name="SubMenu" type="PanelContainer" unique_id=899596500]
-anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.1
-anchor_right = 0.9
-anchor_bottom = 0.9
+custom_maximum_size = Vector2(800, 800)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -68.0
+offset_right = 68.0
+offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_tr5tl")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=135315620]
@@ -29,6 +35,7 @@ size_flags_vertical = 3
 [node name="HelpMenu" parent="VBoxContainer/Menus" unique_id=1783265641 instance=ExtResource("2_jx5bl")]
 unique_name_in_owner = true
 visible = false
+custom_minimum_size = Vector2(800, 700)
 layout_mode = 2
 
 [node name="LevelSelect" parent="VBoxContainer/Menus" unique_id=899088996 instance=ExtResource("3_p77ry")]
@@ -43,7 +50,7 @@ layout_mode = 2
 
 [node name="RecipeBook" parent="VBoxContainer/Menus" unique_id=2082085524 instance=ExtResource("5_jx5bl")]
 unique_name_in_owner = true
-visible = false
+custom_minimum_size = Vector2(800, 700)
 layout_mode = 2
 
 [node name="SoundSettings" type="VBoxContainer" parent="VBoxContainer/Menus" unique_id=74240735]
@@ -52,16 +59,24 @@ visible = false
 layout_mode = 2
 alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer/Menus/SoundSettings" unique_id=1278277872]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Menus/SoundSettings" unique_id=1057822047]
 layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
 
-[node name="SFXLabel" type="RichTextLabel" parent="VBoxContainer/Menus/SoundSettings/GridContainer" unique_id=242559324]
+[node name="GridContainer" type="VBoxContainer" parent="VBoxContainer/Menus/SoundSettings/HBoxContainer" unique_id=409235127]
+custom_maximum_size = Vector2(400, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="SFXLabel" type="RichTextLabel" parent="VBoxContainer/Menus/SoundSettings/HBoxContainer/GridContainer" unique_id=242559324]
 layout_mode = 2
 text = "SFX Level
 "
 fit_content = true
 
-[node name="SFXControl" type="HSlider" parent="VBoxContainer/Menus/SoundSettings/GridContainer" unique_id=248543078]
+[node name="SFXControl" type="HSlider" parent="VBoxContainer/Menus/SoundSettings/HBoxContainer/GridContainer" unique_id=248543078]
 layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
@@ -69,28 +84,25 @@ step = 0.001
 value = 0.5
 script = ExtResource("6_aaxwj")
 
-[node name="MusicLabel" type="RichTextLabel" parent="VBoxContainer/Menus/SoundSettings/GridContainer" unique_id=1378219054]
+[node name="MusicLabel" type="RichTextLabel" parent="VBoxContainer/Menus/SoundSettings/HBoxContainer/GridContainer" unique_id=1378219054]
 layout_mode = 2
 text = "Music Level"
 fit_content = true
 
-[node name="MusicControl" type="HSlider" parent="VBoxContainer/Menus/SoundSettings/GridContainer" unique_id=1648082331]
+[node name="MusicControl" type="HSlider" parent="VBoxContainer/Menus/SoundSettings/HBoxContainer/GridContainer" unique_id=1648082331]
 layout_mode = 2
 max_value = 1.0
 step = 0.001
 value = 0.5
 script = ExtResource("7_8fp0b")
 
-[node name="Close" type="Button" parent="." unique_id=11152296]
+[node name="Close" type="Button" parent="VBoxContainer" unique_id=11152296]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-icon = ExtResource("5_8fp0b")
-flat = true
+text = "Close"
 
-[connection signal="ready" from="VBoxContainer/Menus/SoundSettings/GridContainer/SFXControl" to="VBoxContainer/Menus/SoundSettings/GridContainer/SFXControl" method="_on_ready"]
-[connection signal="value_changed" from="VBoxContainer/Menus/SoundSettings/GridContainer/SFXControl" to="VBoxContainer/Menus/SoundSettings/GridContainer/SFXControl" method="_on_value_changed"]
-[connection signal="ready" from="VBoxContainer/Menus/SoundSettings/GridContainer/MusicControl" to="VBoxContainer/Menus/SoundSettings/GridContainer/MusicControl" method="_on_ready"]
-[connection signal="value_changed" from="VBoxContainer/Menus/SoundSettings/GridContainer/MusicControl" to="VBoxContainer/Menus/SoundSettings/GridContainer/MusicControl" method="_on_value_changed"]
-[connection signal="pressed" from="Close" to="." method="close"]
+[connection signal="ready" from="VBoxContainer/Menus/SoundSettings/HBoxContainer/GridContainer/SFXControl" to="VBoxContainer/Menus/SoundSettings/HBoxContainer/GridContainer/SFXControl" method="_on_ready"]
+[connection signal="value_changed" from="VBoxContainer/Menus/SoundSettings/HBoxContainer/GridContainer/SFXControl" to="VBoxContainer/Menus/SoundSettings/HBoxContainer/GridContainer/SFXControl" method="_on_value_changed"]
+[connection signal="ready" from="VBoxContainer/Menus/SoundSettings/HBoxContainer/GridContainer/MusicControl" to="VBoxContainer/Menus/SoundSettings/HBoxContainer/GridContainer/MusicControl" method="_on_ready"]
+[connection signal="value_changed" from="VBoxContainer/Menus/SoundSettings/HBoxContainer/GridContainer/MusicControl" to="VBoxContainer/Menus/SoundSettings/HBoxContainer/GridContainer/MusicControl" method="_on_value_changed"]
+[connection signal="pressed" from="VBoxContainer/Close" to="." method="close"]

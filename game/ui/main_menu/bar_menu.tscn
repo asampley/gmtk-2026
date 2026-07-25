@@ -24,7 +24,6 @@ text = "Recipe
 "
 
 [node name="Sound" type="Button" parent="." unique_id=244156460]
-visible = false
 layout_mode = 2
 text = "Sound"
 
