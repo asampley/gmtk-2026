@@ -2,32 +2,49 @@
 
 [ext_resource type="Script" uid="uid://buuinc778urfj" path="res://game/ui/hud/sfx_control.gd" id="1_neg6t"]
 [ext_resource type="Script" uid="uid://dp6xb6rhth2ty" path="res://game/ui/hud/music_control.gd" id="2_6o5u7"]
+[ext_resource type="AudioStream" uid="uid://c2iqgjq4hu0hm" path="res://assets/audio/Gamejam Music V3 All Layers.mp3" id="3_ybqp3"]
 
-[node name="HudLayer" type="CanvasLayer" unique_id=1617507283]
+[node name="HudLayer" type="CanvasLayer" unique_id=1743325382]
 
-[node name="SFXLabel" type="RichTextLabel" parent="." unique_id=1048507308]
-offset_right = 81.0
-offset_bottom = 24.0
+[node name="SFXLabel" type="RichTextLabel" parent="." unique_id=352492184]
+offset_left = 691.0
+offset_top = 5.0
+offset_right = 815.0
+offset_bottom = 29.0
 text = "SFX level"
 
-[node name="SFXControl" type="HSlider" parent="." unique_id=810437090]
-offset_left = 1.0
-offset_top = 26.0
-offset_right = 125.0
-offset_bottom = 42.0
+[node name="SFXControl" type="HSlider" parent="." unique_id=1995173216]
+offset_left = 691.0
+offset_top = 29.0
+offset_right = 815.0
+offset_bottom = 45.0
+max_value = 1.0
+step = 0.001
+value = 0.5
 script = ExtResource("1_neg6t")
 
-[node name="MusicLabel" type="RichTextLabel" parent="." unique_id=297430737]
-offset_top = 41.0
-offset_right = 115.0
-offset_bottom = 65.0
+[node name="MusicLabel" type="RichTextLabel" parent="." unique_id=663555652]
+offset_left = 691.0
+offset_top = 46.0
+offset_right = 815.0
+offset_bottom = 71.252174
 text = "Music Level"
 
-[node name="MusicControl" type="HSlider" parent="." unique_id=2017093000]
-offset_top = 67.0
-offset_right = 124.0
-offset_bottom = 83.0
+[node name="MusicControl" type="HSlider" parent="." unique_id=153420155]
+offset_left = 691.0
+offset_top = 72.0
+offset_right = 815.0
+offset_bottom = 88.0
+max_value = 1.0
+step = 0.001
+value = 0.5
 script = ExtResource("2_6o5u7")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=963535653]
+stream = ExtResource("3_ybqp3")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
 
 [connection signal="ready" from="SFXControl" to="SFXControl" method="_on_ready"]
 [connection signal="value_changed" from="SFXControl" to="SFXControl" method="_on_value_changed"]

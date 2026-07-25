@@ -1,6 +1,6 @@
 extends HSlider
 
-var sfx_bus := AudioServer.get_bus_index("Game_Audio")
+var sfx_bus := AudioServer.get_bus_index("Music")
 
 func _on_ready() -> void:
 	value = db_to_linear(AudioServer.get_bus_volume_db(sfx_bus))
