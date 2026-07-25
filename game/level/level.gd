@@ -9,13 +9,13 @@ var enabled_tools: Array[Tool]
 
 var initialized: bool = false
 
-
 func initialize(enabled_tools_in: Array[ToolTemplate]) -> void:
 	initialize_selection_manager()
 	initialize_tools(enabled_tools_in)
 	for tool: Tool in enabled_tools:
 		tool.pulse()
 	PulseTimer.pulse.connect(on_pulse)
+	PulseTimer.tick.connect(on_tick)
 
 func initialize_selection_manager() -> void:
 	add_child(selection_manager)
@@ -33,6 +33,10 @@ func initialize_tools(enabled_tools_in: Array[ToolTemplate]) -> void:
 		else:
 			tool.initialize(null)
 
+func on_tick(tick: int, per_pulse: int) -> void:
+	for tool in enabled_tools:
+		tool.tick(tick, per_pulse)
+
 func on_pulse() -> void:
-	for tool: Tool in enabled_tools:
+	for tool in enabled_tools:
 		tool.pulse()

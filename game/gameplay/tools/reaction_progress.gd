@@ -7,10 +7,9 @@ var reagent_states: Dictionary[Reagent, Variant] = {}
 
 class RecipeProgress:
 	var paused: bool
-	var progress: float = 0.0
 	var time_multiplier: float = 1.0
-	var total_time: int = 0
-	var remaining_time: int = 0
+	var total_time: int
+	var remaining_time: int
 
 enum ReagentState {
 	DESIRABLE_REACTION,
