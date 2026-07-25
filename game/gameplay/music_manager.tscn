@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://s33j33w8geni"]
+
+[ext_resource type="Script" uid="uid://ct67puho0y0rs" path="res://game/music_manager.gd" id="1_fayyy"]
+[ext_resource type="AudioStream" uid="uid://c13irigdpb2c3" path="res://assets/audio/music/Music Track Base (Clarinet, Tuba, Clock).mp3" id="2_eantw"]
+[ext_resource type="AudioStream" uid="uid://xvrmit7narcd" path="res://assets/audio/music/Music Track Cauldron.mp3" id="3_dk7hh"]
+[ext_resource type="AudioStream" uid="uid://c26wd83r50blc" path="res://assets/audio/music/Music Track Crucible.mp3" id="4_5svba"]
+[ext_resource type="AudioStream" uid="uid://cvpqnr6rugmgj" path="res://assets/audio/music/Music Track Knife and Triangle.mp3" id="5_1084n"]
+[ext_resource type="AudioStream" uid="uid://dljho4pc2kn4x" path="res://assets/audio/music/Music Track Pestle and Mortar.mp3" id="6_ovtof"]
+[ext_resource type="AudioStream" uid="uid://bll5benfqv443" path="res://assets/audio/music/Music Track Vocals .mp3" id="7_fbj7r"]
+
+[node name="MusicManager" type="Node" unique_id=646071714]
+script = ExtResource("1_fayyy")
+
+[node name="BaseMusic" type="AudioStreamPlayer" parent="." unique_id=1740935590]
+stream = ExtResource("2_eantw")
+bus = &"Base_Music"
+parameters/looping = true
+
+[node name="CauldronMusic" type="AudioStreamPlayer" parent="." unique_id=353547161]
+stream = ExtResource("3_dk7hh")
+bus = &"Cauldron"
+parameters/looping = true
+
+[node name="CrucibleMusic" type="AudioStreamPlayer" parent="." unique_id=117222484]
+stream = ExtResource("4_5svba")
+bus = &"Crucible"
+parameters/looping = true
+
+[node name="KnifeMusic" type="AudioStreamPlayer" parent="." unique_id=2128519063]
+stream = ExtResource("5_1084n")
+bus = &"Knife"
+parameters/looping = true
+
+[node name="MortarMusic" type="AudioStreamPlayer" parent="." unique_id=1332644147]
+stream = ExtResource("6_ovtof")
+bus = &"Mortar"
+parameters/looping = true
+
+[node name="VocalMusic" type="AudioStreamPlayer" parent="." unique_id=523648235]
+stream = ExtResource("7_fbj7r")
+bus = &"Vocals"
+parameters/looping = true

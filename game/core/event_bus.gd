@@ -9,9 +9,9 @@ var audio_events := AudioEvents.new()
 var debug_events := DebugEvents.new()
 var setup_events := SetupEvents.new()
 enum SFX {AHHA,HMM,GRUMPY,NO,OH,UHUH,WHIMSY}
-	
+
 class GameEvents:
-	signal task_completed(index: int)
+	signal task_completed(tool: ToolTemplate, reagent: Reagent)
 	signal popup_requested(index: int)
 	signal level_completed()
 

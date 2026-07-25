@@ -4,7 +4,7 @@ extends TextureRect
 
 @export var tool_template: ToolTemplate
 @export var held_reagents_ui: HeldReagentsUI
-@export var reagent_readers: Array[ReagentReader]
+@export var task_reagent_reader: TaskReagentReader
 @export var reagent_whitelist: Array[Reagent]
 @export var is_locked: bool = false
 @export var will_decay: bool = true
@@ -43,9 +43,8 @@ func initialize(selection_manager_in: SelectionManager) -> void:
 			reagent_generation.initialize(reagent_generation_template)
 			reagent_generators.append(reagent_generation)
 	held_reagents_ui.initialize(self)
-	if reagent_readers.size() > 0:
-		for reagent_reader: ReagentReader in reagent_readers:
-			reagent_reader.initialize(self)
+	if task_reagent_reader:
+		task_reagent_reader.initialize(self)
 	setup_whitelist()
 	tooltip_text = tool_template.name
 	initialized = true
