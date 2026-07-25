@@ -28,6 +28,8 @@ func select(selection: Tool) -> void:
 			current_selection.remove_reagent(reagent)
 			selection.add_reagent(reagent)
 			clear_selection()
+		else:
+			EventBus.audio_events.sfx_request.emit(EventBus.SFX.NO)
 	else:
 		if selection.removable_reagent:
 			current_selection = selection
