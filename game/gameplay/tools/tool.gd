@@ -59,9 +59,9 @@ func pulse() -> void:
 		reagent_generator.update(1)
 		if reagent_generator.max_reagents >= 1:
 			add_reagent(reagent_generator.reagent)
-	
+
 	_progress_reaction(1)
-	
+
 	#if _flag_updated_reagents:
 		#updated_reagents.emit(reagents)
 	#if _flag_updated_reactions:
@@ -132,20 +132,20 @@ func remove_reagents(old_reagents: Array[Reagent]) -> void:
 # Ties are broken by shortest duration
 func _calculate_recipes() -> void:
 	print_debug("Recalculating recipes for ", self)
-	
+
 	var recipes := ServiceLocator.game_manager.recipes
 	recipes = recipes.filter(func(recipe: Recipe) -> bool:
 		return recipe.tool_template == tool_template
 	)
-	
+
 	# Used to determine if undesirable reactions should continue. Desirable reactions take precedence.
 	var reagent_has_desirable_recipe: Dictionary[Reagent, bool]
-	
+
 	for recipe in recipes:
 		if recipe.desirable && Globals.has_all(reagents, recipe.reagents):
 			for reagent in recipe.reagents:
 				reagent_has_desirable_recipe[reagent] = true
-	
+
 	print_debug(reagent_has_desirable_recipe)
 
 	for recipe: Recipe in recipes:
@@ -155,41 +155,41 @@ func _calculate_recipes() -> void:
 				reaction_progress.recipe_progress.erase(recipe)
 		else:
 			var time_multiplier := 1.0
-		
+
 			for catalyst in recipe.catalysts:
 				if reagents.has(catalyst):
 					time_multiplier *= recipe.catalysts[catalyst].time_multiplier
-		
+
 			if !recipe_progress.has(recipe):
 				reaction_progress.recipe_progress[recipe] = ReactionProgress.RecipeProgress.new()
-				recipe_progress[recipe].estimated_remaining = recipe.time * time_multiplier
-		
+				recipe_progress[recipe].remaining_time = ceili(recipe.time * time_multiplier)
+
 			recipe_progress[recipe].time_multiplier = time_multiplier
-		
+
 			# disable undesirable recipes if there is a recipe desirable
 			var paused := !recipe.desirable && Globals.has_any(recipe.reagents, reagent_has_desirable_recipe.keys())
-		
+
 			recipe_progress[recipe].paused = paused
-	
+
 	_flag_updated_reactions = true
 
 # Advances reactions with a delta time
-func _progress_reaction(delta: float) -> void:
+func _progress_reaction(delta: int) -> void:
 	var recipes_advancing: Array[Recipe] = reaction_progress.recipe_progress.keys()\
 		.filter(func(recipe: Recipe) -> bool: return !reaction_progress.recipe_progress[recipe].paused)
-	
+
 	var reagents_to_remove: Array[Reagent] = []
 	var reagents_to_add: Array[Reagent] = []
-	
+
 	for recipe in recipes_advancing:
 		var rp := reaction_progress.recipe_progress[recipe]
 		var time_multiplier := rp.time_multiplier
-		rp.progress += delta / recipe.time / time_multiplier
-		rp.estimated_remaining = recipe.time * time_multiplier * (1.0 - rp.progress)
-		if rp.progress >= 1.0:
+		rp.progress += delta / (recipe.time as float) / time_multiplier
+		rp.remaining_time = ceili(recipe.time * time_multiplier * (1.0 - rp.progress))
+		if rp.remaining_time <= 0:
 			reagents_to_add.append_array(recipe.products)
 			reagents_to_remove.append_array(recipe.reagents)
-	
+
 	if reagents_to_remove.size() > 0:
 		remove_reagents(reagents_to_remove)
 	if reagents_to_add.size() > 0:

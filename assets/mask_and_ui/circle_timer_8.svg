@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="circle_timer_8.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="2.7148729"
+     inkscape:cx="65.012251"
+     inkscape:cy="81.955953"
+     inkscape:window-width="1280"
+     inkscape:window-height="768"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="M 60,73.658203 27.332031,106.32617 A 56,56 0 0 0 60,119.85742 Z"
+       style="fill:#ffffff;stroke-width:9.8497;stroke-linecap:round"
+       id="path81" />
+    <path
+       d="M 54.341797,68 H 8.1425781 a 56,56 0 0 0 13.5312499,32.66797 z"
+       style="fill:#ffffff;stroke-width:9.8497;stroke-linecap:round"
+       id="path99" />
+    <path
+       d="M 21.673828,27.332031 A 56,56 0 0 0 8.1425781,60 H 54.341797 Z"
+       style="fill:#ffffff;stroke-width:9.8497;stroke-linecap:round"
+       id="path96" />
+    <path
+       d="M 60,8.1425781 A 56,56 0 0 0 27.332031,21.673828 L 60,54.341797 Z"
+       style="fill:#ffffff;stroke-width:9.8497;stroke-linecap:round"
+       id="path87" />
+    <path
+       d="M 100.66797,106.32617 68,73.658203 v 46.199217 a 56,56 0 0 0 32.66797,-13.53125 z"
+       style="fill:#ffffff;stroke-width:9.8497;stroke-linecap:round"
+       id="path95" />
+    <path
+       d="M 119.85742,68 H 73.658203 l 32.667967,32.66797 A 56,56 0 0 0 119.85742,68 Z"
+       style="fill:#ffffff;stroke-width:9.8497;stroke-linecap:round"
+       id="path104" />
+    <path
+       d="M 73.658203,60 H 119.85742 A 56,56 0 0 0 106.32617,27.332031 Z"
+       style="fill:#ffffff;stroke-width:9.8497;stroke-linecap:round"
+       id="path101" />
+    <path
+       d="M 68,54.341797 100.66797,21.673828 A 56,56 0 0 0 68,8.1425781 Z"
+       style="fill:#ffffff;stroke-width:9.8497;stroke-linecap:round"
+       id="path83" />
+  </g>
+</svg>

@@ -30,29 +30,26 @@ func _on_updated_reagents(reagents: Array[Reagent]) -> void:
 func _on_updated_reactions(reaction_progress: ReactionProgress) -> void:
 	reaction_progress_view = reaction_progress
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	for reagent in reagent_to_counter:
-		var time_remaining := INF
-		var progress := 0.0
-		var desireable := true
+		var time_remaining := INT64_MAX
+		var recipe: Recipe
 
-		for recipe in reaction_progress_view.recipe_progress:
-			var rp := reaction_progress_view.recipe_progress[recipe]
+		for recipe_i in reaction_progress_view.recipe_progress:
+			var rp := reaction_progress_view.recipe_progress[recipe_i]
 
 			if rp.paused:
 				continue
 
-			if recipe.reagents.has(reagent):
-				if rp.estimated_remaining < time_remaining:
-					time_remaining = rp.estimated_remaining
-					progress = rp.progress
-					desireable = recipe.desirable
+			if recipe_i.reagents.has(reagent):
+				if rp.remaining_time < time_remaining:
+					time_remaining = rp.remaining_time
+					recipe = recipe_i
 
 		var reagent_counter := reagent_to_counter[reagent]
-		reagent_counter.texture_progress_rect.value = 1.0 - progress
-		if time_remaining == INF:
-			reagent_counter.set_color(ReagentCounter.TimerColor.STABLE)
-		elif desireable:
-			reagent_counter.set_color(ReagentCounter.TimerColor.DESIRABLE)
+		if recipe == null:
+			reagent_counter.set_full()
+			reagent_counter.stable = true
 		else:
-			reagent_counter.set_color(ReagentCounter.TimerColor.UNDESIRABLE)
+			reagent_counter.desirable = recipe.desirable
+			reagent_counter.set_remaining(time_remaining)
