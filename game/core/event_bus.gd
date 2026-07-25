@@ -8,7 +8,7 @@ var ui_events := UIEvents.new()
 var audio_events := AudioEvents.new()
 var debug_events := DebugEvents.new()
 var setup_events := SetupEvents.new()
-enum SFX {AHHA,HMM,GRUMPY,NO,OH,UHUH,WHIMSY}
+enum SFX {AFFIRMATIVE, NEGATIVE}
 
 class GameEvents:
 	signal task_completed(tool: ToolTemplate, reagent: Reagent)

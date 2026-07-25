@@ -33,7 +33,6 @@
 [ext_resource type="PackedScene" uid="uid://dy23jbvo5uxiw" path="res://game/ui/main_menu/popup_menus.tscn" id="33_8atkp"]
 [ext_resource type="AudioStream" uid="uid://bpnngbt7cv8rh" path="res://assets/audio/sfx/Wah 1.mp3" id="33_lt5fa"]
 [ext_resource type="AudioStream" uid="uid://3uv6k1qhoab4" path="res://assets/audio/sfx/Wah 2.mp3" id="34_enml5"]
-[ext_resource type="Script" uid="uid://b7avbeu2iww7d" path="res://game/ui/hud/sound_test.gd" id="35_cpucj"]
 
 [node name="HudLayer" type="CanvasLayer" unique_id=1743325382]
 
@@ -60,24 +59,7 @@ grow_horizontal = 0
 [node name="SubMenu" parent="." unique_id=899596500 instance=ExtResource("33_8atkp")]
 visible = false
 
-[node name="Control" type="Control" parent="." unique_id=1843839787]
-layout_mode = 3
-anchors_preset = 0
-offset_top = 30.0
-offset_right = 40.0
-offset_bottom = 70.0
-
-[node name="SoundTest" type="Button" parent="Control" unique_id=42716204]
-layout_mode = 0
-offset_left = 619.0
-offset_top = 8.0
-offset_right = 683.0
-offset_bottom = 39.0
-text = "hmm??"
-script = ExtResource("35_cpucj")
-
 [connection signal="help" from="BarMenu" to="SubMenu" method="open_help"]
 [connection signal="level_select" from="BarMenu" to="SubMenu" method="open_level_select"]
 [connection signal="recipe_book" from="BarMenu" to="SubMenu" method="open_recipes"]
 [connection signal="sound_settings" from="BarMenu" to="SubMenu" method="open_sound_settings"]
-[connection signal="pressed" from="Control/SoundTest" to="Control/SoundTest" method="_on_pressed"]

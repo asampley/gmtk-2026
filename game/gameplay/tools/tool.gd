@@ -221,10 +221,12 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 		var reagent := tool.removable_reagent
 		if reagent && can_take_reagent(reagent):
 			return true
-	EventBus.audio_events.sfx_request.emit(EventBus.SFX.NO)
+		if tool != self:
+			EventBus.audio_events.sfx_request.emit(EventBus.SFX.NEGATIVE)
 	return false
 
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	var tool := data as Tool
 	add_reagent(tool.removable_reagent)
 	tool.remove_reagent(tool.removable_reagent)
+	EventBus.audio_events.sfx_request.emit(EventBus.SFX.AFFIRMATIVE)
