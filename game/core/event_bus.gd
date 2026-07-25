@@ -21,6 +21,8 @@ class UIEvents:
 class AudioEvents:
 	signal ui_audio_played(sound: AudioStream)
 	signal sfx_request(sfx_type: SFX)
+	signal music_bus_audible(bus_name: String)
+	signal music_bus_muted(bus_name: String)
 
 class DebugEvents:
 	signal toggle_fps_counter()
