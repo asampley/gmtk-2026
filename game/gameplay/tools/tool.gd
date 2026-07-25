@@ -30,6 +30,9 @@ signal updated_reactions(reaction_progress: ReactionProgress)
 
 
 func initialize(selection_manager_in: SelectionManager) -> void:
+	if !selection_manager_in:
+		hide()
+		return
 	selection_manager = selection_manager_in
 	if tool_template.reagent_generation_templates:
 		print_debug(tool_template.reagent_generation_templates)
@@ -49,15 +52,15 @@ func _gui_input(event: InputEvent) -> void:
 		selection_manager.select(self)
 		accept_event()
 
-func _process(delta: float) -> void:
-	if ! initialized:
+func pulse() -> void:
+	if !initialized:
 		return
 	for reagent_generator: ReagentGeneration in reagent_generators:
-		reagent_generator.update(delta)
+		reagent_generator.update(1)
 		if reagent_generator.max_reagents >= 1:
 			add_reagent(reagent_generator.reagent)
 	
-	_progress_reaction(delta)
+	_progress_reaction(1)
 	
 	if _flag_updated_reagents:
 		updated_reagents.emit(reagents)

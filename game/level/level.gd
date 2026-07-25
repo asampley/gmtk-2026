@@ -4,35 +4,43 @@ extends Node
 
 @onready var tools: Control = %Tools
 
-
 var selection_manager := SelectionManager.new()
+var enabled_tools: Array[Tool]
 var time_elapsed_s: float
-var cauldron_recipes: Array[Recipe]
+var initialized: bool = false
 
-func _ready() -> void:
+
+func initialize(enabled_tools_in: Array[ToolTemplate]) -> void:
+	time_elapsed_s = 0
+	initialize_selection_manager()
+	initialize_tools(enabled_tools_in)
+	for tool: Tool in enabled_tools:
+		tool.pulse()
+	initialized = true
+
+func _process(delta: float) -> void:
+	if !initialized:
+		return
+	
+	time_elapsed_s += delta
+	if time_elapsed_s >= 1:
+		for tool: Tool in enabled_tools:
+			tool.pulse()
+		time_elapsed_s -= 1 
+
+
+func initialize_selection_manager() -> void:
 	add_child(selection_manager)
 	var selection_icon := SelectionIcon.new()
 	add_child(selection_icon)
 	selection_icon.size = Vector2(100,100)
 	selection_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	selection_manager.initialize(selection_icon)
-	time_elapsed_s = 0
-	initialize_tool_recipe_arrays()
-	initialize_tools()
 
-func _process(delta: float) -> void:
-	if time_elapsed_s <= 0:
-		return
-
-	time_elapsed_s += delta
-	if time_elapsed_s >= time_elapsed_s:
-		print_debug("Level Lost")
-
-func initialize_tool_recipe_arrays() -> void:
-	for recipe: Recipe in ResourceDataHandler.resource_dict["recipes"]:
-		if recipe.tool_template.name == "Cauldron":
-			cauldron_recipes.append(recipe)
-
-func initialize_tools() -> void:
+func initialize_tools(enabled_tools_in: Array[ToolTemplate]) -> void:
 	for tool: Tool in tools.get_children():
-		tool.initialize(selection_manager)
+		if enabled_tools_in.has(tool.tool_template):
+			enabled_tools.append(tool)
+			tool.initialize(selection_manager)
+		else:
+			tool.initialize(null)
