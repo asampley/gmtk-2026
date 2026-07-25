@@ -8,6 +8,35 @@
 [ext_resource type="Script" uid="uid://b3apsqri2ue3y" path="res://game/core/transition_manager.gd" id="3_fp1wv"]
 [ext_resource type="PackedScene" uid="uid://ca0ys6rnlgdof" path="res://game/ui/level_complete/level_complete_menu.tscn" id="3_q0adu"]
 [ext_resource type="PackedScene" uid="uid://dping0fholceh" path="res://utilities/debug_terminal/debug_terminal.tscn" id="3_wimwi"]
+[ext_resource type="Shader" uid="uid://vgufnnt4up2" path="res://utilities/shaders/universal_transition.gdshader" id="8_5wfij"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mjia"]
+shader = ExtResource("8_5wfij")
+shader_parameter/use_sprite_alpha = true
+shader_parameter/use_transition_texture = false
+shader_parameter/transition_type = 0
+shader_parameter/position = Vector2(0.5, 0.5)
+shader_parameter/invert = false
+shader_parameter/grid_size = Vector2(5, 5)
+shader_parameter/rotation_angle = 0.0
+shader_parameter/global_x_mirror = false
+shader_parameter/global_y_mirror = false
+shader_parameter/local_x_mirror = false
+shader_parameter/local_y_mirror = false
+shader_parameter/stagger = Vector2(1, 1)
+shader_parameter/cumulative_stagger_flip = false
+shader_parameter/cumulative_stagger = Vector2(0, 0)
+shader_parameter/stagger_frequency = Vector2i(2, 2)
+shader_parameter/flip_frequency = Vector2i(1, 1)
+shader_parameter/basic_feather = 0.0
+shader_parameter/use_mask_size = false
+shader_parameter/mask_size = Vector2(100, 100)
+shader_parameter/edges = 6
+shader_parameter/shape_feather = 0.1
+shader_parameter/sectors = 1
+shader_parameter/clock_feather = 0.0
+shader_parameter/progress = 0.0
+shader_parameter/progress_bias = Vector2(0, 0)
 
 [node name="GameManager" type="Node" unique_id=945519092]
 script = ExtResource("1_5ghhe")
@@ -32,9 +61,19 @@ visible = false
 [node name="RecipeBook" parent="MenuLayer" unique_id=2082085524 instance=ExtResource("3_c11ku")]
 visible = false
 
-[node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=2075925208]
+[node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=2075925208 node_paths=PackedStringArray("texture")]
 unique_name_in_owner = true
 script = ExtResource("3_fp1wv")
+texture = NodePath("ColorRect")
+
+[node name="ColorRect" type="ColorRect" parent="TransitionLayer" unique_id=204028147]
+material = SubResource("ShaderMaterial_7mjia")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="DebugLayer" type="CanvasLayer" parent="." unique_id=2141525577]
 unique_name_in_owner = true
