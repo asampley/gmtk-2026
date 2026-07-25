@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dp2b7kp7c1hr3"]
 
 [ext_resource type="Script" uid="uid://bxh3lvkd03a4x" path="res://game/core/game_manager.gd" id="1_5ghhe"]
-[ext_resource type="PackedScene" uid="uid://cujbgwdwtvq31" path="res://game/ui/hud/hud_layer.tscn" id="2_wimwi"]
 [ext_resource type="Resource" uid="uid://ci64vwvpqpf57" path="res://game/_templates/levels/level_1.tres" id="2_c11ku"]
 [ext_resource type="Script" uid="uid://7yqmb6d7mik2" path="res://game/menu_layer.gd" id="2_q0adu"]
+[ext_resource type="PackedScene" uid="uid://cujbgwdwtvq31" path="res://game/ui/hud/hud_layer.tscn" id="2_wimwi"]
 [ext_resource type="PackedScene" uid="uid://db2dopar5raq8" path="res://game/ui/recipe_book/recipe_book.tscn" id="3_c11ku"]
 [ext_resource type="Script" uid="uid://b3apsqri2ue3y" path="res://game/core/transition_manager.gd" id="3_fp1wv"]
 [ext_resource type="PackedScene" uid="uid://ca0ys6rnlgdof" path="res://game/ui/level_complete/level_complete_menu.tscn" id="3_q0adu"]

@@ -21,15 +21,15 @@ signal game_manager_loaded()
 
 func _ready() -> void:
 	ServiceLocator.game_manager = self
-
+	
 	for resource: Resource in ResourceDataHandler.resource_dict["recipes"]:
 		if resource is Recipe:
 			recipes.append(resource)
-
+	
 	for resource: Resource in ResourceDataHandler.resource_dict["recipes_decay"]:
 		if resource is Recipe:
 			recipes.append(resource)
-
+	
 	game_manager_loaded.emit()
 	load_level(starting_level)
 
