@@ -2,40 +2,33 @@
 
 [ext_resource type="Script" uid="uid://b4yc1u5cd8fi3" path="res://game/ui/main_menu/bar_menu.gd" id="1_026ek"]
 
-[node name="BarMenu" type="Control" unique_id=1700861673]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 272.0
+[node name="Buttons" type="HBoxContainer" unique_id=1006699826]
+offset_right = 211.0
 offset_bottom = 31.0
+alignment = 2
 script = ExtResource("1_026ek")
 
-[node name="Buttons" type="HBoxContainer" parent="." unique_id=1006699826]
-layout_mode = 0
-offset_right = 272.0
-offset_bottom = 31.0
-grow_horizontal = 0
-alignment = 2
-
-[node name="Level Select" type="Button" parent="Buttons" unique_id=1905556272]
+[node name="Level Select" type="Button" parent="." unique_id=1905556272]
 layout_mode = 2
 text = "Level Select
 "
 
-[node name="Help" type="Button" parent="Buttons" unique_id=171705095]
+[node name="Help" type="Button" parent="." unique_id=171705095]
 layout_mode = 2
 text = "Help
 "
 
-[node name="Recipe" type="Button" parent="Buttons" unique_id=504214978]
+[node name="Recipe" type="Button" parent="." unique_id=504214978]
 layout_mode = 2
 text = "Recipe
 "
 
-[node name="Sound" type="Button" parent="Buttons" unique_id=244156460]
+[node name="Sound" type="Button" parent="." unique_id=244156460]
+visible = false
 layout_mode = 2
 text = "Sound"
 
-[connection signal="pressed" from="Buttons/Level Select" to="." method="_on_level_select_pressed"]
-[connection signal="pressed" from="Buttons/Help" to="." method="_on_help_pressed"]
-[connection signal="pressed" from="Buttons/Recipe" to="." method="_on_recipe_pressed"]
-[connection signal="pressed" from="Buttons/Sound" to="." method="_on_sound_pressed"]
+[connection signal="pressed" from="Level Select" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="Help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="Recipe" to="." method="_on_recipe_pressed"]
+[connection signal="pressed" from="Sound" to="." method="_on_sound_pressed"]

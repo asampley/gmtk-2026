@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cujbgwdwtvq31"]
 
+[ext_resource type="PackedScene" uid="uid://cmrcbcxxrpixv" path="res://game/ui/main_menu/bar_menu.tscn" id="1_308m3"]
 [ext_resource type="Script" uid="uid://buuinc778urfj" path="res://game/ui/hud/sfx_control.gd" id="1_neg6t"]
 [ext_resource type="Script" uid="uid://dp6xb6rhth2ty" path="res://game/ui/hud/music_control.gd" id="2_6o5u7"]
 [ext_resource type="Script" uid="uid://cj03dpibtj3cx" path="res://game/ui/hud/sfx_player.gd" id="4_308m3"]
@@ -31,45 +32,12 @@
 [ext_resource type="AudioStream" uid="uid://b3r5gn38mkuxr" path="res://assets/audio/sfx/Uh Uh 3.mp3" id="30_ycnta"]
 [ext_resource type="AudioStream" uid="uid://dxmuy30bvx3kf" path="res://assets/audio/sfx/Uh Uh 4.mp3" id="31_efxls"]
 [ext_resource type="AudioStream" uid="uid://b2e24xtsx84de" path="res://assets/audio/sfx/Boh! 1.mp3" id="32_ep0ac"]
+[ext_resource type="PackedScene" uid="uid://dy23jbvo5uxiw" path="res://game/ui/main_menu/popup_menus.tscn" id="33_8atkp"]
 [ext_resource type="AudioStream" uid="uid://bpnngbt7cv8rh" path="res://assets/audio/sfx/Wah 1.mp3" id="33_lt5fa"]
 [ext_resource type="AudioStream" uid="uid://3uv6k1qhoab4" path="res://assets/audio/sfx/Wah 2.mp3" id="34_enml5"]
 [ext_resource type="Script" uid="uid://b7avbeu2iww7d" path="res://game/ui/hud/sound_test.gd" id="35_cpucj"]
 
 [node name="HudLayer" type="CanvasLayer" unique_id=1743325382]
-
-[node name="SFXLabel" type="RichTextLabel" parent="." unique_id=352492184]
-offset_left = 691.0
-offset_top = 5.0
-offset_right = 815.0
-offset_bottom = 29.0
-text = "SFX level"
-
-[node name="SFXControl" type="HSlider" parent="." unique_id=1995173216]
-offset_left = 691.0
-offset_top = 29.0
-offset_right = 815.0
-offset_bottom = 45.0
-max_value = 1.0
-step = 0.001
-value = 0.5
-script = ExtResource("1_neg6t")
-
-[node name="MusicLabel" type="RichTextLabel" parent="." unique_id=663555652]
-offset_left = 691.0
-offset_top = 46.0
-offset_right = 815.0
-offset_bottom = 71.252174
-text = "Music Level"
-
-[node name="MusicControl" type="HSlider" parent="." unique_id=153420155]
-offset_left = 691.0
-offset_top = 72.0
-offset_right = 815.0
-offset_bottom = 88.0
-max_value = 1.0
-step = 0.001
-value = 0.5
-script = ExtResource("2_6o5u7")
 
 [node name="SFXPlayer" type="AudioStreamPlayer" parent="." unique_id=1357625783]
 unique_name_in_owner = true
@@ -83,7 +51,26 @@ oh_sounds = Array[AudioStream]([ExtResource("23_26od6"), ExtResource("24_uqwsa")
 uhuh_sounds = Array[AudioStream]([ExtResource("28_fpjm1"), ExtResource("29_net2s"), ExtResource("30_ycnta"), ExtResource("31_efxls")])
 whimsy_sounds = Array[AudioStream]([ExtResource("32_ep0ac"), ExtResource("33_lt5fa"), ExtResource("34_enml5")])
 
-[node name="SoundTest" type="Button" parent="." unique_id=42716204]
+[node name="BarMenu" parent="." unique_id=1700861673 instance=ExtResource("1_308m3")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -483.0
+offset_right = 0.0
+grow_horizontal = 0
+
+[node name="SubMenu" parent="." unique_id=899596500 instance=ExtResource("33_8atkp")]
+visible = false
+
+[node name="Control" type="Control" parent="." unique_id=1843839787]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 30.0
+offset_right = 40.0
+offset_bottom = 70.0
+
+[node name="SoundTest" type="Button" parent="Control" unique_id=42716204]
+layout_mode = 0
 offset_left = 619.0
 offset_top = 8.0
 offset_right = 683.0
@@ -91,8 +78,50 @@ offset_bottom = 39.0
 text = "hmm??"
 script = ExtResource("35_cpucj")
 
-[connection signal="ready" from="SFXControl" to="SFXControl" method="_on_ready"]
-[connection signal="value_changed" from="SFXControl" to="SFXControl" method="_on_value_changed"]
-[connection signal="ready" from="MusicControl" to="MusicControl" method="_on_ready"]
-[connection signal="value_changed" from="MusicControl" to="MusicControl" method="_on_value_changed"]
-[connection signal="pressed" from="SoundTest" to="SoundTest" method="_on_pressed"]
+[node name="SFXLabel" type="RichTextLabel" parent="Control" unique_id=352492184]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 5.0
+offset_right = 815.0
+offset_bottom = 29.0
+text = "SFX level"
+
+[node name="SFXControl" type="HSlider" parent="Control" unique_id=1995173216]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 29.0
+offset_right = 815.0
+offset_bottom = 45.0
+max_value = 1.0
+step = 0.001
+value = 0.5
+script = ExtResource("1_neg6t")
+
+[node name="MusicLabel" type="RichTextLabel" parent="Control" unique_id=663555652]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 46.0
+offset_right = 815.0
+offset_bottom = 71.252174
+text = "Music Level"
+
+[node name="MusicControl" type="HSlider" parent="Control" unique_id=153420155]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 72.0
+offset_right = 815.0
+offset_bottom = 88.0
+max_value = 1.0
+step = 0.001
+value = 0.5
+script = ExtResource("2_6o5u7")
+
+[connection signal="help" from="BarMenu" to="SubMenu" method="open_help"]
+[connection signal="level_select" from="BarMenu" to="SubMenu" method="open_level_select"]
+[connection signal="recipe_book" from="BarMenu" to="SubMenu" method="open_recipes"]
+[connection signal="sound_settings" from="BarMenu" to="SubMenu" method="open_sound_settings"]
+[connection signal="pressed" from="Control/SoundTest" to="Control/SoundTest" method="_on_pressed"]
+[connection signal="ready" from="Control/SFXControl" to="Control/SFXControl" method="_on_ready"]
+[connection signal="value_changed" from="Control/SFXControl" to="Control/SFXControl" method="_on_value_changed"]
+[connection signal="ready" from="Control/MusicControl" to="Control/MusicControl" method="_on_ready"]
+[connection signal="value_changed" from="Control/MusicControl" to="Control/MusicControl" method="_on_value_changed"]
