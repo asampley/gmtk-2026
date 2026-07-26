@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_y3x3t"]
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_6wrg8"]
-[ext_resource type="Resource" uid="uid://c3hop8s3105uo" path="res://game/_templates/reagents/diarrhetic.tres" id="3_1uu00"]
+[ext_resource type="Resource" uid="uid://c3hop8s3105uo" path="res://game/_templates/reagents/old/diarrhetic.tres" id="3_1uu00"]
 [ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_du4a7"]
 [ext_resource type="Resource" uid="uid://c47nfpajofaxx" path="res://game/_templates/reagents/black_bile.tres" id="4_4ggnw"]
-[ext_resource type="Resource" uid="uid://f2jew64p8lqd" path="res://game/_templates/reagents/tonic.tres" id="5_l7d4g"]
+[ext_resource type="Resource" uid="uid://f2jew64p8lqd" path="res://game/_templates/reagents/old/tonic.tres" id="5_l7d4g"]
 [ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="7_q1spn"]
 
 [resource]

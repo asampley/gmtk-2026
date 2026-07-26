@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_kbv2u"]
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_r2lqd"]
-[ext_resource type="Resource" uid="uid://bb0jhg86b0277" path="res://game/_templates/reagents/antacid.tres" id="3_ws0py"]
+[ext_resource type="Resource" uid="uid://bb0jhg86b0277" path="res://game/_templates/reagents/old/antacid.tres" id="3_ws0py"]
 [ext_resource type="Resource" uid="uid://dtk6jo7ybhw2i" path="res://game/_templates/reagents/yellow_bile.tres" id="4_en0mm"]
-[ext_resource type="Resource" uid="uid://f2jew64p8lqd" path="res://game/_templates/reagents/tonic.tres" id="5_58iwj"]
+[ext_resource type="Resource" uid="uid://f2jew64p8lqd" path="res://game/_templates/reagents/old/tonic.tres" id="5_58iwj"]
 [ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="6_1y2q1"]
 [ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="7_fwllp"]
 

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_lo3qs"]
 [ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_28w0h"]
 [ext_resource type="Resource" uid="uid://c47nfpajofaxx" path="res://game/_templates/reagents/black_bile.tres" id="3_n1feh"]
-[ext_resource type="Resource" uid="uid://bsx6q6qat7bx3" path="res://game/_templates/reagents/ash.tres" id="3_xkf35"]
+[ext_resource type="Resource" uid="uid://bsx6q6qat7bx3" path="res://game/_templates/reagents/old/ash.tres" id="3_xkf35"]
 [ext_resource type="Resource" uid="uid://dtk6jo7ybhw2i" path="res://game/_templates/reagents/yellow_bile.tres" id="4_n1feh"]
 [ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="6_xkf35"]
 

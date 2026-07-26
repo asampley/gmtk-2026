@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://bg46du331xf73"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_m31qi"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_w7mff"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_2d47g"]
+[ext_resource type="Resource" uid="uid://c47nfpajofaxx" path="res://game/_templates/reagents/black_bile.tres" id="3_v8x01"]
+[ext_resource type="Resource" uid="uid://dtk6jo7ybhw2i" path="res://game/_templates/reagents/yellow_bile.tres" id="4_b6cl3"]
+[ext_resource type="Resource" uid="uid://b8f03ymo4d4c6" path="res://game/_templates/reagents/tar.tres" id="5_mrp2e"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="7_8gc0s"]
+
+[resource]
+script = ExtResource("3_2d47g")
+name = "Transmute Biles"
+reagents = Array[ExtResource("2_w7mff")]([ExtResource("4_b6cl3"), ExtResource("5_mrp2e")])
+products = Array[ExtResource("2_w7mff")]([ExtResource("3_v8x01")])
+tool_template = ExtResource("7_8gc0s")
+time = 6
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

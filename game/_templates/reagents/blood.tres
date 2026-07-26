@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://bpfjfo48ep4ek"]
+
+[ext_resource type="Texture2D" uid="uid://cuqexdgde0y31" path="res://assets/icons/blood.svg" id="1_g5vbs"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_iwxi3"]
+
+[resource]
+script = ExtResource("1_iwxi3")
+name = "Blood"
+icon = ExtResource("1_g5vbs")
+metadata/_custom_type_script = "uid://xlcs11xcua2v"
