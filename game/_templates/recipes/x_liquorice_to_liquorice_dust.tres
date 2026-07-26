@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://bma4dvk8hwpg"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_talar"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_45g33"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_7v2nr"]
+[ext_resource type="Resource" uid="uid://3nh78myociua" path="res://game/_templates/reagents/liquorice_dust.tres" id="3_xf8nj"]
+[ext_resource type="Resource" uid="uid://pyh1dgi1rxk2" path="res://game/_templates/reagents/liquorice.tres" id="4_pothj"]
+
+[resource]
+script = ExtResource("3_7v2nr")
+name = "Liquorice Dust"
+reagents = Array[ExtResource("2_45g33")]([ExtResource("4_pothj")])
+products = Array[ExtResource("2_45g33")]([ExtResource("3_xf8nj")])
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="LevelTemplate" format=3 uid="uid://dmxa768aao3in"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_mxq38"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_uba75"]
+[ext_resource type="Script" uid="uid://cdg0e4kmye577" path="res://game/level/level_template.gd" id="3_fjo3j"]
+[ext_resource type="Resource" uid="uid://creyd7ac3iog7" path="res://game/_templates/tools/basket.tres" id="3_yr5am"]
+[ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="4_0eye2"]
+[ext_resource type="Resource" uid="uid://d2br4ogbq1qgf" path="res://game/_templates/tools/wash_basin.tres" id="4_c4oi4"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="5_h422u"]
+[ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="6_midbx"]
+[ext_resource type="Resource" uid="uid://chu73en3fbq1i" path="res://game/_templates/tools/mortar_and_pestle.tres" id="7_jayc4"]
+
+[resource]
+script = ExtResource("3_fjo3j")
+level_name = "Level 6"
+enabled_devices = Array[ExtResource("2_uba75")]([ExtResource("3_yr5am"), ExtResource("4_c4oi4"), ExtResource("5_h422u"), ExtResource("6_midbx"), ExtResource("7_jayc4")])
+tasks = Array[ExtResource("4_0eye2")]([null, null, null])
+metadata/_custom_type_script = "uid://cdg0e4kmye577"

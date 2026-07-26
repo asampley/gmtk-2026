@@ -10,6 +10,7 @@ extends Control
 @onready var reaction_icon: Control = %ReactionIcon
 @onready var recipe_reagents: Control = %RecipeReagents
 @onready var recipe_products: Control = %RecipeProducts
+@onready var time: Label = %Time
 
 
 func render_recipe(recipe: Recipe) -> void:
@@ -26,6 +27,7 @@ func render_recipe(recipe: Recipe) -> void:
 	else:
 		title.text = "[u]" + recipe.name + "[/u]"
 		tool_icon.texture = recipe.tool_template.icon
+		time.text = str(recipe.time)
 
 		for reagent in recipe.reagents:
 			var texture_rect: ReagentContainer = reagent_container_prefab.instantiate()

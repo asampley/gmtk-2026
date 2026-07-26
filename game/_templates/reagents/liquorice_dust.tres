@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://3nh78myociua"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_3voyx"]
+
+[resource]
+script = ExtResource("1_3voyx")
+metadata/_custom_type_script = "uid://xlcs11xcua2v"
