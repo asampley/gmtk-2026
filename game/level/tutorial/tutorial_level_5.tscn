@@ -17,6 +17,7 @@ offset_right = 8.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_aqaoi")
 index_to_popup = {
 0: NodePath("PopupUI")
@@ -66,6 +67,7 @@ offset_left = 161.0
 offset_top = -123.0
 offset_right = 235.0
 offset_bottom = -46.0
+mouse_filter = 2
 texture = ExtResource("4_2sed8")
 expand_mode = 1
 script = ExtResource("5_b8sff")
