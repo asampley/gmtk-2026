@@ -98,6 +98,7 @@ pressed_animations = SubResource("Resource_13hqi")
 metadata/_custom_type_script = "uid://b058847jh8yox"
 
 [node name="Help" type="TextureButton" parent="." unique_id=1808240030]
+visible = false
 layout_mode = 2
 tooltip_text = "Help"
 texture_normal = ExtResource("7_rc1qn")
