@@ -12,7 +12,7 @@ var initialized: bool = false
 
 
 func initialize(template: LevelTemplate) -> void:
-	#task_manager.initialize(template.tasks)
+	task_manager.initialize(template.tasks)
 	initialize_selection_manager()
 	initialize_tools(template.enabled_devices)
 	for tool: Tool in enabled_tools:

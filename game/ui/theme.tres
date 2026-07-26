@@ -1,15 +1,23 @@
 [gd_resource type="Theme" format=3 uid="uid://cogqm6wn24nal"]
 
-[ext_resource type="Texture2D" uid="uid://c34p2u2gx01ia" path="res://assets/ui/panel.png" id="1_hhow7"]
+[ext_resource type="Texture2D" uid="uid://diqw510ijn0ua" path="res://assets/mask_and_ui/button_bg.png" id="1_4ge3b"]
+[ext_resource type="FontFile" uid="uid://c770kdi51bgti" path="res://assets/mask_and_ui/IMFellEnglishSC-Regular.ttf" id="2_4ge3b"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hhow7"]
-texture = ExtResource("1_hhow7")
+texture = ExtResource("1_4ge3b")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a8m8m"]
-texture = ExtResource("1_hhow7")
+texture = ExtResource("1_4ge3b")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
 
 [resource]
 Button/styles/hover = SubResource("StyleBoxTexture_hhow7")
 Button/styles/normal = SubResource("StyleBoxTexture_hhow7")
 Button/styles/pressed = SubResource("StyleBoxTexture_hhow7")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_a8m8m")
+RichTextLabel/colors/default_color = Color(0.90588236, 0.8352941, 0.7019608, 1)
+RichTextLabel/font_sizes/normal_font_size = 14
+RichTextLabel/fonts/normal_font = ExtResource("2_4ge3b")

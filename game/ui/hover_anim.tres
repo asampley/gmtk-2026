@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UIAnimationData" format=3 uid="uid://cphb4x408sle6"]
+
+[ext_resource type="Script" uid="uid://coiuy4ui47v7e" path="res://utilities/ui/ui_animations/ui_animation.gd" id="1_5mhc8"]
+[ext_resource type="Script" uid="uid://yjob76jt1si" path="res://utilities/ui/ui_animations/animations/scale_ui_animation.gd" id="2_uubno"]
+[ext_resource type="Script" uid="uid://brgro56awk3l6" path="res://utilities/ui/ui_animations/ui_animation_data.gd" id="3_lh1cw"]
+
+[sub_resource type="Resource" id="Resource_tymv4"]
+script = ExtResource("2_uubno")
+scale = Vector2(1.05, 1.05)
+duration = 0.1
+metadata/_custom_type_script = "uid://yjob76jt1si"
+
+[resource]
+script = ExtResource("3_lh1cw")
+animations = Array[ExtResource("1_5mhc8")]([SubResource("Resource_tymv4")])
+metadata/_custom_type_script = "uid://brgro56awk3l6"

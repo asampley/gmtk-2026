@@ -1,31 +1,121 @@
 [gd_scene format=3 uid="uid://cmrcbcxxrpixv"]
 
 [ext_resource type="Script" uid="uid://b4yc1u5cd8fi3" path="res://game/ui/main_menu/bar_menu.gd" id="1_026ek"]
+[ext_resource type="Texture2D" uid="uid://diqw510ijn0ua" path="res://assets/mask_and_ui/button_bg.png" id="2_fuvga"]
+[ext_resource type="Script" uid="uid://b058847jh8yox" path="res://utilities/ui/overrides/advanced_texture_button.gd" id="3_fuvga"]
+[ext_resource type="Script" uid="uid://coiuy4ui47v7e" path="res://utilities/ui/ui_animations/ui_animation.gd" id="4_vy4j0"]
+[ext_resource type="Script" uid="uid://yjob76jt1si" path="res://utilities/ui/ui_animations/animations/scale_ui_animation.gd" id="5_13hqi"]
+[ext_resource type="Script" uid="uid://brgro56awk3l6" path="res://utilities/ui/ui_animations/ui_animation_data.gd" id="6_tymv4"]
+
+[sub_resource type="Resource" id="Resource_uii0s"]
+script = ExtResource("5_13hqi")
+scale = Vector2(1.05, 1.05)
+metadata/_custom_type_script = "uid://yjob76jt1si"
+
+[sub_resource type="Resource" id="Resource_gc25p"]
+script = ExtResource("6_tymv4")
+animations = Array[ExtResource("4_vy4j0")]([SubResource("Resource_uii0s")])
+metadata/_custom_type_script = "uid://brgro56awk3l6"
+
+[sub_resource type="Resource" id="Resource_qgky4"]
+script = ExtResource("5_13hqi")
+scale = Vector2(0.9, 0.9)
+metadata/_custom_type_script = "uid://yjob76jt1si"
+
+[sub_resource type="Resource" id="Resource_13hqi"]
+script = ExtResource("6_tymv4")
+animations = Array[ExtResource("4_vy4j0")]([SubResource("Resource_qgky4")])
+metadata/_custom_type_script = "uid://brgro56awk3l6"
+
+[sub_resource type="Resource" id="Resource_lf4jc"]
+script = ExtResource("5_13hqi")
+scale = Vector2(1.05, 1.05)
+metadata/_custom_type_script = "uid://yjob76jt1si"
+
+[sub_resource type="Resource" id="Resource_nejwm"]
+script = ExtResource("6_tymv4")
+animations = Array[ExtResource("4_vy4j0")]([SubResource("Resource_lf4jc")])
+metadata/_custom_type_script = "uid://brgro56awk3l6"
+
+[sub_resource type="Resource" id="Resource_ps1ad"]
+script = ExtResource("6_tymv4")
+animations = Array[ExtResource("4_vy4j0")]([SubResource("Resource_qgky4")])
+metadata/_custom_type_script = "uid://brgro56awk3l6"
+
+[sub_resource type="Resource" id="Resource_4ib38"]
+script = ExtResource("5_13hqi")
+scale = Vector2(1.05, 1.05)
+metadata/_custom_type_script = "uid://yjob76jt1si"
+
+[sub_resource type="Resource" id="Resource_c7b14"]
+script = ExtResource("6_tymv4")
+animations = Array[ExtResource("4_vy4j0")]([SubResource("Resource_4ib38")])
+metadata/_custom_type_script = "uid://brgro56awk3l6"
+
+[sub_resource type="Resource" id="Resource_iub1d"]
+script = ExtResource("6_tymv4")
+animations = Array[ExtResource("4_vy4j0")]([SubResource("Resource_qgky4")])
+metadata/_custom_type_script = "uid://brgro56awk3l6"
+
+[sub_resource type="Resource" id="Resource_nceng"]
+script = ExtResource("5_13hqi")
+scale = Vector2(1.05, 1.05)
+metadata/_custom_type_script = "uid://yjob76jt1si"
+
+[sub_resource type="Resource" id="Resource_4i8qm"]
+script = ExtResource("6_tymv4")
+animations = Array[ExtResource("4_vy4j0")]([SubResource("Resource_nceng")])
+metadata/_custom_type_script = "uid://brgro56awk3l6"
+
+[sub_resource type="Resource" id="Resource_0icqt"]
+script = ExtResource("5_13hqi")
+scale = Vector2(0.95, 0.95)
+metadata/_custom_type_script = "uid://yjob76jt1si"
+
+[sub_resource type="Resource" id="Resource_h65ro"]
+script = ExtResource("6_tymv4")
+animations = Array[ExtResource("4_vy4j0")]([SubResource("Resource_0icqt")])
+metadata/_custom_type_script = "uid://brgro56awk3l6"
 
 [node name="Buttons" type="HBoxContainer" unique_id=1006699826]
 offset_right = 211.0
 offset_bottom = 31.0
+theme_override_constants/separation = 10
 alignment = 2
 script = ExtResource("1_026ek")
 
-[node name="Level Select" type="Button" parent="." unique_id=1905556272]
+[node name="Level Select" type="TextureButton" parent="." unique_id=446605640]
 layout_mode = 2
-text = "Level Select
-"
+texture_normal = ExtResource("2_fuvga")
+stretch_mode = 5
+script = ExtResource("3_fuvga")
+hover_animations = SubResource("Resource_gc25p")
+pressed_animations = SubResource("Resource_13hqi")
+metadata/_custom_type_script = "uid://b058847jh8yox"
 
-[node name="Help" type="Button" parent="." unique_id=171705095]
+[node name="Help" type="TextureButton" parent="." unique_id=1808240030]
 layout_mode = 2
-text = "Help
-"
+texture_normal = ExtResource("2_fuvga")
+script = ExtResource("3_fuvga")
+hover_animations = SubResource("Resource_nejwm")
+pressed_animations = SubResource("Resource_ps1ad")
+metadata/_custom_type_script = "uid://b058847jh8yox"
 
-[node name="Recipe" type="Button" parent="." unique_id=504214978]
+[node name="Recipe" type="TextureButton" parent="." unique_id=582844849]
 layout_mode = 2
-text = "Recipe
-"
+texture_normal = ExtResource("2_fuvga")
+script = ExtResource("3_fuvga")
+hover_animations = SubResource("Resource_c7b14")
+pressed_animations = SubResource("Resource_iub1d")
+metadata/_custom_type_script = "uid://b058847jh8yox"
 
-[node name="Sound" type="Button" parent="." unique_id=244156460]
+[node name="Sound" type="TextureButton" parent="." unique_id=1480418010]
 layout_mode = 2
-text = "Sound"
+texture_normal = ExtResource("2_fuvga")
+script = ExtResource("3_fuvga")
+hover_animations = SubResource("Resource_4i8qm")
+pressed_animations = SubResource("Resource_h65ro")
+metadata/_custom_type_script = "uid://b058847jh8yox"
 
 [connection signal="pressed" from="Level Select" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="Help" to="." method="_on_help_pressed"]

@@ -48,18 +48,25 @@ oh_sounds = Array[AudioStream]([ExtResource("23_26od6"), ExtResource("24_uqwsa")
 uhuh_sounds = Array[AudioStream]([ExtResource("28_fpjm1"), ExtResource("29_net2s"), ExtResource("30_ycnta"), ExtResource("31_efxls")])
 whimsy_sounds = Array[AudioStream]([ExtResource("32_ep0ac"), ExtResource("33_lt5fa"), ExtResource("34_enml5")])
 
-[node name="BarMenu" parent="." unique_id=1700861673 instance=ExtResource("1_308m3")]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -483.0
-offset_right = 0.0
-grow_horizontal = 0
-
 [node name="SubMenu" parent="." unique_id=899596500 instance=ExtResource("33_8atkp")]
 visible = false
 
-[connection signal="help" from="BarMenu" to="SubMenu" method="open_help"]
-[connection signal="level_select" from="BarMenu" to="SubMenu" method="open_level_select"]
-[connection signal="recipe_book" from="BarMenu" to="SubMenu" method="open_recipes"]
-[connection signal="sound_settings" from="BarMenu" to="SubMenu" method="open_sound_settings"]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1353848685]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -306.0
+offset_bottom = 84.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="BarMenu" parent="MarginContainer" unique_id=1700861673 instance=ExtResource("1_308m3")]
+layout_mode = 2
+
+[connection signal="help" from="MarginContainer/BarMenu" to="SubMenu" method="open_help"]
+[connection signal="level_select" from="MarginContainer/BarMenu" to="SubMenu" method="open_level_select"]
+[connection signal="recipe_book" from="MarginContainer/BarMenu" to="SubMenu" method="open_recipes"]
+[connection signal="sound_settings" from="MarginContainer/BarMenu" to="SubMenu" method="open_sound_settings"]
