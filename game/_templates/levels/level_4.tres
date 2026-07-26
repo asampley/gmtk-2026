@@ -33,4 +33,5 @@ level_name = "Level 4"
 next_level = ExtResource("7_abqlf")
 enabled_devices = Array[ExtResource("2_oexg3")]([ExtResource("3_awo1y"), ExtResource("4_bvyfp"), ExtResource("5_abqlf"), ExtResource("6_1k0p1"), ExtResource("7_1k0p1")])
 tasks = Array[ExtResource("4_w6muw")]([SubResource("Resource_vwh8w"), SubResource("Resource_2ya8h")])
+basket_whitelist = Array[ExtResource("2_cnqih")]([ExtResource("9_4txfv"), ExtResource("10_bvyfp")])
 metadata/_custom_type_script = "uid://cdg0e4kmye577"

@@ -10,6 +10,7 @@
 
 [resource]
 script = ExtResource("6_7vjhi")
+name = "Flesh and Poison"
 reagents = Array[ExtResource("2_mtdnm")]([ExtResource("5_o8byh")])
 products = Array[ExtResource("2_mtdnm")]([ExtResource("3_ptxhf"), ExtResource("4_u1oc3")])
 tool_template = ExtResource("7_kvlxm")

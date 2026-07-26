@@ -10,6 +10,7 @@
 
 [resource]
 script = ExtResource("3_8cqsq")
+name = "Yellow Bile"
 reagents = Array[ExtResource("2_lgmrl")]([ExtResource("4_os2wf"), ExtResource("5_os2wf")])
 products = Array[ExtResource("2_lgmrl")]([ExtResource("3_os2wf")])
 tool_template = ExtResource("7_r3j8t")

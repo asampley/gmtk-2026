@@ -10,7 +10,7 @@
 
 [resource]
 script = ExtResource("3_6usw8")
-name = "Purify Black Bile"
+name = "Phlegm"
 reagents = Array[ExtResource("2_7f6xr")]([ExtResource("4_bedel"), ExtResource("5_wbxeh")])
 products = Array[ExtResource("2_7f6xr")]([ExtResource("3_cm7wd")])
 tool_template = ExtResource("7_14401")

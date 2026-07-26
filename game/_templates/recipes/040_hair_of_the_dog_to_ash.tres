@@ -9,7 +9,7 @@
 
 [resource]
 script = ExtResource("5_7i3cl")
-name = "Burn"
+name = "Ash"
 reagents = Array[ExtResource("2_lrvkn")]([ExtResource("4_u3w5i")])
 products = Array[ExtResource("2_lrvkn")]([ExtResource("3_66dnc")])
 tool_template = ExtResource("6_mqalm")

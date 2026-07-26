@@ -9,6 +9,7 @@
 
 [resource]
 script = ExtResource("3_jxekn")
+name = "Tar"
 reagents = Array[ExtResource("2_2kd65")]([ExtResource("4_g15m8")])
 products = Array[ExtResource("2_2kd65")]([ExtResource("3_7mrk4")])
 tool_template = ExtResource("6_8jtlc")

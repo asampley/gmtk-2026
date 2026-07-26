@@ -10,7 +10,7 @@
 
 [resource]
 script = ExtResource("3_2d47g")
-name = "Transmute Biles"
+name = "Black Bile"
 reagents = Array[ExtResource("2_w7mff")]([ExtResource("4_b6cl3"), ExtResource("5_mrp2e")])
 products = Array[ExtResource("2_w7mff")]([ExtResource("3_v8x01")])
 tool_template = ExtResource("7_8gc0s")
