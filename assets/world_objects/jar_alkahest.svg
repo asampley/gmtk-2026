@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="2.5152242"
-     inkscape:cx="34.589362"
+     inkscape:cx="34.390572"
      inkscape:cy="54.269516"
-     inkscape:window-width="1045"
+     inkscape:window-width="1272"
      inkscape:window-height="760"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -41,15 +41,19 @@
      transform="translate(-24.770947,-8.337373)">
     <path
        id="path1"
-       style="fill:#a8b5b2;fill-opacity:1;stroke:#819796;stroke-width:4;stroke-linecap:round;paint-order:markers stroke fill"
+       style="fill:#4f8fba;fill-opacity:1;stroke:#3c5e8b;stroke-width:4;stroke-linecap:round;paint-order:markers stroke fill"
        d="m 27.820312,62.419922 v 36.375 0.002 A 36.179676,16.101944 0 0 0 64,114.89844 36.179676,16.101944 0 0 0 100.17969,98.796875 V 62.419922 Z" />
     <ellipse
-       style="fill:#a8b5b2;fill-opacity:1;stroke:#819796;stroke-width:3.80542;stroke-linecap:butt;stroke-dasharray:none;paint-order:markers stroke fill"
+       style="fill:#4f8fba;fill-opacity:1;stroke:#3c5e8b;stroke-width:3.80542;stroke-linecap:butt;stroke-dasharray:none;paint-order:markers stroke fill"
        id="ellipse1"
        cx="64"
        cy="62.41988"
        rx="32.168758"
        ry="11.229501" />
+    <path
+       id="path14"
+       style="fill:#4f8fba;fill-opacity:0.5;stroke:none;stroke-width:4;stroke-linecap:round;paint-order:markers stroke fill"
+       d="m 100.17969,31.886719 a 36.179676,16.101944 0 0 1 -21.851565,14.6875 36.179676,16.101944 0 0 0 0.791016,-0.138672 V 113.42578 A 36.179676,16.101944 0 0 0 100.17969,98.796875 Z M 76.933594,46.820312 a 36.179676,16.101944 0 0 1 -2.740235,0.414063 36.179676,16.101944 0 0 0 2.740235,-0.414063 z m -4.296875,0.605469 a 36.179676,16.101944 0 0 1 -2.890625,0.253907 36.179676,16.101944 0 0 0 2.890625,-0.253907 z m -4.300781,0.357422 A 36.179676,16.101944 0 0 1 64,47.908203 a 36.179676,16.101944 0 0 0 4.335938,-0.125 z M 29.160156,103.0957 a 36.179676,16.101944 0 0 0 0.517578,0.68946 36.179676,16.101944 0 0 0 0.07422,0.0977 36.179676,16.101944 0 0 1 -0.591797,-0.78711 z m 29.96875,11.65039 A 36.179676,16.101944 0 0 0 64,114.89844 36.179676,16.101944 0 0 1 59.128906,114.74609 Z" />
     <path
        id="path8"
        style="fill:none;fill-opacity:0.5;stroke:#4f8fba;stroke-width:4;stroke-linecap:round;paint-order:markers stroke fill"
@@ -61,10 +65,6 @@
        cy="42.14336"
        rx="33.057968"
        ry="13.322389" />
-    <path
-       id="path14"
-       style="fill:#4f8fba;fill-opacity:0.5;stroke:none;stroke-width:4;stroke-linecap:round;paint-order:markers stroke fill"
-       d="m 100.17969,31.886719 a 36.179676,16.101944 0 0 1 -21.851565,14.6875 36.179676,16.101944 0 0 0 0.791016,-0.138672 V 113.42578 A 36.179676,16.101944 0 0 0 100.17969,98.796875 Z M 76.933594,46.820312 a 36.179676,16.101944 0 0 1 -2.740235,0.414063 36.179676,16.101944 0 0 0 2.740235,-0.414063 z m -4.296875,0.605469 a 36.179676,16.101944 0 0 1 -2.890625,0.253907 36.179676,16.101944 0 0 0 2.890625,-0.253907 z m -4.300781,0.357422 A 36.179676,16.101944 0 0 1 64,47.908203 a 36.179676,16.101944 0 0 0 4.335938,-0.125 z M 29.160156,103.0957 a 36.179676,16.101944 0 0 0 0.517578,0.68946 36.179676,16.101944 0 0 0 0.07422,0.0977 36.179676,16.101944 0 0 1 -0.591797,-0.78711 z m 29.96875,11.65039 A 36.179676,16.101944 0 0 0 64,114.89844 36.179676,16.101944 0 0 1 59.128906,114.74609 Z" />
     <path
        id="path13"
        style="fill:#73bed3;fill-opacity:0.5;stroke:none;stroke-width:4;stroke-linecap:round;paint-order:markers stroke fill"
