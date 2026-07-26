@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://dgxd5avufrdp2" path="res://utilities/ui/fly_in_text/fly_in_text_manager.gd" id="12_pnvrb"]
 [ext_resource type="PackedScene" uid="uid://daumugae1dbgt" path="res://utilities/ui/fly_in_text/score_fly_in_text_prefab.tscn" id="13_1odm2"]
 [ext_resource type="Script" uid="uid://bv4xqu77fk6r2" path="res://game/popups/popup_trigger_level_start.gd" id="13_lro0m"]
+[ext_resource type="PackedScene" uid="uid://bd1adgccqu1wr" path="res://game/gameplay/tools/objects/wash_basin.tscn" id="14_sbrqv"]
 [ext_resource type="PackedScene" uid="uid://q5x73abiy4us" path="res://game/gameplay/tools/objects/salamander.tscn" id="14_vr57k"]
 [ext_resource type="PackedScene" uid="uid://1rokmhcik0if" path="res://game/gameplay/tools/objects/mortar.tscn" id="15_p15a4"]
 [ext_resource type="PackedScene" uid="uid://ca337mb1wrtmu" path="res://game/gameplay/tools/objects/bottled_alkahest.tscn" id="16_p15a4"]
@@ -145,6 +146,13 @@ offset_right = 799.0
 offset_bottom = 518.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="WashBasin" parent="Tools" unique_id=332285069 instance=ExtResource("14_sbrqv")]
+layout_mode = 1
+offset_left = 652.0
+offset_top = 678.0
+offset_right = -30.0
+offset_bottom = 3.0
 
 [node name="PopupTriggerLevelStart" type="Node" parent="." unique_id=1211603721]
 script = ExtResource("13_lro0m")
