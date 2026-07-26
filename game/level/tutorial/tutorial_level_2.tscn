@@ -88,7 +88,7 @@ layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0.0627451, 0.078431375, 0.12156863, 1)
 theme_override_fonts/font = ExtResource("6_sqtio")
-text = "Repeat with hair of the dog. If you do it too soon it well burn up before it can mix! If you do it right, a Healing Salve will form"
+text = "Repeat with hair of the dog. If you do it too soon it well burn into ashes before it can mix and clog things up! Use some Suds from the washbasin. If you do it right, a Healing Salve will form."
 autowrap_mode = 3
 
 [node name="PopupBox" parent="PopupUI2" unique_id=1920342617 instance=ExtResource("7_a4bfg")]
