@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="salamander_tail.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="2.6769353"
+     inkscape:cx="40.157863"
+     inkscape:cy="72.284153"
+     inkscape:window-width="1272"
+     inkscape:window-height="760"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#de9e41;stroke:#be772b;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       d="m 38.103274,91.896132 c 0,0 30.632044,-17.557391 35.114782,-34.741221 C 77.700795,39.971082 60.143404,50.057243 47.068751,41.091766 33.994098,32.12629 42.586012,7.0976689 42.586012,7.0976689 c 0,0 11.382571,24.1374511 26.89643,22.4136901 16.810268,-1.867807 20.919449,-5.603422 32.499848,9.339039 11.77991,15.199888 -27.643549,77.327232 -27.643549,77.327232 z"
+       id="path2"
+       sodipodi:nodetypes="csscsscc" />
+    <path
+       style="fill:#a53030;stroke:#be772b;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       d="m 38.103274,91.896132 c 3.548834,-3.362054 19.051637,-10.833284 28.017114,-4.482738 8.965476,6.350546 13.821776,24.281496 8.218353,28.764236 -5.603423,4.48274 -23.160814,8.96548 -31.379167,0.37356 -8.218353,-8.59191 -8.405135,-21.293005 -4.8563,-24.655058 z"
+       id="path1"
+       sodipodi:nodetypes="zsssz" />
+    <ellipse
+       style="fill:#ebede9;stroke:#c7cfcc;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       id="path3"
+       cx="55.287102"
+       cy="103.66333"
+       rx="4.8562999"
+       ry="4.6695189" />
+    <path
+       style="fill:#ebede9;stroke:#c7cfcc;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       d="M -57.154911,66.120388 -66.120388,17.930953"
+       id="path4" />
+  </g>
+</svg>
