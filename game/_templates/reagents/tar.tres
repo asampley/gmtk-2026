@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://b8f03ymo4d4c6"]
 
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_gasxi"]
-[ext_resource type="Texture2D" uid="uid://ru3a07lnd8jh" path="res://assets/icons/black_bile.svg" id="1_jlkjq"]
+[ext_resource type="Texture2D" uid="uid://wrqweg62jjkn" path="res://assets/icons/tar.svg" id="1_jlkjq"]
 
 [resource]
 script = ExtResource("1_gasxi")
