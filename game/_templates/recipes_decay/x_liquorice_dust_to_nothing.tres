@@ -11,4 +11,5 @@ script = ExtResource("3_u632l")
 reagents = Array[ExtResource("2_gjebm")]([ExtResource("3_klsbq")])
 tool_template = ExtResource("5_u632l")
 time = 2
+desirable = false
 metadata/_custom_type_script = "uid://c4imnao3ortw8"
