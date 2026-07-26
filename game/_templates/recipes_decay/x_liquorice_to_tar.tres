@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://b7xxiwru441kl"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_15553"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_2kd65"]
+[ext_resource type="Resource" uid="uid://b8f03ymo4d4c6" path="res://game/_templates/reagents/tar.tres" id="3_7mrk4"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_jxekn"]
+[ext_resource type="Resource" uid="uid://pyh1dgi1rxk2" path="res://game/_templates/reagents/liquorice.tres" id="4_g15m8"]
+[ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="6_8jtlc"]
+
+[resource]
+script = ExtResource("3_jxekn")
+name = "Burn"
+reagents = Array[ExtResource("2_2kd65")]([ExtResource("4_g15m8")])
+products = Array[ExtResource("2_2kd65")]([ExtResource("3_7mrk4")])
+tool_template = ExtResource("6_8jtlc")
+time = 4
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

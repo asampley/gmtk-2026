@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://xmhfrf35n264" path="res://game/gameplay/tools/objects/basket.tscn" id="4_p15a4"]
 [ext_resource type="Script" uid="uid://d37jru5ijnbu3" path="res://game/task_system/task_reagent_reader.gd" id="7_ec6xq"]
 [ext_resource type="PackedScene" uid="uid://byut73koqqbl0" path="res://game/gameplay/tools/objects/cauldron.tscn" id="8_e05ax"]
+[ext_resource type="PackedScene" uid="uid://c0adp1jlt4fmx" path="res://game/gameplay/tools/objects/potted_liquorice.tscn" id="9_8eb4b"]
 [ext_resource type="PackedScene" uid="uid://uj23w65wfd5" path="res://game/gameplay/tools/objects/crucible.tscn" id="12_idsm0"]
 [ext_resource type="Script" uid="uid://bv4xqu77fk6r2" path="res://game/popups/popup_trigger_level_start.gd" id="13_lro0m"]
 
@@ -66,19 +67,36 @@ will_decay = false
 script = ExtResource("7_ec6xq")
 metadata/_custom_type_script = "uid://d37jru5ijnbu3"
 
-[node name="Cauldron" parent="Tools" unique_id=2096123214 instance=ExtResource("8_e05ax")]
+[node name="Cauldron" parent="Tools" unique_id=2096123214 node_paths=PackedStringArray("task_reagent_reader") instance=ExtResource("8_e05ax")]
 layout_mode = 1
 offset_left = 264.0
 offset_top = 548.0
 offset_right = -300.0
 offset_bottom = -16.0
+task_reagent_reader = NodePath("TaskReagentReader")
 
-[node name="Crucible" parent="Tools" unique_id=1901526035 instance=ExtResource("12_idsm0")]
+[node name="TaskReagentReader" type="Node" parent="Tools/Cauldron" unique_id=1679427035]
+script = ExtResource("7_ec6xq")
+metadata/_custom_type_script = "uid://d37jru5ijnbu3"
+
+[node name="Crucible" parent="Tools" unique_id=1901526035 node_paths=PackedStringArray("task_reagent_reader") instance=ExtResource("12_idsm0")]
 layout_mode = 1
 offset_left = 476.0
 offset_top = 346.0
 offset_right = -216.0
 offset_bottom = -346.0
+task_reagent_reader = NodePath("TaskReagentReader")
+
+[node name="TaskReagentReader" type="Node" parent="Tools/Crucible" unique_id=1941316342]
+script = ExtResource("7_ec6xq")
+metadata/_custom_type_script = "uid://d37jru5ijnbu3"
+
+[node name="PottedLiquorice" parent="Tools" unique_id=628393831 instance=ExtResource("9_8eb4b")]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 404.0
+offset_right = 172.0
+offset_bottom = 468.0
 
 [node name="PopupTriggerLevelStart" type="Node" parent="." unique_id=1211603721]
 script = ExtResource("13_lro0m")

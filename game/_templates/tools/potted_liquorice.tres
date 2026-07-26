@@ -1,18 +1,18 @@
 [gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://vg2w7caefyad"]
 
-[ext_resource type="Texture2D" uid="uid://b8vm0qeigden8" path="res://assets/icons/nightshade.svg" id="1_sp60q"]
+[ext_resource type="Texture2D" uid="uid://d0rfifum3ijia" path="res://assets/world_objects/pot.svg" id="1_sp60q"]
 [ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="2_ksqvv"]
-[ext_resource type="Resource" uid="uid://b1b0p5a15lljp" path="res://game/_templates/reagents/old/nightshade.tres" id="2_scmai"]
+[ext_resource type="Resource" uid="uid://pyh1dgi1rxk2" path="res://game/_templates/reagents/liquorice.tres" id="3_sp60q"]
 [ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="4_4niri"]
 
 [sub_resource type="Resource" id="Resource_hqp2q"]
 script = ExtResource("2_ksqvv")
-reagent = ExtResource("2_scmai")
+reagent = ExtResource("3_sp60q")
 metadata/_custom_type_script = "uid://b6f4ge1t4ys5r"
 
 [resource]
 script = ExtResource("4_4niri")
-name = "Plant of Nightshade"
+name = "PottedLiquorice"
 icon = ExtResource("1_sp60q")
 reagent_generation_templates = Array[ExtResource("2_ksqvv")]([SubResource("Resource_hqp2q")])
 metadata/_custom_type_script = "uid://dhqopjqxgslsw"
