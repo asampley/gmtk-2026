@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ddocofyw364o6"]
+
+[ext_resource type="Texture2D" uid="uid://d0awyk2rao3s0" path="res://assets/world_objects/bottle_of_vinegar.svg" id="1_ekl2e"]
+[ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_6jpfm"]
+[ext_resource type="Resource" uid="uid://82cijue0sjf1" path="res://game/_templates/tools/bottled_alkahest.tres" id="3_qtsv4"]
+[ext_resource type="Script" uid="uid://c8cute52enlko" path="res://game/gameplay/tools/held_reagents_ui.gd" id="4_lyt55"]
+[ext_resource type="PackedScene" uid="uid://l0tjrdtbfjwg" path="res://game/gameplay/tools/reagent_counter.tscn" id="5_w5wfi"]
+
+[node name="BottleOfVinegar" type="TextureRect" unique_id=628393831 node_paths=PackedStringArray("held_reagents_ui")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -442.0
+offset_top = -442.0
+offset_right = -314.0
+offset_bottom = -314.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = ExtResource("1_ekl2e")
+expand_mode = 3
+stretch_mode = 5
+script = ExtResource("2_6jpfm")
+tool_template = ExtResource("3_qtsv4")
+held_reagents_ui = NodePath("HeldReagentsUI")
+metadata/_custom_type_script = "uid://cp85lcgd1nglo"
+
+[node name="HeldReagentsUI" type="HBoxContainer" parent="." unique_id=1954010034]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 70.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("4_lyt55")
+reagent_counter_prefab = ExtResource("5_w5wfi")
+metadata/_custom_type_script = "uid://c8cute52enlko"

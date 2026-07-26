@@ -5,12 +5,11 @@
 [ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_8cqsq"]
 [ext_resource type="Resource" uid="uid://dtk6jo7ybhw2i" path="res://game/_templates/reagents/yellow_bile.tres" id="3_os2wf"]
 [ext_resource type="Resource" uid="uid://bpfjfo48ep4ek" path="res://game/_templates/reagents/blood.tres" id="4_os2wf"]
-[ext_resource type="Resource" uid="uid://c6s7ae8m62lr4" path="res://game/_templates/reagents/hair_of_the_dog.tres" id="5_r3j8t"]
 [ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="7_r3j8t"]
 
 [resource]
 script = ExtResource("3_8cqsq")
-reagents = Array[ExtResource("2_lgmrl")]([ExtResource("4_os2wf"), ExtResource("5_r3j8t")])
+reagents = Array[ExtResource("2_lgmrl")]([ExtResource("4_os2wf")])
 products = Array[ExtResource("2_lgmrl")]([ExtResource("3_os2wf")])
 tool_template = ExtResource("7_r3j8t")
 time = 6
