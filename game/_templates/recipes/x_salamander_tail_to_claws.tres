@@ -14,4 +14,5 @@ reagents = Array[ExtResource("2_80a06")]([ExtResource("4_y0jkt")])
 products = Array[ExtResource("2_80a06")]([ExtResource("3_csruy")])
 tool_template = ExtResource("6_d6gg6")
 time = 8
+desirable = false
 metadata/_custom_type_script = "uid://c4imnao3ortw8"
