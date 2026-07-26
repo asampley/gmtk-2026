@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://brbr0fpe0662j"]
 
-[ext_resource type="Texture2D" uid="uid://dcmu7ms0vnot3" path="res://assets/icons/baking_soda.svg" id="1_by0if"]
+[ext_resource type="Texture2D" uid="uid://c1xcu1yu53d1t" path="res://assets/icons/alkahest.svg" id="1_by0if"]
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_d4rq1"]
 
 [resource]

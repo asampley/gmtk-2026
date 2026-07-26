@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ca337mb1wrtmu"]
 
-[ext_resource type="Texture2D" uid="uid://ca2jp0nrof5xs" path="res://assets/icons/potion_bottle.svg" id="1_tpoph"]
+[ext_resource type="Texture2D" uid="uid://cwkfihr62qfwr" path="res://assets/world_objects/jar_alkahest.svg" id="1_tbe7v"]
 [ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_tbe7v"]
 [ext_resource type="Script" uid="uid://c8cute52enlko" path="res://game/gameplay/tools/held_reagents_ui.gd" id="3_31r64"]
 [ext_resource type="Resource" uid="uid://82cijue0sjf1" path="res://game/_templates/tools/bottled_alkahest.tres" id="3_tbe7v"]
@@ -19,7 +19,7 @@ offset_bottom = -314.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
-texture = ExtResource("1_tpoph")
+texture = ExtResource("1_tbe7v")
 expand_mode = 3
 stretch_mode = 5
 script = ExtResource("2_tbe7v")
