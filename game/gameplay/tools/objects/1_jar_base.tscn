@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://oloj7em0eqta" path="res://assets/world_objects/jar.svg" id="1_wfj21"]
 [ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_hyo4g"]
+[ext_resource type="PackedScene" uid="uid://l0tjrdtbfjwg" path="res://game/gameplay/tools/reagent_counter.tscn" id="4_4s0qn"]
 [ext_resource type="PackedScene" uid="uid://xtumlcime4sh" path="res://game/gameplay/tools/held_reagents_parent.tscn" id="4_8xdlp"]
 
 [node name="JarBase" type="TextureRect" unique_id=1324714557 node_paths=PackedStringArray("held_reagents_ui")]
@@ -26,3 +27,4 @@ offset_top = 38.0
 offset_right = 0.0
 offset_bottom = 30.0
 grow_vertical = 2
+reagent_counter_prefab = ExtResource("4_4s0qn")
