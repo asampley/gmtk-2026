@@ -5,10 +5,12 @@
 [ext_resource type="Resource" uid="uid://dbagjur8cj1ro" path="res://game/_templates/reagents/flesh.tres" id="3_2ljwi"]
 [ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_x00ls"]
 [ext_resource type="Resource" uid="uid://brbr0fpe0662j" path="res://game/_templates/reagents/alkahest.tres" id="4_0mlmx"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="6_2ljwi"]
 
 [resource]
 script = ExtResource("3_x00ls")
 name = "Flesh Solvent"
 reagents = Array[ExtResource("2_kbphg")]([ExtResource("3_2ljwi"), ExtResource("4_0mlmx")])
+tool_template = ExtResource("6_2ljwi")
 time = 2
 metadata/_custom_type_script = "uid://c4imnao3ortw8"

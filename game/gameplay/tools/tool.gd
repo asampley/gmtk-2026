@@ -169,7 +169,7 @@ func _calculate_recipes() -> void:
 			if !recipe_progress.has(recipe):
 				reaction_progress.recipe_progress[recipe] = ReactionProgress.RecipeProgress.new()
 				recipe_progress[recipe].remaining_time = recipe.time
-
+				EventBus.ui_events.fly_in_text_requested.emit(recipe.name, 0, global_position + Vector2(size.x / 2, size.y / 2), 0, Vector2(0,0))
 			recipe_progress[recipe].time_multiplier = time_multiplier
 
 			# disable undesirable recipes if there is a recipe desirable

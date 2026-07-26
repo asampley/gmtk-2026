@@ -16,7 +16,7 @@ class GameEvents:
 	signal level_completed()
 
 class UIEvents:
-	signal fly_in_text_requested(text: String, position: Vector2, impact: float, direction: Vector2)
+	signal fly_in_text_requested(text: String, index: int, position: Vector2, impact: float, direction: Vector2)
 
 class AudioEvents:
 	signal ui_audio_played(sound: AudioStream)

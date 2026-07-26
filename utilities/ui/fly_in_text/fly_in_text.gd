@@ -16,13 +16,14 @@ signal animation_triggered()
 
 func initialize(text_in: String, movement_vector_in: Vector2, impact_in: float) -> void:
 	label.text = text_in
-	movement_vector = movement_vector_in
-	impact = impact_in
-	vars_set.emit()
-	animation_triggered.emit(true)
+	scale = Vector2(0,0)
+	var tween := create_tween()
+	tween.tween_property(self, "scale", Vector2(1,1), 1)
 	
-	await get_tree().create_timer(duration).timeout
-	queue_free()
+	await tween.finished
+	tween.kill()
+	tween = create_tween()
+	tween.tween_property(self, "modulate", Color.TRANSPARENT, .5)
 
 func add_animation(animation: UIAnimation) -> void:
 	animation_container.animations.append(animation)

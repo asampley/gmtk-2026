@@ -26,7 +26,7 @@ func clear_tweens() -> void:
 		tween.kill()
 
 func setup_tween(control: Control) -> void:
-	tween = control.create_tween()	
+	tween = control.create_tween()
 	tween.set_ease(easing)
 	tween.set_trans(transition)
 

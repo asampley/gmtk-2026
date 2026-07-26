@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://c0adp1jlt4fmx" path="res://game/gameplay/tools/objects/potted_liquorice.tscn" id="9_8eb4b"]
 [ext_resource type="Resource" uid="uid://br5udfvhr0tv6" path="res://game/_templates/tools/jar_of_dog_hair.tres" id="10_2v0w1"]
 [ext_resource type="PackedScene" uid="uid://uj23w65wfd5" path="res://game/gameplay/tools/objects/crucible.tscn" id="12_idsm0"]
+[ext_resource type="Script" uid="uid://dgxd5avufrdp2" path="res://utilities/ui/fly_in_text/fly_in_text_manager.gd" id="12_pnvrb"]
+[ext_resource type="PackedScene" uid="uid://daumugae1dbgt" path="res://utilities/ui/fly_in_text/score_fly_in_text_prefab.tscn" id="13_1odm2"]
 [ext_resource type="Script" uid="uid://bv4xqu77fk6r2" path="res://game/popups/popup_trigger_level_start.gd" id="13_lro0m"]
 
 [node name="Level" type="Control" unique_id=324419999]
@@ -111,3 +113,11 @@ tool_template = ExtResource("10_2v0w1")
 [node name="PopupTriggerLevelStart" type="Node" parent="." unique_id=1211603721]
 script = ExtResource("13_lro0m")
 metadata/_custom_type_script = "uid://bv4xqu77fk6r2"
+
+[node name="FlyInTextManager" type="Control" parent="." unique_id=1628627001]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("12_pnvrb")
+text_prefabs = Array[PackedScene]([ExtResource("13_1odm2")])
+metadata/_custom_type_script = "uid://dgxd5avufrdp2"
