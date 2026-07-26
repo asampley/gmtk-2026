@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://clqmj8p1xi2pf"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_w8k4w"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_0ccsl"]
+[ext_resource type="Resource" uid="uid://dy6iqhhm72ut2" path="res://game/_templates/reagents/silver.tres" id="3_cah0l"]
+[ext_resource type="Resource" uid="uid://qfjymqfb4r6v" path="res://game/_templates/reagents/salamander_tail.tres" id="4_wy644"]
+[ext_resource type="Resource" uid="uid://gx8jtw561lg1" path="res://game/_templates/reagents/copper.tres" id="6_aluls"]
+[ext_resource type="Resource" uid="uid://b8f03ymo4d4c6" path="res://game/_templates/reagents/tar.tres" id="6_w8k4w"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="7_yhjr7"]
+[ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="8_b0kgb"]
+
+[resource]
+script = ExtResource("7_yhjr7")
+name = "Silver"
+reagents = Array[ExtResource("2_0ccsl")]([ExtResource("4_wy644"), ExtResource("6_aluls"), ExtResource("6_w8k4w")])
+products = Array[ExtResource("2_0ccsl")]([ExtResource("3_cah0l")])
+tool_template = ExtResource("8_b0kgb")
+time = 8
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

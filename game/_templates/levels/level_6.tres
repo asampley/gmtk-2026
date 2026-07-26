@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="6_midbx"]
 [ext_resource type="Resource" uid="uid://chu73en3fbq1i" path="res://game/_templates/tools/mortar_and_pestle.tres" id="7_jayc4"]
 [ext_resource type="Resource" uid="uid://vg2w7caefyad" path="res://game/_templates/tools/potted_liquorice.tres" id="8_midbx"]
+[ext_resource type="Resource" uid="uid://6tnlrlc38kl8" path="res://game/_templates/levels/level_7.tres" id="10_rqnnr"]
 [ext_resource type="Resource" uid="uid://3nh78myociua" path="res://game/_templates/reagents/liquorice_dust.tres" id="11_jayc4"]
 [ext_resource type="Resource" uid="uid://b8f03ymo4d4c6" path="res://game/_templates/reagents/tar.tres" id="12_u1a7h"]
 [ext_resource type="Resource" uid="uid://cjbkn1qo0hgxo" path="res://game/_templates/reagents/broth.tres" id="13_jayc4"]
@@ -46,6 +47,7 @@ metadata/_custom_type_script = "uid://c7s7risns0jw2"
 [resource]
 script = ExtResource("3_fjo3j")
 level_name = "Level 6"
+next_level = ExtResource("10_rqnnr")
 enabled_devices = Array[ExtResource("2_uba75")]([ExtResource("3_yr5am"), ExtResource("4_c4oi4"), ExtResource("5_h422u"), ExtResource("6_midbx"), ExtResource("7_jayc4"), ExtResource("8_midbx")])
 tasks = Array[ExtResource("4_0eye2")]([SubResource("Resource_a3k37"), SubResource("Resource_mr5n8"), SubResource("Resource_dmhfl"), SubResource("Resource_35oh3")])
 basket_whitelist = Array[ExtResource("1_mxq38")]([ExtResource("14_u1a7h")])
