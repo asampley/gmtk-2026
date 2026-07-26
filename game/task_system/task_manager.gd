@@ -26,6 +26,7 @@ func on_task_completed(tool: ToolTemplate, reagent: Reagent) -> void:
 			task_to_task_ui[task].complete()
 			task_to_task_ui.erase(task)
 			tasks_completed += 1
+			EventBus.game_events.popup_requested.emit(task.popup_index)
 			if tasks_completed >= tasks.size():
 				EventBus.game_events.level_completed.emit()
 			break

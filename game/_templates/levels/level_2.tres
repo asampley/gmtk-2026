@@ -13,12 +13,14 @@
 [ext_resource type="Resource" uid="uid://pyh1dgi1rxk2" path="res://game/_templates/reagents/liquorice.tres" id="9_vf2j1"]
 [ext_resource type="Resource" uid="uid://c6s7ae8m62lr4" path="res://game/_templates/reagents/hair_of_the_dog.tres" id="10_m5pg7"]
 [ext_resource type="Resource" uid="uid://b8f03ymo4d4c6" path="res://game/_templates/reagents/tar.tres" id="10_vvdoh"]
+[ext_resource type="PackedScene" uid="uid://bjngpuelh7ap6" path="res://game/level/tutorial/tutorial_level_2.tscn" id="14_g7laa"]
 
 [sub_resource type="Resource" id="Resource_coou2"]
 script = ExtResource("4_wwava")
 tool = ExtResource("4_vvdoh")
 reagent = ExtResource("9_vf2j1")
 text = "Liquorice → Crucible"
+popup_index = 1
 metadata/_custom_type_script = "uid://c7s7risns0jw2"
 
 [sub_resource type="Resource" id="Resource_8fx6s"]
@@ -40,6 +42,7 @@ script = ExtResource("4_wwava")
 tool = ExtResource("4_vvdoh")
 reagent = ExtResource("2_vf2j1")
 text = "↦ Healing Salve"
+popup_index = 2
 metadata/_custom_type_script = "uid://c7s7risns0jw2"
 
 [sub_resource type="Resource" id="Resource_85c7b"]
@@ -56,4 +59,5 @@ next_level = ExtResource("7_jlbu6")
 enabled_devices = Array[ExtResource("2_5pid8")]([ExtResource("4_vvdoh"), ExtResource("5_m5pg7"), ExtResource("6_jlbu6"), ExtResource("6_m5pg7")])
 tasks = Array[ExtResource("4_wwava")]([SubResource("Resource_coou2"), SubResource("Resource_8fx6s"), SubResource("Resource_8tehk"), SubResource("Resource_q88lf"), SubResource("Resource_85c7b")])
 basket_whitelist = Array[ExtResource("1_r2hqu")]([ExtResource("2_vf2j1")])
+tutorial = ExtResource("14_g7laa")
 metadata/_custom_type_script = "uid://cdg0e4kmye577"

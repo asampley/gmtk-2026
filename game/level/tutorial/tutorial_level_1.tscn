@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://cei7hwdu5dgwm"]
+
+[ext_resource type="Script" uid="uid://y6mi8eflcx8o" path="res://game/popups/popup_manager.gd" id="1_4vsi3"]
+[ext_resource type="PackedScene" uid="uid://4eppg42uma7o" path="res://game/popups/popup_ui.tscn" id="2_w0uts"]
+[ext_resource type="Texture2D" uid="uid://cdrstrn3pu066" path="res://assets/mask_and_ui/popup_box.png" id="3_0f60q"]
+[ext_resource type="Script" uid="uid://d05td3upb2d3t" path="res://game/popups/popup_ui.gd" id="4_0f60q"]
+[ext_resource type="Script" uid="uid://cooo45adbu144" path="res://game/level/pop_up_box.gd" id="4_jw4u4"]
+[ext_resource type="FontFile" uid="uid://cuq6830n247af" path="res://themes/minimalist/font/Urbanist/Urbanist-ExtraBold.ttf" id="5_jw4u4"]
+
+[node name="PopupManager" type="Control" unique_id=1986880260 node_paths=PackedStringArray("index_to_popup")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_4vsi3")
+index_to_popup = {
+0: NodePath("PopupUI"),
+1: NodePath("PopupUI2"),
+2: NodePath("PopupUI3")
+}
+
+[node name="PopupUI" parent="." unique_id=306165981 instance=ExtResource("2_w0uts")]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 340.0
+offset_right = 377.0
+offset_bottom = 475.0
+
+[node name="PopupBox3" type="TextureRect" parent="PopupUI" unique_id=600142263]
+layout_mode = 0
+offset_left = -125.0
+offset_top = 8.0
+offset_right = -44.0
+offset_bottom = 104.0
+mouse_filter = 2
+texture = ExtResource("3_0f60q")
+expand_mode = 1
+script = ExtResource("4_jw4u4")
+metadata/_custom_type_script = "uid://cooo45adbu144"
+
+[node name="PopupBox" type="TextureRect" parent="PopupUI" unique_id=1397981488]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 16.0
+offset_right = 401.0
+offset_bottom = 144.0
+mouse_filter = 2
+texture = ExtResource("3_0f60q")
+script = ExtResource("4_jw4u4")
+metadata/_custom_type_script = "uid://cooo45adbu144"
+
+[node name="PopupUI2" type="Control" parent="." unique_id=1985340377]
+anchors_preset = 0
+offset_left = 453.0
+offset_top = 232.0
+offset_right = 632.0
+offset_bottom = 319.0
+mouse_filter = 2
+script = ExtResource("4_0f60q")
+
+[node name="PanelContainer" type="PanelContainer" parent="PopupUI2" unique_id=176434002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PopupUI2/PanelContainer" unique_id=1409332728]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="PopupUI2/PanelContainer/MarginContainer" unique_id=336681865]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.0627451, 0.078431375, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("5_jw4u4")
+text = "Wait for the Liquorice to cook into tar"
+autowrap_mode = 3
+
+[node name="PopupUI3" type="Control" parent="." unique_id=2039456138]
+anchors_preset = 0
+offset_left = 277.0
+offset_top = 630.0
+offset_right = 529.0
+offset_bottom = 782.0
+mouse_filter = 2
+script = ExtResource("4_0f60q")
+
+[node name="PanelContainer" type="PanelContainer" parent="PopupUI3" unique_id=1875788457]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PopupUI3/PanelContainer" unique_id=502647847]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="PopupUI3/PanelContainer/MarginContainer" unique_id=882561510]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.0627451, 0.078431375, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("5_jw4u4")
+text = "Click or drag on the Crucible and bring the Tar over to the Basket"
+autowrap_mode = 3
+
+[node name="PopupBox2" type="TextureRect" parent="PopupUI3" unique_id=2085334013]
+layout_mode = 0
+offset_left = -269.0
+offset_top = -11.0
+offset_right = -16.0
+offset_bottom = 181.0
+mouse_filter = 2
+texture = ExtResource("3_0f60q")
+expand_mode = 1
+script = ExtResource("4_jw4u4")
+metadata/_custom_type_script = "uid://cooo45adbu144"

@@ -26,6 +26,7 @@ func initialize(template: LevelTemplate) -> void:
 	if template.tutorial:
 		var tutorial := template.tutorial.instantiate()
 		add_child(tutorial)
+		EventBus.game_events.popup_requested.emit(0)
 
 func initialize_selection_manager() -> void:
 	add_child(selection_manager)

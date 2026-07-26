@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://dbflk3na7o13e"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_gpwpe"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_03ne0"]
+[ext_resource type="Resource" uid="uid://c6s7ae8m62lr4" path="res://game/_templates/reagents/hair_of_the_dog.tres" id="3_py17d"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_x4gx7"]
+[ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="5_xynru"]
+
+[resource]
+script = ExtResource("3_x4gx7")
+reagents = Array[ExtResource("2_03ne0")]([ExtResource("3_py17d")])
+tool_template = ExtResource("5_xynru")
+time = 2
+desirable = false
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

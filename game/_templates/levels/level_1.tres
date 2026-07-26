@@ -10,12 +10,14 @@
 [ext_resource type="Resource" uid="uid://pyh1dgi1rxk2" path="res://game/_templates/reagents/liquorice.tres" id="7_22v3b"]
 [ext_resource type="Resource" uid="uid://rlwki0safuvy" path="res://game/_templates/levels/level_2.tres" id="7_102d8"]
 [ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="9_102d8"]
+[ext_resource type="PackedScene" uid="uid://cei7hwdu5dgwm" path="res://game/level/tutorial/tutorial_level_1.tscn" id="11_coou2"]
 
 [sub_resource type="Resource" id="Resource_7ilo3"]
 script = ExtResource("9_102d8")
 tool = ExtResource("4_kqfr8")
 reagent = ExtResource("7_22v3b")
 text = "Liquorice → Crucible"
+popup_index = 1
 metadata/_custom_type_script = "uid://c7s7risns0jw2"
 
 [sub_resource type="Resource" id="Resource_102d8"]
@@ -23,6 +25,7 @@ script = ExtResource("9_102d8")
 tool = ExtResource("4_kqfr8")
 reagent = ExtResource("2_3vorm")
 text = "Liquorice ↦ Tar"
+popup_index = 2
 metadata/_custom_type_script = "uid://c7s7risns0jw2"
 
 [sub_resource type="Resource" id="Resource_3vorm"]
@@ -39,4 +42,5 @@ next_level = ExtResource("7_102d8")
 enabled_devices = Array[ExtResource("1_22v3b")]([ExtResource("3_102d8"), ExtResource("4_kqfr8"), ExtResource("5_22v3b")])
 tasks = Array[ExtResource("9_102d8")]([SubResource("Resource_7ilo3"), SubResource("Resource_102d8"), SubResource("Resource_3vorm")])
 basket_whitelist = Array[ExtResource("1_cdprx")]([ExtResource("2_3vorm")])
+tutorial = ExtResource("11_coou2")
 metadata/_custom_type_script = "uid://cdg0e4kmye577"
