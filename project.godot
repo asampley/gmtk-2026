@@ -32,9 +32,6 @@ ResourceDataHandler="*uid://dsrfmpomi3swo"
 SaveDataHandler="*uid://cko80qb0rade7"
 EventBus="*uid://cq5w1nr8gscj8"
 ServiceLocator="*uid://r867bk7n2n1p"
-Talo="*uid://cf5txmco4tia4"
-Analytics="*uid://dniun7l81oldd"
-Preloader="*uid://k7bdovd5nxwa"
 PulseTimer="*uid://3s2i8x2ivum8"
 
 [debug]
@@ -54,10 +51,6 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
 mouse_cursor/tooltip_position_offset=Vector2(0, 45)
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/talo/plugin.cfg")
 
 [file_customization]
 
