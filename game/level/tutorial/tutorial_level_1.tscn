@@ -24,17 +24,17 @@ index_to_popup = {
 
 [node name="PopupUI" parent="." unique_id=306165981 instance=ExtResource("2_w0uts")]
 layout_mode = 0
-offset_left = 210.0
-offset_top = 340.0
-offset_right = 377.0
-offset_bottom = 475.0
+offset_left = 244.0
+offset_top = 258.0
+offset_right = 411.0
+offset_bottom = 393.0
 
 [node name="PopupBox3" type="TextureRect" parent="PopupUI" unique_id=600142263]
 layout_mode = 0
-offset_left = -125.0
-offset_top = 8.0
-offset_right = -44.0
-offset_bottom = 104.0
+offset_left = -149.0
+offset_top = -26.0
+offset_right = -5.0
+offset_bottom = 180.0
 mouse_filter = 2
 texture = ExtResource("3_0f60q")
 expand_mode = 1
@@ -43,10 +43,10 @@ metadata/_custom_type_script = "uid://cooo45adbu144"
 
 [node name="PopupBox" type="TextureRect" parent="PopupUI" unique_id=1397981488]
 layout_mode = 0
-offset_left = 266.0
-offset_top = 16.0
-offset_right = 401.0
-offset_bottom = 144.0
+offset_left = 196.0
+offset_top = 78.0
+offset_right = 331.0
+offset_bottom = 206.0
 mouse_filter = 2
 texture = ExtResource("3_0f60q")
 script = ExtResource("4_jw4u4")
@@ -54,10 +54,10 @@ metadata/_custom_type_script = "uid://cooo45adbu144"
 
 [node name="PopupUI2" type="Control" parent="." unique_id=1985340377]
 anchors_preset = 0
-offset_left = 453.0
-offset_top = 232.0
-offset_right = 632.0
-offset_bottom = 319.0
+offset_left = 439.0
+offset_top = 241.0
+offset_right = 618.0
+offset_bottom = 328.0
 mouse_filter = 2
 script = ExtResource("4_0f60q")
 
