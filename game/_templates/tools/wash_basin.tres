@@ -15,4 +15,5 @@ script = ExtResource("2_xuwyk")
 name = "Wash Basin"
 icon = ExtResource("1_xuwyk")
 reagent_generation_templates = Array[ExtResource("1_5qn8m")]([SubResource("Resource_ronsb")])
+allow_cleaning = false
 metadata/_custom_type_script = "uid://dhqopjqxgslsw"

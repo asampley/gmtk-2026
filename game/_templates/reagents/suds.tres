@@ -7,4 +7,6 @@
 script = ExtResource("1_jkoua")
 name = "Suds"
 icon = ExtResource("1_qbrun")
+cleans = true
+clean_time = 3
 metadata/_custom_type_script = "uid://xlcs11xcua2v"
