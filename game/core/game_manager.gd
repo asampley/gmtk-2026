@@ -2,6 +2,7 @@ class_name GameManager
 extends Node
 
 
+@export var level_prefab: PackedScene
 @export var starting_level: LevelTemplate
 
 @onready var level_parent: CanvasLayer = %LevelParent
@@ -51,7 +52,7 @@ func _deferred_load_level(level_template: LevelTemplate) -> void:
 	if level_scene:
 		level_scene.queue_free()
 	await get_tree().process_frame
-	level_scene = level_template.level_scene.instantiate()
+	level_scene = level_prefab.instantiate()
 	
 	if level_scene == null:
 		push_error("Loaded level is not type Level or does not exist.")

@@ -1,9 +1,11 @@
 extends Control
 
+
 signal sound_settings()
 signal recipe_book()
 signal help()
 signal level_select()
+
 
 func _on_sound_pressed() -> void:
 	sound_settings.emit()

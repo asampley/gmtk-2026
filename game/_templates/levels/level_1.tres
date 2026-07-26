@@ -1,51 +1,24 @@
-[gd_resource type="Resource" script_class="LevelTemplate" format=3 uid="uid://ci64vwvpqpf57"]
+[gd_resource type="Resource" script_class="LevelTemplate" format=3 uid="uid://bynuivug1dfj2"]
 
 [ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="1_22v3b"]
 [ext_resource type="Script" uid="uid://cdg0e4kmye577" path="res://game/level/level_template.gd" id="1_16102"]
-[ext_resource type="PackedScene" uid="uid://c7d5ruk3rkv1l" path="res://game/level/levels/level_1.tscn" id="1_lqufd"]
-[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="2_3vorm"]
-[ext_resource type="Resource" uid="uid://rlwki0safuvy" path="res://game/_templates/levels/level_2.tres" id="2_mgf6a"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_cdprx"]
 [ext_resource type="Resource" uid="uid://creyd7ac3iog7" path="res://game/_templates/tools/basket.tres" id="3_102d8"]
-[ext_resource type="Resource" uid="uid://dxd1xg2wj5c74" path="res://game/_templates/tools/saleratus_jar.tres" id="4_coou2"]
-[ext_resource type="Resource" uid="uid://5yyqa8b51rv5" path="res://game/_templates/tools/vinegar_bottle.tres" id="5_8fx6s"]
+[ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="4_kqfr8"]
+[ext_resource type="Resource" uid="uid://pyh1dgi1rxk2" path="res://game/_templates/reagents/liquorice.tres" id="7_22v3b"]
 [ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="9_102d8"]
-[ext_resource type="Resource" uid="uid://b51n6jxylo7sc" path="res://game/_templates/reagents/baking_soda.tres" id="10_coou2"]
-[ext_resource type="Resource" uid="uid://di1uvsqiwm7xw" path="res://game/_templates/reagents/vinegar.tres" id="11_coou2"]
-[ext_resource type="Resource" uid="uid://f2jew64p8lqd" path="res://game/_templates/reagents/tonic.tres" id="12_8fx6s"]
 
-[sub_resource type="Resource" id="Resource_8fx6s"]
+[sub_resource type="Resource" id="Resource_7ilo3"]
 script = ExtResource("9_102d8")
-tool = ExtResource("2_3vorm")
-reagent = ExtResource("10_coou2")
-text = "Drag some Saleratus over to the Cauldron"
-metadata/_custom_type_script = "uid://c7s7risns0jw2"
-
-[sub_resource type="Resource" id="Resource_8tehk"]
-script = ExtResource("9_102d8")
-tool = ExtResource("2_3vorm")
-reagent = ExtResource("11_coou2")
-text = "Drag some Vinegar over to the Cauldron"
-metadata/_custom_type_script = "uid://c7s7risns0jw2"
-
-[sub_resource type="Resource" id="Resource_swkuo"]
-script = ExtResource("9_102d8")
-tool = ExtResource("2_3vorm")
-reagent = ExtResource("12_8fx6s")
-text = "Wait for a Tonic to form"
-metadata/_custom_type_script = "uid://c7s7risns0jw2"
-
-[sub_resource type="Resource" id="Resource_xpe5m"]
-script = ExtResource("9_102d8")
-tool = ExtResource("3_102d8")
-reagent = ExtResource("12_8fx6s")
-text = "Drag the Tonic over to the Basket"
+tool = ExtResource("4_kqfr8")
+reagent = ExtResource("7_22v3b")
+text = "Liquorice → Crucible"
 metadata/_custom_type_script = "uid://c7s7risns0jw2"
 
 [resource]
 script = ExtResource("1_16102")
 level_name = "Level 1"
-level_scene = ExtResource("1_lqufd")
-next_level = ExtResource("2_mgf6a")
-enabled_devices = Array[ExtResource("1_22v3b")]([ExtResource("2_3vorm"), ExtResource("3_102d8"), ExtResource("4_coou2"), ExtResource("5_8fx6s")])
-tasks = Array[ExtResource("9_102d8")]([SubResource("Resource_8fx6s"), SubResource("Resource_8tehk"), SubResource("Resource_swkuo"), SubResource("Resource_xpe5m")])
+enabled_devices = Array[ExtResource("1_22v3b")]([ExtResource("3_102d8"), ExtResource("4_kqfr8")])
+tasks = Array[ExtResource("9_102d8")]([SubResource("Resource_7ilo3")])
+basket_whitelist = Array[ExtResource("1_cdprx")]([null])
 metadata/_custom_type_script = "uid://cdg0e4kmye577"

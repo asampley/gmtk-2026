@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://pyh1dgi1rxk2"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_6gywo"]
+[ext_resource type="Texture2D" uid="uid://w5kafc3luitw" path="res://icon.svg" id="1_dnu82"]
+
+[resource]
+script = ExtResource("1_6gywo")
+name = "Liquorice"
+icon = ExtResource("1_dnu82")
+metadata/_custom_type_script = "uid://xlcs11xcua2v"

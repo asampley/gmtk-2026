@@ -4,6 +4,9 @@ extends Node
 
 @onready var tools: Control = %Tools
 @onready var task_manager: TaskManager = %TaskManager
+@onready var basket: Tool = %Basket
+
+
 
 var selection_manager := SelectionManager.new()
 var enabled_tools: Array[Tool]
@@ -19,6 +22,10 @@ func initialize(template: LevelTemplate) -> void:
 		tool.on_pulse(0)
 	PulseTimer.pulse.connect(on_pulse)
 	PulseTimer.tick.connect(on_tick)
+	basket.reagent_whitelist = template.basket_whitelist
+	if template.tutorial:
+		var tutorial := template.tutorial.instantiate()
+		add_child(tutorial)
 
 func initialize_selection_manager() -> void:
 	add_child(selection_manager)

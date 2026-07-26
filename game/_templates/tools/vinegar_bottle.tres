@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cxal7c4aj01g3" path="res://assets/icons/vinegar.svg" id="1_7424w"]
 [ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="2_uwdut"]
-[ext_resource type="Resource" uid="uid://di1uvsqiwm7xw" path="res://game/_templates/reagents/vinegar.tres" id="3_uwdut"]
+[ext_resource type="Resource" uid="uid://di1uvsqiwm7xw" path="res://game/_templates/reagents/old/vinegar.tres" id="3_uwdut"]
 [ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="4_k6olc"]
 
 [sub_resource type="Resource" id="Resource_hqp2q"]

@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://dp2b7kp7c1hr3"]
 
 [ext_resource type="Script" uid="uid://bxh3lvkd03a4x" path="res://game/core/game_manager.gd" id="1_5ghhe"]
-[ext_resource type="Resource" uid="uid://ci64vwvpqpf57" path="res://game/_templates/levels/level_1.tres" id="2_c11ku"]
+[ext_resource type="PackedScene" uid="uid://c7d5ruk3rkv1l" path="res://game/level/level.tscn" id="2_hso7w"]
 [ext_resource type="Script" uid="uid://7yqmb6d7mik2" path="res://game/menu_layer.gd" id="2_q0adu"]
 [ext_resource type="PackedScene" uid="uid://cujbgwdwtvq31" path="res://game/ui/hud/hud_layer.tscn" id="2_wimwi"]
 [ext_resource type="Script" uid="uid://b3apsqri2ue3y" path="res://game/core/transition_manager.gd" id="3_fp1wv"]
+[ext_resource type="Resource" uid="uid://bynuivug1dfj2" path="res://game/_templates/levels/level_1.tres" id="3_lcamf"]
 [ext_resource type="PackedScene" uid="uid://ca0ys6rnlgdof" path="res://game/ui/level_complete/level_complete_menu.tscn" id="3_q0adu"]
 [ext_resource type="PackedScene" uid="uid://dping0fholceh" path="res://utilities/debug_terminal/debug_terminal.tscn" id="3_wimwi"]
 [ext_resource type="Texture2D" uid="uid://brvy5qvw50re7" path="res://assets/mouse/test.png" id="7_lcamf"]
@@ -42,7 +43,8 @@ shader_parameter/progress_bias = Vector2(0, 0)
 
 [node name="GameManager" type="Node" unique_id=945519092]
 script = ExtResource("1_5ghhe")
-starting_level = ExtResource("2_c11ku")
+level_prefab = ExtResource("2_hso7w")
+starting_level = ExtResource("3_lcamf")
 
 [node name="LevelParent" type="CanvasLayer" parent="." unique_id=1337681768]
 unique_name_in_owner = true

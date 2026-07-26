@@ -11,6 +11,10 @@ task_ui_prefab = ExtResource("3_k6jai")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=207352177]
 layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
 
 [node name="TaskParent" type="VBoxContainer" parent="MarginContainer" unique_id=577245531]
 unique_name_in_owner = true

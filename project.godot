@@ -53,7 +53,7 @@ window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
-mouse_cursor/tooltip_position_offset=Vector2(0, 70)
+mouse_cursor/tooltip_position_offset=Vector2(0, 45)
 
 [editor_plugins]
 
@@ -70,6 +70,7 @@ folder_colors={
 
 [gui]
 
+timers/tooltip_delay_sec=0.1
 common/drag_threshold=3
 theme/custom="uid://cogqm6wn24nal"
 

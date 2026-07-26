@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://c7d5ruk3rkv1l"]
+
+[ext_resource type="Script" uid="uid://ch04hx6edyi2f" path="res://game/level/level.gd" id="1_pnvrb"]
+[ext_resource type="Texture2D" uid="uid://dx5bicctr66x" path="res://assets/world_objects/room.svg" id="2_1odm2"]
+[ext_resource type="PackedScene" uid="uid://dc83tubjmui7w" path="res://game/task_system/task_manager.tscn" id="3_vr57k"]
+[ext_resource type="PackedScene" uid="uid://xmhfrf35n264" path="res://game/gameplay/tools/objects/basket.tscn" id="4_p15a4"]
+[ext_resource type="Script" uid="uid://d37jru5ijnbu3" path="res://game/task_system/task_reagent_reader.gd" id="7_ec6xq"]
+[ext_resource type="PackedScene" uid="uid://byut73koqqbl0" path="res://game/gameplay/tools/objects/cauldron.tscn" id="8_e05ax"]
+[ext_resource type="PackedScene" uid="uid://uj23w65wfd5" path="res://game/gameplay/tools/objects/crucible.tscn" id="12_idsm0"]
+[ext_resource type="Script" uid="uid://bv4xqu77fk6r2" path="res://game/popups/popup_trigger_level_start.gd" id="13_lro0m"]
+
+[node name="Level" type="Control" unique_id=324419999]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_pnvrb")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1004434688]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_1odm2")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="TaskManager" parent="." unique_id=1701545271 instance=ExtResource("3_vr57k")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 276.0
+offset_bottom = 159.0
+
+[node name="Tools" type="Control" parent="." unique_id=97151938]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Basket" parent="Tools" unique_id=953902506 node_paths=PackedStringArray("task_reagent_reader") instance=ExtResource("4_p15a4")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 80.0
+offset_top = 681.0
+offset_right = -612.0
+offset_bottom = -11.0
+task_reagent_reader = NodePath("TaskSignalReader")
+is_locked = true
+will_decay = false
+
+[node name="TaskSignalReader" type="Node" parent="Tools/Basket" unique_id=463352272]
+script = ExtResource("7_ec6xq")
+metadata/_custom_type_script = "uid://d37jru5ijnbu3"
+
+[node name="Cauldron" parent="Tools" unique_id=2096123214 instance=ExtResource("8_e05ax")]
+layout_mode = 1
+offset_left = 264.0
+offset_top = 548.0
+offset_right = -300.0
+offset_bottom = -16.0
+
+[node name="Crucible" parent="Tools" unique_id=1901526035 instance=ExtResource("12_idsm0")]
+layout_mode = 1
+offset_left = 476.0
+offset_top = 346.0
+offset_right = -216.0
+offset_bottom = -346.0
+
+[node name="PopupTriggerLevelStart" type="Node" parent="." unique_id=1211603721]
+script = ExtResource("13_lro0m")
+metadata/_custom_type_script = "uid://bv4xqu77fk6r2"

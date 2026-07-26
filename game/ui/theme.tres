@@ -1,7 +1,8 @@
 [gd_resource type="Theme" format=3 uid="uid://cogqm6wn24nal"]
 
 [ext_resource type="Texture2D" uid="uid://diqw510ijn0ua" path="res://assets/mask_and_ui/button_bg.png" id="1_4ge3b"]
-[ext_resource type="FontFile" uid="uid://c770kdi51bgti" path="res://assets/mask_and_ui/IMFellEnglishSC-Regular.ttf" id="2_4ge3b"]
+[ext_resource type="FontFile" uid="uid://ofd58641lxpx" path="res://assets/mask_and_ui/Cardo-Bold.ttf" id="2_4ge3b"]
+[ext_resource type="FontFile" uid="uid://cuq6830n247af" path="res://themes/minimalist/font/Urbanist/Urbanist-ExtraBold.ttf" id="3_drud1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hhow7"]
 texture = ExtResource("1_4ge3b")
@@ -13,11 +14,23 @@ texture_margin_top = 5.0
 texture_margin_right = 5.0
 texture_margin_bottom = 5.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8eb4b"]
+texture = ExtResource("1_4ge3b")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+
 [resource]
+Button/fonts/font = null
 Button/styles/hover = SubResource("StyleBoxTexture_hhow7")
 Button/styles/normal = SubResource("StyleBoxTexture_hhow7")
 Button/styles/pressed = SubResource("StyleBoxTexture_hhow7")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_a8m8m")
-RichTextLabel/colors/default_color = Color(0.90588236, 0.8352941, 0.7019608, 1)
-RichTextLabel/font_sizes/normal_font_size = 14
+RichTextLabel/colors/default_color = Color(0.0627451, 0.078431375, 0.12156863, 1)
+RichTextLabel/font_sizes/normal_font_size = 20
 RichTextLabel/fonts/normal_font = ExtResource("2_4ge3b")
+TooltipLabel/colors/font_color = Color(0.0627451, 0.078431375, 0.12156863, 1)
+TooltipLabel/font_sizes/font_size = 20
+TooltipLabel/fonts/font = ExtResource("3_drud1")
+TooltipPanel/styles/panel = SubResource("StyleBoxTexture_8eb4b")
