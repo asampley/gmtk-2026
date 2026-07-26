@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://vg2w7caefyad" path="res://game/_templates/tools/potted_liquorice.tres" id="9_4mhjb"]
 [ext_resource type="Resource" uid="uid://d2br4ogbq1qgf" path="res://game/_templates/tools/wash_basin.tres" id="10_p3s6k"]
 [ext_resource type="Resource" uid="uid://chu73en3fbq1i" path="res://game/_templates/tools/mortar_and_pestle.tres" id="11_830mj"]
+[ext_resource type="Resource" uid="uid://cxn65m8w16a6f" path="res://game/_templates/tools/bottle_of_vinegar.tres" id="11_wwosm"]
 [ext_resource type="PackedScene" uid="uid://chl7l0225kj70" path="res://game/level/tutorial/tutorial_sandbox.tscn" id="13_wwosm"]
 
 [sub_resource type="Resource" id="Resource_p3s6k"]
@@ -23,7 +24,7 @@ metadata/_custom_type_script = "uid://c7s7risns0jw2"
 [resource]
 script = ExtResource("3_jvywx")
 level_name = "Sandbox"
-enabled_devices = Array[ExtResource("2_r8rjs")]([ExtResource("3_6g0tt"), ExtResource("4_4mhjb"), ExtResource("4_oryid"), ExtResource("5_4mhjb"), ExtResource("6_p3s6k"), ExtResource("7_wwosm"), ExtResource("9_4mhjb"), ExtResource("10_p3s6k"), ExtResource("11_830mj"), null])
+enabled_devices = Array[ExtResource("2_r8rjs")]([ExtResource("3_6g0tt"), ExtResource("4_4mhjb"), ExtResource("4_oryid"), ExtResource("5_4mhjb"), ExtResource("6_p3s6k"), ExtResource("7_wwosm"), ExtResource("9_4mhjb"), ExtResource("10_p3s6k"), ExtResource("11_830mj"), ExtResource("11_wwosm")])
 tasks = Array[ExtResource("4_niapt")]([SubResource("Resource_p3s6k")])
 tutorial = ExtResource("13_wwosm")
 metadata/_custom_type_script = "uid://cdg0e4kmye577"
