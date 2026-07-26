@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://uj23w65wfd5"]
 
-[ext_resource type="Texture2D" uid="uid://besj0tm4eeatf" path="res://assets/icons/mortar_and_pestle.svg" id="1_rxfoa"]
+[ext_resource type="Texture2D" uid="uid://c56hmjuxbtxji" path="res://assets/world_objects/crucible.svg" id="1_rxfoa"]
 [ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_cfxph"]
 [ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="3_cfxph"]
 [ext_resource type="PackedScene" uid="uid://xtumlcime4sh" path="res://game/gameplay/tools/held_reagents_parent.tscn" id="4_v10w2"]

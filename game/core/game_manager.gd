@@ -40,6 +40,7 @@ func _ready() -> void:
 	music_manager.play()
 
 func load_level(level_template: LevelTemplate, should_transition: bool = true) -> void:
+	music_manager.reset_buses()
 	if should_transition:
 		transition_layer.begin_transition()
 	if should_transition:

@@ -4,12 +4,14 @@
 [ext_resource type="AudioStream" uid="uid://c13irigdpb2c3" path="res://assets/audio/music/Music Track Base (Clarinet, Tuba, Clock).mp3" id="2_eantw"]
 [ext_resource type="AudioStream" uid="uid://xvrmit7narcd" path="res://assets/audio/music/Music Track Cauldron.mp3" id="3_dk7hh"]
 [ext_resource type="AudioStream" uid="uid://c26wd83r50blc" path="res://assets/audio/music/Music Track Crucible.mp3" id="4_5svba"]
+[ext_resource type="Script" uid="uid://o5u3bgqtf63l" path="res://game/gameplay/music_control.gd" id="4_eantw"]
 [ext_resource type="AudioStream" uid="uid://cvpqnr6rugmgj" path="res://assets/audio/music/Music Track Knife and Triangle.mp3" id="5_1084n"]
 [ext_resource type="AudioStream" uid="uid://dljho4pc2kn4x" path="res://assets/audio/music/Music Track Pestle and Mortar.mp3" id="6_ovtof"]
 [ext_resource type="AudioStream" uid="uid://bll5benfqv443" path="res://assets/audio/music/Music Track Vocals .mp3" id="7_fbj7r"]
 
-[node name="MusicManager" type="Node" unique_id=646071714]
+[node name="MusicManager" type="Node" unique_id=646071714 node_paths=PackedStringArray("music_controllers")]
 script = ExtResource("1_fayyy")
+music_controllers = [NodePath("CauldronMusic"), NodePath("CrucibleMusic"), NodePath("KnifeMusic"), NodePath("MortarMusic")]
 
 [node name="BaseMusic" type="AudioStreamPlayer" parent="." unique_id=1740935590]
 stream = ExtResource("2_eantw")
@@ -20,21 +22,32 @@ parameters/looping = true
 stream = ExtResource("3_dk7hh")
 bus = &"Cauldron"
 parameters/looping = true
+script = ExtResource("4_eantw")
+this_bus_name = "Cauldron"
 
-[node name="CrucibleMusic" type="AudioStreamPlayer" parent="." unique_id=117222484]
+[node name="CrucibleMusic" type="AudioStreamPlayer" parent="." unique_id=257897980]
 stream = ExtResource("4_5svba")
 bus = &"Crucible"
 parameters/looping = true
+script = ExtResource("4_eantw")
+this_bus_name = "Crucible"
+metadata/_custom_type_script = "uid://o5u3bgqtf63l"
 
-[node name="KnifeMusic" type="AudioStreamPlayer" parent="." unique_id=2128519063]
+[node name="KnifeMusic" type="AudioStreamPlayer" parent="." unique_id=336469450]
 stream = ExtResource("5_1084n")
 bus = &"Knife"
 parameters/looping = true
+script = ExtResource("4_eantw")
+this_bus_name = "Knife"
+metadata/_custom_type_script = "uid://o5u3bgqtf63l"
 
-[node name="MortarMusic" type="AudioStreamPlayer" parent="." unique_id=1332644147]
+[node name="MortarMusic" type="AudioStreamPlayer" parent="." unique_id=346343266]
 stream = ExtResource("6_ovtof")
 bus = &"Mortar"
 parameters/looping = true
+script = ExtResource("4_eantw")
+this_bus_name = "Mortar"
+metadata/_custom_type_script = "uid://o5u3bgqtf63l"
 
 [node name="VocalMusic" type="AudioStreamPlayer" parent="." unique_id=523648235]
 stream = ExtResource("7_fbj7r")

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://8iikdphbge8h"]
 
-[ext_resource type="Texture2D" uid="uid://besj0tm4eeatf" path="res://assets/icons/mortar_and_pestle.svg" id="1_hyg7e"]
+[ext_resource type="Texture2D" uid="uid://c56hmjuxbtxji" path="res://assets/world_objects/crucible.svg" id="1_hyg7e"]
 [ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="1_vd2jr"]
 [ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_hyg7e"]
 

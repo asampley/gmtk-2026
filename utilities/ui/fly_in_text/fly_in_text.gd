@@ -5,7 +5,6 @@ extends Control
 @export var duration: float
 
 @onready var label: Label = %Label
-@onready var animation_container: AnimationContainer = %AnimationContainer
 
 var movement_vector: Vector2
 var impact: float
@@ -24,6 +23,6 @@ func initialize(text_in: String, movement_vector_in: Vector2, impact_in: float) 
 	tween.kill()
 	tween = create_tween()
 	tween.tween_property(self, "modulate", Color.TRANSPARENT, .5)
-
-func add_animation(animation: UIAnimation) -> void:
-	animation_container.animations.append(animation)
+	
+	await tween.finished
+	queue_free()
