@@ -156,30 +156,36 @@ func _calculate_recipes() -> void:
 	var recipes := ServiceLocator.game_manager.recipes
 
 	if tool_template.allow_cleaning:
+		var clean := false
+
 		# If there is a cleaner, we start clearing everything out by replacing recipes with a fake recipe
 		for reagent in reagents:
 			if reagent.cleans:
-				print("Cleaning ", tool_template.name)
+				clean = true
 				cleaning_recipe.reagents = reagents
 				cleaning_recipe.time = reagent.clean_time
 				recipes = [cleaning_recipe]
 
-				# Don't reset cleaning progress unless done
-				if reaction_progress.recipe_progress.has(cleaning_recipe):
-					var cleaning_progress := reaction_progress.recipe_progress[cleaning_recipe]
-					reaction_progress.recipe_progress.clear()
-					if cleaning_progress.remaining_time > 0.0:
-						reaction_progress.recipe_progress[cleaning_recipe] = cleaning_progress
-				else:
-					reaction_progress.recipe_progress.clear()
-
 				break
+
+		if clean:
+			print("Cleaning ", tool_template.name)
+
+			# Reset cleaning progress cause new reagents were added
+			# Remove all other reactions
+			reaction_progress.recipe_progress.clear()
+
+		# Make sure cleaning recipe doesn't linger
+		else:
+			reaction_progress.recipe_progress.erase(cleaning_recipe)
 
 	recipes = recipes.filter(func(recipe: Recipe) -> bool:
 		return recipe.tool_template == tool_template
 	)
 
-	print_debug(reaction_progress.recipe_progress)
+	for recipe in reaction_progress.recipe_progress:
+		var rp := reaction_progress.recipe_progress[recipe]
+		print(recipe.name, " ", rp.remaining_time)
 
 	# Used to determine if undesirable reactions should continue. Desirable reactions take precedence.
 	var reagent_has_desirable_recipe: Dictionary[Reagent, bool]
