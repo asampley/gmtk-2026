@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://b2fwoovgyyumx"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_1sggn"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_iw66o"]
+[ext_resource type="Resource" uid="uid://uqf8mrn1rev2" path="res://game/_templates/reagents/healing_salve.tres" id="3_4mqib"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_b85db"]
+[ext_resource type="Resource" uid="uid://c6s7ae8m62lr4" path="res://game/_templates/reagents/hair_of_the_dog.tres" id="4_w3e6w"]
+[ext_resource type="Resource" uid="uid://b8f03ymo4d4c6" path="res://game/_templates/reagents/tar.tres" id="5_o7bij"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="7_w3e6w"]
+
+[resource]
+script = ExtResource("3_b85db")
+name = "Healing Salve"
+reagents = Array[ExtResource("2_iw66o")]([ExtResource("4_w3e6w"), ExtResource("5_o7bij")])
+products = Array[ExtResource("2_iw66o")]([ExtResource("3_4mqib")])
+tool_template = ExtResource("7_w3e6w")
+time = 4
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

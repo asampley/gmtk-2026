@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="LevelTemplate" format=3 uid="uid://rlwki0safuvy"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_r2hqu"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_5pid8"]
+[ext_resource type="Script" uid="uid://cdg0e4kmye577" path="res://game/level/level_template.gd" id="3_0dv4h"]
+[ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="4_vvdoh"]
+[ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="4_wwava"]
+[ext_resource type="Resource" uid="uid://vg2w7caefyad" path="res://game/_templates/tools/potted_liquorice.tres" id="5_m5pg7"]
+[ext_resource type="Resource" uid="uid://creyd7ac3iog7" path="res://game/_templates/tools/basket.tres" id="6_jlbu6"]
+[ext_resource type="Resource" uid="uid://br5udfvhr0tv6" path="res://game/_templates/tools/jar_of_dog_hair.tres" id="6_m5pg7"]
+[ext_resource type="Resource" uid="uid://pyh1dgi1rxk2" path="res://game/_templates/reagents/liquorice.tres" id="9_vf2j1"]
+[ext_resource type="Resource" uid="uid://c6s7ae8m62lr4" path="res://game/_templates/reagents/hair_of_the_dog.tres" id="10_m5pg7"]
+[ext_resource type="Resource" uid="uid://b8f03ymo4d4c6" path="res://game/_templates/reagents/tar.tres" id="10_vvdoh"]
+
+[sub_resource type="Resource" id="Resource_coou2"]
+script = ExtResource("4_wwava")
+tool = ExtResource("4_vvdoh")
+reagent = ExtResource("9_vf2j1")
+text = "Liquorice → Crucible"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_8fx6s"]
+script = ExtResource("4_wwava")
+tool = ExtResource("4_vvdoh")
+reagent = ExtResource("10_vvdoh")
+text = "Liquorice ↦ Tar"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_8tehk"]
+script = ExtResource("4_wwava")
+tool = ExtResource("4_vvdoh")
+reagent = ExtResource("10_m5pg7")
+text = "Hair of the Dog → Crucible "
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_q88lf"]
+script = ExtResource("4_wwava")
+tool = ExtResource("4_vvdoh")
+text = "↦ Healing Salve"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[resource]
+script = ExtResource("3_0dv4h")
+level_name = "Level 2"
+enabled_devices = Array[ExtResource("2_5pid8")]([ExtResource("4_vvdoh"), ExtResource("5_m5pg7"), ExtResource("6_jlbu6"), ExtResource("6_m5pg7")])
+tasks = Array[ExtResource("4_wwava")]([SubResource("Resource_coou2"), SubResource("Resource_8fx6s"), SubResource("Resource_8tehk"), SubResource("Resource_q88lf")])
+metadata/_custom_type_script = "uid://cdg0e4kmye577"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://br5udfvhr0tv6"]
+
+[ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="1_ha8nk"]
+[ext_resource type="Texture2D" uid="uid://dkems0b2yfbe5" path="res://assets/world_objects/hair_of_the_dog.svg" id="1_tl6e3"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_tl6e3"]
+[ext_resource type="Resource" uid="uid://c6s7ae8m62lr4" path="res://game/_templates/reagents/hair_of_the_dog.tres" id="3_rv51v"]
+
+[sub_resource type="Resource" id="Resource_r5dhc"]
+script = ExtResource("1_ha8nk")
+reagent = ExtResource("3_rv51v")
+metadata/_custom_type_script = "uid://b6f4ge1t4ys5r"
+
+[resource]
+script = ExtResource("2_tl6e3")
+name = "Bowl of Dog Hair"
+icon = ExtResource("1_tl6e3")
+reagent_generation_templates = Array[ExtResource("1_ha8nk")]([SubResource("Resource_r5dhc")])
+metadata/_custom_type_script = "uid://dhqopjqxgslsw"

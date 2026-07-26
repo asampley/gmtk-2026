@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelTemplate" format=3 uid="uid://dx82wchjfxdr7"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_6kj0i"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_g34vg"]
+[ext_resource type="Script" uid="uid://cdg0e4kmye577" path="res://game/level/level_template.gd" id="3_aus03"]
+[ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="4_5dwle"]
+
+[resource]
+script = ExtResource("3_aus03")
+metadata/_custom_type_script = "uid://cdg0e4kmye577"

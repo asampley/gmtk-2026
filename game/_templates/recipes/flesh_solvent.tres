@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://b0gkamtq75con"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_gmq0c"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_kbphg"]
+[ext_resource type="Resource" uid="uid://dbagjur8cj1ro" path="res://game/_templates/reagents/flesh.tres" id="3_2ljwi"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_x00ls"]
+[ext_resource type="Resource" uid="uid://brbr0fpe0662j" path="res://game/_templates/reagents/alkahest.tres" id="4_0mlmx"]
+
+[resource]
+script = ExtResource("3_x00ls")
+name = "Flesh Solvent"
+reagents = Array[ExtResource("2_kbphg")]([ExtResource("3_2ljwi"), ExtResource("4_0mlmx")])
+time = 2
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

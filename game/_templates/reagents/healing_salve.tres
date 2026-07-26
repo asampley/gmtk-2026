@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://uqf8mrn1rev2"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_14ix6"]
+[ext_resource type="Texture2D" uid="uid://ccq3rgwksn4e8" path="res://assets/icons/healing_salve.svg" id="1_05688"]
+
+[resource]
+script = ExtResource("1_14ix6")
+name = "Healing Salve"
+icon = ExtResource("1_05688")
+metadata/_custom_type_script = "uid://xlcs11xcua2v"

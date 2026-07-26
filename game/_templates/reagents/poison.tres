@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://1m3wvk4t13ax"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_k80rp"]
+[ext_resource type="Texture2D" uid="uid://w5kafc3luitw" path="res://icon.svg" id="1_oxalj"]
+
+[resource]
+script = ExtResource("1_k80rp")
+name = "Poison"
+icon = ExtResource("1_oxalj")
+metadata/_custom_type_script = "uid://xlcs11xcua2v"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://c6s7ae8m62lr4"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_fm8bl"]
+[ext_resource type="Texture2D" uid="uid://dgc1fgk53fpo1" path="res://assets/icons/hair_of_the_dog.svg" id="1_gcyms"]
+
+[resource]
+script = ExtResource("1_fm8bl")
+name = "Hair of the Dog"
+icon = ExtResource("1_gcyms")
+metadata/_custom_type_script = "uid://xlcs11xcua2v"
