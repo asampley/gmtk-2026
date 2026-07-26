@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://dobb1pm6jkauu"]
 
-[ext_resource type="Texture2D" uid="uid://d0rfifum3ijia" path="res://assets/world_objects/pot.svg" id="1_8twb8"]
+[ext_resource type="Texture2D" uid="uid://7xssbckwpkqj" path="res://assets/world_objects/bowl_of_copper.svg" id="1_8twb8"]
 [ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="1_v0xw6"]
 [ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_0cuk6"]
 [ext_resource type="Resource" uid="uid://gx8jtw561lg1" path="res://game/_templates/reagents/copper.tres" id="3_1y4fk"]

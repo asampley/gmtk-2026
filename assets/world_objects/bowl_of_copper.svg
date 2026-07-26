@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="400"
-   height="400"
-   viewBox="0 0 400 400"
+   width="399.9982"
+   height="308.80688"
+   viewBox="0 0 399.9982 308.80688"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
@@ -25,7 +25,7 @@
      inkscape:document-units="px"
      inkscape:zoom="0.80060938"
      inkscape:cx="123.03128"
-     inkscape:cy="209.21564"
+     inkscape:cy="118.03509"
      inkscape:window-width="1280"
      inkscape:window-height="768"
      inkscape:window-x="0"
@@ -37,7 +37,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-9.020989e-4,-91.193116)">
     <ellipse
        style="fill:#7a4841;stroke:#241527;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        id="path1"
@@ -104,14 +105,14 @@
     <path
        id="path2"
        style="fill:#7a4841;stroke:#341c27;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
-       d="M 8.0097656 228.07031 C 8.0097656 228.07031 3.3588616 392 200 392 C 396.64114 392 391.99023 228.07031 391.99023 228.07031 A 191.99113 39.969555 0 0 1 200 268.03906 A 191.99113 39.969555 0 0 1 8.0097656 228.07031 z " />
+       d="M 8.0097656,228.07031 C 8.0097656,228.07031 3.3588616,392 200,392 396.64114,392 391.99023,228.07031 391.99023,228.07031 A 191.99113,39.969555 0 0 1 200,268.03906 191.99113,39.969555 0 0 1 8.0097656,228.07031 Z" />
     <path
        id="path6"
        style="fill:#ad7757;stroke:none;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
-       d="M 8.0097656 228.10352 C 7.9538651 230.49355 5.5501084 361.00477 146.68945 387.38281 L 114.02344 263.80859 A 191.99113 39.969555 0 0 1 8.0097656 228.10352 z " />
+       d="m 8.0097656,228.10352 c -0.0559,2.39003 -2.4596572,132.90125 138.6796844,159.27929 L 114.02344,263.80859 A 191.99113,39.969555 0 0 1 8.0097656,228.10352 Z" />
     <path
        id="path7"
        style="fill:#4d2b32;stroke:none;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
-       d="M 391.99023 228.10352 A 191.99113 39.969555 0 0 1 284.74414 263.93555 L 252.5293 387.52734 C 394.45598 361.48649 392.04635 230.50353 391.99023 228.10352 z " />
+       d="M 391.99023,228.10352 A 191.99113,39.969555 0 0 1 284.74414,263.93555 L 252.5293,387.52734 C 394.45598,361.48649 392.04635,230.50353 391.99023,228.10352 Z" />
   </g>
 </svg>

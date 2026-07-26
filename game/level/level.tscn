@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://q5x73abiy4us" path="res://game/gameplay/tools/objects/salamander.tscn" id="14_vr57k"]
 [ext_resource type="PackedScene" uid="uid://ddocofyw364o6" path="res://game/gameplay/tools/objects/bottle_of_vinegar.tscn" id="15_74ton"]
 [ext_resource type="PackedScene" uid="uid://1rokmhcik0if" path="res://game/gameplay/tools/objects/mortar.tscn" id="15_p15a4"]
+[ext_resource type="PackedScene" uid="uid://dqdv0wxlmerqv" path="res://game/gameplay/tools/objects/bowl_of_copper.tscn" id="16_ec6xq"]
 [ext_resource type="PackedScene" uid="uid://ca337mb1wrtmu" path="res://game/gameplay/tools/objects/bottled_alkahest.tscn" id="16_p15a4"]
 
 [node name="Level" type="Control" unique_id=324419999]
@@ -97,8 +98,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 334.0
 offset_top = 375.0
-offset_right = -422.0
-offset_bottom = -381.0
+offset_right = -410.0
+offset_bottom = -369.0
 music_bus = "Mortar"
 
 [node name="TaskReagentReader" type="Node" parent="Tools/Mortar" unique_id=808993063]
@@ -173,6 +174,13 @@ offset_right = 709.0
 offset_bottom = 505.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="JarBase2" parent="Tools" unique_id=1443135211 instance=ExtResource("16_ec6xq")]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 437.0
+offset_right = 225.0
+offset_bottom = 506.0
 
 [node name="PopupTriggerLevelStart" type="Node" parent="." unique_id=1211603721]
 script = ExtResource("13_lro0m")
