@@ -3,9 +3,16 @@
 [ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="1_5qn8m"]
 [ext_resource type="Texture2D" uid="uid://2ykhe2atvwru" path="res://assets/world_objects/wash_bucket.svg" id="1_xuwyk"]
 [ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_xuwyk"]
+[ext_resource type="Resource" uid="uid://cdk7ykt5s706t" path="res://game/_templates/reagents/suds.tres" id="3_tadhj"]
+
+[sub_resource type="Resource" id="Resource_ronsb"]
+script = ExtResource("1_5qn8m")
+reagent = ExtResource("3_tadhj")
+metadata/_custom_type_script = "uid://b6f4ge1t4ys5r"
 
 [resource]
 script = ExtResource("2_xuwyk")
 name = "Wash Basin"
 icon = ExtResource("1_xuwyk")
+reagent_generation_templates = Array[ExtResource("1_5qn8m")]([SubResource("Resource_ronsb")])
 metadata/_custom_type_script = "uid://dhqopjqxgslsw"
