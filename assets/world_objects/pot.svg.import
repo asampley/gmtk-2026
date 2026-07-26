@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0rfifum3ijia"
-path="res://.godot/imported/pot.svg-b1dab1bc58d712c33664c60692f49511.ctex"
+path="res://.godot/imported/pot.svg-62137cdb210b95678092996087f953e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/pot.svg"
-dest_files=["res://.godot/imported/pot.svg-b1dab1bc58d712c33664c60692f49511.ctex"]
+source_file="res://assets/world_objects/pot.svg"
+dest_files=["res://.godot/imported/pot.svg-62137cdb210b95678092996087f953e0.ctex"]
 
 [params]
 

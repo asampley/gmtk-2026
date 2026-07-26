@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cquw7c102xjq7"
-path="res://.godot/imported/pot_licorice.svg-1dcf329f65de7679e5838ff8a87f2ec0.ctex"
+uid="uid://oloj7em0eqta"
+path="res://.godot/imported/jar.svg-942d2c00562ed44faff7a70a76ab632c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/pot_licorice.svg"
-dest_files=["res://.godot/imported/pot_licorice.svg-1dcf329f65de7679e5838ff8a87f2ec0.ctex"]
+source_file="res://assets/world_objects/jar.svg"
+dest_files=["res://.godot/imported/jar.svg-942d2c00562ed44faff7a70a76ab632c.ctex"]
 
 [params]
 
