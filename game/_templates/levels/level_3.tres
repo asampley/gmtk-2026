@@ -45,4 +45,5 @@ script = ExtResource("3_aus03")
 level_name = "Level 3"
 enabled_devices = Array[ExtResource("2_g34vg")]([ExtResource("3_5dwle"), ExtResource("4_rv3xf"), ExtResource("5_uqfl1"), ExtResource("6_4oyd0")])
 tasks = Array[ExtResource("4_5dwle")]([SubResource("Resource_eantw"), SubResource("Resource_rv3xf"), SubResource("Resource_d8su3"), SubResource("Resource_uqfl1")])
+basket_whitelist = Array[ExtResource("1_6kj0i")]([ExtResource("8_rv3xf")])
 metadata/_custom_type_script = "uid://cdg0e4kmye577"

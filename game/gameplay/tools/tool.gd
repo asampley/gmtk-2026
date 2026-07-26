@@ -206,6 +206,9 @@ func _progress_reaction(pulse: int, tick: int, per_pulse: int) -> void:
 		add_reagents(reagents_to_add)
 
 func _get_drag_data(at_position: Vector2) -> Variant:
+	if !removable_reagent:
+		return null
+	
 	var preview_texture := TextureRect.new()
 	preview_texture.texture = removable_reagent.icon
 	print(preview_texture.position)
