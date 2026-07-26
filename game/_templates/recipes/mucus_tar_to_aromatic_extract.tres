@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://cp0dkm75qhd3l"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_su0lk"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_4b5nr"]
+[ext_resource type="Resource" uid="uid://dtahhuukb7ivh" path="res://game/_templates/reagents/aromatic_extract.tres" id="3_0iyud"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_p3hvf"]
+[ext_resource type="Resource" uid="uid://b8f03ymo4d4c6" path="res://game/_templates/reagents/tar.tres" id="4_te6p1"]
+[ext_resource type="Resource" uid="uid://d3hxeh7w5ch5c" path="res://game/_templates/reagents/phlegm.tres" id="5_3obhj"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="7_ilvgj"]
+
+[resource]
+script = ExtResource("3_p3hvf")
+name = "Aromatic Extract"
+reagents = Array[ExtResource("2_4b5nr")]([ExtResource("4_te6p1"), ExtResource("5_3obhj")])
+products = Array[ExtResource("2_4b5nr")]([ExtResource("3_0iyud")])
+tool_template = ExtResource("7_ilvgj")
+time = 2
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

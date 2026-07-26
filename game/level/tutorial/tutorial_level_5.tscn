@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://jy2qp6efqtig"]
+
+[ext_resource type="Script" uid="uid://y6mi8eflcx8o" path="res://game/popups/popup_manager.gd" id="1_aqaoi"]
+[ext_resource type="Script" uid="uid://d05td3upb2d3t" path="res://game/popups/popup_ui.gd" id="2_0y01i"]
+[ext_resource type="FontFile" uid="uid://cuq6830n247af" path="res://themes/minimalist/font/Urbanist/Urbanist-ExtraBold.ttf" id="3_2sed8"]
+[ext_resource type="Texture2D" uid="uid://cdrstrn3pu066" path="res://assets/mask_and_ui/popup_box.png" id="4_2sed8"]
+[ext_resource type="Script" uid="uid://cooo45adbu144" path="res://game/level/pop_up_box.gd" id="5_b8sff"]
+
+[node name="PopupManager" type="Control" unique_id=1211164911 node_paths=PackedStringArray("index_to_popup")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -1.0
+offset_right = 8.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aqaoi")
+index_to_popup = {
+0: NodePath("PopupUI")
+}
+
+[node name="PopupUI" type="Control" parent="." unique_id=788633323]
+anchors_preset = 0
+offset_left = 506.0
+offset_top = 125.0
+offset_right = 758.0
+offset_bottom = 277.0
+mouse_filter = 2
+script = ExtResource("2_0y01i")
+
+[node name="PanelContainer" type="PanelContainer" parent="PopupUI" unique_id=716458603]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PopupUI/PanelContainer" unique_id=1347461623]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="PopupUI/PanelContainer/MarginContainer" unique_id=1831312294]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.0627451, 0.078431375, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("3_2sed8")
+text = "Order matters in this recipe as both Tar and Phlegm need to be in the Cauldron at the same time but Phlegm boils off quickly! Also, check the recipe book if you need help. "
+autowrap_mode = 3
+
+[node name="PopupBox" type="TextureRect" parent="PopupUI" unique_id=1424658328]
+layout_mode = 0
+offset_left = 161.0
+offset_top = -123.0
+offset_right = 235.0
+offset_bottom = -46.0
+texture = ExtResource("4_2sed8")
+expand_mode = 1
+script = ExtResource("5_b8sff")
+metadata/_custom_type_script = "uid://cooo45adbu144"

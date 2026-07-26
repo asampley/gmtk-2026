@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://cjwu0uwtvp0g2"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_13ax7"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_gn3wq"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_ok1mb"]
+[ext_resource type="Resource" uid="uid://cjbkn1qo0hgxo" path="res://game/_templates/reagents/broth.tres" id="3_t1q6s"]
+[ext_resource type="Resource" uid="uid://b8f03ymo4d4c6" path="res://game/_templates/reagents/tar.tres" id="4_ha8tp"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="6_ojc7d"]
+
+[resource]
+script = ExtResource("3_ok1mb")
+reagents = Array[ExtResource("2_gn3wq")]([ExtResource("4_ha8tp")])
+products = Array[ExtResource("2_gn3wq")]([ExtResource("3_t1q6s")])
+tool_template = ExtResource("6_ojc7d")
+time = 8
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

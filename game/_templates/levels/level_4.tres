@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="LevelTemplate" format=3 uid="uid://bfoub0c73cpb1"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_cnqih"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_oexg3"]
+[ext_resource type="Resource" uid="uid://creyd7ac3iog7" path="res://game/_templates/tools/basket.tres" id="3_awo1y"]
+[ext_resource type="Script" uid="uid://cdg0e4kmye577" path="res://game/level/level_template.gd" id="3_cu6sp"]
+[ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="4_bvyfp"]
+[ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="4_w6muw"]
+[ext_resource type="Resource" uid="uid://vg2w7caefyad" path="res://game/_templates/tools/potted_liquorice.tres" id="5_abqlf"]
+[ext_resource type="Resource" uid="uid://b0ra5t6pjax0h" path="res://game/_templates/tools/salamander.tres" id="6_1k0p1"]
+[ext_resource type="Resource" uid="uid://l57y73bh65t8" path="res://game/_templates/levels/level_5.tres" id="7_abqlf"]
+[ext_resource type="Resource" uid="uid://b8f03ymo4d4c6" path="res://game/_templates/reagents/tar.tres" id="9_4txfv"]
+[ext_resource type="Resource" uid="uid://mps3o8hvujwf" path="res://game/_templates/reagents/claws.tres" id="10_bvyfp"]
+
+[sub_resource type="Resource" id="Resource_vwh8w"]
+script = ExtResource("4_w6muw")
+tool = ExtResource("3_awo1y")
+reagent = ExtResource("9_4txfv")
+text = "Tar → Basket"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_2ya8h"]
+script = ExtResource("4_w6muw")
+tool = ExtResource("3_awo1y")
+reagent = ExtResource("10_bvyfp")
+text = "Claws → Basket"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[resource]
+script = ExtResource("3_cu6sp")
+level_name = "Level 4"
+next_level = ExtResource("7_abqlf")
+enabled_devices = Array[ExtResource("2_oexg3")]([ExtResource("3_awo1y"), ExtResource("4_bvyfp"), ExtResource("5_abqlf"), ExtResource("6_1k0p1")])
+tasks = Array[ExtResource("4_w6muw")]([SubResource("Resource_vwh8w"), SubResource("Resource_2ya8h")])
+metadata/_custom_type_script = "uid://cdg0e4kmye577"
