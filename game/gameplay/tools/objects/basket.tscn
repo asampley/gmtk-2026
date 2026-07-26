@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://xmhfrf35n264"]
 
-[ext_resource type="Texture2D" uid="uid://dsohikfo1h36w" path="res://assets/world_objects/basket.png" id="1_e2qry"]
+[ext_resource type="Texture2D" uid="uid://ceffvw3x25jer" path="res://assets/world_objects/basket.svg" id="1_e2qry"]
 [ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_s6cua"]
 [ext_resource type="Resource" uid="uid://creyd7ac3iog7" path="res://game/_templates/tools/basket.tres" id="3_s6cua"]
 [ext_resource type="PackedScene" uid="uid://xtumlcime4sh" path="res://game/gameplay/tools/held_reagents_parent.tscn" id="4_khpb6"]
@@ -17,7 +17,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
 texture = ExtResource("1_e2qry")
-expand_mode = 1
 stretch_mode = 5
 script = ExtResource("2_s6cua")
 tool_template = ExtResource("3_s6cua")
