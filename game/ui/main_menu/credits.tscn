@@ -45,7 +45,7 @@ layout_mode = 2
 [node name="Music" type="RichTextLabel" parent="VBoxContainer" unique_id=234687983]
 layout_mode = 2
 bbcode_enabled = true
-text = "[b]Music[/b]"
+text = "[b]Music & Sound Effects[/b]"
 fit_content = true
 horizontal_alignment = 1
 
@@ -56,4 +56,15 @@ fit_content = true
 horizontal_alignment = 1
 
 [node name="HSeparator2" type="HSeparator" parent="VBoxContainer" unique_id=285133017]
+layout_mode = 2
+
+[node name="Art" type="RichTextLabel" parent="VBoxContainer" unique_id=385302423]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b]Art[/b]
+Alex Sampley"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer" unique_id=54124415]
 layout_mode = 2
