@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="2.5152242"
-     inkscape:cx="28.625679"
-     inkscape:cy="44.727623"
-     inkscape:window-width="1045"
+     inkscape:cx="45.125202"
+     inkscape:cy="92.039509"
+     inkscape:window-width="1272"
      inkscape:window-height="760"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -42,8 +42,16 @@
        id="path16"
        style="fill:#cf573c;fill-opacity:1;stroke:#752438;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
        d="m 24,69.09961 16,40.38867 A 24,14.511629 0 0 0 64,124 24,14.511629 0 0 0 88,109.48828 l 16,-40.38867 z" />
+    <path
+       id="path8"
+       style="fill:#a53030;stroke:none;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       d="M 78.867188 69.099609 L 71.755859 123.2207 A 24 14.511629 0 0 0 88 109.48828 L 104 69.099609 L 78.867188 69.099609 z " />
+    <path
+       id="path2"
+       style="fill:#da863e;fill-opacity:1;stroke:none;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="M 24 69.099609 L 40 109.48828 A 24 14.511629 0 0 0 56 123.16992 L 47.009766 69.099609 L 24 69.099609 z " />
     <ellipse
-       style="fill:#cf573c;fill-opacity:1;stroke:#752438;stroke-width:6.99307;stroke-linecap:butt;stroke-dasharray:none;paint-order:markers stroke fill"
+       style="fill:#da863e;fill-opacity:1;stroke:#752438;stroke-width:6.99307;stroke-linecap:butt;stroke-dasharray:none;paint-order:markers stroke fill"
        id="ellipse17"
        cx="63.780823"
        cy="69.099609"
@@ -56,6 +64,14 @@
        cy="69.099609"
        rx="29.513624"
        ry="10.840071" />
+    <path
+       id="path6"
+       style="fill:#da863e;stroke:none;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       d="M 80.056641 60.056641 L 77.609375 78.675781 A 29.513624 10.840071 0 0 0 93.294922 69.099609 A 29.513624 10.840071 0 0 0 80.056641 60.056641 z " />
+    <path
+       id="path5"
+       style="fill:#a53030;stroke:none;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       d="M 45.591797 60.5625 A 29.513624 10.840071 0 0 0 34.267578 69.099609 A 29.513624 10.840071 0 0 0 48.554688 78.386719 L 45.591797 60.5625 z " />
     <path
        id="ellipse20"
        style="fill:#602c2c;fill-opacity:1;stroke:#752438;stroke-width:4;stroke-linecap:butt;stroke-dasharray:none;paint-order:markers stroke fill"
