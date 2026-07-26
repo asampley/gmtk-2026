@@ -1,15 +1,45 @@
 [gd_resource type="Resource" script_class="LevelTemplate" format=3 uid="uid://6tnlrlc38kl8"]
 
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_o6sr8"]
+[ext_resource type="Resource" uid="uid://8u43a5hgstpt" path="res://game/_templates/reagents/gold.tres" id="2_7atp1"]
 [ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_qi8oi"]
 [ext_resource type="Resource" uid="uid://creyd7ac3iog7" path="res://game/_templates/tools/basket.tres" id="3_t45pk"]
 [ext_resource type="Resource" uid="uid://d2br4ogbq1qgf" path="res://game/_templates/tools/wash_basin.tres" id="4_a354y"]
 [ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="5_7atp1"]
 [ext_resource type="Script" uid="uid://cdg0e4kmye577" path="res://game/level/level_template.gd" id="6_g2fp2"]
+[ext_resource type="Resource" uid="uid://dobb1pm6jkauu" path="res://game/_templates/tools/copper_bowl.tres" id="7_3fwv4"]
 [ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="7_c8bb8"]
+[ext_resource type="Resource" uid="uid://cqgsgb4kiyqjm" path="res://game/_templates/levels/level_sandbox.tres" id="7_g2fp2"]
+[ext_resource type="Resource" uid="uid://vg2w7caefyad" path="res://game/_templates/tools/potted_liquorice.tres" id="8_u08dt"]
+[ext_resource type="Resource" uid="uid://gx8jtw561lg1" path="res://game/_templates/reagents/copper.tres" id="10_c8bb8"]
+[ext_resource type="Resource" uid="uid://dy6iqhhm72ut2" path="res://game/_templates/reagents/silver.tres" id="11_3fwv4"]
+
+[sub_resource type="Resource" id="Resource_c48ck"]
+script = ExtResource("7_c8bb8")
+tool = ExtResource("5_7atp1")
+reagent = ExtResource("10_c8bb8")
+text = "Copper -> Crucible"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_edu0d"]
+script = ExtResource("7_c8bb8")
+tool = ExtResource("5_7atp1")
+reagent = ExtResource("11_3fwv4")
+text = "Silver -> Crucible"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_downk"]
+script = ExtResource("7_c8bb8")
+tool = ExtResource("3_t45pk")
+reagent = ExtResource("2_7atp1")
+text = "Silver -> Basket"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
 
 [resource]
 script = ExtResource("6_g2fp2")
 level_name = "Level 7"
-enabled_devices = Array[ExtResource("2_qi8oi")]([ExtResource("3_t45pk"), ExtResource("4_a354y"), ExtResource("5_7atp1")])
+next_level = ExtResource("7_g2fp2")
+enabled_devices = Array[ExtResource("2_qi8oi")]([ExtResource("3_t45pk"), ExtResource("4_a354y"), ExtResource("5_7atp1"), ExtResource("7_3fwv4"), ExtResource("8_u08dt")])
+tasks = Array[ExtResource("7_c8bb8")]([SubResource("Resource_c48ck"), SubResource("Resource_edu0d"), SubResource("Resource_downk")])
+basket_whitelist = Array[ExtResource("1_o6sr8")]([ExtResource("2_7atp1")])
 metadata/_custom_type_script = "uid://cdg0e4kmye577"

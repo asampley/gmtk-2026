@@ -3,9 +3,17 @@
 [ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_os1l8"]
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_rwllx"]
 [ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_y0auh"]
+[ext_resource type="Resource" uid="uid://8u43a5hgstpt" path="res://game/_templates/reagents/gold.tres" id="3_yl02y"]
+[ext_resource type="Resource" uid="uid://dy6iqhhm72ut2" path="res://game/_templates/reagents/silver.tres" id="4_f74wg"]
+[ext_resource type="Resource" uid="uid://pyh1dgi1rxk2" path="res://game/_templates/reagents/liquorice.tres" id="5_t0a4g"]
+[ext_resource type="Resource" uid="uid://qfjymqfb4r6v" path="res://game/_templates/reagents/salamander_tail.tres" id="6_gae3o"]
+[ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="8_jbvo3"]
 
 [resource]
 script = ExtResource("3_y0auh")
 name = "Gold"
+reagents = Array[ExtResource("2_rwllx")]([ExtResource("4_f74wg"), ExtResource("5_t0a4g"), ExtResource("6_gae3o")])
+products = Array[ExtResource("2_rwllx")]([ExtResource("3_yl02y")])
+tool_template = ExtResource("8_jbvo3")
 time = 8
 metadata/_custom_type_script = "uid://c4imnao3ortw8"
