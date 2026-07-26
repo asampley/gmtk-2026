@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dxyngspdd1kjc"]
+
+[ext_resource type="Script" uid="uid://caevsep2qawtd" path="res://game/ui/recipe_book/reagent_container.gd" id="1_i8qc1"]
+[ext_resource type="Texture2D" uid="uid://cdrstrn3pu066" path="res://assets/mask_and_ui/popup_box.png" id="1_peo3f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4uf6c"]
+texture = ExtResource("1_peo3f")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[node name="ReagentContainer" type="PanelContainer" unique_id=136610506]
+modulate = Color(0.3019608, 0.16862746, 0.19607843, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4uf6c")
+script = ExtResource("1_i8qc1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=274796293]
+unique_name_in_owner = true
+layout_mode = 2
