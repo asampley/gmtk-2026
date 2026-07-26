@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d0awyk2rao3s0" path="res://assets/world_objects/bottle_of_vinegar.svg" id="1_ekl2e"]
 [ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_6jpfm"]
-[ext_resource type="Resource" uid="uid://82cijue0sjf1" path="res://game/_templates/tools/bottled_alkahest.tres" id="3_qtsv4"]
+[ext_resource type="Resource" uid="uid://cxn65m8w16a6f" path="res://game/_templates/tools/bottle_of_vinegar.tres" id="3_ekl2e"]
 [ext_resource type="Script" uid="uid://c8cute52enlko" path="res://game/gameplay/tools/held_reagents_ui.gd" id="4_lyt55"]
 [ext_resource type="PackedScene" uid="uid://l0tjrdtbfjwg" path="res://game/gameplay/tools/reagent_counter.tscn" id="5_w5wfi"]
 
@@ -23,7 +23,7 @@ texture = ExtResource("1_ekl2e")
 expand_mode = 3
 stretch_mode = 5
 script = ExtResource("2_6jpfm")
-tool_template = ExtResource("3_qtsv4")
+tool_template = ExtResource("3_ekl2e")
 held_reagents_ui = NodePath("HeldReagentsUI")
 metadata/_custom_type_script = "uid://cp85lcgd1nglo"
 

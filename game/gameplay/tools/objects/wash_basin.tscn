@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bd1adgccqu1wr"]
+
+[ext_resource type="Texture2D" uid="uid://2ykhe2atvwru" path="res://assets/world_objects/wash_bucket.svg" id="1_135ip"]
+[ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_ajybc"]
+[ext_resource type="Resource" uid="uid://b0ra5t6pjax0h" path="res://game/_templates/tools/salamander.tres" id="3_xkgeo"]
+[ext_resource type="PackedScene" uid="uid://xtumlcime4sh" path="res://game/gameplay/tools/held_reagents_parent.tscn" id="4_nxkoh"]
+
+[node name="Basket" type="TextureRect" unique_id=953902506 node_paths=PackedStringArray("held_reagents_ui")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = 276.0
+offset_right = -166.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = ExtResource("1_135ip")
+stretch_mode = 5
+script = ExtResource("2_ajybc")
+tool_template = ExtResource("3_xkgeo")
+held_reagents_ui = NodePath("HeldReagentsParent")
+metadata/_custom_type_script = "uid://cp85lcgd1nglo"
+
+[node name="HeldReagentsParent" parent="." unique_id=702341484 instance=ExtResource("4_nxkoh")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_vertical = 2

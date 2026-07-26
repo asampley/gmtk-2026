@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://cxn65m8w16a6f"]
+
+[ext_resource type="Texture2D" uid="uid://d0awyk2rao3s0" path="res://assets/world_objects/bottle_of_vinegar.svg" id="1_a3k37"]
+[ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="1_fviua"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_em1cx"]
+[ext_resource type="Resource" uid="uid://di1uvsqiwm7xw" path="res://game/_templates/reagents/vinegar.tres" id="3_mr5n8"]
+
+[sub_resource type="Resource" id="Resource_dvetn"]
+script = ExtResource("1_fviua")
+reagent = ExtResource("3_mr5n8")
+metadata/_custom_type_script = "uid://b6f4ge1t4ys5r"
+
+[resource]
+script = ExtResource("2_em1cx")
+name = "Bottle of Vinegar"
+icon = ExtResource("1_a3k37")
+reagent_generation_templates = Array[ExtResource("1_fviua")]([SubResource("Resource_dvetn")])
+metadata/_custom_type_script = "uid://dhqopjqxgslsw"
