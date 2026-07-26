@@ -18,6 +18,7 @@ const TEST = preload("uid://brvy5qvw50re7")
 var current_level: LevelTemplate
 var level_scene: Level
 var recipes: Array[Recipe]
+var reagents: Array[Reagent]
 
 signal game_manager_loaded()
 
@@ -26,15 +27,19 @@ func _ready() -> void:
 	ServiceLocator.game_manager = self
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	#Input.set_custom_mouse_cursor(TEST, Input.CURSOR_DRAG)
-	
+
 	for resource: Resource in ResourceDataHandler.resource_dict["recipes"]:
 		if resource is Recipe:
 			recipes.append(resource)
-	
+
 	for resource: Resource in ResourceDataHandler.resource_dict["recipes_decay"]:
 		if resource is Recipe:
 			recipes.append(resource)
-	
+
+	for resource: Resource in ResourceDataHandler.resource_dict["reagents"]:
+		if resource is Reagent:
+			reagents.append(resource)
+
 	game_manager_loaded.emit()
 	load_level(starting_level, false)
 	music_manager.play()
@@ -54,7 +59,7 @@ func _deferred_load_level(level_template: LevelTemplate) -> void:
 		level_scene.queue_free()
 	await get_tree().process_frame
 	level_scene = level_prefab.instantiate()
-	
+
 	if level_scene == null:
 		push_error("Loaded level is not type Level or does not exist.")
 		return

@@ -94,6 +94,10 @@ func setup_whitelist() -> void:
 			add_reagent_to_whitelist(reagent)
 		for catalyst: Catalyst in recipe.catalysts:
 			add_reagent_to_whitelist(catalyst.reagent)
+	if tool_template.allow_cleaning:
+		for reagent in ServiceLocator.game_manager.reagents:
+			if reagent.cleans:
+				add_reagent_to_whitelist(reagent)
 
 func add_reagent_to_whitelist(reagent_to_whitelist: Reagent) -> void:
 	if !reagent_whitelist.has(reagent_to_whitelist):
@@ -155,20 +159,27 @@ func _calculate_recipes() -> void:
 		# If there is a cleaner, we start clearing everything out by replacing recipes with a fake recipe
 		for reagent in reagents:
 			if reagent.cleans:
+				print("Cleaning ", tool_template.name)
 				cleaning_recipe.reagents = reagents
+				cleaning_recipe.time = reagent.clean_time
+				recipes = [cleaning_recipe]
 
-				var cleaning_progress := reaction_progress.recipe_progress[cleaning_recipe]
-				reaction_progress.recipe_progress.clear()
-
-				# Don't reset cleaning progress ever
-				if cleaning_progress:
-					reaction_progress.recipe_progress[cleaning_recipe] = cleaning_progress
+				# Don't reset cleaning progress unless done
+				if reaction_progress.recipe_progress.has(cleaning_recipe):
+					var cleaning_progress := reaction_progress.recipe_progress[cleaning_recipe]
+					reaction_progress.recipe_progress.clear()
+					if cleaning_progress.remaining_time > 0.0:
+						reaction_progress.recipe_progress[cleaning_recipe] = cleaning_progress
+				else:
+					reaction_progress.recipe_progress.clear()
 
 				break
 
 	recipes = recipes.filter(func(recipe: Recipe) -> bool:
 		return recipe.tool_template == tool_template
 	)
+
+	print_debug(reaction_progress.recipe_progress)
 
 	# Used to determine if undesirable reactions should continue. Desirable reactions take precedence.
 	var reagent_has_desirable_recipe: Dictionary[Reagent, bool]
