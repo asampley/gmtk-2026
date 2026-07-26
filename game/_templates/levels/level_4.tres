@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="4_w6muw"]
 [ext_resource type="Resource" uid="uid://vg2w7caefyad" path="res://game/_templates/tools/potted_liquorice.tres" id="5_abqlf"]
 [ext_resource type="Resource" uid="uid://b0ra5t6pjax0h" path="res://game/_templates/tools/salamander.tres" id="6_1k0p1"]
+[ext_resource type="Resource" uid="uid://d2br4ogbq1qgf" path="res://game/_templates/tools/wash_basin.tres" id="7_1k0p1"]
 [ext_resource type="Resource" uid="uid://l57y73bh65t8" path="res://game/_templates/levels/level_5.tres" id="7_abqlf"]
 [ext_resource type="Resource" uid="uid://b8f03ymo4d4c6" path="res://game/_templates/reagents/tar.tres" id="9_4txfv"]
 [ext_resource type="Resource" uid="uid://mps3o8hvujwf" path="res://game/_templates/reagents/claws.tres" id="10_bvyfp"]
@@ -30,6 +31,6 @@ metadata/_custom_type_script = "uid://c7s7risns0jw2"
 script = ExtResource("3_cu6sp")
 level_name = "Level 4"
 next_level = ExtResource("7_abqlf")
-enabled_devices = Array[ExtResource("2_oexg3")]([ExtResource("3_awo1y"), ExtResource("4_bvyfp"), ExtResource("5_abqlf"), ExtResource("6_1k0p1")])
+enabled_devices = Array[ExtResource("2_oexg3")]([ExtResource("3_awo1y"), ExtResource("4_bvyfp"), ExtResource("5_abqlf"), ExtResource("6_1k0p1"), ExtResource("7_1k0p1")])
 tasks = Array[ExtResource("4_w6muw")]([SubResource("Resource_vwh8w"), SubResource("Resource_2ya8h")])
 metadata/_custom_type_script = "uid://cdg0e4kmye577"

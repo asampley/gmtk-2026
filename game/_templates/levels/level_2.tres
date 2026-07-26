@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://creyd7ac3iog7" path="res://game/_templates/tools/basket.tres" id="6_jlbu6"]
 [ext_resource type="Resource" uid="uid://br5udfvhr0tv6" path="res://game/_templates/tools/jar_of_dog_hair.tres" id="6_m5pg7"]
 [ext_resource type="Resource" uid="uid://dx82wchjfxdr7" path="res://game/_templates/levels/level_3.tres" id="7_jlbu6"]
+[ext_resource type="Resource" uid="uid://d2br4ogbq1qgf" path="res://game/_templates/tools/wash_basin.tres" id="8_75dda"]
 [ext_resource type="Resource" uid="uid://pyh1dgi1rxk2" path="res://game/_templates/reagents/liquorice.tres" id="9_vf2j1"]
 [ext_resource type="Resource" uid="uid://c6s7ae8m62lr4" path="res://game/_templates/reagents/hair_of_the_dog.tres" id="10_m5pg7"]
 [ext_resource type="Resource" uid="uid://b8f03ymo4d4c6" path="res://game/_templates/reagents/tar.tres" id="10_vvdoh"]
@@ -56,7 +57,7 @@ metadata/_custom_type_script = "uid://c7s7risns0jw2"
 script = ExtResource("3_0dv4h")
 level_name = "Level 2"
 next_level = ExtResource("7_jlbu6")
-enabled_devices = Array[ExtResource("2_5pid8")]([ExtResource("4_vvdoh"), ExtResource("5_m5pg7"), ExtResource("6_jlbu6"), ExtResource("6_m5pg7")])
+enabled_devices = Array[ExtResource("2_5pid8")]([ExtResource("4_vvdoh"), ExtResource("5_m5pg7"), ExtResource("6_jlbu6"), ExtResource("6_m5pg7"), ExtResource("8_75dda")])
 tasks = Array[ExtResource("4_wwava")]([SubResource("Resource_coou2"), SubResource("Resource_8fx6s"), SubResource("Resource_8tehk"), SubResource("Resource_q88lf"), SubResource("Resource_85c7b")])
 basket_whitelist = Array[ExtResource("1_r2hqu")]([ExtResource("2_vf2j1")])
 tutorial = ExtResource("14_g7laa")
