@@ -7,7 +7,7 @@
    viewBox="0 0 128 128"
    version="1.1"
    id="svg1"
-   sodipodi:docname="potion_bottle.svg"
+   sodipodi:docname="healing_salve.svg"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,10 +23,10 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="2.3972145"
-     inkscape:cx="23.569021"
-     inkscape:cy="27.323379"
-     inkscape:window-width="1045"
+     inkscape:zoom="3.2373855"
+     inkscape:cx="41.854762"
+     inkscape:cy="55.445976"
+     inkscape:window-width="1272"
      inkscape:window-height="760"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -38,6 +38,14 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <path
+       id="path31"
+       style="fill:#752438;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="M 76.074219 35.677734 A 14.794173 6.9386893 0 0 1 68.773438 38.289062 A 14.794173 6.9386893 0 0 1 63.894531 38.675781 A 14.794173 6.9386893 0 0 1 51.925781 35.816406 L 51.925781 50.980469 A 12.412041 7.0539911 0 0 0 51.587891 52.619141 A 12.412041 7.0539911 0 0 0 64 59.671875 A 12.412041 7.0539911 0 0 0 68.773438 59.130859 A 12.412041 7.0539911 0 0 0 76.412109 52.619141 A 12.412041 7.0539911 0 0 0 76.074219 50.980469 L 76.074219 35.677734 z " />
+    <path
+       id="path30"
+       style="fill:#752438;fill-opacity:1;stroke:#4f8fba;stroke-width:4;stroke-linecap:round;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="M 51.926579,42.116935 A 40.779216,40.857126 0 0 0 23.220615,81.142704 40.779216,40.857126 0 0 0 63.999999,122 40.779216,40.857126 0 0 0 104.77939,81.142704 40.779216,40.857126 0 0 0 76.07342,42.116935 v 8.863891 a 12.412041,7.0539911 0 0 1 0.338649,1.637399 12.412041,7.0539911 0 0 1 -12.41207,7.054314 12.412041,7.0539911 0 0 1 -12.412069,-7.054314 12.412041,7.0539911 0 0 1 0.338649,-1.637399 z" />
     <path
        id="ellipse6"
        style="fill:#4f8fba;fill-opacity:0.25;stroke:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:none;paint-order:markers stroke fill"
