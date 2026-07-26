@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://dcmu7ms0vnot3" path="res://assets/icons/baking_soda.svg" id="1_ipj61"]
 [ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_ejdd6"]
-[ext_resource type="Resource" uid="uid://dxd1xg2wj5c74" path="res://game/_templates/tools/saleratus_jar.tres" id="3_8gfok"]
 [ext_resource type="PackedScene" uid="uid://xtumlcime4sh" path="res://game/gameplay/tools/held_reagents_parent.tscn" id="4_3nlon"]
 
 [node name="BakingSodaJar" type="TextureRect" unique_id=1324714557 node_paths=PackedStringArray("held_reagents_ui")]
@@ -11,7 +10,6 @@ offset_bottom = 40.0
 mouse_filter = 0
 texture = ExtResource("1_ipj61")
 script = ExtResource("2_ejdd6")
-tool_template = ExtResource("3_8gfok")
 held_reagents_ui = NodePath("HeldReagents")
 metadata/_custom_type_script = "uid://cp85lcgd1nglo"
 

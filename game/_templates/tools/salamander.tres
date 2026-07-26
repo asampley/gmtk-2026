@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://b0ra5t6pjax0h"]
+
+[ext_resource type="Texture2D" uid="uid://k41jv6ijuwug" path="res://assets/world_objects/salamander.svg" id="1_62m1a"]
+[ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="1_xsn3i"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_coa2b"]
+[ext_resource type="Resource" uid="uid://qfjymqfb4r6v" path="res://game/_templates/reagents/salamander_tail.tres" id="3_71up2"]
+
+[sub_resource type="Resource" id="Resource_62m1a"]
+script = ExtResource("1_xsn3i")
+reagent = ExtResource("3_71up2")
+metadata/_custom_type_script = "uid://b6f4ge1t4ys5r"
+
+[resource]
+script = ExtResource("2_coa2b")
+name = "Salamander"
+icon = ExtResource("1_62m1a")
+reagent_generation_templates = Array[ExtResource("1_xsn3i")]([SubResource("Resource_62m1a")])
+metadata/_custom_type_script = "uid://dhqopjqxgslsw"

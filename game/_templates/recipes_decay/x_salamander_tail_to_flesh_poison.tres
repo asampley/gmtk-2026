@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://1m3wvk4t13ax" path="res://game/_templates/reagents/poison.tres" id="3_7n6f3"]
 [ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_ngrjx"]
 [ext_resource type="Resource" uid="uid://dbagjur8cj1ro" path="res://game/_templates/reagents/flesh.tres" id="4_80cnp"]
-[ext_resource type="Resource" uid="uid://qfjymqfb4r6v" path="res://game/_templates/reagents/salamandar_tail.tres" id="5_spfmn"]
+[ext_resource type="Resource" uid="uid://qfjymqfb4r6v" path="res://game/_templates/reagents/salamander_tail.tres" id="5_spfmn"]
 
 [resource]
 script = ExtResource("3_ngrjx")

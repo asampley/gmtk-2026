@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://1rokmhcik0if"]
+
+[ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_p5t50"]
+[ext_resource type="Resource" uid="uid://chu73en3fbq1i" path="res://game/_templates/tools/mortar_and_pestle.tres" id="3_p5t50"]
+[ext_resource type="PackedScene" uid="uid://xtumlcime4sh" path="res://game/gameplay/tools/held_reagents_parent.tscn" id="4_nrhf7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nrhf7"]
+load_path = "res://.godot/imported/mortar_and_pestle.svg-38a6a86d5791ed8ec585c3b69d191317.ctex"
+
+[node name="Mortar" type="TextureRect" unique_id=953902506 node_paths=PackedStringArray("held_reagents_ui")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -410.0
+offset_top = -410.0
+offset_right = -282.0
+offset_bottom = -282.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = SubResource("CompressedTexture2D_nrhf7")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("2_p5t50")
+tool_template = ExtResource("3_p5t50")
+held_reagents_ui = NodePath("HeldReagentsParent")
+changes_music = true
+music_bus = "Crucible"
+metadata/_custom_type_script = "uid://cp85lcgd1nglo"
+
+[node name="HeldReagentsParent" parent="." unique_id=702341484 instance=ExtResource("4_nrhf7")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 71.0
+offset_right = 0.0
+offset_bottom = 42.0
+grow_vertical = 2

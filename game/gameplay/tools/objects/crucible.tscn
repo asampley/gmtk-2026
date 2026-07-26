@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://uj23w65wfd5"]
 
-[ext_resource type="Texture2D" uid="uid://c56hmjuxbtxji" path="res://assets/world_objects/crucible.svg" id="1_rxfoa"]
 [ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_cfxph"]
 [ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="3_cfxph"]
 [ext_resource type="PackedScene" uid="uid://xtumlcime4sh" path="res://game/gameplay/tools/held_reagents_parent.tscn" id="4_v10w2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v10w2"]
+load_path = "res://.godot/imported/crucible.svg-fd8d68c3b49daac96c16f52845758cc7.ctex"
 
 [node name="Crucible" type="TextureRect" unique_id=953902506 node_paths=PackedStringArray("held_reagents_ui")]
 anchors_preset = 15
@@ -16,7 +18,7 @@ offset_bottom = -416.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 0
-texture = ExtResource("1_rxfoa")
+texture = SubResource("CompressedTexture2D_v10w2")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("2_cfxph")
@@ -28,11 +30,11 @@ metadata/_custom_type_script = "uid://cp85lcgd1nglo"
 
 [node name="HeldReagentsParent" parent="." unique_id=702341484 instance=ExtResource("4_v10w2")]
 layout_mode = 1
-anchors_preset = 8
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -174.0
-offset_top = -285.0
-offset_right = 199.0
-offset_bottom = 236.0
+anchors_preset = 15
+anchor_left = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 grow_vertical = 2

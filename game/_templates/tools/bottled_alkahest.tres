@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ToolTemplate" format=3 uid="uid://82cijue0sjf1"]
+
+[ext_resource type="Script" uid="uid://b6f4ge1t4ys5r" path="res://game/gameplay/tools/reagent_generation_template.gd" id="1_7otil"]
+[ext_resource type="Texture2D" uid="uid://ca2jp0nrof5xs" path="res://assets/icons/potion_bottle.svg" id="1_k2a5d"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_lq3nu"]
+[ext_resource type="Resource" uid="uid://brbr0fpe0662j" path="res://game/_templates/reagents/alkahest.tres" id="3_8bf48"]
+
+[sub_resource type="Resource" id="Resource_k2a5d"]
+script = ExtResource("1_7otil")
+reagent = ExtResource("3_8bf48")
+metadata/_custom_type_script = "uid://b6f4ge1t4ys5r"
+
+[resource]
+script = ExtResource("2_lq3nu")
+name = "Bottled Alkahest"
+icon = ExtResource("1_k2a5d")
+reagent_generation_templates = Array[ExtResource("1_7otil")]([SubResource("Resource_k2a5d")])
+metadata/_custom_type_script = "uid://dhqopjqxgslsw"

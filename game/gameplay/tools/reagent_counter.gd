@@ -10,7 +10,7 @@ extends Container
 
 @onready var texture_progress_rect: TextureProgressBar = %TextureProgressRect
 @onready var icon: TextureRect = %Icon
-@onready var overflow_number: RichTextLabel = %OverflowNumber
+#@onready var overflow_number: RichTextLabel = %OverflowNumber
 
 var stable: bool:
 	set(value):
@@ -36,13 +36,13 @@ func _update_color() -> void:
 		texture_progress_rect.self_modulate = _undesirable_color
 
 func set_full() -> void:
-	overflow_number.text = ""
+	#overflow_number.text = ""
 	texture_progress_rect.value = 1.0
 
 func set_remaining(remaining: int) -> void:
 	if remaining > _segments:
-		overflow_number.text = "[b]" + str(remaining) + "[/b]"
+		#overflow_number.text = "[b]" + str(remaining) + "[/b]"
 		texture_progress_rect.value = 1.0
 	else:
-		overflow_number.text = ""
+		#overflow_number.text = ""
 		texture_progress_rect.value = (remaining as float) / _segments

@@ -19,9 +19,9 @@ size_flags_horizontal = 6
 size_flags_vertical = 3
 tooltip_text = "ASHJKBNDJKNAS"
 script = ExtResource("1_07uex")
-_desirable_color = Color(0.45882353, 0.654902, 0.2627451, 1)
-_undesirable_color = Color(0.8117647, 0.34117648, 0.23529412, 1)
-_stable_color = Color(0.12760001, 0.18458, 0.22, 0)
+_desirable_color = Color(0.27450982, 0.50980395, 0.19607843, 1)
+_undesirable_color = Color(0.45882353, 0.14117648, 0.21960784, 1)
+_stable_color = Color(0.22352941, 0.2901961, 0.3137255, 1)
 _reaction_texture = ExtResource("2_sc241")
 _stable_texture = ExtResource("3_sc241")
 
@@ -61,25 +61,3 @@ grow_vertical = 2
 texture = ExtResource("2_07uex")
 expand_mode = 2
 stretch_mode = 5
-
-[node name="Control" type="Control" parent="." unique_id=1955726431]
-layout_mode = 2
-mouse_filter = 1
-
-[node name="OverflowNumber" type="RichTextLabel" parent="Control" unique_id=1497799583]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -413.0
-offset_top = -397.0
-grow_horizontal = 0
-grow_vertical = 0
-mouse_filter = 1
-bbcode_enabled = true
-text = "60"
-horizontal_alignment = 2
-vertical_alignment = 2

@@ -12,7 +12,10 @@ extends TextureRect
 @export var music_bus: String
 
 var initialized: bool = false
-var selection_manager: SelectionManager
+var selection_manager: SelectionManager:
+	set(value):
+			print(value)
+			selection_manager = value
 var reagent_generators: Array[ReagentGeneration]
 var reagents: Array[Reagent]
 var removable_reagent: Reagent:
@@ -50,7 +53,7 @@ func initialize(selection_manager_in: SelectionManager) -> void:
 	initialized = true
 
 func _gui_input(event: InputEvent) -> void:
-	if is_selection_event(event) :
+	if is_selection_event(event):
 		selection_manager.select(self)
 		accept_event()
 

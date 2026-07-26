@@ -17,9 +17,15 @@ held_reagents_ui = NodePath("HeldReagentsUI")
 metadata/_custom_type_script = "uid://cp85lcgd1nglo"
 
 [node name="HeldReagentsUI" type="HBoxContainer" parent="." unique_id=1954010034]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 43.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
 script = ExtResource("3_n8gfl")
 reagent_counter_prefab = ExtResource("4_4oncw")
 metadata/_custom_type_script = "uid://c8cute52enlko"

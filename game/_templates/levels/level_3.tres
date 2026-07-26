@@ -6,9 +6,43 @@
 [ext_resource type="Script" uid="uid://cdg0e4kmye577" path="res://game/level/level_template.gd" id="3_aus03"]
 [ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="4_5dwle"]
 [ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="4_rv3xf"]
+[ext_resource type="Resource" uid="uid://b0ra5t6pjax0h" path="res://game/_templates/tools/salamander.tres" id="5_uqfl1"]
+[ext_resource type="Resource" uid="uid://82cijue0sjf1" path="res://game/_templates/tools/bottled_alkahest.tres" id="6_4oyd0"]
+[ext_resource type="Resource" uid="uid://qfjymqfb4r6v" path="res://game/_templates/reagents/salamander_tail.tres" id="8_4oyd0"]
+[ext_resource type="Resource" uid="uid://1m3wvk4t13ax" path="res://game/_templates/reagents/poison.tres" id="8_rv3xf"]
+[ext_resource type="Resource" uid="uid://brbr0fpe0662j" path="res://game/_templates/reagents/alkahest.tres" id="9_d8su3"]
+
+[sub_resource type="Resource" id="Resource_eantw"]
+script = ExtResource("4_5dwle")
+tool = ExtResource("4_rv3xf")
+reagent = ExtResource("8_4oyd0")
+text = "Salamander Tail → Cauldron"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_rv3xf"]
+script = ExtResource("4_5dwle")
+tool = ExtResource("4_rv3xf")
+reagent = ExtResource("8_rv3xf")
+text = "Salamandar Tail ↦ Poison"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_d8su3"]
+script = ExtResource("4_5dwle")
+tool = ExtResource("4_rv3xf")
+reagent = ExtResource("9_d8su3")
+text = "Alkahest → Cauldron"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_uqfl1"]
+script = ExtResource("4_5dwle")
+tool = ExtResource("3_5dwle")
+reagent = ExtResource("8_rv3xf")
+text = "Poison → Basket"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
 
 [resource]
 script = ExtResource("3_aus03")
 level_name = "Level 3"
-enabled_devices = Array[ExtResource("2_g34vg")]([ExtResource("3_5dwle"), ExtResource("4_rv3xf"), null, null])
+enabled_devices = Array[ExtResource("2_g34vg")]([ExtResource("3_5dwle"), ExtResource("4_rv3xf"), ExtResource("5_uqfl1"), ExtResource("6_4oyd0")])
+tasks = Array[ExtResource("4_5dwle")]([SubResource("Resource_eantw"), SubResource("Resource_rv3xf"), SubResource("Resource_d8su3"), SubResource("Resource_uqfl1")])
 metadata/_custom_type_script = "uid://cdg0e4kmye577"

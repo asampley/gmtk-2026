@@ -13,6 +13,9 @@
 [ext_resource type="Script" uid="uid://dgxd5avufrdp2" path="res://utilities/ui/fly_in_text/fly_in_text_manager.gd" id="12_pnvrb"]
 [ext_resource type="PackedScene" uid="uid://daumugae1dbgt" path="res://utilities/ui/fly_in_text/score_fly_in_text_prefab.tscn" id="13_1odm2"]
 [ext_resource type="Script" uid="uid://bv4xqu77fk6r2" path="res://game/popups/popup_trigger_level_start.gd" id="13_lro0m"]
+[ext_resource type="PackedScene" uid="uid://q5x73abiy4us" path="res://game/gameplay/tools/objects/salamander.tscn" id="14_vr57k"]
+[ext_resource type="PackedScene" uid="uid://1rokmhcik0if" path="res://game/gameplay/tools/objects/mortar.tscn" id="15_p15a4"]
+[ext_resource type="PackedScene" uid="uid://ca337mb1wrtmu" path="res://game/gameplay/tools/objects/bottled_alkahest.tscn" id="16_p15a4"]
 
 [node name="Level" type="Control" unique_id=324419999]
 layout_mode = 3
@@ -83,6 +86,18 @@ task_reagent_reader = NodePath("TaskReagentReader")
 script = ExtResource("7_ec6xq")
 metadata/_custom_type_script = "uid://d37jru5ijnbu3"
 
+[node name="Mortar" parent="Tools" unique_id=62443505 instance=ExtResource("15_p15a4")]
+layout_mode = 1
+offset_left = 591.0
+offset_top = 415.0
+offset_right = 463.0
+offset_bottom = 287.0
+music_bus = "Mortar"
+
+[node name="TaskReagentReader" type="Node" parent="Tools/Mortar" unique_id=808993063]
+script = ExtResource("7_ec6xq")
+metadata/_custom_type_script = "uid://d37jru5ijnbu3"
+
 [node name="Crucible" parent="Tools" unique_id=1901526035 node_paths=PackedStringArray("task_reagent_reader") instance=ExtResource("12_idsm0")]
 layout_mode = 1
 offset_left = 476.0
@@ -109,6 +124,20 @@ offset_top = 488.0
 offset_right = 75.0
 offset_bottom = 552.0
 tool_template = ExtResource("10_2v0w1")
+
+[node name="Salamander" parent="Tools" unique_id=391313719 instance=ExtResource("14_vr57k")]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 220.0
+offset_right = 337.0
+offset_bottom = 284.0
+
+[node name="BottledAlkahest" parent="Tools" unique_id=1763238862 instance=ExtResource("16_p15a4")]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 454.0
+offset_right = 799.0
+offset_bottom = 518.0
 
 [node name="PopupTriggerLevelStart" type="Node" parent="." unique_id=1211603721]
 script = ExtResource("13_lro0m")
