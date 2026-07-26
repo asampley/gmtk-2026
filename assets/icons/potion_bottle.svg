@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="potion_bottle.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="2.5152242"
+     inkscape:cx="28.625679"
+     inkscape:cy="44.727623"
+     inkscape:window-width="1272"
+     inkscape:window-height="760"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="ellipse6"
+       style="fill:#4f8fba;stroke:none;stroke-width:4;stroke-linecap:round;paint-order:markers stroke fill;stroke-dasharray:none;fill-opacity:0.5"
+       d="M 81.664062 30.181641 A 52.599644 78.539192 0 0 1 84.054688 38.521484 A 52.599644 78.539192 0 0 1 86.833984 56.152344 A 52.599644 78.539192 0 0 1 87.185547 65.208984 A 52.599644 78.539192 0 0 1 71.929688 120.51953 A 47.273243 47.273247 0 0 0 111.27344 74 A 47.273243 47.273247 0 0 0 81.664062 30.181641 z M 16.726562 74 A 47.273243 47.273247 0 0 0 17.146484 80.248047 A 47.273243 47.273247 0 0 1 16.726562 74 z M 23.349609 98.115234 A 47.273243 47.273247 0 0 0 64 121.27344 A 47.273243 47.273247 0 0 1 23.382812 98.117188 A 41.971634 47.375706 0 0 1 23.349609 98.115234 z " />
+    <path
+       id="ellipse5"
+       style="fill:#73bed3;stroke:none;stroke-width:4;stroke-linecap:round;paint-order:markers stroke fill;stroke-dasharray:none;fill-opacity:0.5"
+       d="M 77.996094 28.845703 L 77.996094 39.101562 A 14.388639 8.1617355 0 0 1 78.388672 40.996094 A 14.388639 8.1617355 0 0 1 69.476562 48.542969 A 41.971634 47.375706 0 0 1 69.533203 50.978516 A 41.971634 47.375706 0 0 1 27.560547 98.353516 A 41.971634 47.375706 0 0 1 23.382812 98.117188 A 47.273243 47.273247 0 0 0 64 121.27344 A 47.273243 47.273247 0 0 0 71.867188 120.61328 A 52.599644 78.539192 0 0 0 87.185547 65.208984 A 52.599644 78.539192 0 0 0 81.652344 30.146484 A 47.273243 47.273247 0 0 0 77.996094 28.845703 z " />
+    <path
+       id="path5"
+       style="fill:#a4dddb;fill-opacity:0.5;stroke:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="M 50.003906 28.845703 A 47.273243 47.273247 0 0 0 16.726562 74 A 47.273243 47.273247 0 0 0 23.339844 98.113281 A 41.971634 47.375706 0 0 0 27.560547 98.353516 A 41.971634 47.375706 0 0 0 69.533203 50.978516 A 41.971634 47.375706 0 0 0 69.478516 48.542969 A 14.388639 8.1617355 0 0 1 64 49.158203 A 14.388639 8.1617355 0 0 1 49.611328 40.996094 A 14.388639 8.1617355 0 0 1 50.003906 39.101562 L 50.003906 28.845703 z " />
+    <path
+       id="path1"
+       style="fill:none;stroke:#4f8fba;stroke-width:4;stroke-linecap:round;paint-order:markers stroke fill;stroke-dasharray:none;fill-opacity:0.5"
+       d="M 50.003906 28.845703 A 47.273243 47.273247 0 0 0 16.726562 74 A 47.273243 47.273247 0 0 0 64 121.27344 A 47.273243 47.273247 0 0 0 111.27344 74 A 47.273243 47.273247 0 0 0 77.996094 28.845703 L 77.996094 39.101562 A 14.388639 8.1617355 0 0 1 78.388672 40.996094 A 14.388639 8.1617355 0 0 1 64 49.158203 A 14.388639 8.1617355 0 0 1 49.611328 40.996094 A 14.388639 8.1617355 0 0 1 50.003906 39.101562 L 50.003906 28.845703 z " />
+    <path
+       id="path2"
+       style="fill:none;stroke:#4f8fba;stroke-width:4;stroke-linecap:round;stroke-dasharray:none;paint-order:markers stroke fill;fill-opacity:0.5"
+       d="M 77.996094 21.394531 A 17.150122 8.028327 0 0 1 63.876953 24.865234 A 17.150122 8.028327 0 0 1 50.003906 21.556641 L 50.003906 39.101562 A 14.388639 8.1617355 0 0 0 49.611328 40.996094 A 14.388639 8.1617355 0 0 0 64 49.158203 A 14.388639 8.1617355 0 0 0 78.388672 40.996094 A 14.388639 8.1617355 0 0 0 77.996094 39.101562 L 77.996094 21.394531 z " />
+    <path
+       id="rect6"
+       style="fill:#a4dddb;fill-opacity:0.5;stroke:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="M 50.003906 21.556641 L 50.003906 39.101562 A 14.388639 8.1617355 0 0 0 49.611328 40.996094 A 14.388639 8.1617355 0 0 0 64 49.158203 A 14.388639 8.1617355 0 0 0 69.533203 48.53125 L 69.533203 24.416016 A 17.150122 8.028327 0 0 1 63.876953 24.865234 A 17.150122 8.028327 0 0 1 50.003906 21.556641 z " />
+    <path
+       id="path6"
+       style="fill:#73bed3;stroke:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:none;paint-order:markers stroke fill;fill-opacity:0.5"
+       d="M 77.996094 21.394531 A 17.150122 8.028327 0 0 1 69.533203 24.416016 L 69.533203 48.53125 A 14.388639 8.1617355 0 0 0 78.388672 40.996094 A 14.388639 8.1617355 0 0 0 77.996094 39.101562 L 77.996094 21.394531 z " />
+    <ellipse
+       style="fill:#a4dddb;stroke:#4f8fba;stroke-width:4;stroke-linecap:round;stroke-dasharray:none;paint-order:markers stroke fill;fill-opacity:0.5"
+       id="ellipse3"
+       cx="63.877419"
+       cy="16.836079"
+       rx="17.150122"
+       ry="8.028327" />
+    <ellipse
+       style="fill:#a4dddb;stroke:#4f8fba;stroke-width:1.57015502;stroke-linecap:round;stroke-dasharray:none;paint-order:markers stroke fill;fill-opacity:0.5"
+       id="ellipse4"
+       cx="63.877419"
+       cy="16.836079"
+       rx="11.323151"
+       ry="3.6695173" />
+  </g>
+</svg>

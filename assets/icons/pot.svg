@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="pot.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="2.5152242"
+     inkscape:cx="28.426889"
+     inkscape:cy="44.727623"
+     inkscape:window-width="1272"
+     inkscape:window-height="760"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path16"
+       style="fill:#cf573c;fill-opacity:1;stroke:#752438;stroke-width:8;stroke-linecap:round;stroke-dasharray:none;paint-order:markers stroke fill;stroke-linejoin:round"
+       d="M 24 60 L 40 100.38867 A 24 14.511629 0 0 0 64 114.90039 A 24 14.511629 0 0 0 88 100.38867 L 104 60 L 24 60 z " />
+    <ellipse
+       style="fill:#cf573c;fill-opacity:1;stroke:#752438;stroke-width:6.99307;stroke-linecap:butt;stroke-dasharray:none;paint-order:markers stroke fill"
+       id="ellipse17"
+       cx="63.780823"
+       cy="59.999996"
+       rx="40.722454"
+       ry="16.081732" />
+    <ellipse
+       style="fill:#cf573c;fill-opacity:1;stroke:#752438;stroke-width:8;stroke-linecap:butt;stroke-dasharray:none;paint-order:markers stroke fill"
+       id="ellipse18"
+       cx="63.780823"
+       cy="59.999996"
+       rx="29.513624"
+       ry="10.840071" />
+    <path
+       id="ellipse20"
+       style="fill:#602c2c;fill-opacity:1;stroke:#752438;stroke-width:4;stroke-linecap:butt;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="M 63.78125 53.365234 A 26.915308 10.482096 0 0 0 36.865234 63.847656 A 26.915308 10.482096 0 0 0 36.974609 64.490234 A 29.513624 10.840071 0 0 0 63.78125 70.839844 A 29.513624 10.840071 0 0 0 90.587891 64.492188 A 26.915308 10.482096 0 0 0 90.695312 63.847656 A 26.915308 10.482096 0 0 0 63.78125 53.365234 z " />
+  </g>
+</svg>
