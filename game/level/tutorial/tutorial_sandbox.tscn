@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://chl7l0225kj70"]
+
+[ext_resource type="Script" uid="uid://y6mi8eflcx8o" path="res://game/popups/popup_manager.gd" id="1_a258l"]
+[ext_resource type="Script" uid="uid://d05td3upb2d3t" path="res://game/popups/popup_ui.gd" id="2_rpgqs"]
+[ext_resource type="FontFile" uid="uid://cuq6830n247af" path="res://themes/minimalist/font/Urbanist/Urbanist-ExtraBold.ttf" id="3_xf05b"]
+
+[node name="PopupManager" type="Control" unique_id=2117041871]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a258l")
+
+[node name="PopupUI" type="Control" parent="." unique_id=928362282]
+anchors_preset = 0
+offset_left = 499.0
+offset_top = 100.0
+offset_right = 751.0
+offset_bottom = 252.0
+mouse_filter = 2
+script = ExtResource("2_rpgqs")
+
+[node name="PanelContainer" type="PanelContainer" parent="PopupUI" unique_id=1727852013]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -62.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PopupUI/PanelContainer" unique_id=335760681]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="PopupUI/PanelContainer/MarginContainer" unique_id=1699252692]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.0627451, 0.078431375, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("3_xf05b")
+text = "Welcome to the sandbox level. You've reached the end of the game. 
+Thank you for playing!"
+autowrap_mode = 3
