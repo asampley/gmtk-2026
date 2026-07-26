@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://mps3o8hvujwf"]
 
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_inlsd"]
-[ext_resource type="Texture2D" uid="uid://w5kafc3luitw" path="res://icon.svg" id="1_qixyf"]
+[ext_resource type="Texture2D" uid="uid://ivm7k14kd6mj" path="res://assets/icons/claw.svg" id="1_qixyf"]
 
 [resource]
 script = ExtResource("1_inlsd")
