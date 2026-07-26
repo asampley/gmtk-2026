@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0adp1jlt4fmx"]
 
-[ext_resource type="Texture2D" uid="uid://d0rfifum3ijia" path="res://assets/world_objects/pot.svg" id="1_yo7y0"]
+[ext_resource type="Texture2D" uid="uid://cquw7c102xjq7" path="res://assets/world_objects/pot_licorice.svg" id="1_yo7y0"]
 [ext_resource type="Script" uid="uid://cp85lcgd1nglo" path="res://game/gameplay/tools/tool.gd" id="2_5m7v4"]
 [ext_resource type="Resource" uid="uid://vg2w7caefyad" path="res://game/_templates/tools/potted_liquorice.tres" id="3_ghkd5"]
 [ext_resource type="Script" uid="uid://c8cute52enlko" path="res://game/gameplay/tools/held_reagents_ui.gd" id="4_20yqm"]
