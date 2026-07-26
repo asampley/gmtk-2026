@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://dhy5mc2wmj0j4"]
+
+[ext_resource type="Script" uid="uid://y6mi8eflcx8o" path="res://game/popups/popup_manager.gd" id="1_l5aid"]
+[ext_resource type="Script" uid="uid://d05td3upb2d3t" path="res://game/popups/popup_ui.gd" id="2_d220r"]
+[ext_resource type="FontFile" uid="uid://cuq6830n247af" path="res://themes/minimalist/font/Urbanist/Urbanist-ExtraBold.ttf" id="3_gya25"]
+[ext_resource type="PackedScene" uid="uid://0ox6qtanhaq3" path="res://game/popups/popup_box.tscn" id="4_83r0o"]
+
+[node name="PopupManager" type="Control" unique_id=1929152432 node_paths=PackedStringArray("index_to_popup")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_l5aid")
+index_to_popup = {
+0: NodePath("PopupUI"),
+1: NodePath("PopupUI2")
+}
+
+[node name="PopupUI" type="Control" parent="." unique_id=2076199726]
+anchors_preset = 0
+offset_left = 302.0
+offset_top = 370.0
+offset_right = 481.0
+offset_bottom = 499.0
+mouse_filter = 2
+script = ExtResource("2_d220r")
+
+[node name="PanelContainer" type="PanelContainer" parent="PopupUI" unique_id=447850893]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PopupUI/PanelContainer" unique_id=687670468]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="PopupUI/PanelContainer/MarginContainer" unique_id=2059069357]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.0627451, 0.078431375, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("3_gya25")
+text = "Click or drag on the Salamander and drag the Salamander Tail over to the Cauldron"
+autowrap_mode = 3
+
+[node name="PopupUI2" type="Control" parent="." unique_id=31252662]
+anchors_preset = 0
+offset_left = 403.0
+offset_top = 365.0
+offset_right = 655.0
+offset_bottom = 517.0
+mouse_filter = 2
+script = ExtResource("2_d220r")
+
+[node name="PanelContainer" type="PanelContainer" parent="PopupUI2" unique_id=527138116]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PopupUI2/PanelContainer" unique_id=354565851]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="PopupUI2/PanelContainer/MarginContainer" unique_id=1492458469]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.0627451, 0.078431375, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("3_gya25")
+text = "We want the Poison. But we can't take it out! We can only move reagents if there is only one in the tool. Put in some Alkahest to break down the flesh."
+autowrap_mode = 3
+
+[node name="PopupBox" parent="PopupUI2" unique_id=1920342617 instance=ExtResource("4_83r0o")]
+layout_mode = 1
+offset_left = 323.0
+offset_top = 75.0
+offset_right = 149.0
+offset_bottom = 21.0
