@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://d3hxeh7w5ch5c"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_bohye"]
+[ext_resource type="Texture2D" uid="uid://id7syxpmxqyn" path="res://assets/icons/phlegm.svg" id="1_io0cy"]
+
+[resource]
+script = ExtResource("1_bohye")
+name = "Phlegm"
+icon = ExtResource("1_io0cy")
+metadata/_custom_type_script = "uid://xlcs11xcua2v"

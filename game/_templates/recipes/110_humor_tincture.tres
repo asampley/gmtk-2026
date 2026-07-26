@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://d24dsta6d460e"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_8woul"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_8n7mo"]
+[ext_resource type="Resource" uid="uid://vsa6eqbhd5xx" path="res://game/_templates/reagents/humor_tincture.tres" id="3_1lfey"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_4wsnl"]
+[ext_resource type="Resource" uid="uid://bpfjfo48ep4ek" path="res://game/_templates/reagents/blood.tres" id="3_rdx4l"]
+[ext_resource type="Resource" uid="uid://dtk6jo7ybhw2i" path="res://game/_templates/reagents/yellow_bile.tres" id="4_1lfey"]
+[ext_resource type="Resource" uid="uid://c47nfpajofaxx" path="res://game/_templates/reagents/black_bile.tres" id="5_wbt0l"]
+[ext_resource type="Resource" uid="uid://d3hxeh7w5ch5c" path="res://game/_templates/reagents/phlegm.tres" id="6_joped"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="9_wbt0l"]
+
+[resource]
+script = ExtResource("3_4wsnl")
+name = "Humor Tincture"
+reagents = Array[ExtResource("2_8n7mo")]([ExtResource("3_rdx4l"), ExtResource("4_1lfey"), ExtResource("5_wbt0l"), ExtResource("6_joped")])
+products = Array[ExtResource("2_8n7mo")]([ExtResource("3_1lfey")])
+tool_template = ExtResource("9_wbt0l")
+time = 6
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

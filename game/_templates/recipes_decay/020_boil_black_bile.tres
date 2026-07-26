@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://ce87iy6h2bjt0"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_6qw2y"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_gaynw"]
+[ext_resource type="Resource" uid="uid://c6s7ae8m62lr4" path="res://game/_templates/reagents/hair_of_the_dog.tres" id="2_ssgbo"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_d0r0n"]
+[ext_resource type="Resource" uid="uid://c47nfpajofaxx" path="res://game/_templates/reagents/black_bile.tres" id="4_ssgbo"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="6_vejaa"]
+
+[sub_resource type="Resource" id="Resource_ssgbo"]
+script = ExtResource("1_6qw2y")
+reagent = ExtResource("2_ssgbo")
+time_multiplier = 3.0
+metadata/_custom_type_script = "uid://b7hvefdj6ati3"
+
+[resource]
+script = ExtResource("3_d0r0n")
+name = "Boil Black Bile"
+reagents = Array[ExtResource("2_gaynw")]([ExtResource("4_ssgbo")])
+catalysts = Array[ExtResource("1_6qw2y")]([SubResource("Resource_ssgbo")])
+tool_template = ExtResource("6_vejaa")
+time = 2
+desirable = false
+metadata/_custom_type_script = "uid://c4imnao3ortw8"

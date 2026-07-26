@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://sb7tq1c4yx2b"]
+
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_itgx3"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_7f6xr"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_6usw8"]
+[ext_resource type="Resource" uid="uid://d3hxeh7w5ch5c" path="res://game/_templates/reagents/phlegm.tres" id="3_cm7wd"]
+[ext_resource type="Resource" uid="uid://c47nfpajofaxx" path="res://game/_templates/reagents/black_bile.tres" id="4_bedel"]
+[ext_resource type="Resource" uid="uid://bsx6q6qat7bx3" path="res://game/_templates/reagents/old/ash.tres" id="5_wbxeh"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="7_14401"]
+
+[resource]
+script = ExtResource("3_6usw8")
+name = "Purify Black Bile"
+reagents = Array[ExtResource("2_7f6xr")]([ExtResource("4_bedel"), ExtResource("5_wbxeh")])
+products = Array[ExtResource("2_7f6xr")]([ExtResource("3_cm7wd")])
+tool_template = ExtResource("7_14401")
+time = 6
+metadata/_custom_type_script = "uid://c4imnao3ortw8"
