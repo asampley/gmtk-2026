@@ -19,6 +19,6 @@ name = "Boil Black Bile"
 reagents = Array[ExtResource("2_gaynw")]([ExtResource("4_ssgbo")])
 catalysts = Array[ExtResource("1_6qw2y")]([SubResource("Resource_ssgbo")])
 tool_template = ExtResource("6_vejaa")
-time = 2
+time = 6
 desirable = false
 metadata/_custom_type_script = "uid://c4imnao3ortw8"

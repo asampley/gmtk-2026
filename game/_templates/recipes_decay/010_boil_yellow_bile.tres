@@ -19,6 +19,6 @@ name = "Boil Yellow Bile"
 reagents = Array[ExtResource("2_8yi0q")]([ExtResource("4_tirv2")])
 catalysts = Array[ExtResource("1_4y5gw")]([SubResource("Resource_tirv2")])
 tool_template = ExtResource("6_537ev")
-time = 2
+time = 6
 desirable = false
 metadata/_custom_type_script = "uid://c4imnao3ortw8"
