@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Reagent" format=3 uid="uid://dtahhuukb7ivh"]
 
-[ext_resource type="Texture2D" uid="uid://ca2jp0nrof5xs" path="res://assets/icons/potion_bottle.svg" id="1_ime4l"]
+[ext_resource type="Texture2D" uid="uid://b30xdc5bhyo02" path="res://assets/icons/aromatic_extract.svg" id="1_fm2k5"]
 [ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_ligfw"]
 
 [resource]
 script = ExtResource("1_ligfw")
-name = "Sickening Potion"
-icon = ExtResource("1_ime4l")
+name = "Aromatic Extract"
+icon = ExtResource("1_fm2k5")
 metadata/_custom_type_script = "uid://xlcs11xcua2v"
