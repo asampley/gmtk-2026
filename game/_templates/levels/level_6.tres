@@ -9,10 +9,44 @@
 [ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="5_h422u"]
 [ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="6_midbx"]
 [ext_resource type="Resource" uid="uid://chu73en3fbq1i" path="res://game/_templates/tools/mortar_and_pestle.tres" id="7_jayc4"]
+[ext_resource type="Resource" uid="uid://vg2w7caefyad" path="res://game/_templates/tools/potted_liquorice.tres" id="8_midbx"]
+[ext_resource type="Resource" uid="uid://3nh78myociua" path="res://game/_templates/reagents/liquorice_dust.tres" id="11_jayc4"]
+[ext_resource type="Resource" uid="uid://b8f03ymo4d4c6" path="res://game/_templates/reagents/tar.tres" id="12_u1a7h"]
+[ext_resource type="Resource" uid="uid://cjbkn1qo0hgxo" path="res://game/_templates/reagents/broth.tres" id="13_jayc4"]
+[ext_resource type="Resource" uid="uid://dstrcwgnn28v7" path="res://game/_templates/reagents/platonic_liquorice.tres" id="14_u1a7h"]
+
+[sub_resource type="Resource" id="Resource_a3k37"]
+script = ExtResource("4_0eye2")
+tool = ExtResource("7_jayc4")
+reagent = ExtResource("11_jayc4")
+text = "Liquorice -> Liquorice Dust"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_mr5n8"]
+script = ExtResource("4_0eye2")
+tool = ExtResource("6_midbx")
+reagent = ExtResource("12_u1a7h")
+text = "Liquorice -> Tar"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_dmhfl"]
+script = ExtResource("4_0eye2")
+tool = ExtResource("5_h422u")
+reagent = ExtResource("13_jayc4")
+text = "Tar Liquorice -> Broth"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[sub_resource type="Resource" id="Resource_35oh3"]
+script = ExtResource("4_0eye2")
+tool = ExtResource("3_yr5am")
+reagent = ExtResource("14_u1a7h")
+text = "Platonic Liquorice -> Basket"
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
 
 [resource]
 script = ExtResource("3_fjo3j")
 level_name = "Level 6"
-enabled_devices = Array[ExtResource("2_uba75")]([ExtResource("3_yr5am"), ExtResource("4_c4oi4"), ExtResource("5_h422u"), ExtResource("6_midbx"), ExtResource("7_jayc4")])
-tasks = Array[ExtResource("4_0eye2")]([null, null, null])
+enabled_devices = Array[ExtResource("2_uba75")]([ExtResource("3_yr5am"), ExtResource("4_c4oi4"), ExtResource("5_h422u"), ExtResource("6_midbx"), ExtResource("7_jayc4"), ExtResource("8_midbx")])
+tasks = Array[ExtResource("4_0eye2")]([SubResource("Resource_a3k37"), SubResource("Resource_mr5n8"), SubResource("Resource_dmhfl"), SubResource("Resource_35oh3")])
+basket_whitelist = Array[ExtResource("1_mxq38")]([ExtResource("14_u1a7h")])
 metadata/_custom_type_script = "uid://cdg0e4kmye577"

@@ -1,16 +1,17 @@
 [gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://ddjbbvr6i63mg"]
 
-[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_vu6ms"]
-[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_dlpa0"]
-[ext_resource type="Resource" uid="uid://mps3o8hvujwf" path="res://game/_templates/reagents/claws.tres" id="3_csyny"]
-[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="3_pkoyd"]
-[ext_resource type="Resource" uid="uid://qfjymqfb4r6v" path="res://game/_templates/reagents/salamander_tail.tres" id="4_ho8v2"]
-[ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="6_axfu0"]
+[ext_resource type="Script" uid="uid://b7hvefdj6ati3" path="res://game/gameplay/catalyst.gd" id="1_ohne1"]
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="2_80a06"]
+[ext_resource type="Resource" uid="uid://mps3o8hvujwf" path="res://game/_templates/reagents/claws.tres" id="3_csruy"]
+[ext_resource type="Resource" uid="uid://qfjymqfb4r6v" path="res://game/_templates/reagents/salamander_tail.tres" id="4_y0jkt"]
+[ext_resource type="Script" uid="uid://c4imnao3ortw8" path="res://game/gameplay/recipe.gd" id="5_hkc54"]
+[ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="6_d6gg6"]
 
 [resource]
-script = ExtResource("3_pkoyd")
-reagents = Array[ExtResource("2_dlpa0")]([ExtResource("4_ho8v2")])
-products = Array[ExtResource("2_dlpa0")]([ExtResource("3_csyny")])
-tool_template = ExtResource("6_axfu0")
+script = ExtResource("5_hkc54")
+name = "Claws"
+reagents = Array[ExtResource("2_80a06")]([ExtResource("4_y0jkt")])
+products = Array[ExtResource("2_80a06")]([ExtResource("3_csruy")])
+tool_template = ExtResource("6_d6gg6")
 time = 8
 metadata/_custom_type_script = "uid://c4imnao3ortw8"
