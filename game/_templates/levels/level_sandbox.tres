@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="LevelTemplate" format=3 uid="uid://cqgsgb4kiyqjm"]
+
+[ext_resource type="Script" uid="uid://xlcs11xcua2v" path="res://game/gameplay/reagent.gd" id="1_217sg"]
+[ext_resource type="Script" uid="uid://dhqopjqxgslsw" path="res://game/gameplay/tools/tool_template.gd" id="2_r8rjs"]
+[ext_resource type="Resource" uid="uid://creyd7ac3iog7" path="res://game/_templates/tools/basket.tres" id="3_6g0tt"]
+[ext_resource type="Script" uid="uid://cdg0e4kmye577" path="res://game/level/level_template.gd" id="3_jvywx"]
+[ext_resource type="Resource" uid="uid://36kx2v6jr1s5" path="res://game/_templates/tools/cauldron.tres" id="4_4mhjb"]
+[ext_resource type="Script" uid="uid://c7s7risns0jw2" path="res://game/task_system/task_template.gd" id="4_niapt"]
+[ext_resource type="Resource" uid="uid://8iikdphbge8h" path="res://game/_templates/tools/crucible.tres" id="4_oryid"]
+[ext_resource type="Resource" uid="uid://br5udfvhr0tv6" path="res://game/_templates/tools/jar_of_dog_hair.tres" id="5_4mhjb"]
+[ext_resource type="Resource" uid="uid://b0ra5t6pjax0h" path="res://game/_templates/tools/salamander.tres" id="6_p3s6k"]
+[ext_resource type="Resource" uid="uid://82cijue0sjf1" path="res://game/_templates/tools/bottled_alkahest.tres" id="7_wwosm"]
+[ext_resource type="Resource" uid="uid://vg2w7caefyad" path="res://game/_templates/tools/potted_liquorice.tres" id="9_4mhjb"]
+
+[sub_resource type="Resource" id="Resource_p3s6k"]
+script = ExtResource("4_niapt")
+text = "Make whatever you'd like! Make use of the recipe book to see what you can make."
+metadata/_custom_type_script = "uid://c7s7risns0jw2"
+
+[resource]
+script = ExtResource("3_jvywx")
+level_name = "Sandbox"
+enabled_devices = Array[ExtResource("2_r8rjs")]([ExtResource("3_6g0tt"), ExtResource("4_4mhjb"), ExtResource("4_oryid"), ExtResource("5_4mhjb"), ExtResource("6_p3s6k"), ExtResource("7_wwosm"), ExtResource("9_4mhjb")])
+tasks = Array[ExtResource("4_niapt")]([SubResource("Resource_p3s6k")])
+metadata/_custom_type_script = "uid://cdg0e4kmye577"
