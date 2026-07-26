@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="phlegm.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1.9774095"
+     inkscape:cx="60.938313"
+     inkscape:cy="77.626814"
+     inkscape:window-width="1280"
+     inkscape:window-height="768"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#ffffff;stroke:none;stroke-width:6.16441;stroke-linecap:round;stroke-dasharray:none"
+       id="path2"
+       cx="66.754005"
+       cy="35.399853"
+       rx="9.608531"
+       ry="6.5742579" />
+    <path
+       style="fill:#e7d5b3;stroke:#d7b594;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       d="m 59.674034,22.251335 c 41.721246,2.275704 28.319879,41.974108 28.319879,41.974108 0,0 20.228487,-8.091395 19.217067,11.631379 -1.01143,19.722774 -22.251339,7.585682 -22.251339,7.585682 0,0 7.07997,16.182792 -7.585682,16.688506 -14.665653,0.50571 -13.148516,-15.171374 -13.148516,-15.171374 0,0 -3.034273,21.239914 -18.205637,12.64281 -15.171365,-8.59711 -3.034273,-18.711351 -3.034273,-18.711351 0,0 -21.23991,21.239915 -21.745622,2.022849 -0.505713,-19.217062 21.23991,-14.665653 21.23991,-14.665653 0,0 -24.527038,-46.272661 17.194213,-43.996956 z"
+       id="path1"
+       sodipodi:nodetypes="zcscscscscz" />
+    <ellipse
+       style="fill:#ebede9;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       id="path3"
+       cx="50.065502"
+       cy="41.721252"
+       rx="4.5514092"
+       ry="8.8499622" />
+  </g>
+</svg>
