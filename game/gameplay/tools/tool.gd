@@ -28,6 +28,9 @@ var removable_reagent: Reagent:
 var _flag_updated_reagents: bool = false
 var _flag_updated_reactions: bool = false
 
+# Used to create on the fly cleaning recipe with static id
+var cleaning_recipe := Recipe.new()
+
 var reaction_progress: ReactionProgress = ReactionProgress.new()
 
 signal updated_reagents(reagents_out: Array[Reagent])
@@ -51,6 +54,10 @@ func initialize(selection_manager_in: SelectionManager) -> void:
 	setup_whitelist()
 	tooltip_text = tool_template.name
 	initialized = true
+
+	cleaning_recipe.name = "Cleaning"
+	cleaning_recipe.tool_template = tool_template
+	cleaning_recipe.desirable = false
 
 func _gui_input(event: InputEvent) -> void:
 	if is_selection_event(event):
@@ -143,6 +150,22 @@ func update_changes() -> void:
 # Ties are broken by shortest duration
 func _calculate_recipes() -> void:
 	var recipes := ServiceLocator.game_manager.recipes
+
+	if tool_template.allow_cleaning:
+		# If there is a cleaner, we start clearing everything out by replacing recipes with a fake recipe
+		for reagent in reagents:
+			if reagent.cleans:
+				cleaning_recipe.reagents = reagents
+
+				var cleaning_progress := reaction_progress.recipe_progress[cleaning_recipe]
+				reaction_progress.recipe_progress.clear()
+
+				# Don't reset cleaning progress ever
+				if cleaning_progress:
+					reaction_progress.recipe_progress[cleaning_recipe] = cleaning_progress
+
+				break
+
 	recipes = recipes.filter(func(recipe: Recipe) -> bool:
 		return recipe.tool_template == tool_template
 	)
@@ -208,7 +231,7 @@ func _progress_reaction(pulse: int, tick: int, per_pulse: int) -> void:
 func _get_drag_data(at_position: Vector2) -> Variant:
 	if !removable_reagent:
 		return null
-	
+
 	var preview_texture := TextureRect.new()
 	preview_texture.texture = removable_reagent.icon
 	print(preview_texture.position)
